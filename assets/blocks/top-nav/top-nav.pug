@@ -1,0 +1,23 @@
+.top-nav 
+  .container 
+    nav.top-nav-wrap 
+
+      // Site logo & logo-name
+      
+      .logo-container 
+        .logo 
+        .logo__name Мастер Отделкин
+
+      // Navigation menu
+
+      .top-nav-menu
+        each name in ["Главная", "Услуги", "Портфолио", "Контакты"]
+          ul.top-nav-menu__list 
+            li.top-nav-menu__item 
+              a.top-nav-menu__link(href="#")=name
+
+      // Recall button & telefon number
+
+      .top-nav-recall 
+        .top-nav-recall__btn Заказать Звонок
+        .top-nav-recall__tel 8 (921) ХХХ-ХХ-ХХ
