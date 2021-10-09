@@ -14,7 +14,7 @@
     filter: brightness(70%)
     width: 100%
     height: auto
-    min-height: 800px
+    min-height: 700px
     z-index: -5
 
   .header-slide-container:nth-child(1)::before
@@ -29,8 +29,8 @@
 
 .header-slide-info
   padding-top: 15%
-  padding-left: 10%
-  width: 600px
+  padding-left: 8%
+  width: 500px
   // background-color: #615e5e57
   // box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
   &::after
@@ -53,13 +53,30 @@
     color: #fff
     font-weight: 600
     padding: 15px 5px 5px 5px
+    text-shadow: 1px 1px 2px #000
   &__text
     font-family: "Montserrat", sans-serif
-    font-size: 30px
+    font-size: 26px
     font-style: italic
     font-weight: 600
     color: #fff
     padding: 5px 5px 15px 5px
+    text-shadow: 1px 1px 2px #000
 
+.header-slide-lines
+  position: absolute
+  top: 90%
+  left: 30%
+  display: flex
+  justify-content: center
+.header-slide__line
+  display: inline-block
+  height: 5px
+  width: 150px
+  background-color: #fff
+  border-radius: 3px
+  margin: 0 30px
 
+.header-slide__line_active
+  background-color: #fac106
     
