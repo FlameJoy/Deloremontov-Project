@@ -1,0 +1,53 @@
+.top-nav 
+  position: absolute
+  top: 20px
+  width: 100%
+
+.top-nav-wrap 
+  display: flex
+  flex-direction: row
+  justify-content: space-evenly
+
+.logo-container
+  .logo
+    &__name
+      font-family: "Roboto", sans-serif
+      font-size: 24px
+      font-weight: 500
+      color: #fff
+
+.logo__name::after
+  content: ""
+  position: absolute
+  background-color: #2f93e6
+  height: 25px
+  width: 25px
+  transform: skewX(-20deg)
+  -webkit-transform: skewX(-20deg)
+  -o-transform: skewX(-20deg)
+  -moz-transform: skewX(-20deg)
+  top: 4%
+  left: 9%
+  z-index: -1
+
+.top-nav-menu
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  &__item
+    padding: 0 10px
+  &__link
+    font-family: "Roboto", sans-serif
+    font-size: 24px
+    font-weight: 500
+    text-decoration: none
+    text-transform: uppercase
+    color: #fff
+
+.top-nav-recall 
+  &__btn,
+  &__tel
+    font-family: "Roboto", sans-serif
+    font-size: 24px
+    font-weight: 500
+    color: #fff

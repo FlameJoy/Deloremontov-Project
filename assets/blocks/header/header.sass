@@ -1,4 +1,65 @@
-.header-slide-container
-  background: url(../images/dest/slider-header-4.jpeg) no-repeat center
-  width: 100%
-  height: 900px
+// -----------------
+// Slides background
+// -----------------
+.header-slider
+  .header-slide-container
+    width: 100%
+    min-height: 800px
+
+  .header-slide-container::before
+    content: ""
+    top: 0
+    left: 0
+    position: absolute
+    filter: brightness(70%)
+    width: 100%
+    height: auto
+    min-height: 800px
+    z-index: -5
+
+  .header-slide-container:nth-child(1)::before
+    background: url(../images/dest/slider-header-4.jpeg) no-repeat center
+    background-size: cover
+  .header-slide-container:nth-child(2)::before
+    background: url(../images/dest/slider-header-2.jpg) no-repeat center
+    background-size: cover
+  .header-slide-container:nth-child(3)::before
+    background: url(../images/dest/slider-header-3.jpg) no-repeat center
+    background-size: cover
+
+.header-slide-info
+  padding-top: 15%
+  padding-left: 10%
+  width: 600px
+  // background-color: #615e5e57
+  // box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+  &::after
+    content: ""
+    display: block
+    height: 5px
+    width: 100%
+    background-color: #cc0d0d
+    border-radius: 4px
+  &::before
+    content: ""
+    display: block
+    height: 5px
+    width: 100%
+    background-color: #1c4dee
+    border-radius: 4px
+  &__title
+    font-family: "Rubik", sans-serif
+    font-size: 55px
+    color: #fff
+    font-weight: 600
+    padding: 15px 5px 5px 5px
+  &__text
+    font-family: "Montserrat", sans-serif
+    font-size: 30px
+    font-style: italic
+    font-weight: 600
+    color: #fff
+    padding: 5px 5px 15px 5px
+
+
+    
