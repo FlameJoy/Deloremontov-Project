@@ -1,0 +1,48 @@
+section.calc 
+  .container 
+    .calc-container 
+      .calc-tabs 
+        button.calc-tablink(onclick="openCalc()") Квартира
+        button.calc-tablink(onclick="openCalc()") Комната
+        button.calc-tablink(onclick="openCalc()") Кухня
+        button.calc-tablink(onclick="openCalc()") Ванная
+        button.calc-tablink(onclick="openCalc()") Дом
+        button.calc-tablink(onclick="openCalc()") Офис
+
+      .calc-tabcontent 
+        form.calc(action="calculate.php" method="post") 
+
+          h4.calc__service-name Выберите вид ремонта
+          input(type="text")
+
+          h4.calc__work-area Укажите общую площадь
+          input(type="number", name="")
+
+          h4.calc__building-type Выберите тип недвижимости
+          input(type="radio", name="building-type")
+          input(type="radio", name="building-type")
+
+          h4.calc-add-services Выберите дополнительные услуги
+          p.calc-add-service
+            input(type="checkbox", name="add-services") 
+            span.calc-add-service__name Выравнивание пола
+          p.calc-add-service 
+            input(type="checkbox", name="add-services") 
+            span.calc-add-service__name Выравнивание стен
+          p.calc-add-service 
+            input(type="checkbox", name="add-services") 
+            span.calc-add-service__name Выравнивание потолка
+          p.calc-add-service
+            input(type="checkbox", name="add-services") 
+            span.calc-add-service__name Замена электрики
+          p.calc-add-service 
+            input(type="checkbox", name="add-services") 
+            span.calc-add-service__name Замена системы водоснабжения
+          p.calc-add-service 
+            input(type="checkbox", name="add-services") 
+            span.calc-add-service__name Замена системы отопления
+
+          h4.calc-estimate 
+          input.calc-estimate__adress
+
+          button(type="submit") Отправить

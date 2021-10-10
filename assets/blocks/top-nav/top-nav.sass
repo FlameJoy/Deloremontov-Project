@@ -32,7 +32,7 @@
     -webkit-transform: skewX(-15deg)
     -o-transform: skewX(-15deg)
     -moz-transform: skewX(-15deg)
-    left: 7.5%
+    left: 6.7%
     z-index: -1
   &::before
     background-color: #f80101
@@ -43,11 +43,17 @@
   flex-direction: row
   justify-content: space-between
   &__item
-    padding: 0 10px
+    margin: 0 10px
+    padding: 5px
+    border: 2px solid transparent
+    transition-delay: .1s
+    transition-duration: .4s
     &:hover
+      border: 2px solid #fac106
       .top-nav-menu__link
         color: #fac106
         text-shadow: 1px 1px 5px #000
+        
   &__link
     font-family: "Roboto", sans-serif
     font-size: 24px
@@ -63,6 +69,7 @@
   flex-direction: row 
   align-items: center
   gap: 0 10px
+  cursor: pointer
   &::before
     font-family: FontAwesome
     content: "\f87b"
@@ -74,3 +81,8 @@
     font-size: 24px
     font-weight: 500
     color: #fff
+
+.recall-form
+  display: none
+  flex-direction: column
+  gap: 20px 0

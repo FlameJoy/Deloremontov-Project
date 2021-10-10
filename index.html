@@ -28,17 +28,17 @@
           <!-- Navigation menu -->
           <!-- --------------- -->
           <div class="top-nav-menu">
-            <ul class="top-nav-menu__list"> 
-              <li class="top-nav-menu__item"> <a class="top-nav-menu__link" href="#">Главная</a></li>
+            <ul class="top-nav-menu__list cl-effect-8">
+              <li class="top-nav-menu__item"><a class="top-nav-menu__link" href="#">Главная</a></li>
             </ul>
-            <ul class="top-nav-menu__list"> 
-              <li class="top-nav-menu__item"> <a class="top-nav-menu__link" href="#">Услуги</a></li>
+            <ul class="top-nav-menu__list cl-effect-8">
+              <li class="top-nav-menu__item"><a class="top-nav-menu__link" href="#">Услуги</a></li>
             </ul>
-            <ul class="top-nav-menu__list"> 
-              <li class="top-nav-menu__item"> <a class="top-nav-menu__link" href="#">Портфолио</a></li>
+            <ul class="top-nav-menu__list cl-effect-8">
+              <li class="top-nav-menu__item"><a class="top-nav-menu__link" href="#">Портфолио</a></li>
             </ul>
-            <ul class="top-nav-menu__list"> 
-              <li class="top-nav-menu__item"> <a class="top-nav-menu__link" href="#">Контакты</a></li>
+            <ul class="top-nav-menu__list cl-effect-8">
+              <li class="top-nav-menu__item"><a class="top-nav-menu__link" href="#">Контакты</a></li>
             </ul>
           </div>
           <!-- ------------------------------ -->
@@ -50,6 +50,14 @@
               <div class="top-nav-recall__tel">8 (921) ХХХ-ХХ-ХХ</div>
             </div>
           </div>
+          <!-- ---------- -->
+          <!-- Modal form -->
+          <!-- ---------- -->
+          <form class="recall-form" action="recall-action.php" method="post">
+            <input>
+            <input type="tel">
+            <button>jnghfdbnm</button>
+          </form>
         </nav>
       </div>
     </div>
@@ -80,6 +88,79 @@
         </div>
       </div>
     </header>
+    <section class="calc"> 
+      <div class="container"> 
+        <div class="calc-container"> 
+          <div class="calc-tabs"> 
+            <button class="calc-tablink" onclick="openCalc()">Квартира</button>
+            <button class="calc-tablink" onclick="openCalc()">Комната</button>
+            <button class="calc-tablink" onclick="openCalc()">Кухня</button>
+            <button class="calc-tablink" onclick="openCalc()">Ванная</button>
+            <button class="calc-tablink" onclick="openCalc()">Дом</button>
+            <button class="calc-tablink" onclick="openCalc()">Офис</button>
+          </div>
+          <div class="calc-tabcontent"> 
+            <form class="calc" action="calculate.php" method="post"> 
+              <h4 class="calc__service-name">Выберите вид ремонта</h4>
+              <input type="text">
+              <h4 class="calc__work-area">Укажите общую площадь</h4>
+              <input type="number" name="">
+              <h4 class="calc__building-type">Выберите тип недвижимости</h4>
+              <input type="radio" name="building-type">
+              <input type="radio" name="building-type">
+              <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
+              <p class="calc-add-service">
+                <input type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание пола</span>
+              </p>
+              <p class="calc-add-service"> 
+                <input type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен</span>
+              </p>
+              <p class="calc-add-service"> 
+                <input type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание потолка</span>
+              </p>
+              <p class="calc-add-service">
+                <input type="checkbox" name="add-services"><span class="calc-add-service__name">Замена электрики</span>
+              </p>
+              <p class="calc-add-service"> 
+                <input type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы водоснабжения</span>
+              </p>
+              <p class="calc-add-service"> 
+                <input type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы отопления</span>
+              </p>
+              <h4 class="calc-estimate"> </h4>
+              <input class="calc-estimate__adress">
+              <button type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services"> 
+      <div class="container"> 
+        <div class="services-description"> 
+          <h2 class="services-description__title">наши услуги</h2>
+          <p class="services-description__text">Мы оказываем широкий спектр строительных и ремонтно-отделочных работ любой сложности. От легкого косметического до масштабного дизайнерского ремонта на самом высоком уровне. Мы подобрали для Вас команду лучших специалистов любого профиля высшей квалификации, имеющих многолетний опыт работы в сфере строительства.</p>
+          <button></button>
+        </div>
+        <div class="services-container"> 
+          <div class="service">
+            <h3 class="service-name"></h3>
+            <p class="service-description"> </p>
+            <button class="service-info__btn"> </button><span class="service-price">от 1900 руб/м<sup>2</sup></span>
+          </div>
+          <div class="service">
+            <h3 class="service-name"></h3>
+            <p class="service-description"></p>
+            <button class="service-info__btn"></button><span class="service-price">от 4500 руб/м<sup>2</sup></span>
+          </div>
+          <div class="service">
+            <h3 class="service-name"></h3>
+            <p class="service-description"></p>
+            <button class="service-info__btn"></button><span class="service-price">от 5600 руб/м<sup>2</sup></span>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- ------------------- -->
     <!-- Scripts & libraries -->
     <!-- ------------------- -->
