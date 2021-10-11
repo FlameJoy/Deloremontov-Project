@@ -1,0 +1,94 @@
+.video-presentation 
+    position: relative
+.presentation
+  object-fit: cover
+  height: auto
+  width: 100%
+.presentation-wrap
+  position: absolute
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  top: 250px
+  width: 100%
+  row-gap: 30px
+  visibility: visible
+.video-control
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: rgba(0, 0, 0, .2)
+  border-radius: 50%
+  width: 120px
+  height: 120px
+  transition: all .2s ease
+.video-btn
+  background: url(../images/dest/play-btn.png) no-repeat
+  width: 70px
+  height: 70px
+  border: none
+  cursor: pointer
+.video-control:hover
+  transform: scale(1.2)
+.video-title
+  font-family: "Raleway"
+  font-size: 30px
+  text-align: center
+  color: #fff
+.video-text
+  font-family: "Montserrat"
+  font-size: 16px
+  text-align: center
+  color: #fff
+  width: 570px
+  line-height: 1.5em
+.video-timer
+  font-family: "Montserrat"
+  font-size: 16px
+  font-weight: 600
+  text-align: center
+  color: #c7b299
+  width: 570px
+
+// Adaptivity
+@media (max-width: 1440px)
+  .video-control
+    width: 80px
+    height: 80px
+
+  button.video-btn
+    transform: scale(.5)
+
+  .video-title
+    font-size: 24px
+
+  .video-text
+    font-size: 16px
+    width: 570px
+    line-height: 1.5em
+
+  .video-timer
+    font-size: 16px
+    width: 570px
+
+@media (max-width: 1000px)
+  .presentation-wrap
+    top: 35%
+@media (max-width: 768px)
+  .presentation-wrap
+    row-gap: 10px
+
+  .video-text,
+  .video-title,
+  .video-timer
+    display: none
+    
+@media (max-width: 460px)
+  .presentation-wrap
+    top: 60px
+
+  .video-title,
+  .video-text,
+  .video-timer
+    display: none

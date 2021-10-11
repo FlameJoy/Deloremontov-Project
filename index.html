@@ -92,44 +92,275 @@
       <div class="container"> 
         <div class="calc-container"> 
           <div class="calc-tabs"> 
-            <button class="calc-tablink" onclick="openCalc()">Квартира</button>
-            <button class="calc-tablink" onclick="openCalc()">Комната</button>
-            <button class="calc-tablink" onclick="openCalc()">Кухня</button>
-            <button class="calc-tablink" onclick="openCalc()">Ванная</button>
-            <button class="calc-tablink" onclick="openCalc()">Дом</button>
-            <button class="calc-tablink" onclick="openCalc()">Офис</button>
+            <button class="calc-tablink active" id="defaultOpen" onclick="openCalc(event, 'apartment')">Квартира</button>
+            <button class="calc-tablink" onclick="openCalc(event, 'room')">Комната</button>
+            <button class="calc-tablink" onclick="openCalc(event, 'kitchen')">Кухня</button>
+            <button class="calc-tablink" onclick="openCalc(event, 'bathroom')">Ванная</button>
+            <button class="calc-tablink" onclick="openCalc(event, 'building')">Дом</button>
+            <button class="calc-tablink" onclick="openCalc(event, 'office')">Офис</button>
           </div>
-          <div class="calc-tabcontent"> 
-            <form class="calc" action="calculate.php" method="post"> 
-              <h4 class="calc__service-name">Выберите вид ремонта</h4>
-              <input type="text">
-              <h4 class="calc__work-area">Укажите общую площадь</h4>
-              <input type="number" name="">
-              <h4 class="calc__building-type">Выберите тип недвижимости</h4>
-              <input type="radio" name="building-type">
-              <input type="radio" name="building-type">
-              <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
-              <p class="calc-add-service">
-                <input type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание пола</span>
-              </p>
-              <p class="calc-add-service"> 
-                <input type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен</span>
-              </p>
-              <p class="calc-add-service"> 
-                <input type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание потолка</span>
-              </p>
-              <p class="calc-add-service">
-                <input type="checkbox" name="add-services"><span class="calc-add-service__name">Замена электрики</span>
-              </p>
-              <p class="calc-add-service"> 
-                <input type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы водоснабжения</span>
-              </p>
-              <p class="calc-add-service"> 
-                <input type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы отопления</span>
-              </p>
-              <h4 class="calc-estimate"> </h4>
-              <input class="calc-estimate__adress">
-              <button type="submit">Отправить</button>
+          <div class="calc-tabcontent" id="apartment"> 
+            <form class="calc-form" action="calculate.php" method="post"> 
+              <div class="calc-form__left">
+                <h4 class="calc__service-name">Выберите вид ремонта</h4>
+                <input type="text">
+                <h4 class="calc__work-area">Укажите общую площадь</h4>
+                <input type="number" name="" placeholder="100">
+                <h4 class="calc-building-type">Выберите тип недвижимости</h4>
+                <div class="calc-building-type-wrap"> 
+                  <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Первичная недвижимость</span>
+                </div>
+                <div class="calc-building-type-wrap">
+                  <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Вторичная недвижимость</span>
+                </div>
+              </div>
+              <div class="calc-form__center">
+                <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
+                <p class="calc-add-service">
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание пола</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание потолка</span>
+                </p>
+                <p class="calc-add-service">
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена электрики</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы водоснабжения</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы отопления</span>
+                </p>
+                <h4 class="calc-estimate">Введите адрес электронной почты</h4>
+                <input class="calc-estimate__adress" type="email">
+                <button class="calc-estimate__btn" type="submit">Отправить</button>
+              </div>
+              <div class="calc-form__right"> 
+                <div class="calc-img-wrap"><img class="calc-img" src="/assets/images/dest/apartment.jpg" alt="apartment"></div>
+              </div>
+            </form>
+          </div>
+          <div class="calc-tabcontent" id="room"> 
+            <form class="calc-form" action="calculate.php" method="post"> 
+              <div class="calc-form__left">
+                <h4 class="calc__service-name">Выберите вид ремонта</h4>
+                <input type="text">
+                <h4 class="calc__work-area">Укажите общую площадь</h4>
+                <input type="number" name="" placeholder="100">
+                <h4 class="calc-building-type">Выберите тип недвижимости</h4>
+                <div class="calc-building-type-wrap"> 
+                  <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Первичная недвижимость</span>
+                </div>
+                <div class="calc-building-type-wrap">
+                  <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Вторичная недвижимость</span>
+                </div>
+              </div>
+              <div class="calc-form__center">
+                <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
+                <p class="calc-add-service">
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание пола</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание потолка</span>
+                </p>
+                <p class="calc-add-service">
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена электрики</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы водоснабжения</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы отопления</span>
+                </p>
+                <h4 class="calc-estimate">Введите адрес электронной почты</h4>
+                <input class="calc-estimate__adress" type="email">
+                <button class="calc-estimate__btn" type="submit">Отправить</button>
+              </div>
+              <div class="calc-form__right"> 
+                <div class="calc-img-wrap"><img class="calc-img" src="/assets/images/dest/room.jpg" alt="room"></div>
+              </div>
+            </form>
+          </div>
+          <div class="calc-tabcontent" id="kitchen"> 
+            <form class="calc-form" action="calculate.php" method="post"> 
+              <div class="calc-form__left">
+                <h4 class="calc__service-name">Выберите вид ремонта</h4>
+                <input type="text">
+                <h4 class="calc__work-area">Укажите общую площадь</h4>
+                <input type="number" name="" placeholder="100">
+                <h4 class="calc-building-type">Выберите тип недвижимости</h4>
+                <div class="calc-building-type-wrap"> 
+                  <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Первичная недвижимость</span>
+                </div>
+                <div class="calc-building-type-wrap">
+                  <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Вторичная недвижимость</span>
+                </div>
+              </div>
+              <div class="calc-form__center">
+                <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
+                <p class="calc-add-service">
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание пола</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание потолка</span>
+                </p>
+                <p class="calc-add-service">
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена электрики</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы водоснабжения</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы отопления</span>
+                </p>
+                <h4 class="calc-estimate">Введите адрес электронной почты</h4>
+                <input class="calc-estimate__adress" type="email">
+                <button class="calc-estimate__btn" type="submit">Отправить</button>
+              </div>
+              <div class="calc-form__right"> 
+                <div class="calc-img-wrap"><img class="calc-img" src="/assets/images/dest/kitchen.jpg" alt="room"></div>
+              </div>
+            </form>
+          </div>
+          <div class="calc-tabcontent" id="bathroom"> 
+            <form class="calc-form" action="calculate.php" method="post"> 
+              <div class="calc-form__left">
+                <h4 class="calc__service-name">Выберите вид ремонта</h4>
+                <input type="text">
+                <h4 class="calc__work-area">Укажите общую площадь</h4>
+                <input type="number" name="" placeholder="100">
+                <h4 class="calc-building-type">Выберите тип недвижимости</h4>
+                <div class="calc-building-type-wrap"> 
+                  <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Первичная недвижимость</span>
+                </div>
+                <div class="calc-building-type-wrap">
+                  <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Вторичная недвижимость</span>
+                </div>
+              </div>
+              <div class="calc-form__center">
+                <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
+                <p class="calc-add-service">
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание пола</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание потолка</span>
+                </p>
+                <p class="calc-add-service">
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена электрики</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы водоснабжения</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы отопления</span>
+                </p>
+                <h4 class="calc-estimate">Введите адрес электронной почты</h4>
+                <input class="calc-estimate__adress" type="email">
+                <button class="calc-estimate__btn" type="submit">Отправить</button>
+              </div>
+              <div class="calc-form__right"> 
+                <div class="calc-img-wrap"><img class="calc-img" src="/assets/images/dest/bathroom.jpg" alt="room"></div>
+              </div>
+            </form>
+          </div>
+          <div class="calc-tabcontent" id="building"> 
+            <form class="calc-form" action="calculate.php" method="post"> 
+              <div class="calc-form__left">
+                <h4 class="calc__service-name">Выберите вид ремонта</h4>
+                <input type="text">
+                <h4 class="calc__work-area">Укажите общую площадь</h4>
+                <input type="number" name="" placeholder="100">
+                <h4 class="calc-building-type">Выберите тип недвижимости</h4>
+                <div class="calc-building-type-wrap"> 
+                  <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Первичная недвижимость</span>
+                </div>
+                <div class="calc-building-type-wrap">
+                  <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Вторичная недвижимость</span>
+                </div>
+              </div>
+              <div class="calc-form__center">
+                <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
+                <p class="calc-add-service">
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание пола</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание потолка</span>
+                </p>
+                <p class="calc-add-service">
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена электрики</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы водоснабжения</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы отопления</span>
+                </p>
+                <h4 class="calc-estimate">Введите адрес электронной почты</h4>
+                <input class="calc-estimate__adress" type="email">
+                <button class="calc-estimate__btn" type="submit">Отправить</button>
+              </div>
+              <div class="calc-form__right"> 
+                <div class="calc-img-wrap"><img class="calc-img" src="/assets/images/dest/building.jpg" alt="room"></div>
+              </div>
+            </form>
+          </div>
+          <div class="calc-tabcontent" id="office">
+            <form class="calc-form" action="calculate.php" method="post"> 
+              <div class="calc-form__left">
+                <h4 class="calc__service-name">Выберите вид ремонта</h4>
+                <input type="text">
+                <h4 class="calc__work-area">Укажите общую площадь</h4>
+                <input type="number" name="" placeholder="100">
+                <h4 class="calc-building-type">Выберите тип недвижимости</h4>
+                <div class="calc-building-type-wrap"> 
+                  <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Первичная недвижимость</span>
+                </div>
+                <div class="calc-building-type-wrap">
+                  <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Вторичная недвижимость</span>
+                </div>
+              </div>
+              <div class="calc-form__center">
+                <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
+                <p class="calc-add-service">
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание пола</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание потолка</span>
+                </p>
+                <p class="calc-add-service">
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена электрики</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы водоснабжения</span>
+                </p>
+                <p class="calc-add-service"> 
+                  <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы отопления</span>
+                </p>
+                <h4 class="calc-estimate">Введите адрес электронной почты</h4>
+                <input class="calc-estimate__adress" type="email">
+                <button class="calc-estimate__btn" type="submit">Отправить</button>
+              </div>
+              <div class="calc-form__right"> 
+                <div class="calc-img-wrap"><img class="calc-img" src="/assets/images/dest/office.jpg" alt="room"></div>
+              </div>
             </form>
           </div>
         </div>
@@ -140,27 +371,39 @@
         <div class="services-description"> 
           <h2 class="services-description__title">наши услуги</h2>
           <p class="services-description__text">Мы оказываем широкий спектр строительных и ремонтно-отделочных работ любой сложности. От легкого косметического до масштабного дизайнерского ремонта на самом высоком уровне. Мы подобрали для Вас команду лучших специалистов любого профиля высшей квалификации, имеющих многолетний опыт работы в сфере строительства.</p>
-          <button></button>
+          <button class="services-description__calc-link">Рассчитать</button>
         </div>
         <div class="services-container"> 
           <div class="service">
-            <h3 class="service-name"></h3>
-            <p class="service-description"> </p>
-            <button class="service-info__btn"> </button><span class="service-price">от 1900 руб/м<sup>2</sup></span>
+            <h3 class="service-name">Косметический ремонт</h3>
+            <p class="service-description">Наименее затратный способ в сжатые сроки обновить интерьер. Улучшает внешний вид помещения.</p>
+            <button class="service-info__btn">Подробнее</button><span class="service-price">от 1900 руб/м<sup>2</sup></span>
           </div>
           <div class="service">
-            <h3 class="service-name"></h3>
-            <p class="service-description"></p>
-            <button class="service-info__btn"></button><span class="service-price">от 4500 руб/м<sup>2</sup></span>
+            <h3 class="service-name">Капитальный ремонт</h3>
+            <p class="service-description">Применяется при желании кардинально обновить интерьер помещений и заменить коммуникации.</p>
+            <button class="service-info__btn">Подробнее</button><span class="service-price">от 4500 руб/м<sup>2</sup></span>
           </div>
           <div class="service">
-            <h3 class="service-name"></h3>
-            <p class="service-description"></p>
-            <button class="service-info__btn"></button><span class="service-price">от 5600 руб/м<sup>2</sup></span>
+            <h3 class="service-name">Дизайнерский ремонт</h3>
+            <p class="service-description">Создание авторского дизайн-проекта с применением отделочных материалов премиум-класса.</p>
+            <button class="service-info__btn">Подробнее</button><span class="service-price">от 5600 руб/м<sup>2</sup></span>
           </div>
         </div>
       </div>
     </section>
+    <div class="video-presentation"> 
+      <video class="presentation" id="video" poster="assets/images/dest/videoposter.jpg">
+        <source src="assets/video/video.mp4" type="video/mp4">
+      </video>
+      <div class="presentation-wrap">
+        <div class="video-control">
+          <button class="video-btn" id="play" type="button"></button>
+        </div>
+        <h4 class="video-title">Waxom Video Presentation</h4>
+        <p class="video-text">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</p><span class="video-timer">03:26</span>
+      </div>
+    </div>
     <!-- ------------------- -->
     <!-- Scripts & libraries -->
     <!-- ------------------- -->

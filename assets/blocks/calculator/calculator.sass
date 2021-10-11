@@ -1,0 +1,87 @@
+// Style the tab
+.calc-tabs
+  overflow: hidden
+  background-color: #f1f1f1
+
+
+// Style the buttons that are used to open the tab content
+.calc-tablink 
+  background-color: grey
+  font-family: "Montserrat", sans-serif
+  font-size: 22px
+  font-weight: 600
+  border: none
+  outline: none
+  cursor: pointer
+  padding: 14px 16px
+  transition: 0.3s
+  float: left
+  
+// Change background color of buttons on hover
+.calc-tablink:hover
+  background-color: #fac106
+
+
+// Create an active/current tablink class
+.calc-tablink.active 
+  background-color: #fac106
+
+
+// Style the tab content
+.calc-tabcontent
+  display: none
+  padding: 6px 12px
+  border: 1px solid #ccc
+  border-top: none
+  background-color: #fac106
+
+
+.calc-form
+  display: flex
+  flex-direction: row
+  gap: 0 50px
+  justify-content: center
+
+.calc__service-name,
+.calc__work-area,
+.calc-building-type,
+.calc-add-services,
+.calc-estimate
+    font-family: "Roboto", sans-serif
+    font-size: 16px
+    font-weight: 600
+    padding: 15px 0
+
+.calc-building-type__radio-btn
+  width: 20px
+  height: 20px
+
+.calc-add-service
+  display: flex
+  align-items: center
+  padding: 10px 0
+
+.calc-add-service__checkbox
+  height: 20px
+  width: 20px
+
+.calc-add-service__name
+    font-family: "Rubik", sans-serif
+    font-size: 16px
+
+.calc-img
+  width: 600px
+  height: 400px
+
+.calc-building-type-wrap
+  display: flex
+  align-items: center
+  padding: 10px 0
+
+.calc-estimate__btn
+  display: block
+  font-family: "Roboto", sans-serif
+  font-size: 16px
+  font-weight: 500
+  padding: 10px 15px
+  margin-top: 15px
