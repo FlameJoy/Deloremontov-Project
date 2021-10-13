@@ -18,14 +18,22 @@
       // ------------------------------ 
       // Recall button & telefon number 
       // ------------------------------ 
-      .top-nav-recall 
+      .top-nav-recall(onclick="document.getElementById('id01').style.display='block'")
         .top-nav-recall-wrap
           .top-nav-recall__btn Заказать звонок
           .top-nav-recall__tel 8 (921) ХХХ-ХХ-ХХ
       // ---------- 
       // Modal form 
       // ---------- 
-      form.recall-form(action="recall-action.php" method="post")
-        input
-        input(type='tel')
-        button jnghfdbnm
+      .recall#id01.modal
+        form.recall-form(action="recall-action.php" method="post")
+          span(onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal") &times;
+          label(for="name") Ваше имя
+          input(type="text" id="name" name="name")
+          label(for="phone") Введите номер телефона
+          input(type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}")
+          label(for="time-date")
+          input(type="time" id="time" name="time-date")
+          input(type="date" id="date" name="time-date")
+          button Заказать звонок

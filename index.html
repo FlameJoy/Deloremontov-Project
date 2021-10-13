@@ -44,7 +44,7 @@
           <!-- ------------------------------ -->
           <!-- Recall button & telefon number -->
           <!-- ------------------------------ -->
-          <div class="top-nav-recall"> 
+          <div class="top-nav-recall" onclick="document.getElementById('id01').style.display='block'">
             <div class="top-nav-recall-wrap">
               <div class="top-nav-recall__btn">Заказать звонок</div>
               <div class="top-nav-recall__tel">8 (921) ХХХ-ХХ-ХХ</div>
@@ -53,11 +53,18 @@
           <!-- ---------- -->
           <!-- Modal form -->
           <!-- ---------- -->
-          <form class="recall-form" action="recall-action.php" method="post">
-            <input>
-            <input type="tel">
-            <button>jnghfdbnm</button>
-          </form>
+          <div class="recall modal" id="id01">
+            <form class="recall-form" action="recall-action.php" method="post"><span class="close" onclick="document.getElementById('id01').style.display='none'" title="Close Modal">&times;</span>
+              <label for="name">Ваше имя</label>
+              <input type="text" id="name" name="name">
+              <label for="phone">Введите номер телефона</label>
+              <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+              <label for="time-date"></label>
+              <input type="time" id="time" name="time-date">
+              <input type="date" id="date" name="time-date">
+              <button>Заказать звонок</button>
+            </form>
+          </div>
         </nav>
       </div>
     </div>
@@ -366,12 +373,15 @@
         </div>
       </div>
     </section>
+    <section class="portfolio"> 
+      <div class="container"></div>
+    </section>
     <section class="services"> 
       <div class="container"> 
-        <div class="services-description"> 
-          <h2 class="services-description__title">наши услуги</h2>
-          <p class="services-description__text">Мы оказываем широкий спектр строительных и ремонтно-отделочных работ любой сложности. От легкого косметического до масштабного дизайнерского ремонта на самом высоком уровне. Мы подобрали для Вас команду лучших специалистов любого профиля высшей квалификации, имеющих многолетний опыт работы в сфере строительства.</p>
-          <button class="services-description__calc-link">Рассчитать</button>
+        <div class="services-header"> 
+          <h2 class="services-header__title">наши услуги</h2>
+          <p class="services-header__text">Мы оказываем широкий спектр строительных и ремонтно-отделочных работ любой сложности. От легкого косметического до масштабного дизайнерского ремонта на самом высоком уровне. Мы подобрали для Вас команду лучших специалистов любого профиля высшей квалификации, имеющих многолетний опыт работы в сфере строительства.</p>
+          <button class="services-header__calc-link">Рассчитать</button>
         </div>
         <div class="services-container"> 
           <div class="service">
