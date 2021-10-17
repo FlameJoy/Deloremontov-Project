@@ -2,22 +2,22 @@ section.calc
   .container 
     .calc-container 
       .calc-tabs 
-        button#defaultOpen.calc-tablink.active(onclick="openCalc(event, 'apartment')") Квартира
+        button#defaultOpen.calc-tablink.active.firstTab(onclick="openCalc(event, 'apartment')") Квартира
         button.calc-tablink(onclick="openCalc(event, 'room')") Комната
         button.calc-tablink(onclick="openCalc(event, 'kitchen')") Кухня
         button.calc-tablink(onclick="openCalc(event, 'bathroom')") Ванная
         button.calc-tablink(onclick="openCalc(event, 'building')") Дом
-        button.calc-tablink(onclick="openCalc(event, 'office')") Офис
+        button.calc-tablink.lastTab(onclick="openCalc(event, 'office')") Офис
 
       #apartment.calc-tabcontent 
         form.calc-form(action="calculate.php" method="post") 
 
           .calc-form__left
             h4.calc__service-name Выберите вид ремонта
-            input(type="text")
+            input.calc__input(type="text")
 
             h4.calc__work-area Укажите общую площадь
-            input(type="number", name="" placeholder="100")
+            input.calc__input(type="number", name="" placeholder="100")
 
             h4.calc-building-type Выберите тип недвижимости
             .calc-building-type-wrap 
@@ -48,9 +48,9 @@ section.calc
               span.calc-add-service__name Замена системы отопления
 
             h4.calc-estimate Введите адрес электронной почты
-            input.calc-estimate__adress(type="email")
+            input.calc__input.calc-estimate__adress(type="email")
 
-            button.calc-estimate__btn(type="submit") Отправить
+            button.calc-estimate__btn(type="submit") Рассчитать
 
           .calc-form__right 
             .calc-img-wrap

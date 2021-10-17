@@ -54,15 +54,19 @@
           <!-- Modal form -->
           <!-- ---------- -->
           <div class="recall modal" id="id01">
-            <form class="recall-form" action="recall-action.php" method="post"><span class="close" onclick="document.getElementById('id01').style.display='none'" title="Close Modal">&times;</span>
-              <label for="name">Ваше имя</label>
-              <input type="text" id="name" name="name">
-              <label for="phone">Введите номер телефона</label>
-              <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
-              <label for="time-date"></label>
-              <input type="time" id="time" name="time-date">
-              <input type="date" id="date" name="time-date">
-              <button>Заказать звонок</button>
+            <form class="recall-form" action="recall-action.php" method="post"><span class="recall-form__close-btn close" onclick="document.getElementById('id01').style.display='none'" title="Close Modal">&times;</span>
+              <div class="recall-form-container">
+                <label class="recall-form__input-name" for="name">Ваше имя</label>
+                <input class="recall-form__input" type="text" id="name" name="name">
+                <label class="recall-form__input-name" for="phone">Введите номер телефона</label>
+                <input class="recall-form__input" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value="+7 | ">
+                <label class="recall-form__input-name" for="time-date">Укажите дату и время звонка</label>
+                <div class="recall-form__date-time-container">
+                  <input class="recall-form__input-time" type="time" id="time" name="time-date">
+                  <input class="recall-form__input-date" type="date" id="date" name="time-date">
+                </div>
+                <button class="recall-form__btn">Заказать звонок</button>
+              </div>
             </form>
           </div>
         </nav>
@@ -99,20 +103,20 @@
       <div class="container"> 
         <div class="calc-container"> 
           <div class="calc-tabs"> 
-            <button class="calc-tablink active" id="defaultOpen" onclick="openCalc(event, 'apartment')">Квартира</button>
+            <button class="calc-tablink active firstTab" id="defaultOpen" onclick="openCalc(event, 'apartment')">Квартира</button>
             <button class="calc-tablink" onclick="openCalc(event, 'room')">Комната</button>
             <button class="calc-tablink" onclick="openCalc(event, 'kitchen')">Кухня</button>
             <button class="calc-tablink" onclick="openCalc(event, 'bathroom')">Ванная</button>
             <button class="calc-tablink" onclick="openCalc(event, 'building')">Дом</button>
-            <button class="calc-tablink" onclick="openCalc(event, 'office')">Офис</button>
+            <button class="calc-tablink lastTab" onclick="openCalc(event, 'office')">Офис</button>
           </div>
           <div class="calc-tabcontent" id="apartment"> 
             <form class="calc-form" action="calculate.php" method="post"> 
               <div class="calc-form__left">
                 <h4 class="calc__service-name">Выберите вид ремонта</h4>
-                <input type="text">
+                <input class="calc__input" type="text">
                 <h4 class="calc__work-area">Укажите общую площадь</h4>
-                <input type="number" name="" placeholder="100">
+                <input class="calc__input" type="number" name="" placeholder="100">
                 <h4 class="calc-building-type">Выберите тип недвижимости</h4>
                 <div class="calc-building-type-wrap"> 
                   <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Первичная недвижимость</span>
@@ -142,8 +146,8 @@
                   <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы отопления</span>
                 </p>
                 <h4 class="calc-estimate">Введите адрес электронной почты</h4>
-                <input class="calc-estimate__adress" type="email">
-                <button class="calc-estimate__btn" type="submit">Отправить</button>
+                <input class="calc__input calc-estimate__adress" type="email">
+                <button class="calc-estimate__btn" type="submit">Рассчитать</button>
               </div>
               <div class="calc-form__right"> 
                 <div class="calc-img-wrap"><img class="calc-img" src="/assets/images/dest/apartment.jpg" alt="apartment"></div>
@@ -374,30 +378,51 @@
       </div>
     </section>
     <section class="portfolio"> 
-      <div class="container"></div>
+      <div class="container">
+        <div class="portfolio-container"> 
+          <div class="renovation"><a class="renovation__link" href="#">
+              <div class="renovation__type">Ремонт коттеджа</div>
+              <div class="renovation__img-slider"></div>
+              <div class="renovation-silder-sticks-list">
+                <li class="renovation__silder-stick first"></li>
+                <li class="renovation__silder-stick second"></li>
+                <li class="renovation__silder-stick third"></li>
+                <li class="renovation__silder-stick fouth"></li>
+                <li class="renovation__silder-stick fifth"></li>
+              </div>
+              <div class="renovation-info">
+                <div class="renovation-info__name">Таунхаус 220м2</div>
+                <div class="renovation-info__location">Санкт-Петербург</div>
+              </div></a></div>
+        </div>
+      </div>
     </section>
     <section class="services"> 
       <div class="container"> 
         <div class="services-header"> 
           <h2 class="services-header__title">наши услуги</h2>
           <p class="services-header__text">Мы оказываем широкий спектр строительных и ремонтно-отделочных работ любой сложности. От легкого косметического до масштабного дизайнерского ремонта на самом высоком уровне. Мы подобрали для Вас команду лучших специалистов любого профиля высшей квалификации, имеющих многолетний опыт работы в сфере строительства.</p>
-          <button class="services-header__calc-link">Рассчитать</button>
+          <button class="services-header__calc-link button-7"> <span>Рассчитать</span></button>
         </div>
         <div class="services-container"> 
           <div class="service">
             <h3 class="service-name">Косметический ремонт</h3>
             <p class="service-description">Наименее затратный способ в сжатые сроки обновить интерьер. Улучшает внешний вид помещения.</p>
-            <button class="service-info__btn">Подробнее</button><span class="service-price">от 1900 руб/м<sup>2</sup></span>
+            <button class="service-info__btn button-5"> <span class="link-content">Подробнее</span></button><span class="service-price">от 1900 руб/м<sup>2</sup></span>
           </div>
           <div class="service">
-            <h3 class="service-name">Капитальный ремонт</h3>
+            <h3 class="service-name">Капитальный 
+              <p>ремонт</p>
+            </h3>
             <p class="service-description">Применяется при желании кардинально обновить интерьер помещений и заменить коммуникации.</p>
-            <button class="service-info__btn">Подробнее</button><span class="service-price">от 4500 руб/м<sup>2</sup></span>
+            <button class="service-info__btn button-5"> <span class="link-content">Подробнее</span></button><span class="service-price">от 4500 руб/м<sup>2</sup></span>
           </div>
           <div class="service">
-            <h3 class="service-name">Дизайнерский ремонт</h3>
+            <h3 class="service-name">Дизайнерский 
+              <p>ремонт</p>
+            </h3>
             <p class="service-description">Создание авторского дизайн-проекта с применением отделочных материалов премиум-класса.</p>
-            <button class="service-info__btn">Подробнее</button><span class="service-price">от 5600 руб/м<sup>2</sup></span>
+            <button class="service-info__btn button-5"> <span class="link-content">Подробнее</span></button><span class="service-price">от 5600 руб/м<sup>2</sup></span>
           </div>
         </div>
       </div>
@@ -410,10 +435,24 @@
         <div class="video-control">
           <button class="video-btn" id="play" type="button"></button>
         </div>
-        <h4 class="video-title">Waxom Video Presentation</h4>
-        <p class="video-text">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</p><span class="video-timer">03:26</span>
       </div>
     </div>
+    <section class="work-steps"> 
+      <div class="container"> 
+        <div class="work-steps__title">5 простых шагов навстречу Вашей мечте</div>
+        <div class="work-steps-line">
+          <div class="work-step">1</div>
+          <div class="work-step">2</div>
+          <div class="work-step">3 </div>
+          <div class="work-step">4</div>
+          <div class="work-step">5</div>
+        </div>
+        <div class="work-steps-measure-call">
+          <button class="work-steps-measure-call__btn">Вызвать замерщика</button>
+          <p class="work-steps-measure-call">Мы настроены на дальнейшую многолетнюю и плодотворную работу, а потому дорожим своей репутацией и строго контролируем качество выполнения заказа на всех его этапах!</p>
+        </div>
+      </div>
+    </section>
     <!-- ------------------- -->
     <!-- Scripts & libraries -->
     <!-- ------------------- -->
