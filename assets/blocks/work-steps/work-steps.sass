@@ -1,9 +1,16 @@
+.work-steps__title
+  font-family: "Montserrat", sans-serif
+  font-size: 38px
+  font-weight: 600
+  text-transform: uppercase
+  padding: 60px 0
 .work-steps-line
   display: flex
   flex-direction: row
-  gap: 0 150px
+  position: relative
   margin: 40px 0
-  &::after
+  margin: 0 auto
+  &::before
     content: ''
     position: absolute
     display: block
@@ -11,6 +18,23 @@
     width: 100%
     background-color: #000
     vertical-align: bottom
+    top: 55px
+
+.icon
+  &::after
+  &::before
+    content: '0'
+    width: 20px
+    height: 20px
 
 .work-step
   font-size: 40px
+  top: 0
+  &__name
+    font-size: 20px
+    font-weight: 600
+    text-transform: uppercase
+    margin-top: 25px
+  &__text
+    font-size: 18px
+    margin-top: 10px
