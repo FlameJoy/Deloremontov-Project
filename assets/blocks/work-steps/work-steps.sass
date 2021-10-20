@@ -1,34 +1,108 @@
+.work-steps 
+  background: url(../images/dest/2.jpg) no-repeat center
+  // background: linear-gradient(to bottom left, #964707, #ec6c03 50%, #ec6c03 60%, #ec6c03 60%, #ff9e4f)
+  background-size: 100%
 .work-steps__title
   font-family: "Montserrat", sans-serif
-  font-size: 38px
+  font-size: 42px
   font-weight: 600
   text-transform: uppercase
+  text-shadow: 1px 1px 2px #000
   padding: 60px 0
+  color: #fcc8b2
+
+.work-steps__title_marked
+  color: #3a525e
+
 .work-steps-line
   display: flex
   flex-direction: row
   position: relative
   margin: 40px 0
   margin: 0 auto
+  counter-reset: steps-list 0
   &::before
     content: ''
     position: absolute
     display: block
     height: 4px
     width: 100%
-    background-color: #000
+    // background-color: #ddd6c4
+    background: linear-gradient(to right, #2d4d58, #d7ac99)
     vertical-align: bottom
-    top: 55px
+    top: 90px
 
 .work-step
   font-size: 40px
   top: 0
   &__name
+    font-family: "Roboto", sans-serif
     font-size: 20px
     font-weight: 600
     text-transform: uppercase
-    margin-top: 25px
+    margin-top: 35px
+    color: #ddd6c4
+    text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000
   &__text
+    font-family: "Rubik", sans-serif
     font-size: 18px
     margin-top: 10px
     padding-right: 20px
+    color: #ddd6c4
+    text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000
+
+.icon-wrap
+  display: flex
+  flex-direction: column
+  &::after
+    display: inline-block
+    counter-increment: steps-list
+    content: 'Шаг ' counter(steps-list)
+    font-family: "Roboto", sans-serif
+    font-size: 22px
+    font-weight: 600
+    margin-top: 10px
+    color: #e6a998
+    text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000
+
+.icon
+  // color: #504b4b
+  // text-shadow: 2px 2px #a8a7a6, -2px -2px #a8a7a6
+  color: #fcc8b2
+  text-shadow: 2px 2px #474747, -2px -2px #474747
+  font-size: 50px
+
+.work-steps-measure-call
+  font-family: "Rubik", sans-serif
+  font-size: 22px
+  color: #ddd6c4
+  text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000
+  &__btn
+    font-family: "Montserrat", sans-serif
+    font-size: 22px
+    font-weight: 600
+    background-color: #d6ab98
+    padding: 5px 10px
+    border: 1px solid #474747
+    text-transform: uppercase
+    color: #293a42
+    margin: 30px 0
+
+.ttt 
+  background-color: #4c6d7c
+  padding: 20px 30px
+  border-radius: 30%
+  margin-bottom: 30px
+
+.button-7.ttt:hover
+  border-radius: 8px
+
+.button-7.ttt:hover span 
+    max-width: 250px
+    opacity: 1
+    margin-right: 6px
+
+.button-7.ttt:after 
+    content: '\f2a0'
+    font-family: FontAwesome
+    font-size: 30px
