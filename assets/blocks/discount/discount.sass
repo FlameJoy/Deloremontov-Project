@@ -2,12 +2,17 @@
   display: flex
   justify-content: center
   align-items: center
-  background: linear-gradient(to bottom, #eba016, #c95a00)
+  // background: linear-gradient(to bottom, #e99f17 10%, #d86e17, #e99f17 90%)
+  background: repeating-linear-gradient(45deg, #e99f17, #d86e17 10px, #e99f17 10px, #e99f17 20px)
   &-container
+    position: relative
     display: flex
     flex-direction: row
     justify-content: space-between
+    margin: 60px 0
     padding: 50px 0
+    background-color: #d64f00
+    border-radius: 8px
   &__text-section 
     display: flex
     flex-direction: column
@@ -16,13 +21,16 @@
   &__title
     font-family: "Roboto"
     font-size: 28px
-    color: #c7b299
+    font-weight: 600
+    color: #ffee00
   &__title span
     color: #fff
+    text-transform: uppercase
   &__text
     font-family: "Montserrat"
-    font-size: 18px
-    color: #5b524f
+    font-size: 16px
+    font-weight: 600
+    color: #fff
     padding-top: 15px
 
 .btn-discount
@@ -50,6 +58,86 @@
     text-decoration: none
     text-align: center
 
+.discount-wrap 
+  width: 200px
+  height: 150px
+  padding: 15px
+  margin: 50px auto 0
+  background: #ffffff
+  border-radius: 3px
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07)
+
+.discount-inner 
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100%
+  background: #d64f00
+
+.discount-block 
+  border: 8px solid #f9f7f6
+  border-radius: 3px
+  display: inline-block
+
+.discount-block h3 
+  line-height: 1
+  padding: 10px 15px
+  margin: 5px
+  background: #2d3549
+  font-size: 40px
+  font-weight: 600
+  color: #f9f7f6
+  font-family: 'Days One', sans-serif
+  transform: rotate(-2deg)
+
+.discount-block span 
+  display: block
+  text-transform: uppercase
+  font-size: 20px
+  letter-spacing: 2px
+
+.ribbon-wrap
+  width: 100%
+  height: 250px
+  position: absolute
+  top: -8px
+  left: 8px
+  overflow: hidden
+
+.ribbon-wrap:before, .ribbon-wrap:after 
+  content: ""
+  position: absolute
+
+.ribbon-wrap:before
+  width: 40px
+  height: 8px
+  right: 165px
+  background: #4D6530
+  border-radius: 8px 8px 0px 0px
+
+.ribbon-wrap:after
+  width: 8px
+  height: 40px
+  right: 0px
+  top: 165px
+  background: #4D6530
+  border-radius: 0px 8px 8px 0px
+
+.ribbon6
+  width: 300px
+  height: 40px
+  line-height: 40px
+  position: absolute
+  top: 50px
+  right: -60px
+  z-index: 2
+  overflow: hidden
+  -webkit-transform: rotate(45deg)
+  transform: rotate(45deg)
+  border: 1px dashed
+  box-shadow:0 0 0 3px #57DD43,  0px 21px 5px -18px rgba(0,0,0,0.6)
+  background: #57DD43
+  text-align: center
 
 // Adaptivity
 
@@ -81,3 +169,4 @@
 
   .btn-discount
     padding: 5px 20px
+
