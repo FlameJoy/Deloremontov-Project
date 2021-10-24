@@ -11,7 +11,7 @@
   min-height: 800px
   background: url(../images/dest/services.jpg) no-repeat center
   background-size: cover
-  filter: brightness(40%)
+  filter: opacity(60%)
   z-index: -5
 
 .services-header 
@@ -19,13 +19,12 @@
   justify-items: center
   &__title
     font-family: "Roboto", sans-serif
-    font-size: 54px
+    font-size: 48px
     font-weight: 600
-    color: #fff
+    color: #fac106
     text-align: center
     padding: 20px 0
     text-transform: uppercase
-    margin-top: 60px
   &__text
     font-family: "Rubik", sans-serif
     font-size: 22px
@@ -33,7 +32,7 @@
     line-height: 1.2em
     color: #fff
     text-align: center
-    width: 50%
+    width: 70%
   &__calc-link
     font-weight: 500
     color: #fff
@@ -46,6 +45,15 @@
     transition: .5s ease
     &:hover
       background-color: #ff9900
+
+.services-header-wrap
+  display: grid
+  justify-items: center
+  width: 1200px
+  border-radius: 10px
+  background-color: rgba(0, 0, 0, .6)
+  margin-top: 40px
+  padding: 20px 0
 
 .button-7
     text-decoration: none
@@ -97,7 +105,7 @@
   max-width: 300px
   padding: 30px
   border-radius: 10px
-  background-color: rgba(0, 0, 0, .5)
+  background-color: rgba(0, 0, 0, .6)
 
 .service-name
   min-height: 50px
