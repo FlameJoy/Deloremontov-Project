@@ -1,5 +1,5 @@
 .portfolio 
-  height: 900px
+  height: 1600px
 
 .renovation-header
   &__title
@@ -20,18 +20,27 @@
   display: grid
   grid-template-columns: repeat(2, 600px)
   justify-content: space-between
-  gap: 30px 0
+  gap: 50px 0
   margin-top: 50px
 
 .renovation__img 
   position: absolute
-  background: url(../images/dest/main_001.jpg) no-repeat center
   width: 600px
   height: 500px
   border-radius: 8px
   z-index: -5
 
+#townhouse
+  background: url(../images/dest/main_001.jpg) no-repeat center
+#country-house 
+  background: url(../images/dest/main_011.jpg) no-repeat center
+#flat-1
+  background: url(../images/dest/main_021.jpg) no-repeat center
+#flat-2
+  background: url(../images/dest/main_031.jpg) no-repeat center
+
 .renovation
+  text-decoration: none
   &__list
     position: relative
     display: flex
@@ -50,3 +59,20 @@
       background-color: #ec4b00
       top: 95%
       margin: 0 auto
+
+.renovation-description 
+  &__name,
+  &__location
+    font-family: "Montserrat", sans-serif
+    font-size: 22px
+    font-weight: 600
+    text-align: center
+    padding: 5px 0
+    color: #2b2b2b
+  &__location
+    font-size: 16px
+    &::after
+      content: '\f041'
+      font-family: FontAwesome
+      font-size: 16px
+      margin-left: 5px
