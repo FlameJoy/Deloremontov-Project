@@ -92,3 +92,18 @@ window.onclick = function(event) {
   }
 }
 
+function townhouseChangeImg(num) {
+  if(num == 1) {
+    document.getElementById('townhouse').style.background = 'url(assets/images/dest/main_002.jpg) no-repeat center';
+  } if(num == 2) {
+    document.getElementById('townhouse').style.background = 'url(assets/images/dest/main_003.jpg) no-repeat center';
+  } if(num == 3) {
+    document.getElementById('townhouse').style.background = 'url(assets/images/dest/main_004.jpg) no-repeat center';
+  } if(num == 4) {
+    document.getElementById('townhouse').style.background = 'url(assets/images/dest/main_005.jpg) no-repeat center';
+  }
+  
+}
+function townhouseRechangeImg() {
+  document.getElementById('townhouse').style.background = 'url(assets/images/dest/main_001.jpg) no-repeat center';
+}

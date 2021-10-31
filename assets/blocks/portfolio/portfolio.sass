@@ -1,42 +1,52 @@
-.portfolio
-  // background: repeating-linear-gradient(45deg, #e99f17, #d86e17 10px, #e99f17 10px, #e99f17 20px)
+.portfolio 
+  height: 900px
+
+.renovation-header
+  &__title
+    font-family: "Montserrat", sans-serif
+    font-size: 42px
+    font-weight: 600
+    text-transform: uppercase
+    padding: 60px 0 20px
+    color: #2b2b2b
+    line-height: 1.4em
+  &__info
+    font-family: "Montserrat", sans-serif
+    font-size: 22px
+    line-height: 1.5em
+    padding: 20px 0
+
+.renovation-container
+  display: grid
+  grid-template-columns: repeat(2, 600px)
+  justify-content: space-between
+  gap: 30px 0
+  margin-top: 50px
+
+.renovation__img 
+  position: absolute
+  background: url(../images/dest/main_001.jpg) no-repeat center
+  width: 600px
+  height: 500px
+  border-radius: 8px
+  z-index: -5
 
 .renovation
-  display: inline-block
-  width: 600px
-  height: 600px
-  &__link
-    text-decoration: none
-  &__type
-    position: absolute
-    background-color: #fff
-    padding: 5px 10px 
-  &__img-slider
-    background: url(/assets/images/dest/main_001.jpg) no-repeat center
+  &__list
+    position: relative
+    display: flex
+    flex-direction: row
     width: 600px
-    height: 400px
-
-.renovation-silder-sticks-list
-  position: absolute
-  margin-top: -400px
-  display: flex
-  flex-direction: row
-  list-style: none
-.renovation__silder-stick
-  background-color: transparent
-  width: 120px
-  height: 400px
-  display: flex
-  align-items: end
-  justify-content: center
-  &::after
-    content: ''
-    width: 90%
-    height: 4px
-    background-color: red
-    margin-bottom: 15px
-
-.renovation__img-slider .renovation__silder-stick.first:hover
-  background: url(assets/dest/main_002.jpg) no-repeat center
-
-    
+    height: 500px
+  &__item
+    width: 25%
+    height: 100%
+    &::after
+      display: block
+      position: relative
+      content: ''
+      width: 80%
+      height: 3px
+      background-color: #ec4b00
+      top: 95%
+      margin: 0 auto

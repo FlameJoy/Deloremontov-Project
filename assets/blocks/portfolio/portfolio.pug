@@ -1,18 +1,38 @@
 section.portfolio 
   .container
     .portfolio-container 
-      .renovation
-        a.renovation__link(href="#")
-          .renovation__type Ремонт коттеджа
-          .renovation__img-slider
-          .renovation-silder-sticks-list
-              li.renovation__silder-stick.first
-              li.renovation__silder-stick.second
-              li.renovation__silder-stick.third
-              li.renovation__silder-stick.fouth
-              li.renovation__silder-stick.fifth
-          .renovation-info
-            .renovation-info__name Таунхаус 220м2
-            .renovation-info__location Санкт-Петербург
-
--
+      .renovation-header 
+        h2.renovation-header__title Примеры работ по ремонту квартир со 
+          span.title_marked стоимостью работ
+        p.renovation-header__info В этом разделе можно посмотреть реальные фото дизайна и ремонта и квартир, выполненных силами компании «Deloremontov». У каждого объекта есть описание этапов работ, площади, указана стоимость. Здесь есть фото ремонта квартир в современном, классическом стиле, хай-тек, лофт, модерн.
+      .renovation-container
+        a.renovation(href="#")
+          #townhouse.renovation__img 
+          ul.renovation__list
+            li.renovation__item(onmouseover="townhouseChangeImg(1)" onmouseout="townhouseRechangeImg()")
+            li.renovation__item(onmouseover="townhouseChangeImg(2)" onmouseout="townhouseRechangeImg()")
+            li.renovation__item(onmouseover="townhouseChangeImg(3)" onmouseout="townhouseRechangeImg()")
+            li.renovation__item(onmouseover="townhouseChangeImg(4)" onmouseout="townhouseRechangeImg()")
+        a.renovation(href="#")
+          #project-1.renovation__img 
+          ul.renovation__list
+            li.renovation__item(onmouseover="townhouseChangeImg(1)" onmouseout="townhouseRechangeImg()")
+            li.renovation__item(onmouseover="townhouseChangeImg(2)" onmouseout="townhouseRechangeImg()")
+            li.renovation__item(onmouseover="townhouseChangeImg(3)" onmouseout="townhouseRechangeImg()")
+            li.renovation__item(onmouseover="townhouseChangeImg(4)" onmouseout="townhouseRechangeImg()")
+        a.renovation(href="#") 
+          #project-2.renovation__img 
+          ul.renovation__list
+            li.renovation__item(onmouseover="townhouseChangeImg(1)" onmouseout="townhouseRechangeImg()")
+            li.renovation__item(onmouseover="townhouseChangeImg(2)" onmouseout="townhouseRechangeImg()")
+            li.renovation__item(onmouseover="townhouseChangeImg(3)" onmouseout="townhouseRechangeImg()")
+            li.renovation__item(onmouseover="townhouseChangeImg(4)" onmouseout="townhouseRechangeImg()")
+        a.renovation(href="#") 
+          #project-3.renovation__img 
+          ul.renovation__list
+            li.renovation__item(onmouseover="townhouseChangeImg(1)" onmouseout="townhouseRechangeImg()")
+            li.renovation__item(onmouseover="townhouseChangeImg(2)" onmouseout="townhouseRechangeImg()")
+            li.renovation__item(onmouseover="townhouseChangeImg(3)" onmouseout="townhouseRechangeImg()")
+            li.renovation__item(onmouseover="townhouseChangeImg(4)" onmouseout="townhouseRechangeImg()")
+        
+          
