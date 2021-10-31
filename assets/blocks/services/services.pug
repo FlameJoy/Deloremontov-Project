@@ -9,24 +9,126 @@ section.services
       .service
         h3.service-name Косметический ремонт
         p.service-description Наименее затратный способ в сжатые сроки обновить интерьер. Улучшает внешний вид помещения.
-        button.service-info__btn.button-5 
+        button.service-info__btn.button-5(onclick="document.getElementById('id02').style.display='block'")
           span.link-content Подробнее
         span.service-price от 1900 руб/м
-          sup 2
+          span.sup 2
       .service
         h3.service-name Капитальный 
           p ремонт
         p.service-description Применяется при желании кардинально обновить интерьер помещений и заменить коммуникации.
-        button.service-info__btn.button-5 
+        button.service-info__btn.button-5(onclick="document.getElementById('id03').style.display='block'")
           span.link-content Подробнее
         span.service-price от 4500 руб/м
-          sup 2
+          span.sup 2
       .service
         h3.service-name Дизайнерский 
           p ремонт
         p.service-description Создание авторского дизайн-проекта с применением отделочных материалов премиум-класса.
-        button.service-info__btn.button-5 
+        button.service-info__btn.button-5(onclick="document.getElementById('id04').style.display='block'")
           span.link-content Подробнее
         span.service-price от 5600 руб/м
-          sup 2
+          span.sup 2
+
+    #id02.service-info-redecorating.modal
+      form.service-info-form(action="redecorating-action.php" method="post")
+        .service-info-form-left 
+          p.service-info-form-left__title Косметический ремонт
+          p.service-info-form-left__price от 1900 руб/м
+            span.sup 2
+          p.service-info-form-left__info В косметический ремонт входят следующие работы:
+          button.service-info-form-left__btn.button-5
+            span.link-content отправить заявку
+        .service-info-form-right
+          .service-info-form-right-services-container 
+            ul.service-info-form__service-list
+              li.service-info-form__item.included Демонтаж покрытий
+              li.service-info-form__item.included Монтаж натяжного потолка
+              li.service-info-form__item.included Поклейка обоев, покраска стен
+              li.service-info-form__item.included Укладка ламината
+              li.service-info-form__item.included Обустройство откосов
+              li.service-info-form__item.included Подключение сантехники
+            ul.service-info-form__service-list
+              li.service-info-form__item Стяжка на пол
+              li.service-info-form__item Выравнивание стен
+              li.service-info-form__item Укладка плитки
+              li.service-info-form__item Возведение перегородок, арок, ниш
+              li.service-info-form__item Устройство водоснабжения и канализации
+              li.service-info-form__item Прокладка электрических коммуникаций
+            ul.service-info-form__service-list
+              li.service-info-form__item Создание многоуровневых подвесных потолков
+              li.service-info-form__item Архитектурный свет
+              li.service-info-form__item Установка дверей
+              li.service-info-form__item Эксклюзивные дизайнерские решения
+              li.service-info-form__item Установка системы антизатопления
+              li.service-info-form__item Установка сигнализации
+
+    #id03.service-info-overhaul.modal
+      form.service-info-form(action="overhaul-action.php" method="post")
+        .service-info-form-left 
+          p.service-info-form-left__title Капитальный ремонт
+          p.service-info-form-left__price от 4500 руб/м
+            span.sup 2
+          p.service-info-form-left__info В капитальный ремонт входят следующие работы:
+          button.service-info-form-left__btn.button-5
+            span.link-content отправить заявку
+        .service-info-form-right
+          .service-info-form-right-services-container 
+            ul.service-info-form__service-list
+              li.service-info-form__item.included Демонтаж покрытий
+              li.service-info-form__item.included Монтаж натяжного потолка
+              li.service-info-form__item.included Поклейка обоев, покраска стен
+              li.service-info-form__item.included Укладка ламината
+              li.service-info-form__item.included Обустройство откосов
+              li.service-info-form__item.included Подключение сантехники
+            ul.service-info-form__service-list
+              li.service-info-form__item.included Стяжка на пол
+              li.service-info-form__item.included Выравнивание стен
+              li.service-info-form__item.included Укладка плитки
+              li.service-info-form__item.included Возведение перегородок, арок, ниш
+              li.service-info-form__item.included Устройство водоснабжения и канализации
+              li.service-info-form__item.included Прокладка электрических коммуникаций
+            ul.service-info-form__service-list
+              li.service-info-form__item Создание многоуровневых подвесных потолков
+              li.service-info-form__item Архитектурный свет
+              li.service-info-form__item Установка дверей
+              li.service-info-form__item Эксклюзивные дизайнерские решения
+              li.service-info-form__item Установка системы антизатопления
+              li.service-info-form__item Установка сигнализации
+
+    #id04.service-info-designer.modal
+      form.service-info-form(action="designer-action.php" method="post")
+        .service-info-form-left 
+          p.service-info-form-left__title Дизайнерский ремонт
+          p.service-info-form-left__price от 5600 руб/м
+            span.sup 2
+          p.service-info-form-left__info В дизайнерский ремонт входят следующие работы:
+          button.service-info-form-left__btn.button-5
+            span.link-content отправить заявку
+        .service-info-form-right
+          .service-info-form-right-services-container 
+            ul.service-info-form__service-list
+              li.service-info-form__item.included Демонтаж покрытий
+              li.service-info-form__item.included Монтаж натяжного потолка
+              li.service-info-form__item.included Поклейка обоев, покраска стен
+              li.service-info-form__item.included Укладка ламината
+              li.service-info-form__item.included Обустройство откосов
+              li.service-info-form__item.included Подключение сантехники
+            ul.service-info-form__service-list
+              li.service-info-form__item.included Стяжка на пол
+              li.service-info-form__item.included Выравнивание стен
+              li.service-info-form__item.included Укладка плитки
+              li.service-info-form__item.included Возведение перегородок, арок, ниш
+              li.service-info-form__item.included Устройство водоснабжения и канализации
+              li.service-info-form__item.included Прокладка электрических коммуникаций
+            ul.service-info-form__service-list
+              li.service-info-form__item.included Создание многоуровневых подвесных потолков
+              li.service-info-form__item.included Архитектурный свет
+              li.service-info-form__item.included Установка дверей
+              li.service-info-form__item.included Эксклюзивные дизайнерские решения
+              li.service-info-form__item.included Установка системы антизатопления
+              li.service-info-form__item.included Установка сигнализации
+
+
+      
 

@@ -74,12 +74,21 @@ function handleWindowLoad() {
 }
 
 // Get the modal
-var modal = document.getElementById('id01');
+let recall = document.getElementById('id01'),
+    redecorating = document.getElementById('id02'),
+    overhaul = document.getElementById('id03'),
+    designer = document.getElementById('id04');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == recall) {
+    recall.style.display = "none";
+  } else if (event.target == redecorating) {
+    redecorating.style.display = "none";
+  } else if (event.target == overhaul) {
+    overhaul.style.display = "none";
+  } else if (event.target == designer) {
+    designer.style.display = "none";
   }
 }
 

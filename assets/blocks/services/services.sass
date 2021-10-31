@@ -186,6 +186,77 @@
     top: 25px
   color: #fac106
 
+.service-info
+  &-redecorating,
+  &-overhaul,
+  &-designer
+    display: none
 
+.service-info-form
+  display: flex
+  flex-direction: raw
+  width: 1200px
+  margin: 60px auto 0
+  background: #fff
+  background-position: 35% 50%
+  border-radius: 8px
+  &-left
+    background: #2b2b2b
+    height: inherit
+    width: 30%
+    border-radius: 7px 0 0 7px
+    padding: 30px 40px
+    &__title
+      font-family: "Roboto", sans-serif
+      font-size: 28px
+      font-weight: 600
+      color: #fac106
+      text-transform: uppercase
+      margin-top: 30px
+      line-height: 1.4em
+    &__price
+      font-family: "Rubik",sans-serif
+      font-size: 32px
+      font-weight: 800
+      margin-top: 30px
+      color: #fac106
+    &__info
+      font-family: "Rubik",sans-serif
+      font-size: 18px
+      line-height: 1.2em
+      color: #fff
+      margin-top: 30px
+    &__btn
+      background-color: #302f33
+      margin-top: 30px
+  &-right
+    height: 100%
+    width: 70%
+    padding: 20px 0
+    &-services-container 
+      display: flex
+      flex-direction: row
+      justify-content: space-between
 
+.service-info-form__item
+  display: flex
+  align-items: center
+  font-family: "Rubik", sans-serif
+  font-size: 16px
+  font-weight: 400
+  width: 240px
+  height: 40px
+  padding: 10px 20px
+  &::before
+    content: '\f068'
+    font-family: FontAwesome
+    font-size: 22px
+    color: #d42929
+    margin-right: 12px
 
+.service-info-form__item.included
+  &::before
+    content: '\f00c'
+    font-family: FontAwesome
+    color: #19a119
+    
