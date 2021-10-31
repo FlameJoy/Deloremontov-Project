@@ -92,6 +92,10 @@ window.onclick = function(event) {
   }
 }
 
+// ------------------
+// Townhouse function
+// ------------------
+
 function townhouseChangeImg(num) {
   if(num == 1) {
     document.getElementById('townhouse').style.background = 'url(assets/images/dest/main_002.jpg) no-repeat center';
@@ -101,9 +105,70 @@ function townhouseChangeImg(num) {
     document.getElementById('townhouse').style.background = 'url(assets/images/dest/main_004.jpg) no-repeat center';
   } if(num == 4) {
     document.getElementById('townhouse').style.background = 'url(assets/images/dest/main_005.jpg) no-repeat center';
-  }
-  
+  } 
 }
+
 function townhouseRechangeImg() {
   document.getElementById('townhouse').style.background = 'url(assets/images/dest/main_001.jpg) no-repeat center';
 }
+
+// ----------------------
+// Country House function
+// ----------------------
+
+function countryHouseImg(num) {
+  if(num == 1) {
+    document.getElementById('country-house').style.background = 'url(assets/images/dest/main_012.jpg) no-repeat center';
+  } if(num == 2) {
+    document.getElementById('country-house').style.background = 'url(assets/images/dest/main_013.jpg) no-repeat center';
+  } if(num == 3) {
+    document.getElementById('country-house').style.background = 'url(assets/images/dest/main_014.jpg) no-repeat center';
+  } if(num == 4) {
+    document.getElementById('country-house').style.background = 'url(assets/images/dest/main_015.jpg) no-repeat center';
+  }
+}
+
+function countryHouseRechangeImg() {
+  document.getElementById('country-house').style.background = 'url(assets/images/dest/main_011.jpg) no-repeat center';
+}
+
+// ---------------
+// Flat-1 function
+// ---------------
+
+function flat1Img(num) {
+  if(num == 1) {
+    document.getElementById('flat-1').style.background = 'url(assets/images/dest/main_022.jpg) no-repeat center';
+  } if(num == 2) {
+    document.getElementById('flat-1').style.background = 'url(assets/images/dest/main_023.jpg) no-repeat center';
+  } if(num == 3) {
+    document.getElementById('flat-1').style.background = 'url(assets/images/dest/main_024.jpg) no-repeat center';
+  } if(num == 4) {
+    document.getElementById('flat-1').style.background = 'url(assets/images/dest/main_025.jpg) no-repeat center';
+  }
+}
+
+function flat1RechangeImg() {
+  document.getElementById('flat-1').style.background = 'url(assets/images/dest/main_021.jpg) no-repeat center';
+}
+
+// ---------------
+// Flat-2 function
+// ---------------
+
+function flat2Img(num) {
+  if(num == 1) {
+    document.getElementById('flat-2').style.background = 'url(assets/images/dest/main_032.jpg) no-repeat center';
+  } if(num == 2) {
+    document.getElementById('flat-2').style.background = 'url(assets/images/dest/main_033.jpg) no-repeat center';
+  } if(num == 3) {
+    document.getElementById('flat-2').style.background = 'url(assets/images/dest/main_034.jpg) no-repeat center';
+  } if(num == 4) {
+    document.getElementById('flat-2').style.background = 'url(assets/images/dest/main_035.jpg) no-repeat center';
+  }
+}
+
+function flat2RechangeImg() {
+  document.getElementById('flat-2').style.background = 'url(assets/images/dest/main_031.jpg) no-repeat center';
+}
+
