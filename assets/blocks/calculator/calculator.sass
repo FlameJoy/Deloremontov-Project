@@ -1,55 +1,72 @@
 // Style the tab
-.calc-tabs
-  overflow: hidden
-  // background: repeating-linear-gradient(45deg, #e99f17, #d86e17 10px, #e99f17 10px, #e99f17 20px)
-  background: #fff
+.calc
+  background: url(../images/dest/7.png) no-repeat center
+  background-size: 130%
+  background-position: 5% 10%
 
-.firstTab
-  border-radius: 15px 0 0 0
-
-.lastTab
-  border-radius: 0 15px 0 0
+.calc-header__title 
+  display: flex
+  flex-direction: column
+  gap: 15px 0 
+  font-family: "Montserrat", sans-serif
+  font-size: 42px
+  font-weight: 600
+  text-transform: uppercase
+  padding: 80px 0
+  color: #2b2b2b
 
 // Style the buttons that are used to open the tab content
 .calc-tablink 
-  background-color: #c9c9c9
+  background: transparent
+  position: relative
   font-family: "Montserrat", sans-serif
   font-size: 22px
   font-weight: 800
   color: #ec4b00
   text-transform: uppercase
   border: none
+  border-radius: 8px
   outline: none
   cursor: pointer
   padding: 14px 16px
-  transition: 0.3s
   float: left
-  
-// Change background color of buttons on hover
-.calc-tablink:hover
-  background: #fff
+  margin-right: 10px
+  &::after
+    content: ""
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 20px
+    border-color: transparent
+    position: absolute
+    left: calc(50% - 20px)
+    left: -webkit-calc(50% - 15px)
+    top: 55px
+
+.calc-tablink.active
+  &::after
+    border-color: #2b2b2b transparent transparent transparent
 
 // Create an active/current tablink class
 .calc-tablink.active 
-  background-color: #fff
+  background-color: #2b2b2b
   
 // Style the tab content
 .calc-tabcontent
   display: none
-  padding: 100px 12px
-  border: 1px solid #ccc
-  border-top: none
-  // background-color: #f7c4ae
-  // background: linear-gradient(to left, #976200, #de9634 70%)
-  background: url(../images/dest/7.png) no-repeat center
-  background-size: 130%
-  background-position-x: 50%
+  padding: 100px 0 0
+  width: 1266.4px
+  height: 850px
 
-.calc-form
+.calc-wrap
   display: flex
   flex-direction: row
-  gap: 0 50px
+  gap: 0 10px
   justify-content: center
+
+.calc-form
+  &__center
+    max-width: 350px
 
 .calc__service-name,
 .calc__work-area,
@@ -57,24 +74,45 @@
 .calc-add-services,
 .calc-estimate
     font-family: "Roboto", sans-serif
-    font-size: 26px
+    font-size: 24px
     font-weight: 600
     color: #2b2b2b
     padding: 15px 0
     line-height: 1.2em
 
-.calc__input
-  padding: 5px 10px
+.sup
+  vertical-align: super
+  font-size: smaller
+  font-family: "Roboto", sans-serif
+
+.calc__input,
+.calc__selector,
+.apartment__opt
+  padding: 8px 10px
   font-size: 18px
-  width: 270px
+  color: #323232
+  width: 250px
+  border: 1px solid #2b2b2b4d
+  border-radius: 5px
+  outline: none
+
+.calc__input-num
+  width: 30px
+
+.calc__input:focus
+  border-color: #ec4b00
+
+.calc__selector
+  width: 272px
 
 .calc-building-type__radio-btn
   width: 25px
   height: 25px
+  filter: grayscale(1)
 
 .calc-building-type__name
   font-family: "Roboto", sans-serif
-  font-size: 18px
+  font-size: 16px
   font-weight: 500
 
 .calc-add-service
@@ -85,28 +123,55 @@
 .calc-add-service__checkbox
   height: 25px
   width: 25px
+  filter: grayscale(1)
 
 .calc-add-service__name
-    font-family: "Rubik", sans-serif
-    font-size: 18px
-    font-weight: 500
+  font-family: "Rubik", sans-serif
+  font-size: 18px
+  font-weight: 500
+  padding-left: 10px
 
 .calc-img
-  width: 800px
-  height: 550px
-
-.calc-img-wrap
-  box-shadow: 1px 1px 8px #000
+  width: 520px
+  height: 420px
+  box-shadow: 1px 1px 40px #000
+  
 
 .calc-building-type-wrap
   display: flex
   align-items: center
   padding: 10px 0
 
+.calc-btn-container
+  display: flex
+  justify-content: center
+
 .calc-estimate__btn
-  display: block
-  font-family: "Roboto", sans-serif
-  font-size: 16px
-  font-weight: 500
-  padding: 10px 15px
-  margin-top: 15px
+  text-decoration: none
+  display: inline-block
+  width: 340px
+  height: 70px
+  line-height: 70px
+  border-radius: 45px
+  margin: 40px auto 0
+  font-family: 'Montserrat', sans-serif
+  font-size: 28px
+  font-weight: 700
+  text-transform: uppercase
+  text-align: center
+  letter-spacing: 3px
+  color: #474747
+  background: white
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1)
+  transition: .3s
+
+.calc-estimate__btn:hover
+  background: #ec4b00
+  box-shadow: 0 15px 20px #ec4b005e
+  transform: translateY(-7px)
+
+.calc-estimate__btn::after
+  content: '\f51e'
+  font-family: FontAwesome
+  font-size: 30px
+  margin-left: 10px
