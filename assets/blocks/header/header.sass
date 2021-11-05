@@ -2,37 +2,21 @@
 // Slides background
 // -----------------
 .header-slider
-  .header-slide-container
-    width: 100%
-    min-height: 700px
+  position: relative
 
-  .header-slide-container::before
-    content: ""
-    top: 0
-    left: 0
-    position: absolute
-    filter: brightness(70%)
-    width: 100%
-    height: auto
-    min-height: 700px
-    z-index: -5
+.header-slide-container
+  margin: 0 auto
 
-  .header-slide-container:nth-child(1)::before
-    background: url(../images/dest/slider-header-4.jpeg) no-repeat center
-    background-size: cover
-  .header-slide-container:nth-child(2)::before
-    background: url(../images/dest/slider-header-2.jpg) no-repeat center
-    background-size: cover
-  .header-slide-container:nth-child(3)::before
-    background: url(../images/dest/slider-header-3.jpg) no-repeat center
-    background-size: cover
+.header-slide-container::before
+  content: ""
+  position: absolute
+  filter: brightness(70%)
+  z-index: -5
+  margin: 0 auto
 
 .header-slide-info
-  padding-top: 15%
   padding-left: 8%
   width: 500px
-  // background-color: #615e5e57
-  // box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
   &::after,
   &::before
     content: ""
@@ -59,10 +43,12 @@
 
 .header-slide-lines
   position: absolute
-  top: 90%
-  left: 30%
+  width: 1000px
+  left: calc( 50% - 500px )
   display: flex
   justify-content: center
+  bottom: 30px
+
 .header-slide__line
   display: inline-block
   height: 5px
@@ -74,4 +60,198 @@
 
 .header-slide__line_active
   background-color: #fac106
-    
+
+// ----------
+// Adaptivity
+// ----------
+
+// ----------------------------------
+// Screen  resolution 320px - 600px
+//-----------------------------------
+
+@media (min-width: 320px)
+  .header-slide-container,
+  .header-slide-container::before
+    width: 320px
+    height: 700px
+
+  .header-slide-container:nth-child(1)::before
+    background: url(../images/dest/slider-header-4.jpeg) no-repeat center
+    background-size: cover
+    background-position-x: 65%
+
+  .header-slide-container:nth-child(2)::before
+    background: url(../images/dest/slider-header-2.jpg) no-repeat center
+    background-size: cover
+    background-position-x: 65%
+
+  .header-slide-container:nth-child(3)::before
+    background: url(../images/dest/slider-header-3.jpg) no-repeat center
+    background-size: cover
+    background-position-x: 65%
+
+  .header-slide-info
+    padding-left: 0
+    padding-top: 90%
+    width: 90%
+    margin: 0 auto
+    &__title
+      font-size: 32px
+      padding: 5px
+    &__text
+      font-size: 22px
+      padding: 5px
+    &__title,
+    &__text
+      text-align: center
+
+  .header-slide__line
+    width: 30px
+    margin: 0 20px
+
+// ----------------------------------
+// Screen  resolution 600px - 800px
+//-----------------------------------
+
+@media (min-width: 600px)
+  .header-slide-container,
+  .header-slide-container::before
+    width: 600px
+    height: 700px
+
+  .header-slide-info
+    padding-left: 0
+    padding-top: 45%
+    width: 70%
+    margin: 0 auto
+    &__title
+      font-size: 42px
+      padding: 5px
+    &__text
+      font-size: 26px
+      padding: 5px
+    &__title,
+    &__text
+      text-align: center
+
+  .header-slide__line
+    width: 60px
+    margin: 0 30px
+
+// ----------------------------------
+// Screen  resolution 800px - 1000px
+//-----------------------------------
+
+@media (min-width: 800px)
+  .header-slide-container,
+  .header-slide-container::before
+    width: 800px
+    height: 700px
+
+  .header-slide-info
+    padding-left: 0
+    padding-top: 35%
+    width: 60%
+    margin: 0 auto
+    &__title
+      font-size: 48px
+      padding: 5px
+    &__text
+      font-size: 26px
+      padding: 5px
+    &__title,
+    &__text
+      text-align: center
+
+  .header-slide__line
+    width: 100px
+    margin: 0 30px
+
+// ----------------------------------
+// Screen  resolution 1000px - 1200px
+//-----------------------------------
+
+@media (min-width: 1000px)
+  .header-slide-container,
+  .header-slide-container::before
+    width: 1000px
+    height: 700px
+
+  .header-slide-info
+    padding-left: 4%
+    padding-top: 28%
+    width: 350px
+    margin: 0
+    &__title
+      font-size: 38px
+      padding: 15px 5px 5px 5px
+    &__text
+      font-size: 18px
+      padding: 5px 5px 15px 5px
+    &__title,
+    &__text
+      text-align: left
+  .header-slide__line
+    width: 100px
+    margin: 0 30px
+
+// ----------------------------------
+// Screen  resolution 1200px - 1600px
+//-----------------------------------
+
+@media (min-width: 1200px)
+  .header-slide-container,
+  .header-slide-container::before
+    width: 1200px
+    height: 700px
+
+  .header-slide-info
+    padding-left: 8%
+    padding-top: 22%
+    width: 400px
+    &__title
+      font-size: 42px
+      padding: 15px 5px 5px 5px
+    &__text
+      font-size: 20px
+      padding: 5px 5px 15px 5px
+
+  .header-slide__line
+    width: 150px
+
+// ----------------------------------
+// Screen  resolution 1600px - 1920px
+//-----------------------------------
+
+@media (min-width: 1600px)
+  .header-slide-container,
+   .header-slide-container::before
+    width: 1600px
+    height: 800px
+
+  .header-slide-info
+    padding-top: 15%
+    width: 500px
+    &__title
+      font-size: 55px
+      padding: 15px 5px 5px 5px
+    &__text
+      font-size: 26px
+      padding: 5px 5px 15px 5px
+
+// --------------------------
+// Screen resolution > 1920px
+//---------------------------
+
+@media (min-width: 1920px)
+  .header-slide-container
+    width: 1920px
+    height: 1000px
+
+  .header-slide-container::before
+    width: 1920px
+    height: 1000px
+
+  .header-slide-info
+    padding-top: 400px
+
