@@ -7,8 +7,8 @@
 .top-nav-wrap 
   display: flex
   flex-direction: row
-  justify-content: space-evenly
   align-items: center
+  margin: 0 auto
 
 .top-nav-logo
   display: flex
@@ -57,6 +57,7 @@
 // -------------
 
 .top-nav-dropdown-menu
+  display: block
   margin-left: 20px
   &__btn
     font-family: "Roboto", sans-serif
@@ -84,6 +85,8 @@
     &:hover,
     &:active
       border-color: #fac106
+      .top-nav-dropdown-menu__link
+        color: #fac106
   &__link
     color: #fff
     text-decoration: none
@@ -102,6 +105,7 @@
   align-items: center
   gap: 0 15px
   cursor: pointer
+  margin-right: 20px
   &::before
     font-family: FontAwesome
     content: "\f87b"
@@ -118,23 +122,72 @@
 // Adaptivity
 // ----------
 
-// --------------------------------
-// Screen  resolution 320px - 600px
-//---------------------------------
+// -------------------------------
+// Screen resolution 320px - 600px
+//--------------------------------
 
 @media (min-width: 320px)
+  .top-nav-wrap 
+    width: 320px
+    justify-content: space-between
     
+  .top-nav-menu,
+  .logo__name,
+  .top-nav-recall-wrap
+      display: none 
 
-// --------------------------
+// -------------------------------
+// Screen resolution 600px - 800px
+//--------------------------------
+
+@media (min-width: 600px)
+  .top-nav-wrap 
+    width: 600px
+    justify-content: space-evenly
+  .logo__name,
+  .top-nav-dropdown-menu__btn,
+  .top-nav-recall-wrap
+    display: block
+    font-size: 24px
+
+  .top-nav-recall
+    &::before
+      font-size: 40px
+    &__btn,
+    &__tel
+      font-size: 20px
+
+// --------------------------------
+// Screen resolution 800px - 1000px
+//---------------------------------
+
+@media (min-width: 800px)
+  .top-nav-wrap 
+    width: 800px
+
+  .logo__name,
+  .top-nav-dropdown-menu__btn
+    font-size: 28px
+
+  .top-nav-recall
+    &::before
+      font-size: 40px
+    &__btn,
+    &__tel
+      font-size: 20px
+
+// ---------------------------------
 // Screen resolution 1000px - 1200px
-//---------------------------
+//----------------------------------
 
 @media (min-width: 1000px)
+  .top-nav-wrap 
+    width: 1000px
+
   .logo__name
     font-size: 30px
 
-  .top-nav-menu 
-    display: none     
+  .top-nav-menu     
     &__link
       font-size: 22px
 
@@ -150,6 +203,9 @@
 //----------------------------------
 
 @media (min-width: 1200px)
+  .top-nav-wrap 
+    width: 1200px
+
   .logo__name
     font-size: 28px
 
@@ -157,6 +213,9 @@
     display: flex
     &__link
       font-size: 22px
+
+  .top-nav-dropdown-menu
+    display: none
 
   .top-nav-recall
     &::before
@@ -170,6 +229,9 @@
 //----------------------------------
 
 @media (min-width: 1600px)
+  .top-nav-wrap 
+    width: 1600px
+
   .logo__name
     font-size: 36px
 
@@ -189,6 +251,9 @@
 //---------------------------
 
 @media (min-width: 1920px)
+  .top-nav-wrap 
+    width: 1920px
+
   .logo__name
     font-size: 48px
 
