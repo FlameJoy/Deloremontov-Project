@@ -2,6 +2,7 @@
   position: absolute
   top: 20px
   width: 100%
+  z-index: 5
 
 .top-nav-wrap 
   display: flex
@@ -9,34 +10,22 @@
   justify-content: space-evenly
   align-items: center
 
+.top-nav-logo
+  display: flex
+  flex-direction: row
+
 .logo-container
-  .logo
-    &__name
-      font-family: "Roboto", sans-serif
-      font-size: 24px
-      font-weight: 500
-      font-style: italic
-      color: #fff
-      text-transform: uppercase
-      letter-spacing: 1px
+  display: flex
+  flex-direction: row
+  align-items: center
 
 .logo__name
-  &::before,
-  &::after
-    content: ""
-    position: absolute
-    background-color: #2f93e6
-    height: 27px
-    width: 82px
-    transform: skewX(-15deg)
-    -webkit-transform: skewX(-15deg)
-    -o-transform: skewX(-15deg)
-    -moz-transform: skewX(-15deg)
-    left: 6.7%
-    z-index: -1
-  &::before
-    background-color: #f80101
-    width: 255px
+  font-family: "Roboto", sans-serif
+  font-weight: 500
+  font-style: italic
+  color: #fac106
+  text-transform: uppercase
+  letter-spacing: 1px
 
 .top-nav-menu
   display: flex
@@ -52,8 +41,7 @@
       border: 2px solid #fac106
       .top-nav-menu__link
         color: #fac106
-        text-shadow: 1px 1px 5px #000
-        
+        text-shadow: 1px 1px 5px #000       
   &__link
     font-family: "Roboto", sans-serif
     font-size: 24px
@@ -64,11 +52,55 @@
     transition-delay: .1s
     transition-duration: .4s
 
+// -------------
+// Dropdowm menu
+// -------------
+
+.top-nav-dropdown-menu
+  margin-left: 20px
+  &__btn
+    font-family: "Roboto", sans-serif
+    font-size: 30px
+    font-weight: 500
+    color: #fac106
+    text-transform: uppercase
+    background-color: transparent
+    border: none
+
+.fa-caret-down
+  margin-left: 10px
+
+.top-nav-dropdown-menu
+  &__content
+    display: none
+    position: absolute
+    background-color: #0000004d
+  &__item
+    font-family: "Roboto", sans-serif
+    font-size: 22px
+    text-transform: uppercase
+    padding: 10px 5px
+    border: 1px solid transparent
+    &:hover,
+    &:active
+      border-color: #fac106
+  &__link
+    color: #fff
+    text-decoration: none
+    
+.top-nav-dropdown-menu:hover .top-nav-dropdown-menu__content,
+.top-nav-dropdown-menu__content:hover
+  display: block
+
+// -----------
+// Recall form
+// -----------
+
 .top-nav-recall 
   display: flex
   flex-direction: row 
   align-items: center
-  gap: 0 10px
+  gap: 0 15px
   cursor: pointer
   &::before
     font-family: FontAwesome
@@ -78,7 +110,97 @@
   &__btn,
   &__tel
     font-family: "Roboto", sans-serif
-    font-size: 24px
     font-weight: 500
     color: #fff
+    line-height: 1.2em
+
+// ----------
+// Adaptivity
+// ----------
+
+// --------------------------------
+// Screen  resolution 320px - 600px
+//---------------------------------
+
+@media (min-width: 320px)
+    
+
+// --------------------------
+// Screen resolution 1000px - 1200px
+//---------------------------
+
+@media (min-width: 1000px)
+  .logo__name
+    font-size: 30px
+
+  .top-nav-menu 
+    display: none     
+    &__link
+      font-size: 22px
+
+  .top-nav-recall
+    &::before
+      font-size: 40px
+    &__btn,
+    &__tel
+      font-size: 20px
+
+// ---------------------------------
+// Screen resolution 1200px - 1600px
+//----------------------------------
+
+@media (min-width: 1200px)
+  .logo__name
+    font-size: 28px
+
+  .top-nav-menu   
+    display: flex
+    &__link
+      font-size: 22px
+
+  .top-nav-recall
+    &::before
+      font-size: 40px
+    &__btn,
+    &__tel
+      font-size: 20px
+
+// ---------------------------------
+// Screen resolution 1600px - 1920px
+//----------------------------------
+
+@media (min-width: 1600px)
+  .logo__name
+    font-size: 36px
+
+  .top-nav-menu      
+    &__link
+      font-size: 28px
+
+  .top-nav-recall
+    &::before
+      font-size: 60px
+    &__btn,
+    &__tel
+      font-size: 24px
+
+// --------------------------
+// Screen resolution > 1920px
+//---------------------------
+
+@media (min-width: 1920px)
+  .logo__name
+    font-size: 48px
+
+  .top-nav-menu      
+    &__link
+      font-size: 32px
+
+  .top-nav-recall
+    &::before
+      font-size: 80px
+    &__btn,
+    &__tel
+      font-size: 28px
+
 
