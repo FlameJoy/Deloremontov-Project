@@ -14,93 +14,29 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
   </head>
   <body class="page">
-    <div class="top-nav">
-      <nav class="top-nav-wrap"> 
-        <!-- ------------------------->
-        <!-- Site logo & mobile menu-->
-        <!-- ------------------------->
-        <div class="top-nav-logo">
-          <div class="logo-container"> 
-            <div class="logo"> 
-              <h1 class="logo__name">DELOEMONTOV</h1>
+    <div class="discount">
+      <div class="container"> 
+        <div class="discount-container"> 
+          <div class="discount__text-section"> 
+            <div class="discount__title">АКЦИЯ <span class="discount__subtitle">Закажи ремонт сейчас и получи</span></div>
+            <div class="discount__text">Сроки действия акции ограничены</div>
+          </div>
+          <div class="discount-wrap">
+            <div class="discount-inner">
+              <div class="discount-block">
+                <h3>30%<span> скидка</span></h3>
+              </div>
             </div>
           </div>
-          <!-- ------------------------>
-          <!-- Mobile navigation menu-->
-          <!-- ------------------------>
-          <div class="top-nav-dropdown-menu">
-            <button class="top-nav-dropdown-menu__btn">меню<i class="fas fa-caret-down"></i></button>
-            <div class="top-nav-dropdown-menu__content">
-              <ul class="top-nav-dropdown-menu__list cl-effect-8">
-                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link" href="#">Главная</a></li>
-                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link" href="#">Услуги</a></li>
-                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link" href="#">Портфолио</a></li>
-                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link" href="#">Контакты</a></li>
-              </ul>
-            </div>
+          <div class="ribbon-wrap">
+            <div class="ribbon6">До 01.01.2022</div>
           </div>
-        </div>
-        <!-- --------------- -->
-        <!-- Navigation menu -->
-        <!-- --------------- -->
-        <div class="top-nav-menu">
-          <ul class="top-nav-menu__list cl-effect-8">
-            <li class="top-nav-menu__item"><a class="top-nav-menu__link" href="#">Главная</a></li>
-          </ul>
-          <ul class="top-nav-menu__list cl-effect-8">
-            <li class="top-nav-menu__item"><a class="top-nav-menu__link" href="#">Услуги</a></li>
-          </ul>
-          <ul class="top-nav-menu__list cl-effect-8">
-            <li class="top-nav-menu__item"><a class="top-nav-menu__link" href="#">Портфолио</a></li>
-          </ul>
-          <ul class="top-nav-menu__list cl-effect-8">
-            <li class="top-nav-menu__item"><a class="top-nav-menu__link" href="#">Контакты</a></li>
-          </ul>
-        </div>
-        <!-- ------------------------------ -->
-        <!-- Recall button & telefon number -->
-        <!-- ------------------------------ -->
-        <div class="top-nav-recall" onclick="document.getElementById('id01').style.display='block'">
-          <div class="top-nav-recall-wrap">
-            <div class="top-nav-recall__btn">Заказать звонок</div>
-            <div class="top-nav-recall__tel">8 (921) ХХХ-ХХ-ХХ</div>
+          <div class="discount-btn-wrap">
+            <button class="btn discount-btn"><span class="discount-btn__text">Заказать</span></button>
           </div>
-        </div>
-        <!-- ---------- -->
-        <!-- Modal form -->
-        <!-- ---------- -->
-        <div class="recall modal" id="id01">
-          <form class="recall-form" action="recall-action.php" method="post"><span class="recall-form__close-btn close" onclick="document.getElementById('id01').style.display='none'" title="Close Modal">&times;</span>
-            <div class="recall-form-container">
-              <label class="recall-form__input-name" for="name">Ваше имя</label>
-              <input class="recall-form__input" type="text" id="name" name="name">
-              <label class="recall-form__input-name" for="phone">Введите номер телефона</label>
-              <input class="recall-form__input" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value="+7 | ">
-              <label class="recall-form__input-name" for="time-date">Укажите дату и время звонка</label>
-              <div class="recall-form__date-time-container">
-                <input class="recall-form__input-time" type="time" id="time" name="time-date">
-                <input class="recall-form__input-date" type="date" id="date" name="time-date">
-              </div><a class="recall-form__btn">Заказать звонок</a>
-            </div>
-          </form>
-        </div>
-      </nav>
-    </div>
-    <header class="header">
-      <div class="header-slider"> 
-        <div class="header-slide-container">
-          <div class="header-slide-info">
-            <h2 class="header-slide-info__title">Доверьте работу профессионалам!</h2>
-            <p class="header-slide-info__text">Выполняем работу качественно и в срок</p>
-          </div>
-        </div>
-        <div class="header-slide-lines">
-          <div class="header-slide__line header-slide__line_active"></div>
-          <div class="header-slide__line header-slide__line_active"></div>
-          <div class="header-slide__line header-slide__line_active"></div>
         </div>
       </div>
-    </header>
+    </div>
     <!-- ------------------- -->
     <!-- Scripts & libraries -->
     <!-- ------------------- -->

@@ -2,9 +2,9 @@
   display: flex
   justify-content: center
   align-items: center
-  // background: linear-gradient(to bottom, #e99f17 10%, #d86e17, #e99f17 90%)
   background: repeating-linear-gradient(45deg, #e99f17, #d86e17 10px, #e99f17 10px, #e99f17 20px)
   &-container
+    width: 60%
     position: relative
     display: flex
     flex-direction: row
@@ -24,7 +24,7 @@
     font-size: 32px
     font-weight: 600
     color: #ffee00
-  &__title span
+  &__subtitle
     color: #fff
     text-transform: uppercase
   &__text
@@ -87,7 +87,8 @@
   color: #810000
 
 .discount-wrap 
-  width: 200px
+  min-width: 200px
+  width: 60%
   height: 150px
   padding: 15px
   margin: 10px
@@ -172,34 +173,94 @@
   font-weight: 600
   color: #e00000
 
+// ----------
 // Adaptivity
+// ----------
 
-@media (max-width: 1000px)
+// -------------------------------------
+// Screen resolution from 320px to 600px
+// -------------------------------------
+@media (min-width: 320px)
   .discount
-    &__title
-      font-size: 22px
-    &__text
-      font-size: 14px
-
-@media (max-width: 800px)
-  .btn-discount
-    margin-right: 0
-
-  .btn__link
-    font-size: 14px
-
-@media (max-width: 700px)
-  .discount
+    &-container
+      flex-direction: column
+      margin: 20px auto
+      padding: 10px 0
     &__text-section 
-      padding-left: 10px
-    &__title
-      font-size: 16px
-    &__text
-      font-size: 10px
+      display: none
 
-  .btn__link
-    font-size: 10px
+  .discount-wrap 
+    margin: 10px auto
 
-  .btn-discount
-    padding: 5px 20px
+  .discount-block h3 
+    line-height: 1
+    padding: 10px 15px
+    margin: 5px
+    background: #2d3549
+    font-size: 58px
+
+  // ------
+  // RIBBON
+  // ------
+  .ribbon6
+    top: 30px
+    right: -95px
+  
+  .ribbon-wrap:before
+    right: 108px
+
+  .ribbon-wrap:after
+    top: 108px
+
+  .discount-btn-wrap
+    margin: 0 auto
+
+  // ------
+  // BUTTON
+  // ------
+  .btn
+    padding: 10px 20px
+    margin: 0 10px
+  
+  .discount-btn__text 
+    font-size: 24px
+
+  .btn:before 
+    top: 0
+    right: -3px
+
+  .btn:after 
+    bottom: 0
+    left: -3px
+
+  .btn:hover:before 
+    transform: translateX(-3px)
+
+  .btn:hover:after
+    transform: translateX(3px)
+
+
+// -------------------------------------
+// Screen resolution from 600px to 900px
+// -------------------------------------
+
+
+
+// --------------------------------------
+// Screen resolution from 900px to 1200px
+// --------------------------------------
+
+// ---------------------------------------
+// Screen resolution from 1200px to 1600px
+// ---------------------------------------
+
+// ---------------------------------------
+// Screen resolution from 1600px to 1920px
+// ---------------------------------------
+
+// ----------------------------------------
+// Screen resolution from 1920px and higher
+// ----------------------------------------
+
+
 
