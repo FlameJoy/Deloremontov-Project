@@ -1,21 +1,22 @@
+.about-us
+  margin-top: 60px
+  
 .about-us-container 
   display: flex
   flex-direction: row
   padding: 60px 0
+  gap: 20px
 
 .about-us-info
   max-width: 30%
   &__title
-    font-family: "Montserrat", sans-serif
-    font-size: 42px
+    font-family: "Montserrat", sans-serif   
     font-weight: 600
     text-transform: uppercase
     color: #2b2b2b
   &__text
-    font-family: "Montserrat", sans-serif
-    font-size: 22px
+    font-family: "Montserrat", sans-serif  
     line-height: 1.5em
-    padding: 20px 0
 
 .about-us-advantages-container
   max-width: 70%
@@ -29,28 +30,20 @@
   display: flex
   flex-direction: row
   grid-column: 1 span
-  &-wrap
-    padding-left: 10px
   &__title
     display: flex
     align-items: center
     font-family: "Montserrat", sans-serif
-    font-size: 32px
     font-weight: 600
     color: #2b2b2b
-    height: 70px
   &__text
-    font-family: "Rubik", sans-serif
-    font-size: 18px
+    font-family: "Rubik", sans-serif 
     color: #2b2b2b
-    padding: 15px 0
   &::before
     content: '\f017'
     font-family: FontAwesome
-    font-size: 38px
     color: #2b2b2b
-    margin-top: 20px
-    margin-right: 10px
+
 
 .about-us-box:nth-child(2)::before
   content: '\f4d3'
@@ -66,3 +59,191 @@
 
 .about-us-box:nth-child(6)::before
   content: '\f56c'
+
+// ----------  
+// Adaptivity
+// ----------
+
+// -----------------------------------
+// Screen resolution 1920px and higher
+// -----------------------------------
+@media (min-width: 1920px)
+  .about-us-info
+    &__title
+      font-size: 52px
+    &__text
+      font-size: 30px
+      padding: 20px 0
+
+  .about-us-box
+    &-wrap
+      padding-left: 10px
+    &__title
+      font-size: 38px
+      height: 70px
+    &__text
+      font-size: 24px
+      padding: 15px 0
+    &::before
+      font-size: 46px
+      margin-top: 20px
+      margin-right: 10px
+
+// ---------------------------------------
+// Screen resolution from 1600px to 1920px
+// ---------------------------------------
+@media (min-width: 1600px) and (max-width: 1919.98px)
+  .about-us-info
+    &__title
+      font-size: 42px
+    &__text
+      font-size: 24px
+      padding: 20px 0
+
+  .about-us-box
+    &-wrap
+      padding-left: 10px
+    &__title
+      font-size: 30px
+      height: 70px
+    &__text
+      font-size: 18px
+      padding: 15px 0
+    &::before
+      font-size: 38px
+      margin-top: 20px
+      margin-right: 10px
+
+// ---------------------------------------
+// Screen resolution from 1200px to 1600px
+// ---------------------------------------
+@media (min-width: 1200px) and (max-width: 1599.98px)
+  .about-us-info
+    &__title
+      font-size: 34px
+    &__text
+      font-size: 18px
+      padding: 20px 0
+
+  .about-us-box
+    &-wrap
+      padding-left: 10px
+    &__title
+      font-size: 20px
+      height: 40px
+    &__text
+      font-size: 16px
+      padding: 10px 0
+    &::before
+      font-size: 28px
+      margin-top: 10px
+      margin-right: 10px
+
+// --------------------------------------
+// Screen resolution from 900px to 1200px
+// --------------------------------------
+@media (min-width: 900px) and (max-width: 1199.98px)
+  .about-us-info
+    &__title
+      font-size: 34px
+    &__text
+      font-size: 18px
+      padding: 20px 0
+
+  .about-us-advantages-table
+    grid-template-columns: repeat(2, 1fr)
+    gap: 30px
+
+  .about-us-box
+    &-wrap
+      padding-left: 10px
+    &__title
+      font-size: 20px
+      height: 40px
+    &__text
+      font-size: 16px
+      padding: 10px 0
+    &::before
+      font-size: 28px
+      margin-top: 10px
+      margin-right: 10px
+
+// -------------------------------------
+// Screen resolution from 600px to 900px
+// -------------------------------------
+@media (min-width: 600px) and (max-width: 899.98px)
+  .about-us-container 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 60px 0
+    gap: 20px
+
+  .about-us-info
+    max-width: 100%
+    &__title
+      font-size: 34px
+    &__text
+      font-size: 18px
+      padding: 20px 0
+
+  .about-us-advantages-container
+    max-width: 1000%
+
+  .about-us-advantages-table
+    grid-template-columns: repeat(2, 1fr)
+    gap: 30px
+
+  .about-us-box
+    &-wrap
+      padding-left: 10px
+    &__title
+      font-size: 20px
+      height: 40px
+    &__text
+      font-size: 16px
+      padding: 10px 0
+    &::before
+      font-size: 28px
+      margin-top: 10px
+      margin-right: 10px
+
+// -------------------------------------
+// Screen resolution from 320px to 600px
+// -------------------------------------
+@media (min-width: 320px) and (max-width: 699.98px)
+  .about-us-container 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 60px 0
+    gap: 20px
+
+  .about-us-info
+    max-width: 100%
+    &__title
+      font-size: 34px
+    &__text
+      font-size: 18px
+      padding: 20px 0
+
+  .about-us-advantages-container
+    max-width: 100%
+
+  .about-us-advantages-table
+    grid-template-columns: repeat(1, 1fr)
+    gap: 30px
+
+  .about-us-box
+    &-wrap
+      padding-left: 10px
+    &__title
+      font-size: 20px
+      height: 40px
+    &__text
+      font-size: 16px
+      padding: 10px 0
+    &::before
+      font-size: 28px
+      margin-top: 10px
+      margin-right: 10px
