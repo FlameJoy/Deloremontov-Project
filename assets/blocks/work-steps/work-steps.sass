@@ -4,10 +4,8 @@
 
 .work-steps__title
   font-family: "Montserrat", sans-serif
-  font-size: 42px
   font-weight: 600
   text-transform: uppercase
-  padding: 80px 0
   color: #2b2b2b
 
 .title_marked
@@ -17,7 +15,6 @@
   display: flex
   flex-direction: row
   position: relative
-  margin: 40px 0
   margin: 0 auto
   counter-reset: steps-list 0
   &::before
@@ -28,34 +25,23 @@
     width: 100%
     background-color: #ec4b00
     vertical-align: bottom
-    top: 95px
 
 .work-step
-  font-size: 40px
   &__name
     font-family: "Roboto", sans-serif
-    font-size: 20px
     font-weight: 600
     text-transform: uppercase
-    margin-top: 35px
     color: #474747
   &__text
-    font-family: "Rubik", sans-serif
-    font-size: 18px
+    font-family: "Rubik", sans-serif  
     font-weight: 400
-    margin-top: 10px
-    padding-right: 20px
     color: #364147
   &::before
     content: '\f111'
     background-color: #444444
     position: absolute
     font-family: FontAwesome
-    font-size: 20px
-    width: 20px
-    height: 20px
     color: #444444
-    top: 87px
     border-radius: 50%
 
 .icon-wrap
@@ -66,14 +52,11 @@
     counter-increment: steps-list
     content: 'Шаг ' counter(steps-list)
     font-family: "Roboto", sans-serif
-    font-size: 22px
     font-weight: 600
-    margin-top: 10px
     color: #474747
 
 .icon
   color: #474747
-  font-size: 50px
 
 .work-steps-measure-call
   display: flex
@@ -110,3 +93,200 @@
   font-size: 30px
   margin-left: 10px
 
+// ----------
+// Adaptivity
+// ----------
+
+// -----------------------------------
+// Screen resolution 1920px and higher
+// -----------------------------------
+@media (min-width: 1920px)
+  .work-steps__title
+    font-size: 60px
+    padding: 80px 0
+
+  .work-step
+    &__name
+      font-size: 30px
+      margin-top: 35px
+    &__text
+      font-size: 28px
+      margin-top: 10px
+      padding-right: 20px
+    &::before
+      font-size: 20px
+      width: 20px
+      height: 20px
+      top: 122px
+
+  .icon-wrap
+    &::after
+      font-size: 34px
+      margin-top: 10px
+
+  .icon
+    font-size: 70px
+
+  .work-steps-line
+    margin: 40px 0
+    &::before
+      height: 4px
+      top: 130px
+
+// ---------------------------------------
+// Screen resolution from 1200px to 1920px
+// ---------------------------------------
+@media (min-width: 1200px) and (max-width: 1919.98px)
+  .work-steps__title
+    font-size: 42px
+    padding: 80px 0
+
+  .work-step
+    &__name
+      font-size: 20px
+      margin-top: 35px
+    &__text
+      font-size: 18px
+      margin-top: 10px
+      padding-right: 20px
+    &::before
+      font-size: 20px
+      width: 20px
+      height: 20px
+      top: 87px
+
+  .icon-wrap
+    &::after
+      font-size: 22px
+      margin-top: 10px
+
+  .icon
+    font-size: 50px
+
+  .work-steps-line
+    margin: 40px 0
+    &::before
+      top: 95px
+
+// ---------------------------------------
+// Screen resolution from 1600px to 1920px
+// ---------------------------------------
+@media (min-width: 900px) and (max-width: 1199.98px)
+  .work-steps__title
+    font-size: 42px
+    padding: 40px 0
+
+  .work-step
+    &__name
+      font-size: 20px
+      margin-top: 35px
+    &__text
+      font-size: 16px
+      margin-top: 10px
+      padding-right: 20px
+    &::before
+      font-size: 20px
+      width: 20px
+      height: 20px
+      top: 87px
+
+  .icon-wrap
+    &::after
+      font-size: 22px
+      margin-top: 10px
+
+  .icon
+    font-size: 50px
+
+  .work-steps-line
+    margin: 40px 0
+    &::before
+      top: 95px
+
+// ---------------------------------------
+// Screen resolution from 600px to 900px
+// ---------------------------------------
+@media (min-width: 600px) and (max-width: 899.98px)
+  .work-steps 
+    background-size: 100%
+    padding: 50px 0 0
+
+  .work-steps__title
+    font-size: 42px
+    padding: 40px 0
+
+  .work-step
+    &__name
+      font-size: 36px
+      margin-top: 20px
+    &__text
+      font-size: 28px
+      margin-top: 10px
+      padding-right: 20px
+    &::before
+      display: none
+
+  .icon-wrap
+    &::after
+      font-size: 30px
+      margin-top: 10px
+
+  .icon
+    font-size: 70px
+
+  .work-steps-line
+    margin: 40px 0
+    flex-direction: column
+    gap: 50px 0
+    &::before
+      display: none
+
+  .work-step__name,
+  .work-step__text,
+  .icon,
+  .icon-wrap::after
+    text-align: center
+
+// ---------------------------------------
+// Screen resolution from 320px to 600px
+// ---------------------------------------
+@media (min-width: 320px) and (max-width: 599.98px)
+  .work-steps 
+    background-size: 100%
+    padding: 50px 0 0
+
+  .work-steps__title
+    font-size: 28px
+    padding: 40px 0
+
+  .work-step
+    &__name
+      font-size: 30px
+      margin-top: 15px
+    &__text
+      font-size: 24px
+      margin-top: 10px
+      padding-right: 20px
+    &::before
+      display: none
+
+  .icon-wrap
+    &::after
+      font-size: 30px
+      margin-top: 10px
+
+  .icon
+    font-size: 70px
+
+  .work-steps-line
+    margin: 40px 0
+    flex-direction: column
+    gap: 50px 0
+    &::before
+      display: none
+
+  .work-step__name,
+  .work-step__text,
+  .icon,
+  .icon-wrap::after
+    text-align: center
