@@ -1,6 +1,7 @@
 .services
   width: 100%
-  min-height: 800px
+  min-height: 1000px
+  margin-top: 80px
 
 .services::before
   content: ""
@@ -8,7 +9,7 @@
   display: block
   width: 100%
   height: auto
-  min-height: 800px
+  min-height: 1000px
   background: url(../images/dest/services.jpg) no-repeat center
   background-size: cover
   filter: opacity(80%)
@@ -19,20 +20,16 @@
   justify-items: center
   &__title
     font-family: "Montserrat", sans-serif
-    font-size: 42px
     font-weight: 600
     color: #fac106
     text-align: center
-    padding: 10px 0
     text-transform: uppercase
   &__text
     font-family: "Montserrat", sans-serif
-    font-size: 22px
     font-weight: 500
     line-height: 1.2em
     color: #fff
     text-align: center
-    width: 70%
   &__calc-link
     font-weight: 500
     color: #fff
@@ -94,23 +91,17 @@
 
 .services-container
   display: flex
-  flex-direction: row
   flex-wrap: nowrap
   justify-content: space-evenly
-  margin-top: 50px
 
 .service
   display: flex
   flex-direction: column
-  max-width: 300px
-  padding: 30px
   border-radius: 10px
   background-color: rgba(0, 0, 0, .6)
 
 .service-name
-  min-height: 50px
   font-family: "Montserrat", sans-serif
-  font-size: 24px
   font-weight: 600
   color: #fac106
   text-align: center
@@ -118,11 +109,9 @@
 
 .service-description
   font-family: "Montserrat", sans-serif
-  font-size: 22px
   text-align: center
   line-height: 1.2em
   color: #fff
-  margin-top: 10px
 
 .service-info__btn
   font-family: "Montserrat", sans-serif
@@ -136,7 +125,6 @@
   margin-top: 15px
   color: #ec7f25
   border: 1px solid #3A374C
-  font-size: 18px
   font-weight: 700
   text-transform: uppercase
   white-space: nowrap
@@ -180,7 +168,7 @@
 
 .service-price
   font-family: "Montserrat",sans-serif
-  font-size: 32px
+  
   font-weight: 800
   text-align: center
   padding:
@@ -194,10 +182,11 @@
     display: none
 
 .service-info-form
+  position: relative
   display: flex
   flex-direction: raw
-  width: 1200px
-  margin: 60px auto 0
+  width: 1320px
+  margin: 10% auto 0
   background: #fff
   background-position: 35% 50%
   border-radius: 8px
@@ -232,7 +221,7 @@
       margin-top: 30px
   &-right
     height: 100%
-    width: 70%
+    width: 78%
     padding: 20px 0
     &-services-container 
       display: flex
@@ -261,3 +250,273 @@
     font-family: FontAwesome
     color: #19a119
     
+.service-info-form__close-btn
+  position: absolute
+  font-size: 50px
+  width: 40px
+  height: 40px
+  right: 0
+  top: 2px
+  cursor: pointer
+
+// ----------
+// Adaptivity
+// ----------
+// ----------------------------------------
+// Screen resolution from 1920px and higher
+// ----------------------------------------
+@media (min-width: 1920px)
+  .services,
+  .services::before
+    width: 100%
+    min-height: 1200px
+
+  .services-header 
+    padding-top: 80px
+    &__title
+      font-size: 60px
+      padding: 10px 0
+    &__text
+      font-size: 30px
+      width: 90%
+
+  .service
+    max-width: 400px
+    &-name
+      min-height: 50px
+      font-size: 30px
+    &-description
+      font-size: 26px
+      margin-top: 10px
+      min-height: 160px
+    &-price
+      font-size: 42px
+
+  .button-5 
+    font-size: 24px
+
+  .services-container
+    flex-direction: row
+    margin-top: 70px
+
+// ----------------------------------------
+// Screen resolution from 1600px to 1920px
+// ----------------------------------------
+@media (min-width: 1600px) and (max-width: 1919.98px)
+  .services,
+  .services::before
+    width: 100%
+    min-height: 1000px
+
+  .services-header-wrap
+    width: 1200px
+
+  .services-header 
+    padding-top: 80px
+    &__title
+      font-size: 42px
+      padding: 10px 0
+    &__text
+      font-size: 22px
+      width: 70%
+
+  .service
+    max-width: 300px
+    padding: 30px
+    &-name
+      min-height: 50px
+      font-size: 24px
+    &-description
+      font-size: 22px
+      margin-top: 10px
+      min-height: 120px
+    &-price
+      font-size: 32px
+
+  .button-5 
+    font-size: 18px
+
+  .services-container
+    flex-direction: row
+    margin-top: 70px
+
+// ----------------------------------------
+// Screen resolution from 1200px to 1600px
+// ----------------------------------------
+@media (min-width: 1200px) and (max-width: 1599.98px)
+  .services,
+  .services::before
+    width: 100%
+    min-height: 1000px
+
+  .services-header-wrap
+    width: 900px
+
+  .services-header 
+    padding-top: 80px
+    &__title
+      font-size: 36px
+      padding: 10px 0
+    &__text
+      font-size: 20px
+      width: 70%
+
+  .service
+    max-width: 300px
+    padding: 30px
+    &-name
+      min-height: 50px
+      font-size: 24px
+    &-description
+      font-size: 22px
+      margin-top: 10px
+      min-height: 120px
+    &-price
+      font-size: 32px
+
+  .button-5 
+    font-size: 18px
+
+  .services-container
+    flex-direction: row
+    margin-top: 70px
+
+// ----------------------------------------
+// Screen resolution from 900px to 1200px
+// ----------------------------------------
+@media (min-width: 900px) and (max-width: 1199.98px)
+  .services,
+  .services::before
+    width: 100%
+    min-height: 900px
+
+  .services-header-wrap
+    width: 800px
+
+  .services-header 
+    padding-top: 80px
+    &__title
+      font-size: 32px
+      padding: 10px 0
+    &__text
+      font-size: 18px
+      width: 80%
+
+  .service
+    max-width: 250px
+    padding: 20px
+    &-name
+      min-height: 50px
+      font-size: 22px
+    &-description
+      font-size: 18px
+      margin-top: 10px
+      min-height: 100px
+    &-price
+      font-size: 24px
+
+  .button-5 
+    font-size: 18px
+
+  .services-container
+    flex-direction: row
+    margin-top: 70px
+
+// ----------------------------------------
+// Screen resolution from 600px to 900px
+// ----------------------------------------
+@media (min-width: 600px) and (max-width: 899.98px)
+  .services,
+  .services::before
+    width: 100%
+    min-height: 1200px
+
+  .services-header-wrap
+    width: 90%
+
+  .services-header 
+    padding-top: 0
+    &__title
+      font-size: 28px
+      padding: 5px 0
+    &__text
+      font-size: 18px
+      width: 90%
+
+  .service
+    display: grid
+    justify-items: center
+    width: 85%
+    padding: 5px
+    margin: 10px auto
+    &-name
+      height: auto
+      font-size: 24px
+      padding: 5px 0
+    &-description
+      font-size: 18px
+      margin-top: 10px
+      height: auto
+      width: 70%
+    &-price
+      font-size: 24px
+      padding: 5px 0
+
+  .button-5 
+    font-size: 18px
+    width: 50%
+    margin: 10px auto
+
+  .services-container
+    flex-direction: column
+    margin-top: 10px
+
+// ----------------------------------------
+// Screen resolution from 320px to 600px
+// ----------------------------------------
+@media (min-width: 320px) and (max-width: 599.98px)
+  .services,
+  .services::before
+    width: 100%
+    min-height: 1100px
+
+  .services-header-wrap
+    width: 90%
+
+  .services-header 
+    padding-top: 0
+    &__title
+      font-size: 24px
+      padding: 5px 0
+    &__text
+      font-size: 14px
+      width: 90%
+
+  .service
+    display: grid
+    justify-items: center
+    width: 85%
+    padding: 5px
+    margin: 10px auto
+    &-name
+      height: auto
+      font-size: 22px
+      padding: 5px 0
+    &-description
+      font-size: 14px
+      margin-top: 10px
+      height: auto
+      width: 70%
+    &-price
+      font-size: 24px
+      padding: 5px 0
+
+  .button-5 
+    display: none
+    font-size: 18px
+    width: 50%
+    margin: 10px auto
+
+  .services-container
+    flex-direction: column
+    margin-top: 10px
