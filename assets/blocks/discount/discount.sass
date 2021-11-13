@@ -8,7 +8,6 @@
     position: relative
     display: flex
     flex-direction: row
-    justify-content: left
     background-color: #d64f00
     border-radius: 8px
   &__text-section 
@@ -18,18 +17,22 @@
     padding-left: 60px
     margin-top: 35px
   &__title
-    font-family: "Roboto"
+    font-family: "Montserrat", sans-serif
     font-weight: 600
     color: #ffee00
   &__subtitle
     color: #fff
     text-transform: uppercase
   &__text
-    font-family: "Montserrat"
+    font-family: "Montserrat", sans-serif
     font-size: 18px
     font-weight: 600
     color: #fff
     padding-top: 15px
+
+.discount .container
+  width: 80%
+  margin: 15px auto
 
 // ------
 // BUTTON
@@ -156,148 +159,16 @@
   text-align: center
   text-transform: uppercase
   font-family: "Montserrat", sans-serif
-  font-size: 18px
   font-weight: 600
   color: #e00000
 
 // ----------
 // Adaptivity
 // ----------
-
-// -------------------------------------
-// Screen resolution from 320px to 900px
-// -------------------------------------
-@media (min-width: 320px)
-  .discount
-    &-container
-      width: 100%
-      flex-direction: column
-      margin: 20px auto
-      padding: 10px 0
-    &__text-section 
-      display: none
-
-  .discount-wrap 
-    margin: 10px auto
-
-  .discount-block h3 
-    line-height: 1
-    padding: 10px 15px
-    margin: 5px
-    background: #2d3549
-    font-size: 60px
-
-  // ------
-  // RIBBON
-  // ------
-  .ribbon6
-    top: 30px
-    right: -95px
-  
-  .ribbon-wrap:before
-    right: 108px
-
-  .ribbon-wrap:after
-    top: 108px
-
-  .discount-btn-wrap
-    margin: 0 auto
-
-  // ------
-  // BUTTON
-  // ------
-  .discount-btn
-    padding: 10px 20px
-    margin: 0 10px
-  
-  .discount-btn__text 
-    font-size: 24px
-
-  .discount-btn:before 
-    top: 0
-    right: -3px
-
-  .discount-btn:after 
-    bottom: 0
-    left: -3px
-
-  .discount-btn:hover:before 
-    transform: translateX(-3px)
-
-  .discount-btn:hover:after
-    transform: translateX(3px)
-
-// -------------------------------------
-// Screen resolution from 900px to 1200px
-// -------------------------------------
-@media (min-width: 900px)
-  .discount
-    &-container
-      width: 100%
-      flex-direction: row
-      align-items: center
-      margin: 20px auto
-      padding: 10px 0
-    &__text-section 
-      display: block
-    &__title
-      font-size: 22px
-
-  .discount-wrap 
-    margin: 10px
-    width: 30%
-
-  .discount-block h3 
-    line-height: 1
-    padding: 10px 15px
-    margin: 5px
-    background: #2d3549
-    font-size: 60px
-
-  // ------
-  // RIBBON
-  // ------
-  .ribbon6
-    top: 30px
-    right: -95px
-  
-  .ribbon-wrap:before
-    right: 108px
-
-  .ribbon-wrap:after
-    top: 108px
-
-  // ------
-  // BUTTON
-  // ------
-  .discount-btn-wrap
-    margin: 0 auto
-
-  .discount-btn
-    padding: 10px 20px
-    margin: 0 10px
-  
-  .discount-btn__text 
-    font-size: 32px
-
-  .discount-btn:before 
-    top: 0
-    right: -3px
-
-  .discount-btn:after 
-    bottom: 0
-    left: -3px
-
-  .discount-btn:hover:before 
-    transform: translateX(-3px)
-
-  .discount-btn:hover:after
-    transform: translateX(3px)
-
-// --------------------------------------
-// Screen resolution from 1200px to 1600px
-// --------------------------------------
-@media (min-width: 1200px)
+// ----------------------------------------
+// Screen resolution from 1920px and higher
+// ----------------------------------------
+@media (min-width: 1920px)
   .discount
     &-container
       width: 100%
@@ -305,16 +176,28 @@
       align-items: center
       margin: 60px 0
       padding: 50px 0
+      justify-content: left
     &__text-section 
       display: block
-    &__title
-      font-size: 38px
+    &__title,
+    &__subtitle
+      font-size: 60px
+    &__text
+      font-size: 30px
 
+  // --------
+  // DISCOUNT
+  // --------
   .discount-wrap 
-    margin: 10px
+    width: 50%
+    height: 250px
+    padding: 15px
+    background: #ffffff
+    border-radius: 3px
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07)
 
   .discount-block h3 
-    font-size: 60px
+    font-size: 120px
 
   // ------
   // RIBBON
@@ -332,6 +215,9 @@
     top: 108px
     top: 165px
 
+  .ribbon6
+    font-size: 24px
+
   // ------
   // BUTTON
   // ------
@@ -344,7 +230,7 @@
     margin: 0 20px
   
   .discount-btn__text 
-    font-size: 36px
+    font-size: 48px
 
   .discount-btn:before 
     top: 0
@@ -361,10 +247,412 @@
     transform: translateX(8px)
 
 // ----------------------------------------
-// Screen resolution from 1600px and higher
+// Screen resolution from 1600px to 1920px
 // ----------------------------------------
-@media (min-width: 1920px)
+@media (min-width: 1600px) and (max-width: 1919.98px)
   .discount
-    max-width: 1920px
+    &-container
+      width: 100%
+      flex-direction: row
+      align-items: center
+      margin: 60px 0
+      padding: 50px 0
+      justify-content: left
+    &__text-section 
+      display: block
+    &__title,
+    &__subtitle
+      font-size: 46px
+    &__text
+      font-size: 24px
+
+  // --------
+  // DISCOUNT
+  // --------
+  .discount-wrap 
+    width: 50%
+    height: 220px
+    padding: 15px
+    background: #ffffff
+    border-radius: 3px
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07)
+
+  .discount-block h3 
+    font-size: 90px
+
+  // ------
+  // RIBBON
+  // ------
+  .ribbon6
+    width: 300px
+    height: 40px
+    top: 50px
+    right: -60px
+  
+  .ribbon-wrap:before
+    right: 165px
+
+  .ribbon-wrap:after
+    top: 108px
+    top: 165px
+
+  .ribbon6
+    font-size: 24px
+
+  // ------
+  // BUTTON
+  // ------
+  .discount-btn-wrap
+    margin: auto 0
+    margin-right: 70px
+
+  .discount-btn
+    padding: 25px 40px
+    margin: 0 20px
+  
+  .discount-btn__text 
+    font-size: 48px
+
+  .discount-btn:before 
+    top: 0
+    right: -8px
+
+  .discount-btn:after 
+    bottom: 0
+    left: -8px
+
+  .discount-btn:hover:before 
+    transform: translateX(-8px)
+
+  .discount-btn:hover:after
+    transform: translateX(8px)
+
+// ----------------------------------------
+// Screen resolution from 1200px to 1600px
+// ----------------------------------------
+@media (min-width: 1200px) and (max-width: 1599.98px)
+  .discount
+    &-container
+      width: 100%
+      flex-direction: row
+      align-items: center
+      margin: 40px 0
+      padding: 30px 0
+      justify-content: left
+    &__text-section 
+      display: block
+    &__title,
+    &__subtitle
+      font-size: 26px
+    &__text
+      font-size: 18px
+
+  // --------
+  // DISCOUNT
+  // --------
+  .discount-wrap 
+    width: 40%
+    max-width: 300px
+    height: 160px
+    padding: 10px
+    background: #ffffff
+    border-radius: 3px
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07)
+    margin-left: 10px
+
+  .discount-block h3 
+    font-size: 70px
+
+  // ------
+  // RIBBON
+  // ------
+  .ribbon6
+    width: 300px
+    height: 40px
+    top: 50px
+    right: -60px
+  
+  .ribbon-wrap:before
+    right: 165px
+
+  .ribbon-wrap:after
+    top: 165px
+
+  .ribbon6
+    font-size: 20px
+
+  // ------
+  // BUTTON
+  // ------
+  .discount-btn-wrap
+    margin: auto 0
+    margin-right: 70px
+
+  .discount-btn
+    padding: 25px 40px
+    margin: 0 20px
+  
+  .discount-btn__text 
+    font-size: 28px
+
+  .discount-btn:before 
+    top: 0
+    right: -8px
+
+  .discount-btn:after 
+    bottom: 0
+    left: -8px
+
+  .discount-btn:hover:before 
+    transform: translateX(-8px)
+
+  .discount-btn:hover:after
+    transform: translateX(8px)
+
+// ----------------------------------------
+// Screen resolution from 900px to 1200px
+// ----------------------------------------
+@media (min-width: 900px) and (max-width: 1199.98px)
+  .discount
+    &-container
+      width: 100%
+      flex-direction: row
+      align-items: center
+      justify-content: right
+      padding: 30px 0
+    &__text-section 
+      display: none
+    &__title,
+    &__subtitle
+      font-size: 22px
+    &__text
+      font-size: 14px
+
+  // --------
+  // DISCOUNT
+  // --------
+  .discount-wrap 
+    width: 40%
+    max-width: 300px
+    height: 160px
+    padding: 10px
+    background: #ffffff
+    border-radius: 3px
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07)
+    margin-left: 10px
+
+  .discount-block h3 
+    font-size: 70px
+
+  // ------
+  // RIBBON
+  // ------
+  .ribbon6
+    width: 300px
+    height: 40px
+    top: 50px
+    right: -60px
+  
+  .ribbon-wrap:before
+    right: 165px
+
+  .ribbon-wrap:after
+    top: 165px
+
+  .ribbon6
+    font-size: 16px
+
+  // ------
+  // BUTTON
+  // ------
+  .discount-btn-wrap
+    margin: auto 0
+    margin-right: 70px
+
+  .discount-btn
+    padding: 25px 40px
+    margin: 0 20px
+  
+  .discount-btn__text 
+    font-size: 22px
+
+  .discount-btn:before 
+    top: 0
+    right: -8px
+
+  .discount-btn:after 
+    bottom: 0
+    left: -8px
+
+  .discount-btn:hover:before 
+    transform: translateX(-8px)
+
+  .discount-btn:hover:after
+    transform: translateX(8px)
+
+// -------------------------------------
+// Screen resolution from 600px to 900px
+// -------------------------------------
+@media (min-width: 600px) and (max-width: 899.98px)
+  .discount
+    &-container
+      width: 100%
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      padding: 30px 0
+    &__text-section 
+      display: none
+    &__title,
+    &__subtitle
+      font-size: 22px
+    &__text
+      font-size: 14px
+
+  // --------
+  // DISCOUNT
+  // --------
+  .discount-wrap 
+    width: 40%
+    max-width: 250px
+    height: 160px
+    padding: 10px
+    background: #ffffff
+    border-radius: 3px
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07)
+    margin-left: 0
+
+  .discount-block h3 
+    font-size: 55px
+
+  // ------
+  // RIBBON
+  // ------
+  .ribbon6
+    width: 300px
+    height: 40px
+    top: 50px
+    right: -60px
+  
+  .ribbon-wrap:before
+    right: 165px
+
+  .ribbon-wrap:after
+    top: 165px
+
+  .ribbon6
+    font-size: 16px
+
+  // ------
+  // BUTTON
+  // ------
+  .discount-btn-wrap
+    margin: 20px 0 0
+    margin-right: 0
+
+  .discount-btn
+    padding: 25px 40px
+    margin: 0 20px
+  
+  .discount-btn__text 
+    font-size: 22px
+
+  .discount-btn:before 
+    top: 0
+    right: -8px
+
+  .discount-btn:after 
+    bottom: 0
+    left: -8px
+
+  .discount-btn:hover:before 
+    transform: translateX(-8px)
+
+  .discount-btn:hover:after
+    transform: translateX(8px)
+
+// -------------------------------------
+// Screen resolution from 320px to 600px
+// -------------------------------------
+@media (min-width: 320px) and (max-width: 599.98px)
+  .discount
+    &-container
+      width: 100%
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      padding: 30px 0
+    &__text-section 
+      display: none
+    &__title,
+    &__subtitle
+      font-size: 22px
+    &__text
+      font-size: 14px
+
+  // --------
+  // DISCOUNT
+  // --------
+  .discount-wrap 
+    width: 40%
+    max-width: 250px
+    height: 160px
+    padding: 10px
+    background: #ffffff
+    border-radius: 3px
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07)
+    margin-left: 0
+
+  .discount-block h3 
+    font-size: 50px
+
+  // ------
+  // RIBBON
+  // ------
+  .ribbon6
+    width: 300px
+    height: 40px
+    top: 40px
+    right: -80px
+  
+  .ribbon-wrap:before
+    right: 135px
+
+  .ribbon-wrap:after
+    top: 135px
+
+  .ribbon6
+    font-size: 16px
+
+  // ------
+  // BUTTON
+  // ------
+  .discount-btn-wrap
+    margin: 20px 0 0
+    margin-right: 0
+
+  .discount-btn
+    padding: 25px 40px
+    margin: 0 20px
+  
+  .discount-btn__text 
+    font-size: 22px
+
+  .discount-btn:before 
+    top: 0
+    right: -8px
+
+  .discount-btn:after 
+    bottom: 0
+    left: -8px
+
+  .discount-btn:hover:before 
+    transform: translateX(-8px)
+
+  .discount-btn:hover:after
+    transform: translateX(8px)
+
+
+
 
 
