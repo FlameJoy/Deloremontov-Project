@@ -115,10 +115,16 @@
     <section class="calc"> 
       <div class="container">
         <div class="calc-container"> 
+          <!-- ------------------->
+          <!-- Calculator header-->
+          <!-- ------------------->
           <div class="calc-header"> 
             <div class="calc-header__title"> <span>Узнайте, сколько будет стоить </span><span class="title_marked">ваш ремонт</span></div>
           </div>
           <div class="calc-mobile-wrap">
+            <!-- ----------------->
+            <!-- Calculator tabs-->
+            <!-- ----------------->
             <div class="calc-tabs"> 
               <button class="calc-tablink active firstTab" id="defaultOpen" onclick="openCalc(event, 'apartment')">Квартира</button>
               <button class="calc-tablink" onclick="openCalc(event, 'room')">Комната</button>
@@ -127,6 +133,9 @@
               <button class="calc-tablink" onclick="openCalc(event, 'building')">Дом</button>
               <button class="calc-tablink lastTab" onclick="openCalc(event, 'office')">Офис</button>
             </div>
+            <!-- ------------------------->
+            <!-- Apartment-->
+            <!-- ------------------------->
             <div class="calc-tabcontent" id="apartment"> 
               <form class="calc-form" action="calculate.php" method="post">
                 <div class="calc-wrap">
@@ -175,12 +184,15 @@
                     <input class="calc__input calc-estimate__adress" type="email" placeholder="example@gmail.com">
                   </div>
                   <div class="calc-form__right"> 
-                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/apartment.jpg" alt="apartment"></div>
+                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/apartment.jpg" alt="apartment" rel="prefetch prerender"></div>
                   </div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
               </form>
             </div>
+            <!-- -------------------->
+            <!-- Room-->
+            <!-- -------------------->
             <div class="calc-tabcontent" id="room"> 
               <form class="calc-form" action="calculate.php" method="post">
                 <div class="calc-wrap">
@@ -223,12 +235,15 @@
                     <input class="calc__input calc-estimate__adress" type="email" placeholder="example@gmail.com">
                   </div>
                   <div class="calc-form__right"> 
-                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/room.jpg" alt="room"></div>
+                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/room.jpg" alt="room" rel="prefetch prerender"></div>
                   </div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
               </form>
             </div>
+            <!-- ----------------------->
+            <!-- Kitchen-->
+            <!-- ----------------------->
             <div class="calc-tabcontent" id="kitchen"> 
               <form class="calc-form" action="calculate.php" method="post">
                 <div class="calc-wrap">
@@ -271,12 +286,15 @@
                     <input class="calc__input calc-estimate__adress" type="email" placeholder="example@gmail.com">
                   </div>
                   <div class="calc-form__right"> 
-                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/room.jpg" alt="room"></div>
+                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/room.jpg" alt="room" rel="prefetch prerender"></div>
                   </div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
               </form>
             </div>
+            <!-- ------------------------>
+            <!-- Bathroom-->
+            <!-- ------------------------>
             <div class="calc-tabcontent" id="bathroom"> 
               <form class="calc-form" action="calculate.php" method="post">
                 <div class="calc-wrap">
@@ -322,12 +340,15 @@
                     <input class="calc__input calc-estimate__adress" type="email" placeholder="example@gmail.com">
                   </div>
                   <div class="calc-form__right"> 
-                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/bathroom.jpg" alt="bathroom"></div>
+                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/bathroom.jpg" alt="bathroom" rel="prefetch prerender"></div>
                   </div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
               </form>
             </div>
+            <!-- ------------------------>
+            <!-- Building-->
+            <!-- ------------------------>
             <div class="calc-tabcontent" id="building"> 
               <form class="calc-form" action="calculate.php" method="post">
                 <div class="calc-wrap">
@@ -376,12 +397,15 @@
                     <input class="calc__input calc-estimate__adress" type="email" placeholder="example@gmail.com">
                   </div>
                   <div class="calc-form__right"> 
-                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/building.jpg" alt="building"></div>
+                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/building.jpg" alt="building" rel="prefetch prerender"></div>
                   </div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
               </form>
             </div>
+            <!-- ---------------------->
+            <!-- Office-->
+            <!-- ---------------------->
             <div class="calc-tabcontent" id="office">
               <form class="calc-form" action="calculate.php" method="post">
                 <div class="calc-wrap">
@@ -433,11 +457,345 @@
                     <input class="calc__input calc-estimate__adress" type="email" placeholder="example@gmail.com">
                   </div>
                   <div class="calc-form__right"> 
-                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/office.jpg" alt="office"></div>
+                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/office.jpg" alt="office" rel="prefetch prerender"></div>
                   </div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
               </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="discount">
+      <div class="container"> 
+        <div class="discount-container"> 
+          <div class="discount__text-section"> 
+            <div class="discount__title">АКЦИЯ <span class="discount__subtitle">Закажи ремонт сейчас и получи</span></div>
+            <div class="discount__text">Сроки действия акции ограничены</div>
+          </div>
+          <div class="discount-wrap">
+            <div class="discount-inner">
+              <div class="discount-block">
+                <h3>10%<span> скидка</span></h3>
+              </div>
+            </div>
+          </div>
+          <div class="ribbon-wrap">
+            <div class="ribbon6">До 01.01.2022</div>
+          </div>
+          <div class="discount-btn-wrap">
+            <button class="discount-btn"><span class="discount-btn__text">Заказать</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="portfolio"> 
+      <div class="container">
+        <div class="portfolio-container"> 
+          <div class="renovation-header"> 
+            <h2 class="renovation-header__title">Примеры выполненных нашей компанией работ по <span class="title_marked">ремонту квартир</span></h2>
+            <p class="renovation-header__info">В этом разделе можно посмотреть реальные фото дизайна и ремонта и квартир, выполненных силами компании «Deloremontov». Здесь есть фото ремонта квартир в современном, классическом стиле, хай-тек, лофт, модерн.</p>
+          </div>
+          <div class="renovation-container"><a class="renovation" href="town">
+              <div class="renovation__img" id="townhouse"> </div>
+              <ul class="renovation__list">
+                <li class="renovation__item" onmouseover="townhouseChangeImg(1)" onmouseout="townhouseRechangeImg()"></li>
+                <li class="renovation__item" onmouseover="townhouseChangeImg(2)" onmouseout="townhouseRechangeImg()"></li>
+                <li class="renovation__item" onmouseover="townhouseChangeImg(3)" onmouseout="townhouseRechangeImg()"></li>
+                <li class="renovation__item" onmouseover="townhouseChangeImg(4)" onmouseout="townhouseRechangeImg()"></li>
+              </ul>
+              <div class="renovation-description"> 
+                <div class="renovation-description__name">Таунхаус 220 м<span class="sup">2</span></div>
+                <div class="renovation-description__location">г. Санкт-Петербург </div>
+              </div></a><a class="renovation" href="#">
+              <div class="renovation__img" id="country-house"> </div>
+              <ul class="renovation__list">
+                <li class="renovation__item" onmouseover="countryHouseImg(1)" onmouseout="countryHouseRechangeImg()"></li>
+                <li class="renovation__item" onmouseover="countryHouseImg(2)" onmouseout="countryHouseRechangeImg()"></li>
+                <li class="renovation__item" onmouseover="countryHouseImg(3)" onmouseout="countryHouseRechangeImg()"></li>
+                <li class="renovation__item" onmouseover="countryHouseImg(4)" onmouseout="countryHouseRechangeImg()"></li>
+              </ul>
+              <div class="renovation-description"> 
+                <div class="renovation-description__name">Загородный дом 650 м<span class="sup">2</span></div>
+                <div class="renovation-description__location">Ленинградская область</div>
+              </div></a><a class="renovation" href="#"> 
+              <div class="renovation__img" id="flat-1"> </div>
+              <ul class="renovation__list">
+                <li class="renovation__item" onmouseover="flat1Img(1)" onmouseout="flat1RechangeImg()"></li>
+                <li class="renovation__item" onmouseover="flat1Img(2)" onmouseout="flat1RechangeImg()"></li>
+                <li class="renovation__item" onmouseover="flat1Img(3)" onmouseout="flat1RechangeImg()"></li>
+                <li class="renovation__item" onmouseover="flat1Img(4)" onmouseout="flat1RechangeImg()"></li>
+              </ul>
+              <div class="renovation-description"> 
+                <div class="renovation-description__name">Квартира 140 м<span class="sup">2</span></div>
+                <div class="renovation-description__location">г. Санкт-Петербург</div>
+              </div></a><a class="renovation" href="#"> 
+              <div class="renovation__img" id="flat-2"> </div>
+              <ul class="renovation__list">
+                <li class="renovation__item" onmouseover="flat2Img(1)" onmouseout="flat2RechangeImg()"></li>
+                <li class="renovation__item" onmouseover="flat2Img(2)" onmouseout="flat2RechangeImg()"></li>
+                <li class="renovation__item" onmouseover="flat2Img(3)" onmouseout="flat2RechangeImg()"></li>
+                <li class="renovation__item" onmouseover="flat2Img(4)" onmouseout="flat2RechangeImg()"></li>
+              </ul>
+              <div class="renovation-description"> 
+                <div class="renovation-description__name">Квартира 145 м<span class="sup">2</span></div>
+                <div class="renovation-description__location">г. Санкт-Петербург</div>
+              </div></a></div>
+        </div>
+      </div>
+    </section>
+    <section class="services"> 
+      <div class="services-header"> 
+        <div class="services-header-wrap">
+          <h2 class="services-header__title">наши услуги</h2>
+          <p class="services-header__text">Мы оказываем широкий спектр строительных и ремонтно-отделочных работ любой сложности. От легкого косметического до масштабного дизайнерского ремонта на самом высоком уровне. Мы подобрали для Вас команду лучших специалистов любого профиля высшей квалификации, имеющих многолетний опыт работы в сфере строительства.</p>
+          <button class="services-header__calc-link button-7"> <span>Рассчитать</span></button>
+        </div>
+      </div>
+      <div class="services-container"> 
+        <div class="service">
+          <h3 class="service-name">Косметический ремонт</h3>
+          <p class="service-description">Наименее затратный способ в сжатые сроки обновить интерьер. Улучшает внешний вид помещения.</p>
+          <button class="service-info__btn button-5" onclick="document.getElementById('id02').style.display='block'"><span class="link-content">Подробнее</span></button><span class="service-price">от 1900 руб/м<span class="sup">2</span></span>
+        </div>
+        <div class="service">
+          <h3 class="service-name">Капитальный 
+            <p>ремонт</p>
+          </h3>
+          <p class="service-description">Применяется при желании кардинально обновить интерьер помещений и заменить коммуникации.</p>
+          <button class="service-info__btn button-5" onclick="document.getElementById('id03').style.display='block'"><span class="link-content">Подробнее</span></button><span class="service-price">от 4500 руб/м<span class="sup">2</span></span>
+        </div>
+        <div class="service">
+          <h3 class="service-name">Дизайнерский 
+            <p>ремонт</p>
+          </h3>
+          <p class="service-description">Создание авторского дизайн-проекта с применением отделочных материалов премиум-класса.</p>
+          <button class="service-info__btn button-5" onclick="document.getElementById('id04').style.display='block'"><span class="link-content">Подробнее</span></button><span class="service-price">от 5600 руб/м<span class="sup">2</span></span>
+        </div>
+      </div>
+      <div class="service-info-redecorating modal" id="id02">
+        <form class="service-info-form" action="redecorating-action.php" method="post">
+          <div class="service-info-form-left"> 
+            <p class="service-info-form-left__title">Косметический ремонт</p>
+            <p class="service-info-form-left__price">от 1900 руб/м<span class="sup">2</span></p>
+            <p class="service-info-form-left__info">В косметический ремонт входят следующие работы:</p>
+            <button class="service-info-form-left__btn button-5"><span class="link-content">отправить заявку</span></button>
+          </div>
+          <div class="service-info-form-right">
+            <div class="service-info-form-right-services-container"> 
+              <ul class="service-info-form__service-list">
+                <li class="service-info-form__item included">Демонтаж покрытий</li>
+                <li class="service-info-form__item included">Монтаж натяжного потолка</li>
+                <li class="service-info-form__item included">Поклейка обоев, покраска стен</li>
+                <li class="service-info-form__item included">Укладка ламината</li>
+                <li class="service-info-form__item included">Обустройство откосов</li>
+                <li class="service-info-form__item included">Подключение сантехники</li>
+              </ul>
+              <ul class="service-info-form__service-list">
+                <li class="service-info-form__item">Стяжка на пол</li>
+                <li class="service-info-form__item">Выравнивание стен</li>
+                <li class="service-info-form__item">Укладка плитки</li>
+                <li class="service-info-form__item">Возведение перегородок, арок, ниш</li>
+                <li class="service-info-form__item">Устройство водоснабжения и канализации</li>
+                <li class="service-info-form__item">Прокладка электрических коммуникаций</li>
+              </ul>
+              <ul class="service-info-form__service-list">
+                <li class="service-info-form__item">Создание многоуровневых подвесных потолков</li>
+                <li class="service-info-form__item">Архитектурный свет</li>
+                <li class="service-info-form__item">Установка дверей</li>
+                <li class="service-info-form__item">Эксклюзивные дизайнерские решения</li>
+                <li class="service-info-form__item">Установка системы антизатопления</li>
+                <li class="service-info-form__item">Установка сигнализации</li>
+              </ul><span class="service-info-form__close-btn close" onclick="document.getElementById('id02').style.display='none'" title="Close Modal">&times;</span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="service-info-overhaul modal" id="id03">
+        <form class="service-info-form" action="overhaul-action.php" method="post">
+          <div class="service-info-form-left"> 
+            <p class="service-info-form-left__title">Капитальный ремонт</p>
+            <p class="service-info-form-left__price">от 4500 руб/м<span class="sup">2</span></p>
+            <p class="service-info-form-left__info">В капитальный ремонт входят следующие работы:</p>
+            <button class="service-info-form-left__btn button-5"><span class="link-content">отправить заявку</span></button>
+          </div>
+          <div class="service-info-form-right">
+            <div class="service-info-form-right-services-container"> 
+              <ul class="service-info-form__service-list">
+                <li class="service-info-form__item included">Демонтаж покрытий</li>
+                <li class="service-info-form__item included">Монтаж натяжного потолка</li>
+                <li class="service-info-form__item included">Поклейка обоев, покраска стен</li>
+                <li class="service-info-form__item included">Укладка ламината</li>
+                <li class="service-info-form__item included">Обустройство откосов</li>
+                <li class="service-info-form__item included">Подключение сантехники</li>
+              </ul>
+              <ul class="service-info-form__service-list">
+                <li class="service-info-form__item included">Стяжка на пол</li>
+                <li class="service-info-form__item included">Выравнивание стен</li>
+                <li class="service-info-form__item included">Укладка плитки</li>
+                <li class="service-info-form__item included">Возведение перегородок, арок, ниш</li>
+                <li class="service-info-form__item included">Устройство водоснабжения и канализации</li>
+                <li class="service-info-form__item included">Прокладка электрических коммуникаций</li>
+              </ul>
+              <ul class="service-info-form__service-list">
+                <li class="service-info-form__item">Создание многоуровневых подвесных потолков</li>
+                <li class="service-info-form__item">Архитектурный свет</li>
+                <li class="service-info-form__item">Установка дверей</li>
+                <li class="service-info-form__item">Эксклюзивные дизайнерские решения</li>
+                <li class="service-info-form__item">Установка системы антизатопления</li>
+                <li class="service-info-form__item">Установка сигнализации</li>
+              </ul><span class="service-info-form__close-btn close" onclick="document.getElementById('id03').style.display='none'" title="Close Modal">&times;</span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="service-info-designer modal" id="id04">
+        <form class="service-info-form" action="designer-action.php" method="post">
+          <div class="service-info-form-left"> 
+            <p class="service-info-form-left__title">Дизайнерский ремонт</p>
+            <p class="service-info-form-left__price">от 5600 руб/м<span class="sup">2</span></p>
+            <p class="service-info-form-left__info">В дизайнерский ремонт входят следующие работы:</p>
+            <button class="service-info-form-left__btn button-5"><span class="link-content">отправить заявку</span></button>
+          </div>
+          <div class="service-info-form-right">
+            <div class="service-info-form-right-services-container"> 
+              <ul class="service-info-form__service-list">
+                <li class="service-info-form__item included">Демонтаж покрытий</li>
+                <li class="service-info-form__item included">Монтаж натяжного потолка</li>
+                <li class="service-info-form__item included">Поклейка обоев, покраска стен</li>
+                <li class="service-info-form__item included">Укладка ламината</li>
+                <li class="service-info-form__item included">Обустройство откосов</li>
+                <li class="service-info-form__item included">Подключение сантехники</li>
+              </ul>
+              <ul class="service-info-form__service-list">
+                <li class="service-info-form__item included">Стяжка на пол</li>
+                <li class="service-info-form__item included">Выравнивание стен</li>
+                <li class="service-info-form__item included">Укладка плитки</li>
+                <li class="service-info-form__item included">Возведение перегородок, арок, ниш</li>
+                <li class="service-info-form__item included">Устройство водоснабжения и канализации</li>
+                <li class="service-info-form__item included">Прокладка электрических коммуникаций</li>
+              </ul>
+              <ul class="service-info-form__service-list">
+                <li class="service-info-form__item included">Создание многоуровневых подвесных потолков</li>
+                <li class="service-info-form__item included">Архитектурный свет</li>
+                <li class="service-info-form__item included">Установка дверей</li>
+                <li class="service-info-form__item included">Эксклюзивные дизайнерские решения</li>
+                <li class="service-info-form__item included">Установка системы антизатопления</li>
+                <li class="service-info-form__item included">Установка сигнализации</li>
+              </ul><span class="service-info-form__close-btn close" onclick="document.getElementById('id04').style.display='none'" title="Close Modal">&times;</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="work-steps"> 
+      <div class="container"> 
+        <div class="work-steps-line-container">
+          <div class="work-steps__title"> <span class="title_marked">5 простых шагов </span><span>навстречу Вашей мечте</span></div>
+          <ul class="work-steps-line">
+            <li class="work-step">
+              <div class="icon-wrap"><i class="icon fas fa-file-medical"></i></div>
+              <p class="work-step__name">заявка</p>
+              <p class="work-step__text">Для бесплатного вызова замерщика Отправьте заявку</p>
+            </li>
+            <li class="work-step">
+              <div class="icon-wrap"><i class="icon fas fa-calculator"></i></div>
+              <p class="work-step__name">Расчёт</p>
+              <p class="work-step__text">Считаем смету ремонта с учетом оптовых скидок</p>
+            </li>
+            <li class="work-step">
+              <div class="icon-wrap"><i class="icon fas fa-file-signature"></i></div>
+              <p class="work-step__name">Договор</p>
+              <p class="work-step__text">Согласовываем стоимость и сроки, заключаем договор</p>
+            </li>
+            <li class="work-step">
+              <div class="icon-wrap"><i class="icon fas fa-paint-roller"></i></div>
+              <p class="work-step__name">Работа</p>
+              <p class="work-step__text">Мастера выполняют ремонт по СНИП, соблюдая сроки </p>
+            </li>
+            <li class="work-step">
+              <div class="icon-wrap"><i class="icon fas fa-thumbs-up"></i></div>
+              <p class="work-step__name">Завершение</p>
+              <p class="work-step__text">Наслаждайтесь новой уютной атмосферой</p>
+            </li>
+          </ul>
+        </div>
+        <div class="work-steps-measure-call"><a class="btn work-steps__btn">оформить</a></div>
+      </div>
+    </section>
+    <section class="about-us">
+      <div class="container"> 
+        <div class="about-us-container"> 
+          <div class="about-us-info"> 
+            <h2 class="about-us-info__title">Почему <span class="title_marked">нас </span><span>выбирают</span></h2>
+            <p class="about-us-info__text">Мы понимаем, что Вам нужно! Избавим от головной боли и лишних хлопот. Возьмем на себя ответственность и не заставим вдаваться в подробности. Мы с удовольствием поможем Вам создать приятную и уютную атмосферу!</p>
+          </div>
+          <div class="about-us-advantages-container">
+            <ul class="about-us-advantages-table">
+              <li class="about-us-box"> 
+                <div class="about-us-box-wrap">
+                  <h4 class="about-us-box__title">Скорость</h4>
+                  <p class="about-us-box__text">Ремонт от 21 дня - благодаря большому количеству профессионалов</p>
+                </div>
+              </li>
+              <li class="about-us-box"> 
+                <div class="about-us-box-wrap">
+                  <h4 class="about-us-box__title">Честная цена</h4>
+                  <p class="about-us-box__text">Без скрытых дополнительных платежей</p>
+                </div>
+              </li>
+              <li class="about-us-box"> 
+                <div class="about-us-box-wrap">
+                  <h4 class="about-us-box__title">Выгодно</h4>
+                  <p class="about-us-box__text">Цена ниже, чем у конкурентов. Подарки каждому</p>
+                </div>
+              </li>
+              <li class="about-us-box"> 
+                <div class="about-us-box-wrap">
+                  <h4 class="about-us-box__title">Качество работ</h4>
+                  <p class="about-us-box__text">Высококлассные специалисты со стажем от 5 лет. Ежедневный контроль качества</p>
+                </div>
+              </li>
+              <li class="about-us-box"> 
+                <div class="about-us-box-wrap">
+                  <h4 class="about-us-box__title">Удобно</h4>
+                  <p class="about-us-box__text">Мы выполняем весь комплекс работ и услуг по ремонту и отделке помещений</p>
+                </div>
+              </li>
+              <li class="about-us-box"> 
+                <div class="about-us-box-wrap">
+                  <h4 class="about-us-box__title">Работаем по договору</h4>
+                  <p class="about-us-box__text">Предоставляем гарантию на работы от 24 месяцев</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="container"> 
+        <div class="contact-container">
+          <div class="contact-header">
+            <h2 class="contact-header__title">Оставить заявку</h2>
+            <p class="contact-header__text">Отправьте заявку, и мы свяжемся с Вами в ближайшее время. Будем рады проконсультировать Вас +7 (985) 141-07-07</p>
+          </div>
+          <div class="contact-footer"> 
+            <form class="contact-form" action="#" method="post">
+              <div class="contact-form__input-container">
+                <input class="contact-form__input" type="text" placeholder="Имя">
+                <input class="contact-form__input" type="email" name="email" placeholder="Ваш Email">
+              </div>
+              <textarea class="contact-form__textarea" name="" cols="30" rows="8" placeholder="Сообщение"></textarea><a class="btn contact-form__btn" type="submit">Отправить</a>
+            </form>
+            <div class="contact-info">
+              <div class="contact-info-wrap">
+                <h4 class="contact-info__title">Контакты</h4>
+                <p class="contact-info__line"> <span class="title_marked">Адрес: </span><span>г. Санкт-Петербург, ул. Неизвестная, д.1, к.1</span></p>
+                <p class="contact-info__line"> <span class="title_marked">E-mail: </span><span>masterotdelkin@gmail.com</span></p>
+                <p class="contact-info__line"> <span class="title_marked">Телефон: </span><span>+7 (921) XXX - XX - XX</span></p>
+              </div>
             </div>
           </div>
         </div>

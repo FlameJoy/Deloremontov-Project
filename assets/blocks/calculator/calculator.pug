@@ -1,11 +1,17 @@
 section.calc 
   .container
     .calc-container 
+      // -----------------
+      // Calculator header
+      // -----------------
       .calc-header 
         .calc-header__title 
           span Узнайте, сколько будет стоить 
           span.title_marked ваш ремонт
       .calc-mobile-wrap
+        // ---------------
+        // Calculator tabs
+        // ---------------
         .calc-tabs 
           button#defaultOpen.calc-tablink.active.firstTab(onclick="openCalc(event, 'apartment')") Квартира
           button.calc-tablink(onclick="openCalc(event, 'room')") Комната
@@ -13,7 +19,9 @@ section.calc
           button.calc-tablink(onclick="openCalc(event, 'bathroom')") Ванная
           button.calc-tablink(onclick="openCalc(event, 'building')") Дом
           button.calc-tablink.lastTab(onclick="openCalc(event, 'office')") Офис
-
+        // -----------------------
+        // Apartment
+        // -----------------------
         #apartment.calc-tabcontent 
           form.calc-form(action="calculate.php" method="post")
             .calc-wrap
@@ -60,10 +68,12 @@ section.calc
                 input.calc__input.calc-estimate__adress(type="email" placeholder="example@gmail.com")
               .calc-form__right 
                 .calc-img-wrap
-                  img.calc-img(src="assets/images/dest/apartment.jpg" alt="apartment") 
+                  img.calc-img(src="assets/images/dest/apartment.jpg" alt="apartment"  rel="prefetch prerender") 
             .calc-btn-container
               a.btn.calc__btn(type="submit") Рассчитать
-
+        // ------------------
+        // Room
+        // ------------------
         #room.calc-tabcontent 
           form.calc-form(action="calculate.php" method="post")
             .calc-wrap
@@ -104,10 +114,12 @@ section.calc
                 input.calc__input.calc-estimate__adress(type="email" placeholder="example@gmail.com")
               .calc-form__right 
                 .calc-img-wrap
-                  img.calc-img(src="assets/images/dest/room.jpg" alt="room") 
+                  img.calc-img(src="assets/images/dest/room.jpg" alt="room"  rel="prefetch prerender") 
             .calc-btn-container
               a.btn.calc__btn(type="submit") Рассчитать
-
+        // ---------------------
+        // Kitchen
+        // ---------------------
         #kitchen.calc-tabcontent 
           form.calc-form(action="calculate.php" method="post")
             .calc-wrap
@@ -148,10 +160,12 @@ section.calc
                 input.calc__input.calc-estimate__adress(type="email" placeholder="example@gmail.com")
               .calc-form__right 
                 .calc-img-wrap
-                  img.calc-img(src="assets/images/dest/room.jpg" alt="room") 
+                  img.calc-img(src="assets/images/dest/room.jpg" alt="room"  rel="prefetch prerender") 
             .calc-btn-container
               a.btn.calc__btn(type="submit") Рассчитать
-
+        // ----------------------
+        // Bathroom
+        // ----------------------
         #bathroom.calc-tabcontent 
           form.calc-form(action="calculate.php" method="post")
             .calc-wrap
@@ -195,10 +209,12 @@ section.calc
                 input.calc__input.calc-estimate__adress(type="email" placeholder="example@gmail.com")
               .calc-form__right 
                 .calc-img-wrap
-                  img.calc-img(src="assets/images/dest/bathroom.jpg" alt="bathroom") 
+                  img.calc-img(src="assets/images/dest/bathroom.jpg" alt="bathroom"  rel="prefetch prerender") 
             .calc-btn-container
               a.btn.calc__btn(type="submit") Рассчитать
-        
+        // ----------------------
+        // Building
+        // ----------------------
         #building.calc-tabcontent 
           form.calc-form(action="calculate.php" method="post")
             .calc-wrap
@@ -247,10 +263,12 @@ section.calc
                 input.calc__input.calc-estimate__adress(type="email" placeholder="example@gmail.com")
               .calc-form__right 
                 .calc-img-wrap
-                  img.calc-img(src="assets/images/dest/building.jpg" alt="building") 
+                  img.calc-img(src="assets/images/dest/building.jpg" alt="building"  rel="prefetch prerender") 
             .calc-btn-container
               a.btn.calc__btn(type="submit") Рассчитать
-
+        // --------------------
+        // Office
+        // --------------------
         #office.calc-tabcontent
           form.calc-form(action="calculate.php" method="post")
             .calc-wrap
@@ -301,6 +319,6 @@ section.calc
                 input.calc__input.calc-estimate__adress(type="email" placeholder="example@gmail.com")
               .calc-form__right 
                 .calc-img-wrap
-                  img.calc-img(src="assets/images/dest/office.jpg" alt="office") 
+                  img.calc-img(src="assets/images/dest/office.jpg" alt="office"  rel="prefetch prerender") 
             .calc-btn-container
               a.btn.calc__btn(type="submit") Рассчитать

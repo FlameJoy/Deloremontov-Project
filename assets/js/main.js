@@ -95,7 +95,6 @@ window.onclick = function(event) {
 // ------------------
 // Townhouse function
 // ------------------
-
 function townhouseChangeImg(num) {
   if(num == 1) {
     document.getElementById('townhouse').style.background = 'url(assets/images/dest/main_002.jpg) no-repeat center';
@@ -115,7 +114,6 @@ function townhouseRechangeImg() {
 // ----------------------
 // Country House function
 // ----------------------
-
 function countryHouseImg(num) {
   if(num == 1) {
     document.getElementById('country-house').style.background = 'url(assets/images/dest/main_012.jpg) no-repeat center';
@@ -135,7 +133,6 @@ function countryHouseRechangeImg() {
 // ---------------
 // Flat-1 function
 // ---------------
-
 function flat1Img(num) {
   if(num == 1) {
     document.getElementById('flat-1').style.background = 'url(assets/images/dest/main_022.jpg) no-repeat center';
@@ -155,7 +152,6 @@ function flat1RechangeImg() {
 // ---------------
 // Flat-2 function
 // ---------------
-
 function flat2Img(num) {
   if(num == 1) {
     document.getElementById('flat-2').style.background = 'url(assets/images/dest/main_032.jpg) no-repeat center';
@@ -171,4 +167,3 @@ function flat2Img(num) {
 function flat2RechangeImg() {
   document.getElementById('flat-2').style.background = 'url(assets/images/dest/main_031.jpg) no-repeat center';
 }
-
