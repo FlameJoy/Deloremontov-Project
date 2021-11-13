@@ -4,8 +4,20 @@
 .header-slider
   position: relative
 
-.header-slide-container
-  margin: 0 auto
+.header-slide-container:nth-child(1)::before
+  background: url(../images/dest/slider-header-4.jpeg) no-repeat center
+  background-size: cover
+  background-position-x: 65%
+
+.header-slide-container:nth-child(2)::before
+  background: url(../images/dest/slider-header-2.jpg) no-repeat center
+  background-size: cover
+  background-position-x: 65%
+
+.header-slide-container:nth-child(3)::before
+  background: url(../images/dest/slider-header-3.jpg) no-repeat center
+  background-size: cover
+  background-position-x: 65%
 
 .header-slide-container::before
   content: ""
@@ -41,6 +53,21 @@
     padding: 5px 5px 15px 5px
     text-shadow: 1px 1px 2px #000
 
+// -------------
+// Slider button
+// -------------
+.header-slider-btn 
+  position: absolute
+  left: calc( 50% - 180px )
+  bottom: 150px
+
+.slider-btn
+  border: none
+  background-color: #fac106
+
+// ------------
+// Slider lines
+// ------------
 .header-slide-lines
   position: absolute
   width: 1000px
@@ -64,194 +91,187 @@
 // ----------
 // Adaptivity
 // ----------
-
-// ----------------------------------
-// Screen  resolution 320px - 600px
-//-----------------------------------
-
-@media (min-width: 320px)
-  .header-slide-container,
-  .header-slide-container::before
-    width: 320px
-    height: 700px
-
-  .header-slide-container:nth-child(1)::before
-    background: url(../images/dest/slider-header-4.jpeg) no-repeat center
-    background-size: cover
-    background-position-x: 65%
-
-  .header-slide-container:nth-child(2)::before
-    background: url(../images/dest/slider-header-2.jpg) no-repeat center
-    background-size: cover
-    background-position-x: 65%
-
-  .header-slide-container:nth-child(3)::before
-    background: url(../images/dest/slider-header-3.jpg) no-repeat center
-    background-size: cover
-    background-position-x: 65%
-
-  .header-slide-info
-    padding-left: 0
-    padding-top: 90%
-    width: 90%
-    margin: 0 auto
-    &__title
-      font-size: 32px
-      padding: 5px
-    &__text
-      font-size: 22px
-      padding: 5px
-    &__title,
-    &__text
-      text-align: center
-
-  .header-slide__line
-    width: 30px
-    margin: 0 20px
-
-// ----------------------------------
-// Screen  resolution 600px - 800px
-//-----------------------------------
-
-@media (min-width: 600px)
-  .header-slide-container,
-  .header-slide-container::before
-    width: 600px
-    height: 700px
-
-  .header-slide-info
-    padding-left: 0
-    padding-top: 45%
-    width: 70%
-    margin: 0 auto
-    &__title
-      font-size: 42px
-      padding: 5px
-    &__text
-      font-size: 26px
-      padding: 5px
-    &__title,
-    &__text
-      text-align: center
-
-  .header-slide__line
-    width: 60px
-    margin: 0 30px
-
-// ----------------------------------
-// Screen  resolution 800px - 1000px
-//-----------------------------------
-
-@media (min-width: 800px)
-  .header-slide-container,
-  .header-slide-container::before
-    width: 800px
-    height: 700px
-
-  .header-slide-info
-    padding-left: 0
-    padding-top: 35%
-    width: 60%
-    margin: 0 auto
-    &__title
-      font-size: 48px
-      padding: 5px
-    &__text
-      font-size: 26px
-      padding: 5px
-    &__title,
-    &__text
-      text-align: center
-
-  .header-slide__line
-    width: 100px
-    margin: 0 30px
-
-// ----------------------------------
-// Screen  resolution 1000px - 1200px
-//-----------------------------------
-
-@media (min-width: 1000px)
-  .header-slide-container,
-  .header-slide-container::before
-    width: 1000px
-    height: 700px
-
-  .header-slide-info
-    padding-left: 4%
-    padding-top: 28%
-    width: 350px
-    margin: 0
-    &__title
-      font-size: 38px
-      padding: 15px 5px 5px 5px
-    &__text
-      font-size: 18px
-      padding: 5px 5px 15px 5px
-    &__title,
-    &__text
-      text-align: left
-  .header-slide__line
-    width: 100px
-    margin: 0 30px
-
-// ----------------------------------
-// Screen  resolution 1200px - 1600px
-//-----------------------------------
-
-@media (min-width: 1200px)
-  .header-slide-container,
-  .header-slide-container::before
-    width: 1200px
-    height: 700px
-
-  .header-slide-info
-    padding-left: 8%
-    padding-top: 22%
-    width: 400px
-    &__title
-      font-size: 42px
-      padding: 15px 5px 5px 5px
-    &__text
-      font-size: 20px
-      padding: 5px 5px 15px 5px
-
-  .header-slide__line
-    width: 150px
-
-// ----------------------------------
-// Screen  resolution 1600px - 1920px
-//-----------------------------------
-
-@media (min-width: 1600px)
-  .header-slide-container,
-   .header-slide-container::before
-    width: 1600px
-    height: 800px
-
-  .header-slide-info
-    padding-top: 15%
-    width: 500px
-    &__title
-      font-size: 55px
-      padding: 15px 5px 5px 5px
-    &__text
-      font-size: 26px
-      padding: 5px 5px 15px 5px
-
-// --------------------------
-// Screen resolution > 1920px
-//---------------------------
-
+// ----------------------------------------
+// Screen resolution from 1920px and higher
+//-----------------------------------------
 @media (min-width: 1920px)
   .header-slide-container
-    width: 1920px
+    max-width: 1920px
+    width: 100%
     height: 1000px
 
   .header-slide-container::before
-    width: 1920px
+    max-width: 1920px
+    width: 100%
     height: 1000px
 
   .header-slide-info
     padding-top: 400px
 
+  .header-slider-btn 
+    position: absolute
+    left: calc( 50% - 180px )
+    bottom: 150px
+
+// ---------------------------------------
+// Screen resolution from 1600px to 1920px
+//----------------------------------------
+@media (min-width: 1600px) and (max-width: 1919.98px)
+  .header-slide-container
+    max-width: 1600px
+    width: 100%
+    height: 1000px
+
+  .header-slide-container::before
+    max-width: 1600px
+    width: 100%
+    height: 1000px
+
+  .header-slide-info
+    padding-top: 400px
+
+  .header-slider-btn 
+    position: absolute
+    left: calc( 50% - 180px )
+    bottom: 150px
+
+// ---------------------------------------
+// Screen resolution from 1200px to 1600px
+//----------------------------------------
+@media (min-width: 1200px) and (max-width: 1599.98px)
+  .header-slide-container
+    max-width: 1200px
+    width: 100%
+    height: 800px
+
+  .header-slide-container::before
+    max-width: 1200px
+    width: 100%
+    height: 800px
+
+  .header-slide-info
+    padding-top: 300px
+    &__title
+      font-size: 42px
+      padding: 15px 5px 5px 5px
+    &__text
+      font-size: 22px
+      padding: 5px 5px 15px 5px
+
+  .header-slider-btn 
+    position: absolute
+    left: calc( 50% - 180px )
+    bottom: 100px
+
+// --------------------------------------
+// Screen resolution from 900px to 1200px
+//---------------------------------------
+@media (min-width: 900px) and (max-width: 1199.98px)
+  .header-slide-container
+    max-width: 1200px
+    width: 100%
+    height: 800px
+
+  .header-slide-container::before
+    max-width: 1200px
+    width: 100%
+    height: 800px
+
+  .header-slide-info
+    padding-top: 300px
+    width: 400px
+    padding-left: 4%
+    &__title
+      font-size: 36px
+      padding: 15px 5px 5px 5px
+    &__text
+      font-size: 18px
+      padding: 5px 5px 15px 5px
+
+  .header-slider-btn 
+    position: absolute
+    left: calc( 50% - 180px )
+    bottom: 100px
+
+// -------------------------------------
+// Screen resolution from 600px to 900px
+//--------------------------------------
+@media (min-width: 600px) and (max-width: 899.98px)
+  .header-slide-container
+    max-width: 1200px
+    width: 100%
+    height: 800px
+
+  .header-slide-container::before
+    max-width: 1200px
+    width: 100%
+    height: 800px
+
+  .header-slide-info
+    padding-top: 300px
+    width: 380px
+    padding-left: 0
+    margin: 0 auto
+    &__title
+      font-size: 36px
+      padding: 15px 5px 5px 5px
+      text-align: center
+    &__text
+      font-size: 18px
+      padding: 5px 5px 15px 5px
+      text-align: center
+
+  .header-slider-btn 
+    position: absolute
+    left: calc( 50% - 180px )
+    bottom: 100px
+
+  .header-slide__line
+    width: 50px
+
+// -------------------------------------
+// Screen resolution from 320px to 600px
+//--------------------------------------
+@media (min-width: 320px) and (max-width: 599.98px)
+  .header-slide-container
+    max-width: 1200px
+    width: 100%
+    height: 700px
+
+  .header-slide-container::before
+    max-width: 1200px
+    width: 100%
+    height: 700px
+
+  .header-slide-info
+    padding-top: 250px
+    width: 300px
+    padding-left: 0
+    margin: 0 auto
+    &__title
+      font-size: 30px
+      padding: 15px 5px 5px 5px
+      text-align: center
+    &__text
+      font-size: 18px
+      padding: 5px 5px 15px 5px
+      text-align: center
+
+  .header-slider-btn 
+    position: absolute
+    left: calc( 50% - 180px )
+    bottom: 50px
+
+  .header-slide__line
+    width: 50px
+
+  .header-slide-container:nth-child(1)::before
+    background-position-x: 65%
+  
+  .header-slide-container:nth-child(2)::before
+    background-position-x: 55%
+
+  .header-slide-container:nth-child(3)::before
+    background-position-x: 65%
+
+  

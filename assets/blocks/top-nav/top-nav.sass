@@ -10,6 +10,9 @@
   align-items: center
   margin: 0 auto
 
+// ----
+// LOGO
+// ----
 .top-nav-logo
   display: flex
   flex-direction: row
@@ -18,6 +21,9 @@
   display: flex
   flex-direction: row
   align-items: center
+
+.logo-img
+  width: 400px
 
 .logo__name
   font-family: "Roboto", sans-serif
@@ -106,17 +112,34 @@
   gap: 0 15px
   cursor: pointer
   margin-right: 20px
+  padding: 8px
+  border-radius: 10px
+  transition-delay: .1s
+  transition-duration: .4s
   &::before
     font-family: FontAwesome
     content: "\f87b"
     font-size: 60px
     color: #fac106
+  &::after
+    font-family: FontAwesome
+    content: "\f40c"
+    font-size: 60px
+    color: #06fa1a
   &__btn,
   &__tel
-    font-family: "Roboto", sans-serif
-    font-weight: 500
+    font-family: "Montserrat", sans-serif
+    font-weight: 600
     color: #fff
     line-height: 1.2em
+    transition-delay: .1s
+    transition-duration: .4s
+
+.top-nav-recall:hover
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, .8)
+  .top-nav-recall__btn,
+  .top-nav-recall__tel
+    color: #fac106
 
 // ----------
 // Adaptivity
