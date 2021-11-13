@@ -4,6 +4,9 @@
 .header-slider
   position: relative
 
+.header-slide-container
+  margin: 0 auto
+
 .header-slide-container:nth-child(1)::before
   background: url(../images/dest/slider-header-4.jpeg) no-repeat center
   background-size: cover
@@ -106,46 +109,42 @@
     height: 1000px
 
   .header-slide-info
-    padding-top: 400px
+    padding-top: 360px
 
   .header-slider-btn 
     position: absolute
     left: calc( 50% - 180px )
-    bottom: 150px
+    bottom: 80px
 
 // ---------------------------------------
 // Screen resolution from 1600px to 1920px
 //----------------------------------------
 @media (min-width: 1600px) and (max-width: 1919.98px)
   .header-slide-container
-    max-width: 1600px
     width: 100%
     height: 1000px
 
   .header-slide-container::before
-    max-width: 1600px
     width: 100%
     height: 1000px
 
   .header-slide-info
-    padding-top: 400px
+    padding-top: 360px
 
   .header-slider-btn 
     position: absolute
     left: calc( 50% - 180px )
-    bottom: 150px
+    bottom: 80px
 
 // ---------------------------------------
 // Screen resolution from 1200px to 1600px
 //----------------------------------------
 @media (min-width: 1200px) and (max-width: 1599.98px)
   .header-slide-container
-    max-width: 1200px
     width: 100%
     height: 800px
 
   .header-slide-container::before
-    max-width: 1200px
     width: 100%
     height: 800px
 
@@ -161,19 +160,17 @@
   .header-slider-btn 
     position: absolute
     left: calc( 50% - 180px )
-    bottom: 100px
+    bottom: 80px
 
 // --------------------------------------
 // Screen resolution from 900px to 1200px
 //---------------------------------------
 @media (min-width: 900px) and (max-width: 1199.98px)
   .header-slide-container
-    max-width: 1200px
     width: 100%
     height: 800px
 
   .header-slide-container::before
-    max-width: 1200px
     width: 100%
     height: 800px
 
@@ -191,24 +188,22 @@
   .header-slider-btn 
     position: absolute
     left: calc( 50% - 180px )
-    bottom: 100px
+    bottom: 80px
 
 // -------------------------------------
 // Screen resolution from 600px to 900px
 //--------------------------------------
 @media (min-width: 600px) and (max-width: 899.98px)
   .header-slide-container
-    max-width: 1200px
     width: 100%
     height: 800px
 
   .header-slide-container::before
-    max-width: 1200px
     width: 100%
     height: 800px
 
   .header-slide-info
-    padding-top: 300px
+    padding-top: 340px
     width: 380px
     padding-left: 0
     margin: 0 auto
@@ -224,7 +219,7 @@
   .header-slider-btn 
     position: absolute
     left: calc( 50% - 180px )
-    bottom: 100px
+    bottom: 80px
 
   .header-slide__line
     width: 50px
@@ -234,17 +229,15 @@
 //--------------------------------------
 @media (min-width: 320px) and (max-width: 599.98px)
   .header-slide-container
-    max-width: 1200px
     width: 100%
     height: 700px
 
   .header-slide-container::before
-    max-width: 1200px
     width: 100%
     height: 700px
 
   .header-slide-info
-    padding-top: 250px
+    padding-top: 320px
     width: 300px
     padding-left: 0
     margin: 0 auto

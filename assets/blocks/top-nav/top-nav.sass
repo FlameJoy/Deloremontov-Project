@@ -22,9 +22,6 @@
   flex-direction: row
   align-items: center
 
-.logo-img
-  width: 400px
-
 .logo__name
   font-family: "Roboto", sans-serif
   font-weight: 500
@@ -36,7 +33,6 @@
 .top-nav-menu
   display: flex
   flex-direction: row
-  justify-content: space-between
   &__item
     margin: 0 10px
     padding: 5px
@@ -61,10 +57,9 @@
 // -------------
 // Dropdowm menu
 // -------------
-
 .top-nav-dropdown-menu
-  display: block
-  margin-left: 20px
+  display: none
+  position: relative
   &__btn
     font-family: "Roboto", sans-serif
     font-size: 30px
@@ -81,12 +76,13 @@
   &__content
     display: none
     position: absolute
-    background-color: #0000004d
+    background-color: #00000075
+    margin-top: 90px
   &__item
     font-family: "Roboto", sans-serif
     font-size: 22px
     text-transform: uppercase
-    padding: 10px 5px
+    padding: 15px 10px
     border: 1px solid transparent
     &:hover,
     &:active
@@ -96,6 +92,7 @@
   &__link
     color: #fff
     text-decoration: none
+    font-size: 24px
     
 .top-nav-dropdown-menu:hover .top-nav-dropdown-menu__content,
 .top-nav-dropdown-menu__content:hover
@@ -104,7 +101,6 @@
 // -----------
 // Recall form
 // -----------
-
 .top-nav-recall 
   display: flex
   flex-direction: row 
@@ -144,151 +140,177 @@
 // ----------
 // Adaptivity
 // ----------
-
-// -------------------------------
-// Screen resolution 320px - 600px
-//--------------------------------
-
-@media (min-width: 320px)
-  .top-nav-wrap 
-    width: 320px
-    justify-content: space-between
-    
-  .top-nav-menu,
-  .logo__name,
-  .top-nav-recall-wrap
-      display: none 
-
-// -------------------------------
-// Screen resolution 600px - 800px
-//--------------------------------
-
-@media (min-width: 600px)
-  .top-nav-wrap 
-    width: 600px
-    justify-content: space-evenly
-  .logo__name,
-  .top-nav-dropdown-menu__btn,
-  .top-nav-recall-wrap
-    display: block
-    font-size: 24px
-
-  .top-nav-recall
-    &::before
-      font-size: 40px
-    &__btn,
-    &__tel
-      font-size: 20px
-
-// --------------------------------
-// Screen resolution 800px - 1000px
-//---------------------------------
-
-@media (min-width: 800px)
-  .top-nav-wrap 
-    width: 800px
-
-  .logo__name,
-  .top-nav-dropdown-menu__btn
-    font-size: 28px
-
-  .top-nav-recall
-    &::before
-      font-size: 40px
-    &__btn,
-    &__tel
-      font-size: 20px
-
-// ---------------------------------
-// Screen resolution 1000px - 1200px
-//----------------------------------
-
-@media (min-width: 1000px)
-  .top-nav-wrap 
-    width: 1000px
-
-  .logo__name
-    font-size: 30px
-
-  .top-nav-menu     
-    &__link
-      font-size: 22px
-
-  .top-nav-recall
-    &::before
-      font-size: 40px
-    &__btn,
-    &__tel
-      font-size: 20px
-
-// ---------------------------------
-// Screen resolution 1200px - 1600px
-//----------------------------------
-
-@media (min-width: 1200px)
-  .top-nav-wrap 
-    width: 1200px
-
-  .logo__name
-    font-size: 28px
-
-  .top-nav-menu   
-    display: flex
-    &__link
-      font-size: 22px
-
-  .top-nav-dropdown-menu
-    display: none
-
-  .top-nav-recall
-    &::before
-      font-size: 40px
-    &__btn,
-    &__tel
-      font-size: 20px
-
-// ---------------------------------
-// Screen resolution 1600px - 1920px
-//----------------------------------
-
-@media (min-width: 1600px)
-  .top-nav-wrap 
-    width: 1600px
-
-  .logo__name
-    font-size: 36px
-
-  .top-nav-menu      
-    &__link
-      font-size: 28px
-
-  .top-nav-recall
-    &::before
-      font-size: 60px
-    &__btn,
-    &__tel
-      font-size: 24px
-
-// --------------------------
-// Screen resolution > 1920px
-//---------------------------
-
+// ----------------------------------------
+// Screen resolution from 1920px and higher
+//-----------------------------------------
 @media (min-width: 1920px)
   .top-nav-wrap 
-    width: 1920px
+    max-width: 1920px
+    width: 100%
+    justify-content: space-evenly
 
-  .logo__name
-    font-size: 48px
+  .logo-img
+    width: 400px
 
   .top-nav-menu      
     &__link
       font-size: 32px
 
   .top-nav-recall
-    &::before
+    &::before,
+    &::after
       font-size: 80px
     &__btn,
     &__tel
       font-size: 28px
+
+// ---------------------------------------
+// Screen resolution from 1600px to 1920px
+//----------------------------------------
+@media (min-width: 1600px) and (max-width: 1919.98px)
+  .top-nav-wrap 
+    max-width: 1600px
+    width: 100%
+    justify-content: space-evenly
+
+  .logo-img
+    width: 400px
+
+  .top-nav-menu      
+    &__link
+      font-size: 28px
+
+  .top-nav-recall
+    &::before,
+    &::after
+      font-size: 60px
+    &__btn,
+    &__tel
+      font-size: 22px
+
+// ---------------------------------------
+// Screen resolution from 1200px to 1600px
+//----------------------------------------
+@media (min-width: 1200px) and (max-width: 1599.98px)
+  .top-nav-wrap 
+    max-width: 1600px
+    width: 100%
+    justify-content: space-evenly
+
+  .logo-img
+    width: 300px
+
+  .top-nav-menu      
+    &__link
+      font-size: 22px
+
+  .top-nav-recall
+    &::before,
+    &::after
+      font-size: 40px
+    &__btn,
+    &__tel
+      font-size: 18px
+
+// --------------------------------------
+// Screen resolution from 900px to 1200px
+//---------------------------------------
+@media (min-width: 900px) and (max-width: 1199.98px)
+  .top-nav-wrap 
+    max-width: 1600px
+    width: 100%
+    justify-content: space-evenly
+
+  .logo-img
+    width: 300px
+
+  .top-nav-menu 
+    display: none
+
+  .top-nav-dropdown-menu
+    display: flex
+
+  .top-nav-recall
+    &::before,
+    &::after
+      font-size: 40px
+    &__btn,
+    &__tel
+      font-size: 18px
+
+// --------------------------------------
+// Screen resolution from 600px to 900px
+//---------------------------------------
+@media (min-width: 600px) and (max-width: 899.98px)
+  .top-nav-wrap 
+    max-width: 1600px
+    width: 100%
+    justify-content: space-between
+
+  .logo-img
+    width: 250px
+
+  .top-nav-menu 
+    display: none
+
+  .top-nav-dropdown-menu
+    display: flex
+    &__btn
+      font-size: 24px
+
+  .top-nav-recall
+    &::before,
+    &::after
+      font-size: 40px
+    &__btn,
+    &__tel
+      display: none
+
+// --------------------------------------
+// Screen resolution from 320px to 600px
+//---------------------------------------
+@media (min-width: 320px) and (max-width: 599.98px)
+  .top-nav-wrap 
+    max-width: 1600px
+    width: 100%
+    justify-content: space-between
+
+  .logo-img
+    width: 130px
+
+  .top-nav-menu 
+    display: none
+
+  .top-nav-dropdown-menu
+    display: flex
+    &__btn
+      font-size: 18px
+    &__content
+      margin-top: 50px
+      right: -50px
+
+  .top-nav-recall
+    flex-direction: column
+    gap: 0 5px
+    &::before,
+    &::after
+      font-size: 40px
+    &__btn,
+    &__tel
+      display: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
