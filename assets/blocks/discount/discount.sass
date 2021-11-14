@@ -14,13 +14,14 @@
     display: flex
     flex-direction: column
     align-self: center
-    padding-left: 60px
+    padding: 0 30px
     margin-top: 35px
   &__title
     font-family: "Montserrat", sans-serif
     font-weight: 600
     color: #ffee00
-  &__subtitle
+    text-transform: uppercase
+  &__list
     color: #fff
     text-transform: uppercase
   &__text
@@ -80,7 +81,6 @@
   width: 60%
   height: 150px
   padding: 15px
-  background: #ffffff
   border-radius: 3px
   box-shadow: 0 1px 2px rgba(0,0,0,0.07)
 
@@ -95,21 +95,22 @@
   border: 8px solid #f9f7f6
   border-radius: 3px
   display: inline-block
+  transform: rotate(-3deg)
 
-.discount-block h3 
+.discount-block__num 
   line-height: 1
-  padding: 10px 15px
-  margin: 5px
+  padding: 10px
+  margin: 12px
   background: #2d3549
   font-weight: 600
+  text-align: center
   color: #f9f7f6
   font-family: 'Days One', sans-serif
-  transform: rotate(-2deg)
+  transform: rotate(6deg)
 
-.discount-block span 
+.discount-block__currency
   display: block
   text-transform: uppercase
-  font-size: 20px
   letter-spacing: 2px
 
 // ------
@@ -179,26 +180,30 @@
       justify-content: left
     &__text-section 
       display: block
-    &__title,
-    &__subtitle
-      font-size: 60px
-    &__text
+    &__title
+      font-size: 52px
+    &__list
       font-size: 30px
+      padding-left: 10px
+      padding-top: 15px
+    &__item
+      padding: 8px 0
+      &::before
+        font-family: FontAwesome
+        font-size: 24px
+        content: '\f101'
+        padding-right: 5px
+    &__text
+      font-size: 24px
 
   // --------
   // DISCOUNT
   // --------
-  .discount-wrap 
-    width: 50%
-    height: 250px
-    padding: 15px
-    background: #ffffff
-    border-radius: 3px
-    box-shadow: 0 1px 2px rgba(0,0,0,0.07)
-
-  .discount-block h3 
-    font-size: 120px
-
+  .discount-block
+    &__num 
+      font-size: 220px
+    &__currency
+      font-size: 80px
   // ------
   // RIBBON
   // ------
@@ -216,7 +221,9 @@
     top: 165px
 
   .ribbon6
-    font-size: 24px
+    font-family: "Montserrat", sans-serif
+    font-size: 34px
+    font-weight: 700
 
   // ------
   // BUTTON
@@ -230,7 +237,7 @@
     margin: 0 20px
   
   .discount-btn__text 
-    font-size: 48px
+    font-size: 52px
 
   .discount-btn:before 
     top: 0
@@ -260,25 +267,30 @@
       justify-content: left
     &__text-section 
       display: block
-    &__title,
-    &__subtitle
-      font-size: 46px
+    &__title
+      font-size: 42px
+    &__list
+      font-size: 24px
+      padding-left: 10px
+      padding-top: 15px
+    &__item
+      padding: 8px 0
+      &::before
+        font-family: FontAwesome
+        font-size: 24px
+        content: '\f101'
+        padding-right: 5px
     &__text
       font-size: 24px
 
   // --------
   // DISCOUNT
   // --------
-  .discount-wrap 
-    width: 50%
-    height: 220px
-    padding: 15px
-    background: #ffffff
-    border-radius: 3px
-    box-shadow: 0 1px 2px rgba(0,0,0,0.07)
-
-  .discount-block h3 
-    font-size: 90px
+  .discount-block
+    &__num 
+      font-size: 200px
+    &__currency
+      font-size: 80px
 
   // ------
   // RIBBON
@@ -297,7 +309,9 @@
     top: 165px
 
   .ribbon6
-    font-size: 24px
+    font-family: "Montserrat", sans-serif
+    font-size: 30px
+    font-weight: 700
 
   // ------
   // BUTTON
@@ -341,27 +355,30 @@
       justify-content: left
     &__text-section 
       display: block
-    &__title,
-    &__subtitle
+    &__title
       font-size: 26px
+    &__list
+      font-size: 24px
+      padding-left: 10px
+      padding-top: 15px
+    &__item
+      padding: 8px 0
+      &::before
+        font-family: FontAwesome
+        font-size: 24px
+        content: '\f101'
+        padding-right: 5px
     &__text
       font-size: 18px
 
   // --------
   // DISCOUNT
   // --------
-  .discount-wrap 
-    width: 40%
-    max-width: 300px
-    height: 160px
-    padding: 10px
-    background: #ffffff
-    border-radius: 3px
-    box-shadow: 0 1px 2px rgba(0,0,0,0.07)
-    margin-left: 10px
-
-  .discount-block h3 
-    font-size: 70px
+  .discount-block
+    &__num 
+      font-size: 160px
+    &__currency
+      font-size: 60px
 
   // ------
   // RIBBON
@@ -379,7 +396,9 @@
     top: 165px
 
   .ribbon6
-    font-size: 20px
+    font-family: "Montserrat", sans-serif
+    font-size: 30px
+    font-weight: 700
 
   // ------
   // BUTTON
@@ -393,7 +412,7 @@
     margin: 0 20px
   
   .discount-btn__text 
-    font-size: 28px
+    font-size: 34px
 
   .discount-btn:before 
     top: 0
@@ -416,33 +435,37 @@
   .discount
     &-container
       width: 100%
-      flex-direction: row
+      flex-direction: column
+      gap: 20px 0
       align-items: center
       justify-content: right
       padding: 30px 0
     &__text-section 
-      display: none
-    &__title,
-    &__subtitle
-      font-size: 22px
+      display: block
+    &__title
+      font-size: 32px
+    &__list
+      font-size: 24px
+      padding-left: 10px
+      padding-top: 15px
+    &__item
+      padding: 8px 0
+      &::before
+        font-family: FontAwesome
+        font-size: 24px
+        content: '\f101'
+        padding-right: 5px
     &__text
-      font-size: 14px
+      font-size: 16px
 
   // --------
   // DISCOUNT
   // --------
-  .discount-wrap 
-    width: 40%
-    max-width: 300px
-    height: 160px
-    padding: 10px
-    background: #ffffff
-    border-radius: 3px
-    box-shadow: 0 1px 2px rgba(0,0,0,0.07)
-    margin-left: 10px
-
-  .discount-block h3 
-    font-size: 70px
+  .discount-block
+    &__num 
+      font-size: 160px
+    &__currency
+      font-size: 60px
 
   // ------
   // RIBBON
@@ -460,21 +483,23 @@
     top: 165px
 
   .ribbon6
-    font-size: 16px
+    font-family: "Montserrat", sans-serif
+    font-size: 30px
+    font-weight: 700
 
   // ------
   // BUTTON
   // ------
   .discount-btn-wrap
     margin: auto 0
-    margin-right: 70px
+    margin-right: 0
 
   .discount-btn
     padding: 25px 40px
     margin: 0 20px
   
   .discount-btn__text 
-    font-size: 22px
+    font-size: 30px
 
   .discount-btn:before 
     top: 0
@@ -498,32 +523,37 @@
     &-container
       width: 100%
       flex-direction: column
+      gap: 20px 0
       align-items: center
-      justify-content: center
+      justify-content: right
       padding: 30px 0
     &__text-section 
-      display: none
-    &__title,
-    &__subtitle
-      font-size: 22px
+      display: block
+    &__title
+      font-size: 32px
+      max-width: 80%
+    &__list
+      font-size: 20px
+      padding-left: 10px
+      padding-top: 15px
+    &__item
+      padding: 8px 0
+      &::before
+        font-family: FontAwesome
+        font-size: 24px
+        content: '\f101'
+        padding-right: 5px
     &__text
-      font-size: 14px
+      font-size: 16px
 
   // --------
   // DISCOUNT
   // --------
-  .discount-wrap 
-    width: 40%
-    max-width: 250px
-    height: 160px
-    padding: 10px
-    background: #ffffff
-    border-radius: 3px
-    box-shadow: 0 1px 2px rgba(0,0,0,0.07)
-    margin-left: 0
-
-  .discount-block h3 
-    font-size: 55px
+  .discount-block
+    &__num 
+      font-size: 160px
+    &__currency
+      font-size: 60px
 
   // ------
   // RIBBON
@@ -541,13 +571,15 @@
     top: 165px
 
   .ribbon6
-    font-size: 16px
+    font-family: "Montserrat", sans-serif
+    font-size: 30px
+    font-weight: 700
 
   // ------
   // BUTTON
   // ------
   .discount-btn-wrap
-    margin: 20px 0 0
+    margin: auto 0
     margin-right: 0
 
   .discount-btn
@@ -555,7 +587,7 @@
     margin: 0 20px
   
   .discount-btn__text 
-    font-size: 22px
+    font-size: 30px
 
   .discount-btn:before 
     top: 0
@@ -579,32 +611,37 @@
     &-container
       width: 100%
       flex-direction: column
+      gap: 20px 0
       align-items: center
-      justify-content: center
+      justify-content: right
       padding: 30px 0
     &__text-section 
-      display: none
-    &__title,
-    &__subtitle
-      font-size: 22px
+      display: block
+    &__title
+      font-size: 30px
+      max-width: 80%
+    &__list
+      font-size: 16px
+      padding-left: 10px
+      padding-top: 15px
+    &__item
+      padding: 8px 0
+      &::before
+        font-family: FontAwesome
+        font-size: 24px
+        content: '\f101'
+        padding-right: 5px
     &__text
-      font-size: 14px
+      font-size: 16px
 
   // --------
   // DISCOUNT
   // --------
-  .discount-wrap 
-    width: 40%
-    max-width: 250px
-    height: 160px
-    padding: 10px
-    background: #ffffff
-    border-radius: 3px
-    box-shadow: 0 1px 2px rgba(0,0,0,0.07)
-    margin-left: 0
-
-  .discount-block h3 
-    font-size: 50px
+  .discount-block
+    &__num 
+      font-size: 100px
+    &__currency
+      font-size: 40px
 
   // ------
   // RIBBON
@@ -613,22 +650,24 @@
     width: 300px
     height: 40px
     top: 40px
-    right: -80px
+    right: -90px
   
   .ribbon-wrap:before
-    right: 135px
+    right: 125px
 
   .ribbon-wrap:after
-    top: 135px
+    top: 125px
 
   .ribbon6
-    font-size: 16px
+    font-family: "Montserrat", sans-serif
+    font-size: 30px
+    font-weight: 700
 
   // ------
   // BUTTON
   // ------
   .discount-btn-wrap
-    margin: 20px 0 0
+    margin: auto 0
     margin-right: 0
 
   .discount-btn
@@ -636,7 +675,7 @@
     margin: 0 20px
   
   .discount-btn__text 
-    font-size: 22px
+    font-size: 28px
 
   .discount-btn:before 
     top: 0
