@@ -6,49 +6,104 @@ section.portfolio
           span.title_marked ремонту квартир
         p.renovation-header__info В этом разделе можно посмотреть реальные фото дизайна и ремонта и квартир, выполненных силами компании «Deloremontov». Здесь есть фото ремонта квартир в современном, классическом стиле, хай-тек, лофт, модерн.
       .renovation-container
-        a.renovation(href="town")
-          #townhouse.renovation__img 
-          ul.renovation__list
-            li.renovation__item(onmouseover="townhouseChangeImg(1)" onmouseout="townhouseRechangeImg()")
-            li.renovation__item(onmouseover="townhouseChangeImg(2)" onmouseout="townhouseRechangeImg()")
-            li.renovation__item(onmouseover="townhouseChangeImg(3)" onmouseout="townhouseRechangeImg()")
-            li.renovation__item(onmouseover="townhouseChangeImg(4)" onmouseout="townhouseRechangeImg()")
-          .renovation-description 
-            .renovation-description__name Таунхаус 220 м
-              span.sup 2
-            .renovation-description__location г. Санкт-Петербург 
+        // --------------------
+        // Promotion materials
+        // --------------------
         a.renovation(href="#")
-          #country-house.renovation__img 
+          #promotions.renovation__img 
           ul.renovation__list
-            li.renovation__item(onmouseover="countryHouseImg(1)" onmouseout="countryHouseRechangeImg()")
-            li.renovation__item(onmouseover="countryHouseImg(2)" onmouseout="countryHouseRechangeImg()")
-            li.renovation__item(onmouseover="countryHouseImg(3)" onmouseout="countryHouseRechangeImg()")
-            li.renovation__item(onmouseover="countryHouseImg(4)" onmouseout="countryHouseRechangeImg()")
+            li.renovation__item.promotion(onmouseover="promotionImg(1)" onmouseout="promotionRechangeImg()")
+            li.renovation__item.promotion(onmouseover="promotionImg(2)" onmouseout="promotionRechangeImg()")
+            li.renovation__item.promotion(onmouseover="promotionImg(3)" onmouseout="promotionRechangeImg()")
+            li.renovation__item.promotion(onmouseover="promotionImg(4)" onmouseout="promotionRechangeImg()")
+            li.renovation__item.promotion(onmouseover="promotionImg(5)" onmouseout="promotionRechangeImg()")
+            li.renovation__item.promotion(onmouseover="promotionImg(6)" onmouseout="promotionRechangeImg()")
+            li.renovation__item.promotion(onmouseover="promotionImg(7)" onmouseout="promotionRechangeImg()")
+            li.renovation__item.promotion(onmouseover="promotionImg(8)" onmouseout="promotionRechangeImg()")
+            li.renovation__item.promotion(onmouseover="promotionImg(9)" onmouseout="promotionRechangeImg()")
           .renovation-description 
-            .renovation-description__name Загородный дом 650 м
-              span.sup 2
-            .renovation-description__location Ленинградская область
-        a.renovation(href="#") 
-          #flat-1.renovation__img 
-          ul.renovation__list
-            li.renovation__item(onmouseover="flat1Img(1)" onmouseout="flat1RechangeImg()")
-            li.renovation__item(onmouseover="flat1Img(2)" onmouseout="flat1RechangeImg()")
-            li.renovation__item(onmouseover="flat1Img(3)" onmouseout="flat1RechangeImg()")
-            li.renovation__item(onmouseover="flat1Img(4)" onmouseout="flat1RechangeImg()")
-          .renovation-description 
-            .renovation-description__name Квартира 140 м
-              span.sup 2
+            .renovation-description__name Образцы готовых работ
+              span.sup
             .renovation-description__location г. Санкт-Петербург
-        a.renovation(href="#") 
-          #flat-2.renovation__img 
+        // --------------------
+        // Room
+        // --------------------
+        a.renovation(href="#")
+          #room-1.renovation__img 
           ul.renovation__list
-            li.renovation__item(onmouseover="flat2Img(1)" onmouseout="flat2RechangeImg()")
-            li.renovation__item(onmouseover="flat2Img(2)" onmouseout="flat2RechangeImg()")
-            li.renovation__item(onmouseover="flat2Img(3)" onmouseout="flat2RechangeImg()")
-            li.renovation__item(onmouseover="flat2Img(4)" onmouseout="flat2RechangeImg()")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(1)" onmouseout="roomRechangeImg()")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(2)" onmouseout="roomRechangeImg()")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(3)" onmouseout="roomRechangeImg()")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(4)" onmouseout="roomRechangeImg()")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(5)" onmouseout="roomRechangeImg()")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(6)" onmouseout="roomRechangeImg()")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(7)" onmouseout="roomRechangeImg()")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(8)" onmouseout="roomRechangeImg()")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(9)" onmouseout="roomRechangeImg()")
           .renovation-description 
-            .renovation-description__name Квартира 145 м
-              span.sup 2
+            .renovation-description__name Ремонт комнаты
+              span.sup
+            .renovation-description__location г. Санкт-Петербург
+        // --------------------
+        // Office
+        // --------------------
+        a.renovation(href="#")
+          #office-1.renovation__img 
+          ul.renovation__list
+            li.renovation__item.office(onmouseover="officeImg(1)" onmouseout="officeRechangeImg()")
+            li.renovation__item.office(onmouseover="officeImg(2)" onmouseout="officeRechangeImg()")
+            li.renovation__item.office(onmouseover="officeImg(3)" onmouseout="officeRechangeImg()")
+            li.renovation__item.office(onmouseover="officeImg(4)" onmouseout="officeRechangeImg()")
+            li.renovation__item.office(onmouseover="officeImg(5)" onmouseout="officeRechangeImg()")
+            li.renovation__item.office(onmouseover="officeImg(6)" onmouseout="officeRechangeImg()")
+            li.renovation__item.office(onmouseover="officeImg(7)" onmouseout="officeRechangeImg()")
+            li.renovation__item.office(onmouseover="officeImg(8)" onmouseout="officeRechangeImg()")
+          .renovation-description 
+            .renovation-description__name Ремонт офиса
+              span.sup 
+            .renovation-description__location Ленинградская область
+        // --------------------
+        // Bathroom
+        // --------------------
+        a.renovation(href="#")
+          #bathroom-1.renovation__img 
+          ul.renovation__list
+            li.renovation__item.bathroom(onmouseover="bathroomImg(1)" onmouseout="bathroomRechangeImg()")
+            li.renovation__item.bathroom(onmouseover="bathroomImg(2)" onmouseout="bathroomRechangeImg()")
+            li.renovation__item.bathroom(onmouseover="bathroomImg(4)" onmouseout="bathroomRechangeImg()")
+            li.renovation__item.bathroom(onmouseover="bathroomImg(5)" onmouseout="bathroomRechangeImg()")
+            li.renovation__item.bathroom(onmouseover="bathroomImg(6)" onmouseout="bathroomRechangeImg()")
+          .renovation-description 
+            .renovation-description__name Ремонт сан узла
+              span.sup
+            .renovation-description__location г. Санкт-Петербург
+        // --------------------
+        // Ceiling
+        // --------------------
+        a.renovation(href="#") 
+          #ceiling-1.renovation__img 
+          ul.renovation__list
+            li.renovation__item.ceiling(onmouseover="ceilingImg(1)" onmouseout="ceilingRechangeImg()")
+            li.renovation__item.ceiling(onmouseover="ceilingImg(2)" onmouseout="ceilingRechangeImg()")
+            li.renovation__item.ceiling(onmouseover="ceilingImg(3)" onmouseout="ceilingRechangeImg()")
+            li.renovation__item.ceiling(onmouseover="ceilingImg(4)" onmouseout="ceilingRechangeImg()")
+            li.renovation__item.ceiling(onmouseover="ceilingImg(5)" onmouseout="ceilingRechangeImg()")
+            li.renovation__item.ceiling(onmouseover="ceilingImg(6)" onmouseout="ceilingRechangeImg()")
+            li.renovation__item.ceiling(onmouseover="ceilingImg(7)" onmouseout="ceilingRechangeImg()")
+            li.renovation__item.ceiling(onmouseover="ceilingImg(8)" onmouseout="ceilingRechangeImg()")
+          .renovation-description 
+            .renovation-description__name Ремонт потолков
+              span.sup
+            .renovation-description__location г. Санкт-Петербург
+        // --------------------
+        // Kitchen
+        // --------------------
+        a.renovation(href="#")
+          #kitchen-1.renovation__img
+          ul.renovation__list
+          .renovation-description 
+            .renovation-description__name Ремонт кухни
+              span.sup
             .renovation-description__location г. Санкт-Петербург
         
           

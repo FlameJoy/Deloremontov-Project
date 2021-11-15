@@ -26,15 +26,18 @@
   height: 500px
   border-radius: 8px
   z-index: -5
-
-#townhouse
-  background: url(../images/dest/main_001.jpg) no-repeat center
-#country-house 
-  background: url(../images/dest/main_011.jpg) no-repeat center
-#flat-1
-  background: url(../images/dest/main_021.jpg) no-repeat center
-#flat-2
-  background: url(../images/dest/main_031.jpg) no-repeat center
+#promotions
+  background: url(../images/dest/portfolio/promotions/promotions-1.jpg) no-repeat center
+#kitchen-1
+  background: url(../images/dest/portfolio/kitchen/kitchen-1.jpeg) no-repeat center
+#room-1
+  background: url(../images/dest/portfolio/room/room-1.jpeg) no-repeat center
+#office-1
+  background: url(../images/dest/portfolio/office/office-1.jpeg) no-repeat center
+#bathroom-1
+  background: url(../images/dest/portfolio/bathroom/bathroom-1.jpeg) no-repeat center
+#ceiling-1
+  background: url(../images/dest/portfolio/ceiling/ceiling-1.jpeg) no-repeat center
 
 .renovation
   text-decoration: none
@@ -44,18 +47,33 @@
     flex-direction: row
     width: 600px
     height: 500px
-  &__item
-    width: 25%
-    height: 100%
-    &::after
-      display: block
-      position: relative
-      content: ''
-      width: 80%
-      height: 3px
-      background-color: #ec4b00
-      top: 95%
-      margin: 0 auto
+
+.renovation__item
+  height: 100%
+  &::after
+    display: block
+    position: relative
+    content: ''
+    width: 80%
+    height: 3px
+    background-color: #ec4b00
+    top: 95%
+    margin: 0 auto
+
+.room-1
+  width: 11.11%
+
+.office
+  width: 12.5%
+
+.bathroom
+  width: 20%
+
+.ceiling
+  width: 12.5%
+
+.promotion
+  width: 11.11%
 
 .renovation-description 
   &__name,

@@ -14,8 +14,14 @@ header.header
         p.header-slide-info__text От лёгкого косметического ремонта, до полной перепланировки
     .header-slider-btn 
       button.btn.slider-btn Заказать
+    button.instagram(onclick="document.getElementById('instagram-modal').style.display='block'")
+    #instagram-modal.modal
+      .instagram-modal-content
+        span.instagram-modal__close-btn(onclick="document.getElementById('instagram-modal').style.display='none'" class="close" title="Close Modal") &times;
+        img.instagram__qr-code(src="../assets/images/dest/qr-code.jpg" alt='qr-code')
     .header-slide-lines
       .header-slide__line.header-slide__line_active
       .header-slide__line.header-slide__line_active
       .header-slide__line.header-slide__line_active
+
 

@@ -76,7 +76,7 @@
               <div class="recall-form__date-time-container">
                 <input class="recall-form__input-time" type="time" id="time" name="time-date">
                 <input class="recall-form__input-date" type="date" id="date" name="time-date">
-              </div><a class="btn">Заказать звонок</a>
+              </div><a class="btn recall-form__btn">Заказать звонок</a>
             </div>
           </form>
         </div>
@@ -104,6 +104,10 @@
         </div>
         <div class="header-slider-btn"> 
           <button class="btn slider-btn">Заказать</button>
+        </div>
+        <button class="instagram" onclick="document.getElementById('instagram-modal').style.display='block'"></button>
+        <div class="modal" id="instagram-modal">
+          <div class="instagram-modal-content"><span class="instagram-modal__close-btn close" onclick="document.getElementById('instagram-modal').style.display='none'" title="Close Modal">&times;</span><img class="instagram__qr-code" src="../assets/images/dest/qr-code.jpg" alt="qr-code"></div>
         </div>
         <div class="header-slide-lines">
           <div class="header-slide__line header-slide__line_active"></div>
@@ -503,51 +507,106 @@
             <h2 class="renovation-header__title">Примеры выполненных нашей компанией работ по <span class="title_marked">ремонту квартир</span></h2>
             <p class="renovation-header__info">В этом разделе можно посмотреть реальные фото дизайна и ремонта и квартир, выполненных силами компании «Deloremontov». Здесь есть фото ремонта квартир в современном, классическом стиле, хай-тек, лофт, модерн.</p>
           </div>
-          <div class="renovation-container"><a class="renovation" href="town">
-              <div class="renovation__img" id="townhouse"> </div>
+          <div class="renovation-container">
+            <!-- ---------------------->
+            <!-- Promotion materials-->
+            <!-- ----------------------><a class="renovation" href="#">
+              <div class="renovation__img" id="promotions"> </div>
               <ul class="renovation__list">
-                <li class="renovation__item" onmouseover="townhouseChangeImg(1)" onmouseout="townhouseRechangeImg()"></li>
-                <li class="renovation__item" onmouseover="townhouseChangeImg(2)" onmouseout="townhouseRechangeImg()"></li>
-                <li class="renovation__item" onmouseover="townhouseChangeImg(3)" onmouseout="townhouseRechangeImg()"></li>
-                <li class="renovation__item" onmouseover="townhouseChangeImg(4)" onmouseout="townhouseRechangeImg()"></li>
+                <li class="renovation__item promotion" onmouseover="promotionImg(1)" onmouseout="promotionRechangeImg()"></li>
+                <li class="renovation__item promotion" onmouseover="promotionImg(2)" onmouseout="promotionRechangeImg()"></li>
+                <li class="renovation__item promotion" onmouseover="promotionImg(3)" onmouseout="promotionRechangeImg()"></li>
+                <li class="renovation__item promotion" onmouseover="promotionImg(4)" onmouseout="promotionRechangeImg()"></li>
+                <li class="renovation__item promotion" onmouseover="promotionImg(5)" onmouseout="promotionRechangeImg()"></li>
+                <li class="renovation__item promotion" onmouseover="promotionImg(6)" onmouseout="promotionRechangeImg()"></li>
+                <li class="renovation__item promotion" onmouseover="promotionImg(7)" onmouseout="promotionRechangeImg()"></li>
+                <li class="renovation__item promotion" onmouseover="promotionImg(8)" onmouseout="promotionRechangeImg()"></li>
+                <li class="renovation__item promotion" onmouseover="promotionImg(9)" onmouseout="promotionRechangeImg()"></li>
               </ul>
               <div class="renovation-description"> 
-                <div class="renovation-description__name">Таунхаус 220 м<span class="sup">2</span></div>
-                <div class="renovation-description__location">г. Санкт-Петербург </div>
-              </div></a><a class="renovation" href="#">
-              <div class="renovation__img" id="country-house"> </div>
+                <div class="renovation-description__name">Образцы готовых работ<span class="sup"></span></div>
+                <div class="renovation-description__location">г. Санкт-Петербург</div>
+              </div></a>
+            <!-- ---------------------->
+            <!-- Room-->
+            <!-- ----------------------><a class="renovation" href="#">
+              <div class="renovation__img" id="room-1"> </div>
               <ul class="renovation__list">
-                <li class="renovation__item" onmouseover="countryHouseImg(1)" onmouseout="countryHouseRechangeImg()"></li>
-                <li class="renovation__item" onmouseover="countryHouseImg(2)" onmouseout="countryHouseRechangeImg()"></li>
-                <li class="renovation__item" onmouseover="countryHouseImg(3)" onmouseout="countryHouseRechangeImg()"></li>
-                <li class="renovation__item" onmouseover="countryHouseImg(4)" onmouseout="countryHouseRechangeImg()"></li>
+                <li class="renovation__item room-1" onmouseover="roomChangeImg(1)" onmouseout="roomRechangeImg()"></li>
+                <li class="renovation__item room-1" onmouseover="roomChangeImg(2)" onmouseout="roomRechangeImg()"></li>
+                <li class="renovation__item room-1" onmouseover="roomChangeImg(3)" onmouseout="roomRechangeImg()"></li>
+                <li class="renovation__item room-1" onmouseover="roomChangeImg(4)" onmouseout="roomRechangeImg()"></li>
+                <li class="renovation__item room-1" onmouseover="roomChangeImg(5)" onmouseout="roomRechangeImg()"></li>
+                <li class="renovation__item room-1" onmouseover="roomChangeImg(6)" onmouseout="roomRechangeImg()"></li>
+                <li class="renovation__item room-1" onmouseover="roomChangeImg(7)" onmouseout="roomRechangeImg()"></li>
+                <li class="renovation__item room-1" onmouseover="roomChangeImg(8)" onmouseout="roomRechangeImg()"></li>
+                <li class="renovation__item room-1" onmouseover="roomChangeImg(9)" onmouseout="roomRechangeImg()"></li>
               </ul>
               <div class="renovation-description"> 
-                <div class="renovation-description__name">Загородный дом 650 м<span class="sup">2</span></div>
+                <div class="renovation-description__name">Ремонт комнаты<span class="sup"></span></div>
+                <div class="renovation-description__location">г. Санкт-Петербург</div>
+              </div></a>
+            <!-- ---------------------->
+            <!-- Office-->
+            <!-- ----------------------><a class="renovation" href="#">
+              <div class="renovation__img" id="office-1"> </div>
+              <ul class="renovation__list">
+                <li class="renovation__item office" onmouseover="officeImg(1)" onmouseout="officeRechangeImg()"></li>
+                <li class="renovation__item office" onmouseover="officeImg(2)" onmouseout="officeRechangeImg()"></li>
+                <li class="renovation__item office" onmouseover="officeImg(3)" onmouseout="officeRechangeImg()"></li>
+                <li class="renovation__item office" onmouseover="officeImg(4)" onmouseout="officeRechangeImg()"></li>
+                <li class="renovation__item office" onmouseover="officeImg(5)" onmouseout="officeRechangeImg()"></li>
+                <li class="renovation__item office" onmouseover="officeImg(6)" onmouseout="officeRechangeImg()"></li>
+                <li class="renovation__item office" onmouseover="officeImg(7)" onmouseout="officeRechangeImg()"></li>
+                <li class="renovation__item office" onmouseover="officeImg(8)" onmouseout="officeRechangeImg()"></li>
+              </ul>
+              <div class="renovation-description"> 
+                <div class="renovation-description__name">Ремонт офиса<span class="sup"> </span></div>
                 <div class="renovation-description__location">Ленинградская область</div>
-              </div></a><a class="renovation" href="#"> 
-              <div class="renovation__img" id="flat-1"> </div>
+              </div></a>
+            <!-- ---------------------->
+            <!-- Bathroom-->
+            <!-- ----------------------><a class="renovation" href="#">
+              <div class="renovation__img" id="bathroom-1"> </div>
               <ul class="renovation__list">
-                <li class="renovation__item" onmouseover="flat1Img(1)" onmouseout="flat1RechangeImg()"></li>
-                <li class="renovation__item" onmouseover="flat1Img(2)" onmouseout="flat1RechangeImg()"></li>
-                <li class="renovation__item" onmouseover="flat1Img(3)" onmouseout="flat1RechangeImg()"></li>
-                <li class="renovation__item" onmouseover="flat1Img(4)" onmouseout="flat1RechangeImg()"></li>
+                <li class="renovation__item bathroom" onmouseover="bathroomImg(1)" onmouseout="bathroomRechangeImg()"></li>
+                <li class="renovation__item bathroom" onmouseover="bathroomImg(2)" onmouseout="bathroomRechangeImg()"></li>
+                <li class="renovation__item bathroom" onmouseover="bathroomImg(4)" onmouseout="bathroomRechangeImg()"></li>
+                <li class="renovation__item bathroom" onmouseover="bathroomImg(5)" onmouseout="bathroomRechangeImg()"></li>
+                <li class="renovation__item bathroom" onmouseover="bathroomImg(6)" onmouseout="bathroomRechangeImg()"></li>
               </ul>
               <div class="renovation-description"> 
-                <div class="renovation-description__name">Квартира 140 м<span class="sup">2</span></div>
+                <div class="renovation-description__name">Ремонт сан узла<span class="sup"></span></div>
                 <div class="renovation-description__location">г. Санкт-Петербург</div>
-              </div></a><a class="renovation" href="#"> 
-              <div class="renovation__img" id="flat-2"> </div>
+              </div></a>
+            <!-- ---------------------->
+            <!-- Ceiling-->
+            <!-- ----------------------><a class="renovation" href="#"> 
+              <div class="renovation__img" id="ceiling-1"> </div>
               <ul class="renovation__list">
-                <li class="renovation__item" onmouseover="flat2Img(1)" onmouseout="flat2RechangeImg()"></li>
-                <li class="renovation__item" onmouseover="flat2Img(2)" onmouseout="flat2RechangeImg()"></li>
-                <li class="renovation__item" onmouseover="flat2Img(3)" onmouseout="flat2RechangeImg()"></li>
-                <li class="renovation__item" onmouseover="flat2Img(4)" onmouseout="flat2RechangeImg()"></li>
+                <li class="renovation__item ceiling" onmouseover="ceilingImg(1)" onmouseout="ceilingRechangeImg()"></li>
+                <li class="renovation__item ceiling" onmouseover="ceilingImg(2)" onmouseout="ceilingRechangeImg()"></li>
+                <li class="renovation__item ceiling" onmouseover="ceilingImg(3)" onmouseout="ceilingRechangeImg()"></li>
+                <li class="renovation__item ceiling" onmouseover="ceilingImg(4)" onmouseout="ceilingRechangeImg()"></li>
+                <li class="renovation__item ceiling" onmouseover="ceilingImg(5)" onmouseout="ceilingRechangeImg()"></li>
+                <li class="renovation__item ceiling" onmouseover="ceilingImg(6)" onmouseout="ceilingRechangeImg()"></li>
+                <li class="renovation__item ceiling" onmouseover="ceilingImg(7)" onmouseout="ceilingRechangeImg()"></li>
+                <li class="renovation__item ceiling" onmouseover="ceilingImg(8)" onmouseout="ceilingRechangeImg()"></li>
               </ul>
               <div class="renovation-description"> 
-                <div class="renovation-description__name">Квартира 145 м<span class="sup">2</span></div>
+                <div class="renovation-description__name">Ремонт потолков<span class="sup"></span></div>
                 <div class="renovation-description__location">г. Санкт-Петербург</div>
-              </div></a></div>
+              </div></a>
+            <!-- ---------------------->
+            <!-- Kitchen-->
+            <!-- ----------------------><a class="renovation" href="#">
+              <div class="renovation__img" id="kitchen-1"></div>
+              <ul class="renovation__list"></ul>
+              <div class="renovation-description"> 
+                <div class="renovation-description__name">Ремонт кухни<span class="sup"></span></div>
+                <div class="renovation-description__location">г. Санкт-Петербург</div>
+              </div></a>
+          </div>
         </div>
       </div>
     </section>
