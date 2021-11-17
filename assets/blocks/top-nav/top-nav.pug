@@ -15,17 +15,41 @@
               i.fas.fa-caret-down
             .top-nav-dropdown-menu__content
               ul.top-nav-dropdown-menu__list.cl-effect-8
-                each name in ["Главная", "Услуги", "Портфолио", "Контакты"]
-                  li.top-nav-dropdown-menu__item
-                    a.top-nav-dropdown-menu__link(href="#")=name
+                li.top-nav-dropdown-menu__item
+                  a.top-nav-dropdown-menu__link.scrollto(href="#header") Главная
+                li.top-nav-dropdown-menu__item
+                  a.top-nav-dropdown-menu__link.scrollto(href="#services") Услуги
+                li.top-nav-dropdown-menu__item
+                  a.top-nav-dropdown-menu__link.scrollto(href="#portfolio") Портфолио
+                li.top-nav-dropdown-menu__item
+                  a.top-nav-dropdown-menu__link.scrollto(href="#contact") Контакты
       // --------------- 
       // Navigation menu 
       // --------------- 
       .top-nav-menu
-        each name in ["Главная", "Услуги", "Портфолио", "Контакты"]
-          ul.top-nav-menu__list.cl-effect-8
-            li.top-nav-menu__item
-              a.top-nav-menu__link(href="#")=name
+        ul.top-nav-menu__list.cl-effect-8
+          li.top-nav-menu__item
+            a.top-nav-menu__link.scrollto(href="#header") Главная
+          li.top-nav-menu__item
+            a.top-nav-menu__link.scrollto(href="#services") Услуги
+          li.top-nav-menu__item
+            a.top-nav-menu__link.scrollto(href="#portfolio") Портфолио
+          li.top-nav-menu__item
+            a.top-nav-menu__link.scrollto(href="#contact") Контакты
+      // --------------- 
+      // Scroll menu
+      // --------------- 
+      #top-nav-scroll-menu.top-nav-scroll-menu
+        ul.top-nav-scroll-menu__list.cl-effect-8
+          img.top-nav-scroll-menu__logo(src="assets/images/dest/nav-scroll-logo.png" alt="scroll-menu-logo")
+          li.top-nav-scroll-menu__item
+            a.top-nav-scroll-menu__link.scrollto(href="#header") Главная
+          li.top-nav-scroll-menu__item
+            a.top-nav-scroll-menu__link.scrollto(href="#services") Услуги
+          li.top-nav-scroll-menu__item
+            a.top-nav-scroll-menu__link.scrollto(href="#portfolio") Портфолио
+          li.top-nav-scroll-menu__item
+            a.top-nav-scroll-menu__link.scrollto(href="#contact") Контакты
       // ------------------------------ 
       // Recall button & telefon number 
       // ------------------------------ 

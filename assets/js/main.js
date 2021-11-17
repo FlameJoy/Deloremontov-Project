@@ -1,5 +1,7 @@
 "use strict"
-
+// -----------------
+// Header autoslider
+// -----------------
 let headerSliderIndex = 0;
 showSlides();
 
@@ -27,6 +29,34 @@ function showSlides(n) {
   setTimeout(showSlides, 4000);
 }
 
+// ----------------
+// Scroll down menu
+// ----------------
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+    document.getElementById("top-nav-scroll-menu").style.top = "0";
+  } else {
+    document.getElementById("top-nav-scroll-menu").style.top = "-100px";
+  }
+}
+
+// -----------------------
+// Smooth scroll animation
+// -----------------------
+jQuery(document).ready(function() {
+  jQuery("a.scrollto").click(function () {
+  elementClick = jQuery(this).attr("href")
+  destination = jQuery(elementClick).offset().top;
+  jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1100);
+  return false;
+  });
+});
+
+// ---------------
+// Calculator tabs
+// ---------------
 function openCalc(evt, objectName) {
   // Declare all variables
   var i, tabcontent, tablinks;

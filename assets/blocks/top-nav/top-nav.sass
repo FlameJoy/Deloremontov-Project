@@ -31,8 +31,9 @@
   letter-spacing: 1px
 
 .top-nav-menu
-  display: flex
-  flex-direction: row
+  &__list
+    display: flex
+    flex-direction: row
   &__item
     margin: 0 10px
     padding: 5px
@@ -97,6 +98,43 @@
 .top-nav-dropdown-menu:hover .top-nav-dropdown-menu__content,
 .top-nav-dropdown-menu__content:hover
   display: block
+
+// --------------- 
+// Scroll menu
+// --------------- 
+.top-nav-scroll-menu
+  position: fixed
+  background-color: #fff
+  top: -100px
+  width: 100%
+  transition: all 0.3s
+  &__logo
+    width: 320px
+    padding: 0 40px 0 5% 
+  &__list
+    display: flex
+    flex-direction: row
+    align-items: center
+  &__item
+    margin: 10px
+    padding: 5px
+    border: 2px solid transparent
+    transition-delay: .1s
+    transition-duration: .4s
+    &:hover
+      border: 2px solid #fac106
+      .top-nav-scroll-menu__link
+        color: #fac106
+        text-shadow: 1px 1px 2px #000       
+  &__link
+    font-family: "Roboto", sans-serif
+    font-size: 28px
+    font-weight: 500
+    text-decoration: none
+    text-transform: uppercase
+    color: #fac106
+    transition-delay: .1s
+    transition-duration: .4s
 
 // -----------
 // Recall form

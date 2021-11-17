@@ -80,7 +80,6 @@
     content: "\e055"
     font-size: 100px
     color: #fd1d1d
-    // background: linear-gradient(to bottom, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80)
     right: 15%
     bottom: 80px
 
@@ -137,6 +136,22 @@
 .header-slide__line_active
   background-color: #fac106
 
+// ---------
+// Up button
+// ---------
+.up-btn
+  cursor: pointer
+  &__link::before
+    position: fixed
+    display: block
+    font-family: FontAwesome
+    font-size: 80px
+    content: '\f102'
+    top: 80%
+    right: 5%
+    color: #fac106
+
+
 // ----------
 // Adaptivity
 // ----------
@@ -162,6 +177,28 @@
     left: calc( 50% - 180px )
     bottom: 80px
 
+  // ----------------------
+  // Instagram QR code link
+  // ----------------------
+  .instagram
+    &::after 
+      font-size: 100px
+      right: 10%
+      bottom: 80px
+
+  // ----------------------
+  // Instagram modal window
+  // ----------------------
+  .instagram-modal-content
+    width: 400px
+    padding: 15px 30px
+
+  .instagram-modal__close-btn
+    font-size: 60px
+
+  .instagram__qr-code
+    width: 400px
+
 // ---------------------------------------
 // Screen resolution from 1600px to 1920px
 //----------------------------------------
@@ -181,6 +218,28 @@
     position: absolute
     left: calc( 50% - 180px )
     bottom: 80px
+
+  // ----------------------
+  // Instagram QR code link
+  // ----------------------
+  .instagram
+    &::after 
+      font-size: 100px
+      right: 10%
+      bottom: 80px
+
+  // ----------------------
+  // Instagram modal window
+  // ----------------------
+  .instagram-modal-content
+    width: 400px
+    padding: 15px 30px
+
+  .instagram-modal__close-btn
+    font-size: 60px
+
+  .instagram__qr-code
+    width: 400px
 
 // ---------------------------------------
 // Screen resolution from 1200px to 1600px
@@ -207,6 +266,28 @@
     position: absolute
     left: calc( 50% - 180px )
     bottom: 80px
+
+  // ----------------------
+  // Instagram QR code link
+  // ----------------------
+  .instagram
+    &::after 
+      font-size: 80px
+      right: 10%
+      bottom: 80px
+
+  // ----------------------
+  // Instagram modal window
+  // ----------------------
+  .instagram-modal-content
+    width: 300px
+    padding: 15px 30px
+
+  .instagram-modal__close-btn
+    font-size: 60px
+
+  .instagram__qr-code
+    width: 300px
 
 // --------------------------------------
 // Screen resolution from 900px to 1200px
@@ -239,6 +320,29 @@
   .header-slide-lines
     width: 600px
     left: calc( 50% - 300px )
+
+  // ----------------------
+  // Instagram QR code link
+  // ----------------------
+  .instagram
+    &::after 
+      font-size: 80px
+      right: 10%
+      bottom: 80px
+
+  // ----------------------
+  // Instagram modal window
+  // ----------------------
+  .instagram-modal-content
+    width: 300px
+    padding: 15px 30px
+
+  .instagram-modal__close-btn
+    font-size: 60px
+
+  .instagram__qr-code
+    width: 300px
+
 // -------------------------------------
 // Screen resolution from 600px to 900px
 //--------------------------------------
@@ -276,6 +380,28 @@
   .header-slide-lines
     width: 600px
     left: calc( 50% - 300px )
+
+  // ----------------------
+  // Instagram QR code link
+  // ----------------------
+  .instagram
+    &::after 
+      font-size: 60px
+      right: 10%
+      bottom: 80px
+
+  // ----------------------
+  // Instagram modal window
+  // ----------------------
+  .instagram-modal-content
+    width: 250px
+    padding: 15px 30px
+
+  .instagram-modal__close-btn
+    font-size: 40px
+
+  .instagram__qr-code
+    width: 250px
 
 // -------------------------------------
 // Screen resolution from 320px to 600px
@@ -323,5 +449,12 @@
 
   .header-slide-container:nth-child(3)::before
     background-position-x: 65%
+
+  // ----------------------
+  // Instagram QR code link
+  // ----------------------
+  .instagram
+    display: none
+
 
   

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мастер Отделкин</title>
+    <title>Deloremontov.ru</title>
     <!-- ------------------- -->
     <!-- Styles & animations -->
     <!-- ------------------- -->
@@ -28,10 +28,10 @@
             <button class="top-nav-dropdown-menu__btn">меню<i class="fas fa-caret-down"></i></button>
             <div class="top-nav-dropdown-menu__content">
               <ul class="top-nav-dropdown-menu__list cl-effect-8">
-                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link" href="#">Главная</a></li>
-                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link" href="#">Услуги</a></li>
-                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link" href="#">Портфолио</a></li>
-                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link" href="#">Контакты</a></li>
+                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link scrollto" href="#header">Главная</a></li>
+                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link scrollto" href="#services">Услуги</a></li>
+                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link scrollto" href="#portfolio">Портфолио</a></li>
+                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link scrollto" href="#contact">Контакты</a></li>
               </ul>
             </div>
           </div>
@@ -41,16 +41,21 @@
         <!-- --------------- -->
         <div class="top-nav-menu">
           <ul class="top-nav-menu__list cl-effect-8">
-            <li class="top-nav-menu__item"><a class="top-nav-menu__link" href="#">Главная</a></li>
+            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#header">Главная</a></li>
+            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#services">Услуги</a></li>
+            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#portfolio">Портфолио</a></li>
+            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#contact">Контакты</a></li>
           </ul>
-          <ul class="top-nav-menu__list cl-effect-8">
-            <li class="top-nav-menu__item"><a class="top-nav-menu__link" href="#">Услуги</a></li>
-          </ul>
-          <ul class="top-nav-menu__list cl-effect-8">
-            <li class="top-nav-menu__item"><a class="top-nav-menu__link" href="#">Портфолио</a></li>
-          </ul>
-          <ul class="top-nav-menu__list cl-effect-8">
-            <li class="top-nav-menu__item"><a class="top-nav-menu__link" href="#">Контакты</a></li>
+        </div>
+        <!-- --------------- -->
+        <!-- Scroll menu-->
+        <!-- --------------- -->
+        <div class="top-nav-scroll-menu" id="top-nav-scroll-menu">
+          <ul class="top-nav-scroll-menu__list cl-effect-8"><img class="top-nav-scroll-menu__logo" src="assets/images/dest/nav-scroll-logo.png" alt="scroll-menu-logo">
+            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="#header">Главная</a></li>
+            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="#services">Услуги</a></li>
+            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="#portfolio">Портфолио</a></li>
+            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="#contact">Контакты</a></li>
           </ul>
         </div>
         <!-- ------------------------------ -->
@@ -82,7 +87,7 @@
         </div>
       </nav>
     </div>
-    <header class="header">
+    <header class="header" id="header">
       <div class="header-slider"> 
         <div class="header-slide-container">
           <div class="header-slide-info">
@@ -114,6 +119,7 @@
           <div class="header-slide__line header-slide__line_active"></div>
           <div class="header-slide__line header-slide__line_active"></div>
         </div>
+        <div class="up-btn"><a class="up-btn__link scrollto" href="#header"></a></div>
       </div>
     </header>
     <section class="calc"> 
@@ -500,7 +506,7 @@
         </div>
       </div>
     </div>
-    <section class="portfolio"> 
+    <section class="portfolio" id="portfolio"> 
       <div class="container">
         <div class="portfolio-container"> 
           <div class="renovation-header"> 
@@ -610,7 +616,7 @@
         </div>
       </div>
     </section>
-    <section class="services"> 
+    <section class="services" id="services"> 
       <div class="services-header"> 
         <div class="services-header-wrap">
           <h2 class="services-header__title">наши услуги</h2>
@@ -839,7 +845,7 @@
         </div>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="container"> 
         <div class="contact-container">
           <div class="contact-header">
