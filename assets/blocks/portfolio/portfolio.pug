@@ -9,101 +9,239 @@ section#portfolio.portfolio
         // --------------------
         // Promotion materials
         // --------------------
-        a.renovation(href="#")
+        .renovation
           #promotions.renovation__img 
           ul.renovation__list
-            li.renovation__item.promotion(onmouseover="promotionImg(1)" onmouseout="promotionRechangeImg()")
-            li.renovation__item.promotion(onmouseover="promotionImg(2)" onmouseout="promotionRechangeImg()")
-            li.renovation__item.promotion(onmouseover="promotionImg(3)" onmouseout="promotionRechangeImg()")
-            li.renovation__item.promotion(onmouseover="promotionImg(4)" onmouseout="promotionRechangeImg()")
-            li.renovation__item.promotion(onmouseover="promotionImg(5)" onmouseout="promotionRechangeImg()")
-            li.renovation__item.promotion(onmouseover="promotionImg(6)" onmouseout="promotionRechangeImg()")
-            li.renovation__item.promotion(onmouseover="promotionImg(7)" onmouseout="promotionRechangeImg()")
-            li.renovation__item.promotion(onmouseover="promotionImg(8)" onmouseout="promotionRechangeImg()")
-            li.renovation__item.promotion(onmouseover="promotionImg(9)" onmouseout="promotionRechangeImg()")
+            li.renovation__item.promotion(onmouseover="promotionImg(1)" onmouseout="promotionRechangeImg()" onclick="openModalSlider(1)")
+            li.renovation__item.promotion(onmouseover="promotionImg(2)" onmouseout="promotionRechangeImg()" onclick="openModalSlider(1)")
+            li.renovation__item.promotion(onmouseover="promotionImg(3)" onmouseout="promotionRechangeImg()" onclick="openModalSlider(1)")
+            li.renovation__item.promotion(onmouseover="promotionImg(4)" onmouseout="promotionRechangeImg()" onclick="openModalSlider(1)")
+            li.renovation__item.promotion(onmouseover="promotionImg(5)" onmouseout="promotionRechangeImg()" onclick="openModalSlider(1)")
+            li.renovation__item.promotion(onmouseover="promotionImg(6)" onmouseout="promotionRechangeImg()" onclick="openModalSlider(1)")
+            li.renovation__item.promotion(onmouseover="promotionImg(7)" onmouseout="promotionRechangeImg()" onclick="openModalSlider(1)")
+            li.renovation__item.promotion(onmouseover="promotionImg(8)" onmouseout="promotionRechangeImg()" onclick="openModalSlider(1)")
+            li.renovation__item.promotion(onmouseover="promotionImg(9)" onmouseout="promotionRechangeImg()" onclick="openModalSlider(1)")
           .renovation-description 
             .renovation-description__name Образцы готовых работ
               span.sup
             .renovation-description__location г. Санкт-Петербург
+        // --------------------------------
+        // Promotion materials modal slider
+        // --------------------------------
+        #promotions-modal-slider
+          span.modal-slider__close-btn(onclick="document.getElementById('promotions-modal-slider').style.display='none'" class="close" title="Close Modal") &times;
+          .modal-slider-container
+            .slide.mySlides1
+              img.slide__img(src='assets/images/dest/portfolio/promotions/promotions-1.jpg' alt="promotions-1")
+            .slide.mySlides1
+              img.slide__img(src='assets/images/dest/portfolio/promotions/promotions-2.jpg' alt="promotions-2")
+            .slide.mySlides1
+              img.slide__img(src='assets/images/dest/portfolio/promotions/promotions-3.jpg' alt="promotions-3")
+            .slide.mySlides1
+              img.slide__img(src='assets/images/dest/portfolio/promotions/promotions-4.jpg' alt="promotions-4")
+            .slide.mySlides1
+              img.slide__img(src='assets/images/dest/portfolio/promotions/promotions-5.jpeg' alt="promotions-5")
+            .slide.mySlides1
+              img.slide__img(src='assets/images/dest/portfolio/promotions/promotions-6.jpg' alt="promotions-6")
+            .slide.mySlides1
+              img.slide__img(src='assets/images/dest/portfolio/promotions/promotions-7.jpg' alt="promotions-7")
+            .slide.mySlides1
+              img.slide__img(src='assets/images/dest/portfolio/promotions/promotions-8.jpg' alt="promotions-8")
+            .slide.mySlides1
+              img.slide__img(src='assets/images/dest/portfolio/promotions/promotions-9.jpg' alt="promotions-9")
+            .slide.mySlides1
+              img.slide__img(src='assets/images/dest/portfolio/promotions/promotions-10.jpg' alt="promotions-10")
+            a.next-btn(onclick="plusSlides(1, 0)")
+            a.prev-btn(onclick="plusSlides(-1, 0)")
         // --------------------
         // Room
         // --------------------
-        a.renovation(href="#")
+        .renovation
           #room-1.renovation__img 
           ul.renovation__list
-            li.renovation__item.room-1(onmouseover="roomChangeImg(1)" onmouseout="roomRechangeImg()")
-            li.renovation__item.room-1(onmouseover="roomChangeImg(2)" onmouseout="roomRechangeImg()")
-            li.renovation__item.room-1(onmouseover="roomChangeImg(3)" onmouseout="roomRechangeImg()")
-            li.renovation__item.room-1(onmouseover="roomChangeImg(4)" onmouseout="roomRechangeImg()")
-            li.renovation__item.room-1(onmouseover="roomChangeImg(5)" onmouseout="roomRechangeImg()")
-            li.renovation__item.room-1(onmouseover="roomChangeImg(6)" onmouseout="roomRechangeImg()")
-            li.renovation__item.room-1(onmouseover="roomChangeImg(7)" onmouseout="roomRechangeImg()")
-            li.renovation__item.room-1(onmouseover="roomChangeImg(8)" onmouseout="roomRechangeImg()")
-            li.renovation__item.room-1(onmouseover="roomChangeImg(9)" onmouseout="roomRechangeImg()")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(1)" onmouseout="roomRechangeImg()" onclick="openModalSlider(2)")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(2)" onmouseout="roomRechangeImg()" onclick="openModalSlider(2)")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(3)" onmouseout="roomRechangeImg()" onclick="openModalSlider(2)")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(4)" onmouseout="roomRechangeImg()" onclick="openModalSlider(2)")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(5)" onmouseout="roomRechangeImg()" onclick="openModalSlider(2)")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(6)" onmouseout="roomRechangeImg()" onclick="openModalSlider(2)")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(7)" onmouseout="roomRechangeImg()" onclick="openModalSlider(2)")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(8)" onmouseout="roomRechangeImg()" onclick="openModalSlider(2)")
+            li.renovation__item.room-1(onmouseover="roomChangeImg(9)" onmouseout="roomRechangeImg()" onclick="openModalSlider(2)")
           .renovation-description 
             .renovation-description__name Ремонт комнаты
               span.sup
             .renovation-description__location г. Санкт-Петербург
+        // --------------------------------
+        // Room modal slider
+        // --------------------------------
+        #room-modal-slider
+          span.modal-slider__close-btn(onclick="document.getElementById('room-modal-slider').style.display='none'" class="close" title="Close Modal") &times;
+          .modal-slider-container
+            .slide.mySlides2
+              img.slide__img(src='assets/images/dest/portfolio/room/room-1.jpeg' alt="room-1")
+            .slide.mySlides2
+              img.slide__img(src='assets/images/dest/portfolio/room/room-2.jpeg' alt="room-2")
+            .slide.mySlides2
+              img.slide__img(src='assets/images/dest/portfolio/room/room-3.jpeg' alt="room-3")
+            .slide.mySlides2
+              img.slide__img(src='assets/images/dest/portfolio/room/room-4.jpeg' alt="room-4")
+            .slide.mySlides2
+              img.slide__img(src='assets/images/dest/portfolio/room/room-5.jpeg' alt="room-5")
+            .slide.mySlides2
+              img.slide__img(src='assets/images/dest/portfolio/room/room-6.jpeg' alt="room-6")
+            .slide.mySlides2
+              img.slide__img(src='assets/images/dest/portfolio/room/room-7.jpeg' alt="room-7")
+            .slide.mySlides2
+              img.slide__img(src='assets/images/dest/portfolio/room/room-8.jpeg' alt="room-8")
+            .slide.mySlides2
+              img.slide__img(src='assets/images/dest/portfolio/room/room-9.jpeg' alt="room-9")
+            .slide.mySlides2
+              img.slide__img(src='assets/images/dest/portfolio/room/room-10.jpeg' alt="room-10")
+            a.next-btn(onclick="plusSlides(1, 1)")
+            a.prev-btn(onclick="plusSlides(-1, 1)")
         // --------------------
         // Office
         // --------------------
-        a.renovation(href="#")
+        .renovation
           #office-1.renovation__img 
           ul.renovation__list
-            li.renovation__item.office(onmouseover="officeImg(1)" onmouseout="officeRechangeImg()")
-            li.renovation__item.office(onmouseover="officeImg(2)" onmouseout="officeRechangeImg()")
-            li.renovation__item.office(onmouseover="officeImg(3)" onmouseout="officeRechangeImg()")
-            li.renovation__item.office(onmouseover="officeImg(4)" onmouseout="officeRechangeImg()")
-            li.renovation__item.office(onmouseover="officeImg(5)" onmouseout="officeRechangeImg()")
-            li.renovation__item.office(onmouseover="officeImg(6)" onmouseout="officeRechangeImg()")
-            li.renovation__item.office(onmouseover="officeImg(7)" onmouseout="officeRechangeImg()")
-            li.renovation__item.office(onmouseover="officeImg(8)" onmouseout="officeRechangeImg()")
+            li.renovation__item.office(onmouseover="officeImg(1)" onmouseout="officeRechangeImg()" onclick="openModalSlider(3)")
+            li.renovation__item.office(onmouseover="officeImg(2)" onmouseout="officeRechangeImg()" onclick="openModalSlider(3)")
+            li.renovation__item.office(onmouseover="officeImg(3)" onmouseout="officeRechangeImg()" onclick="openModalSlider(3)")
+            li.renovation__item.office(onmouseover="officeImg(4)" onmouseout="officeRechangeImg()" onclick="openModalSlider(3)")
+            li.renovation__item.office(onmouseover="officeImg(5)" onmouseout="officeRechangeImg()" onclick="openModalSlider(3)")
+            li.renovation__item.office(onmouseover="officeImg(6)" onmouseout="officeRechangeImg()" onclick="openModalSlider(3)")
+            li.renovation__item.office(onmouseover="officeImg(7)" onmouseout="officeRechangeImg()" onclick="openModalSlider(3)")
+            li.renovation__item.office(onmouseover="officeImg(8)" onmouseout="officeRechangeImg()" onclick="openModalSlider(3)")
           .renovation-description 
             .renovation-description__name Ремонт офиса
               span.sup 
             .renovation-description__location Ленинградская область
+        // --------------------------------
+        // Office modal slider
+        // --------------------------------
+        #office-modal-slider
+          span.modal-slider__close-btn(onclick="document.getElementById('office-modal-slider').style.display='none'" class="close" title="Close Modal") &times;
+          .modal-slider-container
+            .slide.mySlides3
+              img.slide__img(src='assets/images/dest/portfolio/office/office-1.jpeg' alt="office-1")
+            .slide.mySlides3
+              img.slide__img(src='assets/images/dest/portfolio/office/office-2.jpeg' alt="office-2")
+            .slide.mySlides3
+              img.slide__img(src='assets/images/dest/portfolio/office/office-3.jpeg' alt="office-3")
+            .slide.mySlides3
+              img.slide__img(src='assets/images/dest/portfolio/office/office-4.jpeg' alt="office-4")
+            .slide.mySlides3
+              img.slide__img(src='assets/images/dest/portfolio/office/office-5.jpeg' alt="office-5")
+            .slide.mySlides3
+              img.slide__img(src='assets/images/dest/portfolio/office/office-6.jpeg' alt="office-6")
+            .slide.mySlides3
+              img.slide__img(src='assets/images/dest/portfolio/office/office-7.jpeg' alt="office-7")
+            .slide.mySlides3
+              img.slide__img(src='assets/images/dest/portfolio/office/office-8.jpeg' alt="office-8")
+            .slide.mySlides3
+              img.slide__img(src='assets/images/dest/portfolio/office/office-9.jpeg' alt="office-9")
+            a.next-btn(onclick="plusSlides(1, 2)")
+            a.prev-btn(onclick="plusSlides(-1, 2)")
         // --------------------
         // Bathroom
         // --------------------
-        a.renovation(href="#")
+        .renovation
           #bathroom-1.renovation__img 
           ul.renovation__list
-            li.renovation__item.bathroom(onmouseover="bathroomImg(1)" onmouseout="bathroomRechangeImg()")
-            li.renovation__item.bathroom(onmouseover="bathroomImg(2)" onmouseout="bathroomRechangeImg()")
-            li.renovation__item.bathroom(onmouseover="bathroomImg(4)" onmouseout="bathroomRechangeImg()")
-            li.renovation__item.bathroom(onmouseover="bathroomImg(5)" onmouseout="bathroomRechangeImg()")
-            li.renovation__item.bathroom(onmouseover="bathroomImg(6)" onmouseout="bathroomRechangeImg()")
+            li.renovation__item.bathroom(onmouseover="bathroomImg(1)" onmouseout="bathroomRechangeImg()" onclick="openModalSlider(4)")
+            li.renovation__item.bathroom(onmouseover="bathroomImg(2)" onmouseout="bathroomRechangeImg()" onclick="openModalSlider(4)")
+            li.renovation__item.bathroom(onmouseover="bathroomImg(4)" onmouseout="bathroomRechangeImg()" onclick="openModalSlider(4)")
+            li.renovation__item.bathroom(onmouseover="bathroomImg(5)" onmouseout="bathroomRechangeImg()" onclick="openModalSlider(4)")
+            li.renovation__item.bathroom(onmouseover="bathroomImg(6)" onmouseout="bathroomRechangeImg()" onclick="openModalSlider(4)")
           .renovation-description 
             .renovation-description__name Ремонт сан узла
               span.sup
             .renovation-description__location г. Санкт-Петербург
+        // --------------------------------
+        // Bathroom modal slider
+        // --------------------------------
+        #bathroom-modal-slider
+          span.modal-slider__close-btn(onclick="document.getElementById('bathroom-modal-slider').style.display='none'" class="close" title="Close Modal") &times;
+          .modal-slider-container
+            .slide.mySlides4
+              img.slide__img(src='assets/images/dest/portfolio/bathroom/bathroom-1.jpeg' alt="bathroom-1")
+            .slide.mySlides4
+              img.slide__img(src='assets/images/dest/portfolio/bathroom/bathroom-2.jpeg' alt="bathroom-2")
+            .slide.mySlides4
+              img.slide__img(src='assets/images/dest/portfolio/bathroom/bathroom-3.jpeg' alt="bathroom-3")
+            .slide.mySlides4
+              img.slide__img(src='assets/images/dest/portfolio/bathroom/bathroom-5.jpeg' alt="bathroom-4")
+            .slide.mySlides4
+              img.slide__img(src='assets/images/dest/portfolio/bathroom/bathroom-6.jpeg' alt="bathroom-5")
+            .slide.mySlides4
+              img.slide__img(src='assets/images/dest/portfolio/bathroom/bathroom-7.jpeg' alt="bathroom-6")
+            a.next-btn(onclick="plusSlides(1, 3)")
+            a.prev-btn(onclick="plusSlides(-1, 3)")
         // --------------------
         // Ceiling
         // --------------------
-        a.renovation(href="#") 
+        .renovation 
           #ceiling-1.renovation__img 
           ul.renovation__list
-            li.renovation__item.ceiling(onmouseover="ceilingImg(1)" onmouseout="ceilingRechangeImg()")
-            li.renovation__item.ceiling(onmouseover="ceilingImg(2)" onmouseout="ceilingRechangeImg()")
-            li.renovation__item.ceiling(onmouseover="ceilingImg(3)" onmouseout="ceilingRechangeImg()")
-            li.renovation__item.ceiling(onmouseover="ceilingImg(4)" onmouseout="ceilingRechangeImg()")
-            li.renovation__item.ceiling(onmouseover="ceilingImg(5)" onmouseout="ceilingRechangeImg()")
-            li.renovation__item.ceiling(onmouseover="ceilingImg(6)" onmouseout="ceilingRechangeImg()")
-            li.renovation__item.ceiling(onmouseover="ceilingImg(7)" onmouseout="ceilingRechangeImg()")
-            li.renovation__item.ceiling(onmouseover="ceilingImg(8)" onmouseout="ceilingRechangeImg()")
+            li.renovation__item.ceiling(onmouseover="ceilingImg(1)" onmouseout="ceilingRechangeImg()" onclick="openModalSlider(5)")
+            li.renovation__item.ceiling(onmouseover="ceilingImg(2)" onmouseout="ceilingRechangeImg()" onclick="openModalSlider(5)")
+            li.renovation__item.ceiling(onmouseover="ceilingImg(3)" onmouseout="ceilingRechangeImg()" onclick="openModalSlider(5)")
+            li.renovation__item.ceiling(onmouseover="ceilingImg(4)" onmouseout="ceilingRechangeImg()" onclick="openModalSlider(5)")
+            li.renovation__item.ceiling(onmouseover="ceilingImg(5)" onmouseout="ceilingRechangeImg()" onclick="openModalSlider(5)")
+            li.renovation__item.ceiling(onmouseover="ceilingImg(6)" onmouseout="ceilingRechangeImg()" onclick="openModalSlider(5)")
+            li.renovation__item.ceiling(onmouseover="ceilingImg(7)" onmouseout="ceilingRechangeImg()" onclick="openModalSlider(5)")
+            li.renovation__item.ceiling(onmouseover="ceilingImg(8)" onmouseout="ceilingRechangeImg()" onclick="openModalSlider(5)")
           .renovation-description 
             .renovation-description__name Ремонт потолков
               span.sup
             .renovation-description__location г. Санкт-Петербург
+        // --------------------------------
+        // Ceiling modal slider
+        // --------------------------------
+        #ceiling-modal-slider
+          span.modal-slider__close-btn(onclick="document.getElementById('ceiling-modal-slider').style.display='none'" class="close" title="Close Modal") &times;
+          .modal-slider-container
+            .slide.mySlides5
+              img.slide__img(src='assets/images/dest/portfolio/ceiling/ceiling-1.jpeg' alt="ceiling-1")
+            .slide.mySlides5
+              img.slide__img(src='assets/images/dest/portfolio/ceiling/ceiling-2.jpeg' alt="ceiling-2")
+            .slide.mySlides5
+              img.slide__img(src='assets/images/dest/portfolio/ceiling/ceiling-3.jpeg' alt="ceiling-3")
+            .slide.mySlides5
+              img.slide__img(src='assets/images/dest/portfolio/ceiling/ceiling-5.jpeg' alt="ceiling-4")
+            .slide.mySlides5
+              img.slide__img(src='assets/images/dest/portfolio/ceiling/ceiling-6.jpeg' alt="ceiling-5")
+            .slide.mySlides5
+              img.slide__img(src='assets/images/dest/portfolio/ceiling/ceiling-7.jpeg' alt="ceiling-6")
+            .slide.mySlides5
+              img.slide__img(src='assets/images/dest/portfolio/ceiling/ceiling-5.jpeg' alt="ceiling-7")
+            .slide.mySlides5
+              img.slide__img(src='assets/images/dest/portfolio/ceiling/ceiling-6.jpeg' alt="ceiling-8")
+            .slide.mySlides5
+              img.slide__img(src='assets/images/dest/portfolio/ceiling/ceiling-7.jpeg' alt="ceiling-9")
+            a.next-btn(onclick="plusSlides(1, 4)")
+            a.prev-btn(onclick="plusSlides(-1, 4)")
         // --------------------
         // Kitchen
         // --------------------
-        a.renovation(href="#")
+        .renovation
           #kitchen-1.renovation__img
-          ul.renovation__list
+          ul.renovation__list(onclick="openModalSlider(6)")
           .renovation-description 
             .renovation-description__name Ремонт кухни
               span.sup
             .renovation-description__location г. Санкт-Петербург
+        // --------------------------------
+        // Kitchen modal slider
+        // --------------------------------
+        #kitchen-modal-slider
+          span.modal-slider__close-btn(onclick="document.getElementById('kitchen-modal-slider').style.display='none'" class="close" title="Close Modal") &times;
+          .modal-slider-container
+            .slide.mySlides6
+              img.slide__img(src='assets/images/dest/portfolio/kitchen/kitchen-1.jpeg' alt="kitchen-1")
+            a.next-btn(onclick="plusSlides(1, 5)")
+            a.prev-btn(onclick="plusSlides(-1, 5)")
         
           

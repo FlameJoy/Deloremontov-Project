@@ -26,6 +26,7 @@
   height: 500px
   border-radius: 8px
   z-index: -5
+
 #promotions
   background: url(../images/dest/portfolio/promotions/promotions-1.jpg) no-repeat center
 #kitchen-1
@@ -89,10 +90,84 @@
       font-family: FontAwesome
       margin-left: 5px
 
+// Modal slider
+#promotions-modal-slider,
+#room-modal-slider,
+#office-modal-slider,
+#bathroom-modal-slider,
+#ceiling-modal-slider,
+#kitchen-modal-slider
+  display: none
+  position: fixed
+  z-index: 5
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: #00000057
+
+.modal-slider__close-btn
+  position: absolute
+  font-size: 80px
+  font-weight: 700
+  padding: 15px 30px
+  right: 30px
+  top: 10px
+  cursor: pointer
+  color: #fac106
+  background-color: #00000050
+  border-radius: 8px
+
+.modal-slider-container
+  width: 100%
+  height: 100%
+  display: flex
+
+.slide
+  margin: auto
+
+.slide__img
+  max-height: 700px
+
+.mySlides1, 
+.mySlides2, 
+.mySlides3,
+.mySlides4, 
+.mySlides5, 
+.mySlides6
+  display: none
+
+.next-btn,
+.prev-btn
+  position: absolute
+  top: calc( 50% - 42.5px )
+  font-size: 80px
+  color: #fac106
+  cursor: pointer
+  padding: 10px 15px
+  background-color: #00000050
+  border-radius: 8px
+
+.next-btn
+  right: 3%
+  &::before
+    font-family: FontAwesome
+    content: '\f054'
+
+.prev-btn
+  left: 3% 
+  &::before
+    font-family: FontAwesome
+    content: '\f053'
+
+.next-btn:hover,
+.prev-btn:hover,
+.modal-slider__close-btn:hover
+  background-color: #fff
+
 // ----------
 // Adaptivity
 // ----------
-
 // ----------------------------------------
 // Screen resolution from 1920px and higher
 // ----------------------------------------
@@ -170,6 +245,9 @@
       width: 500px
       height: 400px
 
+  .slide__img
+    max-height: 700px
+    max-width: 1200px
 // ---------------------------------------
 // Screen resolution from 900px to 1200px
 // ---------------------------------------
@@ -208,6 +286,10 @@
       flex-direction: row
       width: 600px
       height: 500px
+
+  .slide__img
+    max-height: 700px
+    max-width: 900px
 
 // ---------------------------------------
 // Screen resolution from 600px to 900px
@@ -248,6 +330,15 @@
       width: 500px
       height: 400px
 
+  .slide__img
+    max-height: 700px
+    max-width: 600px
+
+  .next-btn,
+  .prev-btn
+    top: calc( 50% - 22.5px )
+    font-size: 40px
+
 // ---------------------------------------
 // Screen resolution from 320px to 600px
 // ---------------------------------------
@@ -287,7 +378,11 @@
       width: 320px
       height: 300px
 
+  .slide__img
+    max-height: 700px
+    max-width: 320px
 
-
-
-
+  .next-btn,
+  .prev-btn
+    top: calc( 50% - 12.5px )
+    font-size: 20px

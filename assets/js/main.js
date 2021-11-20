@@ -257,3 +257,46 @@ function ceilingImg(num) {
 function ceilingRechangeImg() {
   document.getElementById('ceiling-1').style.background = 'url(assets/images/dest/portfolio/ceiling/ceiling-1.jpeg) no-repeat center';
 }
+
+// ------------
+// Modal slider
+// ------------
+function openModalSlider(n) {
+  if(n == 1) {
+    document.getElementById('promotions-modal-slider').style.display = "block";
+  } else if(n == 2) {
+    document.getElementById('room-modal-slider').style.display = "block";
+  } else if(n == 3) {
+    document.getElementById('office-modal-slider').style.display = "block";
+  }  else if(n == 4) {
+    document.getElementById('bathroom-modal-slider').style.display = "block";
+  } else if(n == 5) {
+    document.getElementById('ceiling-modal-slider').style.display = "block";
+  }  else if(n == 6) {
+    document.getElementById('kitchen-modal-slider').style.display = "block";
+  }
+}
+
+let slideIndex = [1,1,1,1,1,1];
+let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6"]
+portfolioShowSlides(1, 0);
+portfolioShowSlides(1, 1);
+portfolioShowSlides(1, 2);
+portfolioShowSlides(1, 3);
+portfolioShowSlides(1, 4);
+portfolioShowSlides(1, 5);
+
+function plusSlides(n, no) {
+  portfolioShowSlides(slideIndex[no] += n, no);
+}
+
+function portfolioShowSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "flex";  
+}
