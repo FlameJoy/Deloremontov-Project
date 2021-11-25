@@ -30,20 +30,17 @@
 .recall-form-container
   display: grid
   flex-direction: column
-  
   gap: 20px 0
   margin-top: 20px
 
 .recall-form
   &__input,
-  &__input-time,
-  &__input-date
+  &__textarea
     font-family: "Roboto", sans-serif
     border: none
 
-.recall-form__date-time-container
-  display: flex
-  flex-direction: row
+.recall-form__textarea
+  height: 120px
 
 .recall-form__input-name
   font-family: "Montserrat", sans-serif
@@ -85,25 +82,17 @@
 @media (min-width: 320px)
   .recall-form
     width: 300px
-    padding: 10px 5px 60px 5px
+    padding: 10px 5px 10px 5px
 
   .recall-form-container
     justify-content: normal
 
   .recall-form
     &__input,
-    &__input-time,
-    &__input-date
+    &__textarea
       font-size: 18px
       padding: 5px
       width: 285px
-      &-time,
-      &-date
-        width: 120px
-
-  .recall-form__date-time-container
-    width: 300px
-    justify-content: space-evenly
 
   .recall-form__input-name
     font-size: 18px
@@ -123,25 +112,20 @@
 @media (min-width: 800px)
   .recall-form
     width: 750px
-    padding: 10px 15px 60px 15px
+    padding: 10px 15px 10px 15px
 
   .recall-form-container
     justify-content: center
 
   .recall-form
     &__input,
-    &__input-time,
-    &__input-date
+    &__textarea
       font-size: 22px
       padding: 10px 20px
       width: 545px
       &-time,
       &-date
         width: 240px
-
-  .recall-form__date-time-container
-    width: 100%
-    justify-content: space-between
 
   .recall-form__input-name
     font-size: 32px

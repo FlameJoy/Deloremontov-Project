@@ -300,3 +300,34 @@ function portfolioShowSlides(n, no) {
   }
   x[slideIndex[no]-1].style.display = "flex";  
 }
+
+// ------------------
+// Validation scripts
+// ------------------
+
+// ----------------------
+// Client name validation
+// ----------------------
+
+// No digits script
+function noDigits(event) {
+  if ("1234567890".indexOf(event.key) != -1)
+    event.preventDefault();
+}
+
+// -----------------------
+// Client phone validation
+// -----------------------
+
+// No letters script
+let name = document.querySelector('#phone'); // Получаем input
+let regex = /^[а-яa-z]+$/i; // регулярка только цифры
+ 
+name.oninput = function() {
+  this.value = this.value.replace(regex, '');
+}
+
+$(function(){
+  //2. Получить элемент, к которому необходимо добавить маску
+  $("#phone").mask("+7 (999) 999-99-99");
+});

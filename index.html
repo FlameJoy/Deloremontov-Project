@@ -71,17 +71,15 @@
         <!-- Modal form -->
         <!-- ---------- -->
         <div class="recall modal" id="id01">
-          <form class="recall-form" action="recall-action.php" method="post"><span class="recall-form__close-btn close" onclick="document.getElementById('id01').style.display='none'" title="Close Modal">&times;</span>
+          <form class="recall-form" action="assets/php/action.php" method="post" name="recall-form"><span class="recall-form__close-btn close" onclick="document.getElementById('id01').style.display='none'" title="Close Modal">&times;</span>
             <div class="recall-form-container">
               <label class="recall-form__input-name" for="name">Ваше имя</label>
-              <input class="recall-form__input" type="text" id="name" name="name">
+              <input class="recall-form__input" type="text" id="name" name="name" minlength="2" maxlength="20" pattern="^[а-яА-ЯёЁa-zA-Z]{1,20}$" placeholder="Ваше имя" onkeypress="noDigits(event)" required>
               <label class="recall-form__input-name" for="phone">Введите номер телефона</label>
-              <input class="recall-form__input" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value="+7 | ">
-              <label class="recall-form__input-name" for="time-date">Укажите дату и время звонка</label>
-              <div class="recall-form__date-time-container">
-                <input class="recall-form__input-time" type="time" id="time" name="time-date">
-                <input class="recall-form__input-date" type="date" id="date" name="time-date">
-              </div><a class="btn recall-form__btn">Заказать звонок</a>
+              <input class="recall-form__input" type="tel" id="phone" name="phone" pattern="^((8|+7)[- ]?)?((?d{3})?[- ]?)?[d- ]{7,10}$" minlength="20" maxlength="20" placeholder="+7 (999) 999-99-99" required>
+              <label class="recall-form__input-name" for="message">Сообщение</label>
+              <textarea class="recall-form__textarea" type="textarea" name="message"></textarea>
+              <button class="btn recall-form__btn" type="submit" onclick="document.getElementById('sendform').style.display = 'block'">Заказать звонок</button>
             </div>
           </form>
         </div>
@@ -122,7 +120,7 @@
         <div class="up-btn"><a class="up-btn__link scrollto" href="#header"></a></div>
       </div>
     </header>
-    <section class="calc"> 
+    <section class="calc" id="calc"> 
       <div class="container">
         <div class="calc-container"> 
           <!-- ------------------->
@@ -720,7 +718,7 @@
         <div class="services-header-wrap">
           <h2 class="services-header__title">наши услуги</h2>
           <p class="services-header__text">Мы оказываем широкий спектр строительных и ремонтно-отделочных работ любой сложности. От легкого косметического до масштабного дизайнерского ремонта на самом высоком уровне. Мы подобрали для Вас команду лучших специалистов любого профиля высшей квалификации, имеющих многолетний опыт работы в сфере строительства.</p>
-          <button class="services-header__calc-link button-7"> <span>Рассчитать</span></button>
+          <button class="services-header__calc-link button-7"> <a class="services__calc-link scrollto" href="#calc">Рассчитать</a></button>
         </div>
       </div>
       <div class="services-container"> 
@@ -976,5 +974,6 @@
     <!-- ------------------- -->
     <script src="assets/js/main.min.js"></script>
     <script src="https://kit.fontawesome.com/36446de779.js" crossorigin="anonymous"> </script>
+    <script src="assets/js/jquery.maskedinput.min.js"></script>
   </body>
 </html>
