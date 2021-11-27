@@ -9,7 +9,7 @@ section#contact.contact
         .contact-form__input-container
           input.contact-form__input(type="text" id="name" name="name" minlength="2" maxlength="20" pattern="^[а-яА-ЯёЁa-zA-Z]{1,20}$" placeholder="Ваше имя" onkeypress="noDigits(event)" required)
           input.contact-form__input(type="tel" id="phone2" name="phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" minlength="20" maxlength="20" placeholder="+7 (999) 999-99-99" required)
-        textarea.contact-form__textarea(name="", cols="30", rows="8" placeholder="Сообщение")
+        textarea.contact-form__textarea(type="textarea" name="message" placeholder="Сообщение")
         button.btn.contact-form__btn(type="submit") Отправить
       .contact-info
         .contact-info-wrap
