@@ -83,6 +83,10 @@
             </div>
           </form>
         </div>
+        <div id="sendform">
+          <p class="sendform-msg">Уважаемы посетители, сайт находится в разработке, просим уточнять реальную стоимость услуг по телефону обратной связи.</p>
+          <button class="sendform__btn" onclick="document.getElementById('sendform').style.display = 'none'">ОК</button>
+        </div>
       </nav>
     </div>
     <header class="header" id="header">
@@ -499,7 +503,7 @@
             <div class="ribbon6">БОНУС</div>
           </div>
           <div class="discount-btn-wrap">
-            <button class="discount-btn"><span class="discount-btn__text">Заказать</span></button>
+            <button class="discount-btn" onclick="document.getElementById('id01').style.display='block'"><span class="discount-btn__text">Заказать</span></button>
           </div>
         </div>
       </div>
@@ -972,6 +976,7 @@
     <!-- ------------------- -->
     <!-- Scripts & libraries -->
     <!-- ------------------- -->
+    <script src="assets/js/wow.min.js" type="text/javascript"></script>
     <script src="assets/js/main.min.js"></script>
     <script src="https://kit.fontawesome.com/36446de779.js" crossorigin="anonymous"> </script>
     <script src="assets/js/jquery.maskedinput.min.js"></script>
