@@ -20,7 +20,9 @@
         <!-- Site logo & mobile menu-->
         <!-- ------------------------->
         <div class="top-nav-logo">
-          <div class="logo-container"> <img class="logo-img" src="assets/images/dest/logo-2.png" alt="logo-img"></div>
+          <div class="logo-container"> <img class="logo-img" src="assets/images/dest/logo-2.png" alt="logo-img">
+            <h1 class="logo__name">Ремонт и отделка помещений в Москве и Санкт-Петербурге</h1>
+          </div>
           <!-- ------------------------>
           <!-- Mobile navigation menu-->
           <!-- ------------------------>
@@ -42,7 +44,13 @@
         <div class="top-nav-menu">
           <ul class="top-nav-menu__list cl-effect-8">
             <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#header">Главная</a></li>
-            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#services">Услуги</a></li>
+            <li class="top-nav-menu__item" id="services-submenu"><a class="top-nav-menu__link scrollto" href="#services">Услуги</a>
+              <ul class="services-submenu"> 
+                <li class="services-submenu__item"> <a class="services-submenu__link" href="service.html">Услуга</a></li>
+                <li class="services-submenu__item"> <a class="services-submenu__link" href="#">Услуга</a></li>
+                <li class="services-submenu__item"> <a class="services-submenu__link" href="#">Услуга</a></li>
+              </ul>
+            </li>
             <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#portfolio">Портфолио</a></li>
             <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#contact">Контакты</a></li>
           </ul>
@@ -729,21 +737,21 @@
         <div class="service">
           <h3 class="service-name">Косметический ремонт</h3>
           <p class="service-description">Наименее затратный способ в сжатые сроки обновить интерьер. Улучшает внешний вид помещения.</p>
-          <button class="service-info__btn button-5" onclick="document.getElementById('id02').style.display='block'"><span class="link-content">Подробнее</span></button><span class="service-price">от 1900 руб/м<span class="sup">2</span></span>
+          <button class="service-info__btn button-5" onclick="document.getElementById('id02').style.display='block'"><span class="link-content">Подробнее</span></button><span class="service-price">от 3800 руб/м<span class="sup">2</span></span>
         </div>
         <div class="service">
           <h3 class="service-name">Капитальный 
             <p>ремонт</p>
           </h3>
           <p class="service-description">Применяется при желании кардинально обновить интерьер помещений и заменить коммуникации.</p>
-          <button class="service-info__btn button-5" onclick="document.getElementById('id03').style.display='block'"><span class="link-content">Подробнее</span></button><span class="service-price">от 4500 руб/м<span class="sup">2</span></span>
+          <button class="service-info__btn button-5" onclick="document.getElementById('id03').style.display='block'"><span class="link-content">Подробнее</span></button><span class="service-price">от 9000 руб/м<span class="sup">2</span></span>
         </div>
         <div class="service">
           <h3 class="service-name">Дизайнерский 
             <p>ремонт</p>
           </h3>
           <p class="service-description">Создание авторского дизайн-проекта с применением отделочных материалов премиум-класса.</p>
-          <button class="service-info__btn button-5" onclick="document.getElementById('id04').style.display='block'"><span class="link-content">Подробнее</span></button><span class="service-price">от 5600 руб/м<span class="sup">2</span></span>
+          <button class="service-info__btn button-5" onclick="document.getElementById('id04').style.display='block'"><span class="link-content">Подробнее</span></button><span class="service-price">от 12000 руб/м<span class="sup">2</span></span>
         </div>
       </div>
       <div class="service-info-redecorating modal" id="id02">
@@ -965,8 +973,6 @@
             <div class="contact-info">
               <div class="contact-info-wrap">
                 <h4 class="contact-info__title">Контакты</h4>
-                <p class="contact-info__line"> <span class="title_marked">Адрес: </span><span>г. Санкт-Петербург, ул. Неизвестная, д.1, к.1</span></p>
-                <p class="contact-info__line"> <span class="title_marked">E-mail: </span><span>masterotdelkin@gmail.com</span></p>
                 <p class="contact-info__line"> <span class="title_marked">Телефон: </span><span>+7 (991) 021 - 22 - 60</span></p>
               </div>
             </div>

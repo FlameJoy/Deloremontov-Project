@@ -13,13 +13,9 @@
 // ----
 // LOGO
 // ----
-.top-nav-logo
-  display: flex
-  flex-direction: row
-
 .logo-container
   display: flex
-  flex-direction: row
+  flex-direction: column
   align-items: center
 
 .logo__name
@@ -29,6 +25,9 @@
   color: #fac106
   text-transform: uppercase
   letter-spacing: 1px
+  line-height: 1.2em
+  text-align: center
+  max-width: 400px
 
 .top-nav-menu
   &__list
@@ -54,6 +53,33 @@
     color: #fff
     transition-delay: .1s
     transition-duration: .4s
+
+.services-submenu 
+  display: none
+  position: absolute
+  font-family: "Roboto", sans-serif
+  font-size: 20px
+  font-weight: 500
+  text-decoration: none
+  text-transform: uppercase
+  color: #fff
+  padding-top: 15px
+  &__link
+    text-decoration: none
+    color: #fff
+  &__item
+    padding: 10px 20px 10px 5px
+    border: 2px solid transparent
+    cursor: pointer
+    &:hover
+      border-color: #fac106
+      .services-submenu__link
+        color: #fac106
+        text-shadow: 1px 1px 5px #000    
+  
+#services-submenu:hover .services-submenu,
+.services-submenu:hover
+  display: block
 
 // -------------
 // Dropdowm menu

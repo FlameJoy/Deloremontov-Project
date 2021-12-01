@@ -6,7 +6,7 @@
       .top-nav-logo
         .logo-container 
           img.logo-img(src="assets/images/dest/logo-2.png" alt="logo-img")
-          //- h1.logo__name 
+          h1.logo__name Ремонт и отделка помещений в Москве и Санкт-Петербурге
         // ----------------------
         // Mobile navigation menu
         // ----------------------
@@ -30,8 +30,15 @@
         ul.top-nav-menu__list.cl-effect-8
           li.top-nav-menu__item
             a.top-nav-menu__link.scrollto(href="#header") Главная
-          li.top-nav-menu__item
+          li#services-submenu.top-nav-menu__item
             a.top-nav-menu__link.scrollto(href="#services") Услуги
+            ul.services-submenu 
+              li.services-submenu__item 
+                a.services-submenu__link(href="service.html") Услуга
+              li.services-submenu__item 
+                a.services-submenu__link(href="#") Услуга
+              li.services-submenu__item 
+                a.services-submenu__link(href="#") Услуга
           li.top-nav-menu__item
             a.top-nav-menu__link.scrollto(href="#portfolio") Портфолио
           li.top-nav-menu__item

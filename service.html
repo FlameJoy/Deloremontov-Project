@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deloremontov.ru</title>
+    <!-- ------------------- -->
+    <!-- Styles & animations -->
+    <!-- ------------------- -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/google-fonts.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+  </head>
+  <body class="page">
+    <section class="serv"></section>
+    <div class="top-nav">
+      <nav class="top-nav-wrap"> 
+        <!-- ------------------------->
+        <!-- Site logo & mobile menu-->
+        <!-- ------------------------->
+        <div class="top-nav-logo">
+          <div class="logo-container"> <img class="logo-img" src="assets/images/dest/logo-2.png" alt="logo-img">
+            <h1 class="logo__name">Ремонт и отделка помещений в Москве и Санкт-Петербурге</h1>
+          </div>
+          <!-- ------------------------>
+          <!-- Mobile navigation menu-->
+          <!-- ------------------------>
+          <div class="top-nav-dropdown-menu">
+            <button class="top-nav-dropdown-menu__btn">меню<i class="fas fa-caret-down"></i></button>
+            <div class="top-nav-dropdown-menu__content">
+              <ul class="top-nav-dropdown-menu__list cl-effect-8">
+                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link scrollto" href="#header">Главная</a></li>
+                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link scrollto" href="#services">Услуги</a></li>
+                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link scrollto" href="#portfolio">Портфолио</a></li>
+                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link scrollto" href="#contact">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- --------------- -->
+        <!-- Navigation menu -->
+        <!-- --------------- -->
+        <div class="top-nav-menu">
+          <ul class="top-nav-menu__list cl-effect-8">
+            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#header">Главная</a></li>
+            <li class="top-nav-menu__item" id="services-submenu"><a class="top-nav-menu__link scrollto" href="#services">Услуги</a>
+              <ul class="services-submenu"> 
+                <li class="services-submenu__item"> <a class="services-submenu__link" href="service.html">Услуга</a></li>
+                <li class="services-submenu__item"> <a class="services-submenu__link" href="#">Услуга</a></li>
+                <li class="services-submenu__item"> <a class="services-submenu__link" href="#">Услуга</a></li>
+              </ul>
+            </li>
+            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#portfolio">Портфолио</a></li>
+            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#contact">Контакты</a></li>
+          </ul>
+        </div>
+        <!-- --------------- -->
+        <!-- Scroll menu-->
+        <!-- --------------- -->
+        <div class="top-nav-scroll-menu" id="top-nav-scroll-menu">
+          <ul class="top-nav-scroll-menu__list cl-effect-8"><img class="top-nav-scroll-menu__logo" src="assets/images/dest/nav-scroll-logo.png" alt="scroll-menu-logo">
+            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="#header">Главная</a></li>
+            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="#services">Услуги</a></li>
+            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="#portfolio">Портфолио</a></li>
+            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="#contact">Контакты</a></li>
+          </ul>
+        </div>
+        <!-- ------------------------------ -->
+        <!-- Recall button & telefon number -->
+        <!-- ------------------------------ -->
+        <div class="top-nav-recall" onclick="document.getElementById('id01').style.display='block'">
+          <div class="top-nav-recall-wrap">
+            <div class="top-nav-recall__btn">Заказать звонок</div>
+            <div class="top-nav-recall__tel">8 (991) 021-22-60</div>
+          </div>
+        </div>
+        <!-- ---------- -->
+        <!-- Modal form -->
+        <!-- ---------- -->
+        <div class="recall modal" id="id01">
+          <form class="recall-form" action="assets/php/action.php" method="post" name="recall-form"><span class="recall-form__close-btn close" onclick="document.getElementById('id01').style.display='none'" title="Close Modal">&times;</span>
+            <div class="recall-form-container">
+              <label class="recall-form__input-name" for="name">Ваше имя</label>
+              <input class="recall-form__input" type="text" id="name" name="name" minlength="2" maxlength="20" pattern="^[а-яА-ЯёЁa-zA-Z]{1,20}$" placeholder="Ваше имя" onkeypress="noDigits(event)" required>
+              <label class="recall-form__input-name" for="phone">Введите номер телефона</label>
+              <input class="recall-form__input" type="tel" id="phone" name="phone" pattern="^((8|+7)[- ]?)?((?d{3})?[- ]?)?[d- ]{7,10}$" minlength="20" maxlength="20" placeholder="+7 (999) 999-99-99" required>
+              <label class="recall-form__input-name" for="message">Сообщение</label>
+              <textarea class="recall-form__textarea" type="textarea" name="message"></textarea>
+              <button class="btn recall-form__btn" type="submit" onclick="document.getElementById('sendform').style.display = 'block'">Заказать звонок</button>
+            </div>
+          </form>
+        </div>
+        <div id="sendform">
+          <p class="sendform-msg">Уважаемы посетители, сайт находится в разработке, просим уточнять реальную стоимость услуг по телефону обратной связи.</p>
+          <button class="sendform__btn" onclick="document.getElementById('sendform').style.display = 'none'">ОК</button>
+        </div>
+      </nav>
+    </div>
+    <!-- ------------------- -->
+    <!-- Scripts & libraries -->
+    <!-- ------------------- -->
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+    <script src="https://kit.fontawesome.com/36446de779.js" crossorigin="anonymous"> </script>
+    <script src="assets/js/jquery.maskedinput.min.js"></script>
+  </body>
+</html>
