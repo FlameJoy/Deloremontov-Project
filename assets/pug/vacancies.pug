@@ -1,4 +1,3 @@
-doctype html
 html(lang="ru en")
   head
     meta(charset="UTF-8")
@@ -12,18 +11,10 @@ html(lang="ru en")
     link(rel="stylesheet", href="assets/css/google-fonts.css")
     link(rel="stylesheet", href="assets/css/main.min.css")
     link(rel="stylesheet", href="assets/css/animate.min.css")
-    link(rel="shortcut icon" href="assets/images/src/favicon.ico" type="image/x-icon")
   body.page
+    include ../blocks/extra-page-header/extra-page-header.pug
     include ../blocks/top-nav/top-nav.pug
-    include ../blocks/header/header.pug
-    include ../blocks/calculator/calculator.pug
-    include ../blocks/discount/discount.pug
-    include ../blocks/portfolio/portfolio.pug
-    include ../blocks/services/services.pug
-    //- include ../blocks/video-presentation/video-presentation.pug
-    include ../blocks/work-steps/work-steps.pug
-    include ../blocks/about-us/about-us.pug
-    include ../blocks/contacts/contacts.pug
+    include ../blocks/vacancies-content/vacancies-content.pug
     // ------------------- 
     // Scripts & libraries 
     // ------------------- 
@@ -31,4 +22,3 @@ html(lang="ru en")
     script(src="assets/js/main.min.js")
     script(src="https://kit.fontawesome.com/36446de779.js" crossorigin="anonymous") 
     script(src="assets/js/jquery.maskedinput.min.js")
-    

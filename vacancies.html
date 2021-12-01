@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+
 <html lang="ru en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Deloremontov.ru</title>
     <!-- ------------------- -->
     <!-- Styles & animations -->
     <!-- ------------------- -->
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/google-fonts.css">
-    <link rel="stylesheet" href="assets/css/main.min.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css"/>
+    <link rel="stylesheet" href="assets/css/google-fonts.css"/>
+    <link rel="stylesheet" href="assets/css/main.min.css"/>
+    <link rel="stylesheet" href="assets/css/animate.min.css"/>
   </head>
   <body class="page">
     <section class="extra-page-header"></section>
@@ -20,7 +20,7 @@
         <!-- ------------------------->
         <!-- Site logo & mobile menu-->
         <!-- -------------------------><a class="top-nav-logo" href="index.html">
-          <div class="logo-container"> <img class="logo-img" src="assets/images/dest/logo-2.png" alt="logo-img">
+          <div class="logo-container"> <img class="logo-img" src="assets/images/dest/logo-2.png" alt="logo-img"/>
             <h1 class="logo__name">Ремонт и отделка помещений в Москве и Санкт-Петербурге</h1>
           </div>
           <!-- ------------------------>
@@ -59,7 +59,7 @@
         <!-- Scroll menu-->
         <!-- --------------- -->
         <div class="top-nav-scroll-menu" id="top-nav-scroll-menu">
-          <ul class="top-nav-scroll-menu__list cl-effect-8"><img class="top-nav-scroll-menu__logo" src="assets/images/dest/nav-scroll-logo.png" alt="scroll-menu-logo">
+          <ul class="top-nav-scroll-menu__list cl-effect-8"><img class="top-nav-scroll-menu__logo" src="assets/images/dest/nav-scroll-logo.png" alt="scroll-menu-logo"/>
             <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="#header">Главная</a></li>
             <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="#services">Услуги</a></li>
             <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="#portfolio">Портфолио</a></li>
@@ -82,9 +82,9 @@
           <form class="recall-form" action="assets/php/action.php" method="post" name="recall-form"><span class="recall-form__close-btn close" onclick="document.getElementById('id01').style.display='none'" title="Close Modal">&times;</span>
             <div class="recall-form-container">
               <label class="recall-form__input-name" for="name">Ваше имя</label>
-              <input class="recall-form__input" type="text" id="name" name="name" minlength="2" maxlength="20" pattern="^[а-яА-ЯёЁa-zA-Z]{1,20}$" placeholder="Ваше имя" onkeypress="noDigits(event)" required>
+              <input class="recall-form__input" type="text" id="name" name="name" minlength="2" maxlength="20" pattern="^[а-яА-ЯёЁa-zA-Z]{1,20}$" placeholder="Ваше имя" onkeypress="noDigits(event)" required="required"/>
               <label class="recall-form__input-name" for="phone">Введите номер телефона</label>
-              <input class="recall-form__input" type="tel" id="phone" name="phone" pattern="^((8|+7)[- ]?)?((?d{3})?[- ]?)?[d- ]{7,10}$" minlength="20" maxlength="20" placeholder="+7 (999) 999-99-99" required>
+              <input class="recall-form__input" type="tel" id="phone" name="phone" pattern="^((8|+7)[- ]?)?((?d{3})?[- ]?)?[d- ]{7,10}$" minlength="20" maxlength="20" placeholder="+7 (999) 999-99-99" required="required"/>
               <label class="recall-form__input-name" for="message">Сообщение</label>
               <textarea class="recall-form__textarea" type="textarea" name="message"></textarea>
               <button class="btn recall-form__btn" type="submit" onclick="document.getElementById('sendform').style.display = 'block'">Заказать звонок</button>
@@ -97,38 +97,12 @@
         </div>
       </nav>
     </div>
-    <section class="soundproofing">
+    <section class="vacancies"> 
       <div class="container">
-        <div class="soundproofing-container">
-          <div class="soundproofing-info">
-            <h2 class="soundproofing-title"> <span class="title_marked-blue">Эффективная </span><span>звукоизоляция и шумоизоляция помещений</span></h2>
-            <p class="soundproofing-text">Наш партнёр-дистрибьютор "Тихий дом" предоставляет качесвенную звукоизоляцию, виброизоляцию для любого типа помещений, используя современные материалы.</p>
-          </div>
-          <div class="soundproofing-benefits">
-            <div class="soundproofing-benefits__title">Наши преимущества</div>
-            <div class="soundproofing-benefits-container"> 
-              <div class="soundproofing-benefit"><img class="soundproofing-benefit__img" src="assets/images/dest/benefit1.png" alt="benefit-1">
-                <h4 class="soundproofing-benefit__title">Гарантия</h4>
-                <p class="soundproofing-benefit__text">Даем гарантию на используемые  материалы и выполненные работы</p>
-              </div>
-              <div class="soundproofing-benefit"><img class="soundproofing-benefit__img" src="assets/images/dest/benefit2.png" alt="benefit-2">
-                <h4 class="soundproofing-benefit__title">Качество</h4>
-                <p class="soundproofing-benefit__text">Работаем только с сертифицированными материалами, прошедшими все испытания</p>
-              </div>
-              <div class="soundproofing-benefit"><img class="soundproofing-benefit__img" src="assets/images/dest/benefit3.png" alt="benefit-3">
-                <h4 class="soundproofing-benefit__title">Опыт</h4>
-                <p class="soundproofing-benefit__text">С 2017 года звукоизолировано 480 квартир. Подберем и установим самую эффективную систему</p>
-              </div>
-              <div class="soundproofing-benefit"><img class="soundproofing-benefit__img" src="assets/images/dest/benefit4.png" alt="benefit-4">
-                <h4 class="soundproofing-benefit__title">«Под ключ»</h4>
-                <p class="soundproofing-benefit__text">Все услуги в "Одном окне" - собственное сертифицированное производство, проектирование, доставка, монтаж</p>
-              </div>
-            </div>
-          </div>
-          <div class="soundproofing-distributor">
-            <div class="soundproofing-distributor-container"> <img class="soundproofing-distributor__img" src="assets/images/dest/silent-home-logo.png" alt="silent-home-logo">
-              <p class="soundproofing-distributor__text">Более подробно ознакомисться с поставщиком услдуг пройдя по <a class="soundproofing-distributor__link" href="https://stopzvuk-shop.ru/" target="_blank">ссылке</a></p>
-            </div>
+        <div class="vacancies-container"> 
+          <div class="vacancies-info"> 
+            <h2 class="vacancies-title"> <span class="title_marked">Доступные </span><span>Вакансии</span></h2>
+            <p class="vacancies__text">Здесь размещены доступные, на данный момент, вакансии. </p>
           </div>
         </div>
       </div>
