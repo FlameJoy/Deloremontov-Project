@@ -7,22 +7,22 @@
         .logo-container 
           img.logo-img(src="assets/images/dest/logo-2.png" alt="logo-img")
           h1.logo__name Ремонт и отделка помещений в Москве и Санкт-Петербурге
-        // ----------------------
-        // Mobile navigation menu
-        // ----------------------
-        .top-nav-dropdown-menu
-            button.top-nav-dropdown-menu__btn меню
-              i.fas.fa-caret-down
-            .top-nav-dropdown-menu__content
-              ul.top-nav-dropdown-menu__list.cl-effect-8
-                li.top-nav-dropdown-menu__item
-                  a.top-nav-dropdown-menu__link.scrollto(href="#header") Главная
-                li.top-nav-dropdown-menu__item
-                  a.top-nav-dropdown-menu__link.scrollto(href="#services") Услуги
-                li.top-nav-dropdown-menu__item
-                  a.top-nav-dropdown-menu__link.scrollto(href="#portfolio") Портфолио
-                li.top-nav-dropdown-menu__item
-                  a.top-nav-dropdown-menu__link.scrollto(href="#contact") Контакты
+      // ----------------------
+      // Mobile navigation menu
+      // ----------------------
+      .top-nav-dropdown-menu
+          button.top-nav-dropdown-menu__btn(onclick="openSideNav()") меню
+          // -------------
+          // Side nav menu
+          // -------------
+          #mySidenav.sidenav
+            a.sidenav__closebtn(href="javascript:void(0)" onclick="closeSideNav()") &times;
+            a(href="#") Главная
+            a(href="#") Услуги
+            a(href="#") Портфолио
+            a(href="#") Контакты
+            a(href="#") Вакансии
+            a(href="#") О нас
       // --------------- 
       // Navigation menu 
       // --------------- 
@@ -45,6 +45,8 @@
             a.top-nav-menu__link.scrollto(href="#contact") Контакты
           li.top-nav-menu__item
             a.top-nav-menu__link.scrollto(href="vacancies.html") Вакансии
+          li.top-nav-menu__item
+            a.top-nav-menu__link.scrollto(href="№") O нас
       // --------------- 
       // Scroll menu
       // --------------- 

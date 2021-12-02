@@ -22,21 +22,17 @@
         <!-- -------------------------><a class="top-nav-logo" href="index.html">
           <div class="logo-container"> <img class="logo-img" src="assets/images/dest/logo-2.png" alt="logo-img"/>
             <h1 class="logo__name">Ремонт и отделка помещений в Москве и Санкт-Петербурге</h1>
-          </div>
-          <!-- ------------------------>
-          <!-- Mobile navigation menu-->
-          <!-- ------------------------>
-          <div class="top-nav-dropdown-menu">
-            <button class="top-nav-dropdown-menu__btn">меню<i class="fas fa-caret-down"></i></button>
-            <div class="top-nav-dropdown-menu__content">
-              <ul class="top-nav-dropdown-menu__list cl-effect-8">
-                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link scrollto" href="#header">Главная</a></li>
-                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link scrollto" href="#services">Услуги</a></li>
-                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link scrollto" href="#portfolio">Портфолио</a></li>
-                <li class="top-nav-dropdown-menu__item"><a class="top-nav-dropdown-menu__link scrollto" href="#contact">Контакты</a></li>
-              </ul>
-            </div>
           </div></a>
+        <!-- ------------------------>
+        <!-- Mobile navigation menu-->
+        <!-- ------------------------>
+        <div class="top-nav-dropdown-menu">
+          <button class="top-nav-dropdown-menu__btn" onclick="openSideNav()">меню</button>
+          <!-- --------------->
+          <!-- Side nav menu-->
+          <!-- --------------->
+          <div class="sidenav" id="mySidenav"><a class="sidenav__closebtn" href="javascript:void(0)" onclick="closeSideNav()">&times;</a><a href="#">Главная</a><a href="#">Услуги</a><a href="#">Портфолио</a><a href="#">Контакты</a><a href="#">Вакансии</a><a href="#">О нас</a></div>
+        </div>
         <!-- --------------- -->
         <!-- Navigation menu -->
         <!-- --------------- -->
@@ -53,6 +49,7 @@
             <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#portfolio">Портфолио</a></li>
             <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#contact">Контакты</a></li>
             <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="vacancies.html">Вакансии</a></li>
+            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="№">O нас</a></li>
           </ul>
         </div>
         <!-- --------------- -->

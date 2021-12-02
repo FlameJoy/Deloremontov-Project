@@ -1,10 +1,6 @@
 .extra-page-header
   position: relative
-  height: 350px
-  width: 100%
   background: url(../images/dest/1.jpg) no-repeat center
-  background-position: 50% 80%
-  background-size: 100%
   &::before
     content: ''
     display: block
@@ -14,5 +10,68 @@
     left: 0
     right: 0
     bottom: 0
+
+// ----------
+// Adaptivity
+// ----------
+// ----------------------------------------
+// Screen resolution from 1920px and higher
+// ----------------------------------------
+@media (min-width: 1920px)
+  .extra-page-header
+    height: 350px
+    width: 100%
+    background-position: 50% 80%
+    background-size: 100%
+
+// ----------------------------------------
+// Screen resolution from 1600px to 1920px
+// ----------------------------------------
+@media (min-width: 1600px) and (max-width: 1919.98px)
+  .extra-page-header
+    height: 300px
+    width: 100%
+    background-position: 50% 80%
+    background-size: 100%
+
+// ----------------------------------------
+// Screen resolution from 1200px to 1600px
+// ----------------------------------------
+@media (min-width: 1200px) and (max-width: 1599.98px)
+  .extra-page-header
+    height: 250px
+    width: 100%
+    background-position: 50% 80%
+    background-size: 100%
+
+// ----------------------------------------
+// Screen resolution from 900px to 1200px
+// ----------------------------------------
+@media (min-width: 900px) and (max-width: 1199.98px)
+  .extra-page-header
+    height: 250px
+    width: 100%
+    background-position: 50% 80%
+    background-size: 100%
+
+// ----------------------------------------
+// Screen resolution from 600px to 900px
+// ----------------------------------------
+@media (min-width: 600px) and (max-width: 899.98px)
+  .extra-page-header
+    height: 200px
+    width: 100%
+    background-position: 50% 80%
+    background-size: 100%
+
+// ----------------------------------------
+// Screen resolution from 600px to 900px
+// ----------------------------------------
+@media (min-width: 320px) and (max-width: 599.98px)
+  .extra-page-header
+    height: 180px
+    width: 100%
+    background-position: 50% 80%
+    background-size: 100%
 
   

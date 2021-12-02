@@ -42,6 +42,19 @@ function scrollFunction() {
   }
 }
 
+// ---------
+// Side menu
+// ---------
+/* Set the width of the side navigation to 250px */
+function openSideNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeSideNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
 // -----------------------
 // Smooth scroll animation
 // -----------------------

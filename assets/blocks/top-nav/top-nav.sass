@@ -99,35 +99,50 @@
     text-transform: uppercase
     background-color: transparent
     border: none
+    cursor: pointer
+    padding: 8px
+    border-radius: 10px
+    transition-delay: .1s
+    transition-duration: .4s
+    &::after
+      content: '\f0c9'
+      font-family: FontAwesome
+      font-size: 30px
+      padding-left: 5px
+    &:hover
+      box-shadow: 3px 3px 15px rgba(0, 0, 0, .8)
 
-.fa-caret-down
-  margin-left: 10px
+.sidenav
+  height: 100%
+  width: 0
+  position: fixed
+  z-index: 1
+  top: 0
+  left: 0
+  background-color: #2b2b2b 
+  overflow-x: hidden
+  padding-top: 60px
+  transition: 0.5s
 
-.top-nav-dropdown-menu
-  &__content
-    display: none
-    position: absolute
-    background-color: #00000075
-    margin-top: 90px
-  &__item
-    font-family: "Roboto", sans-serif
-    font-size: 22px
-    text-transform: uppercase
-    padding: 15px 10px
-    border: 1px solid transparent
-    &:hover,
-    &:active
-      border-color: #fac106
-      .top-nav-dropdown-menu__link
-        color: #fac106
-  &__link
-    color: #fff
-    text-decoration: none
-    font-size: 24px
-    
-.top-nav-dropdown-menu:hover .top-nav-dropdown-menu__content,
-.top-nav-dropdown-menu__content:hover
+/* The navigation menu links */
+.sidenav a
+  padding: 8px 8px 8px 32px
+  text-decoration: none
+  font-family: "Roboto", sans-serif
+  font-size: 25px
+  color: #fff
   display: block
+  transition: 0.3s
+  &:hover
+    color: #fac106
+
+.sidenav
+  &__closebtn
+    position: absolute
+    top: 20px
+    right: 25px
+    font-weight: 600
+    margin-left: 50px
 
 // --------------- 
 // Scroll menu
@@ -180,11 +195,6 @@
   border-radius: 10px
   transition-delay: .1s
   transition-duration: .4s
-  // &::before
-  //   font-family: FontAwesome
-  //   content: "\f87b"
-  //   font-size: 60px
-  //   color: #fac106
   &::after
     font-family: FontAwesome
     content: "\f40c"
@@ -265,15 +275,18 @@
 
   .top-nav-menu      
     &__link
-      font-size: 32px
+      font-size: 30px
 
   .top-nav-recall
     &::before,
     &::after
-      font-size: 80px
+      font-size: 60px
     &__btn,
     &__tel
-      font-size: 28px
+      font-size: 24px
+
+  .logo__name
+    max-width: 300px
 
 // ---------------------------------------
 // Screen resolution from 1600px to 1920px
@@ -289,7 +302,7 @@
 
   .top-nav-menu      
     &__link
-      font-size: 28px
+      font-size: 24px
 
   .top-nav-recall
     &::before,
@@ -297,7 +310,10 @@
       font-size: 60px
     &__btn,
     &__tel
-      font-size: 22px
+      font-size: 20px
+
+  .logo__name
+    max-width: 300px
 
 // ---------------------------------------
 // Screen resolution from 1200px to 1600px
@@ -311,17 +327,29 @@
   .logo-img
     width: 300px
 
-  .top-nav-menu      
+  .top-nav-menu  
+    &__item
+      margin: 0 5px    
     &__link
-      font-size: 22px
+      font-size: 18px
 
   .top-nav-recall
     &::before,
     &::after
-      font-size: 40px
+      font-size: 30px
     &__btn,
     &__tel
-      font-size: 18px
+      font-size: 14px
+
+  .logo__name
+    max-width: 250px
+
+  .services-submenu 
+    font-size: 16px
+    padding-top: 15px
+    &__item
+      padding: 10px 20px 10px 5px
+
 
 // --------------------------------------
 // Screen resolution from 900px to 1200px
@@ -348,6 +376,9 @@
     &__btn,
     &__tel
       font-size: 18px
+
+  .logo__name
+    max-width: 250px
 
 // --------------------------------------
 // Screen resolution from 600px to 900px
@@ -382,6 +413,10 @@
     width: 500px
     left: calc( 50% - 260px )
 
+  .logo__name
+    max-width: 250px
+    font-size: 8px
+
 // --------------------------------------
 // Screen resolution from 320px to 600px
 //---------------------------------------
@@ -401,6 +436,8 @@
     display: flex
     &__btn
       font-size: 18px
+      &::after
+        font-size: 18px  
     &__content
       margin-top: 50px
       right: -50px
@@ -430,3 +467,7 @@
       font-size: 24px
       &::before
         font-size: 30px
+
+  .logo__name
+    max-width: 120px
+    font-size: 10px

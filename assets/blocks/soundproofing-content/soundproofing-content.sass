@@ -22,7 +22,6 @@
   &__title
     font-family: "Montserrat", sans-serif
     font-weight: 600
-    font-size: 38px
     color: #2b2b2b
     text-align: center
     padding: 40px 0
@@ -40,11 +39,10 @@
     text-align: center
     font-family: "Montserrat", sans-serif
   &__title
-    font-size: 30px
     font-weight: 600
     padding: 10px 0
+    color: #2b2b2b
   &__text
-    font-size: 18px
     line-height: 1.2em
 
 .soundproofing-distributor
@@ -60,7 +58,6 @@
     padding: 0 20px
   &__text
     font-family: "Montserrat", sans-serif
-    font-size: 28px
     line-height: 1.4em
   &__link
     color: #0c6294
@@ -70,13 +67,39 @@
     &::after
       content: '\f0c1'
       font-family: FontAwesome
-      font-size: 20px
       color: #0c6294
       padding: 0 10px
 
 // ----------
 // Adaptivity
 // ----------
+// ----------------------------------------
+// Screen resolution from 1920px and higher
+// ----------------------------------------
+@media (min-width: 1920px)
+  .soundproofing
+    &-title
+      font-size: 60px
+    &-text
+      font-size: 30px
+      padding: 20px 0
+
+  .soundproofing-benefits
+    &__title
+      font-size: 48px
+
+  .soundproofing-benefit
+    &__title
+      font-size: 36px
+    &__text
+      font-size: 24px
+
+  .soundproofing-distributor
+    &__text
+      font-size: 38px
+    &__link::after
+      font-size: 30px
+
 // ---------------------------------------
 // Screen resolution from 1600px to 1920px
 // ---------------------------------------
@@ -87,3 +110,153 @@
     &-text
       font-size: 24px
       padding: 20px 0
+  
+  .soundproofing-benefits
+    &__title
+      font-size: 38px
+
+  .soundproofing-benefit
+    &__title
+      font-size: 30px
+    &__text
+      font-size: 18px
+
+  .soundproofing-distributor
+    &__text
+      font-size: 28px
+    &__link::after
+      font-size: 20px
+
+// ---------------------------------------
+// Screen resolution from 1200px to 1600px
+// ---------------------------------------
+@media (min-width: 1200px) and (max-width: 1599.98px)
+  .soundproofing
+    &-title
+      font-size: 42px
+    &-text
+      font-size: 24px
+      padding: 20px 0
+  
+  .soundproofing-benefits
+    &__title
+      font-size: 38px
+
+  .soundproofing-benefit
+    &__title
+      font-size: 30px
+    &__text
+      font-size: 16px
+
+  .soundproofing-distributor
+    &__text
+      font-size: 28px
+    &__link::after
+      font-size: 20px
+
+// ---------------------------------------
+// Screen resolution from 900px to 1200px
+// ---------------------------------------
+@media (min-width: 900px) and (max-width: 1199.98px)
+  .soundproofing
+    &-title
+      font-size: 32px
+    &-text
+      font-size: 24px
+      padding: 20px 0
+
+  .soundproofing-benefits
+    &-container 
+      display: grid
+      justify-content: space-evenly
+      grid-template-columns: repeat(2, 300px)
+      row-gap: 30px
+  
+  .soundproofing-benefits
+    &__title
+      font-size: 38px
+
+  .soundproofing-benefit
+    &__title
+      font-size: 30px
+    &__text
+      font-size: 16px
+
+  .soundproofing-distributor
+    &__text
+      font-size: 28px
+    &__link::after
+      font-size: 20px
+
+// ---------------------------------------
+// Screen resolution from 600px to 900px
+// ---------------------------------------
+@media (min-width: 600px) and (max-width: 899.98px)
+  .soundproofing
+    &-title
+      font-size: 24px
+    &-text
+      font-size: 18px
+      padding: 10px 0
+
+  .soundproofing-benefits
+    &-container 
+      display: grid
+      justify-content: space-evenly
+      grid-template-columns: repeat(1, 300px)
+      row-gap: 30px
+  
+  .soundproofing-benefits
+    &__title
+      font-size: 24px
+
+  .soundproofing-benefit
+    &__title
+      font-size: 24px
+    &__text
+      font-size: 16px
+
+  .soundproofing-distributor
+    &__text
+      font-size: 18px
+    &__link::after
+      font-size: 14px
+
+// ---------------------------------------
+// Screen resolution from 320px to 600px
+// ---------------------------------------
+@media (min-width: 320px) and (max-width: 599.98px)
+  .soundproofing
+    &-title
+      font-size: 20px
+    &-text
+      font-size: 16px
+      padding: 10px 0
+
+  .soundproofing-benefits
+    &-container 
+      display: grid
+      justify-content: space-evenly
+      grid-template-columns: repeat(1, 300px)
+      row-gap: 30px
+  
+  .soundproofing-benefits
+    &__title
+      font-size: 24px
+
+  .soundproofing-benefit
+    &__title
+      font-size: 24px
+    &__text
+      font-size: 16px
+
+  .soundproofing-distributor
+    &__img
+      width: 85.5px
+      height: 40px
+      padding: 0 10px
+    &__text
+      font-size: 18px
+    &__link::after
+      font-size: 14px
+      
