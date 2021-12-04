@@ -345,3 +345,8 @@ $(function(){
   $("#phone").mask("+7 (999) 999-99-99");
   $("#phone2").mask("+7 (999) 999-99-99");
 });
+
+// -----------
+// VK chat app
+// -----------
+VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonText: "Есть вопрос?"});

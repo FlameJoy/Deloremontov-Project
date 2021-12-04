@@ -1,18 +1,24 @@
-
+<!DOCTYPE html>
 <html lang="ru en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deloremontov.ru</title>
     <!-- ------------------- -->
     <!-- Styles & animations -->
     <!-- ------------------- -->
-    <link rel="stylesheet" href="assets/css/reset.css"/>
-    <link rel="stylesheet" href="assets/css/google-fonts.css"/>
-    <link rel="stylesheet" href="assets/css/main.min.css"/>
-    <link rel="stylesheet" href="assets/css/animate.min.css"/>
-    <link rel="shortcut icon" href="assets/images/src/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/google-fonts.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="shortcut icon" href="assets/images/src/favicon.ico" type="image/x-icon"><script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
+
+<!-- VK Widget -->
+<div id="vk_community_messages"></div>
+<script type="text/javascript">
+VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonText: "Есть вопрос?"});
+</script>
   </head>
   <body class="page">
     <section class="extra-page-header"></section>
@@ -21,7 +27,7 @@
         <!-- ------------------------->
         <!-- Site logo & mobile menu-->
         <!-- -------------------------><a class="top-nav-logo" href="index.html">
-          <div class="logo-container"> <img class="logo-img" src="assets/images/dest/logo-2.png" alt="logo-img"/>
+          <div class="logo-container"> <img class="logo-img" src="assets/images/dest/logo-2.png" alt="logo-img">
             <h1 class="logo__name">Ремонт и отделка помещений в Москве и Санкт-Петербурге</h1>
           </div></a>
         <!-- ------------------------>
@@ -57,7 +63,7 @@
         <!-- Scroll menu-->
         <!-- --------------- -->
         <div class="top-nav-scroll-menu" id="top-nav-scroll-menu">
-          <ul class="top-nav-scroll-menu__list cl-effect-8"><img class="top-nav-scroll-menu__logo" src="assets/images/dest/nav-scroll-logo.png" alt="scroll-menu-logo"/>
+          <ul class="top-nav-scroll-menu__list cl-effect-8"><img class="top-nav-scroll-menu__logo" src="assets/images/dest/nav-scroll-logo.png" alt="scroll-menu-logo">
             <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="index.html">Главная</a></li>
             <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="index.html#services">Услуги</a></li>
             <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="index.html#portfolio">Портфолио</a></li>
@@ -82,9 +88,9 @@
           <form class="recall-form" action="assets/php/action.php" method="post" name="recall-form"><span class="recall-form__close-btn close" onclick="document.getElementById('id01').style.display='none'" title="Close Modal">&times;</span>
             <div class="recall-form-container">
               <label class="recall-form__input-name" for="name">Ваше имя</label>
-              <input class="recall-form__input" type="text" id="name" name="name" minlength="2" maxlength="20" pattern="^[а-яА-ЯёЁa-zA-Z]{1,20}$" placeholder="Ваше имя" onkeypress="noDigits(event)" required="required"/>
+              <input class="recall-form__input" type="text" id="name" name="name" minlength="2" maxlength="20" pattern="^[а-яА-ЯёЁa-zA-Z]{1,20}$" placeholder="Ваше имя" onkeypress="noDigits(event)" required>
               <label class="recall-form__input-name" for="phone">Введите номер телефона</label>
-              <input class="recall-form__input" type="tel" id="phone" name="phone" pattern="^((8|+7)[- ]?)?((?d{3})?[- ]?)?[d- ]{7,10}$" minlength="20" maxlength="20" placeholder="+7 (999) 999-99-99" required="required"/>
+              <input class="recall-form__input" type="tel" id="phone" name="phone" pattern="^((8|+7)[- ]?)?((?d{3})?[- ]?)?[d- ]{7,10}$" minlength="20" maxlength="20" placeholder="+7 (999) 999-99-99" required>
               <label class="recall-form__input-name" for="message">Сообщение</label>
               <textarea class="recall-form__textarea" type="textarea" name="message"></textarea>
               <button class="btn recall-form__btn" type="submit" onclick="document.getElementById('sendform').style.display = 'block'">Заказать звонок</button>
