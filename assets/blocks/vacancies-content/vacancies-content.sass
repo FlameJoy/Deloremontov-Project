@@ -1,14 +1,346 @@
 .vacancies
-  &-container
-    padding: 60px 0
   &-title
     font-family: "Montserrat", sans-serif
     font-weight: 600
-    font-size: 38px
     color: #2b2b2b
-    padding: 40px 0
     text-transform: uppercase
   &__text
     font-family: "Montserrat", sans-serif
-    font-size: 18px
     line-height: 1.2em
+
+.vacancy
+  border: 2px solid #2b2b2b
+  border-radius: 8px
+  padding: 15px
+  &__name,
+  &__salary
+    font-family: "Montserrat", sans-serif
+    font-weight: 600
+
+.vacancy-description
+  &__work-time
+    font-family: "Montserrat", sans-serif
+
+.vacancy-description-requirements,
+.vacancies-description-responsibilities,
+.vacancy-description-conditions,
+.vacancy-contacts
+  font-family: "Montserrat", sans-serif
+  color: #ec4b00
+  font-weight: 600
+
+.vacancy-description-requirements,
+.vacancies-description-responsibilities,
+.vacancy-description-conditions
+  &__item
+    &::before
+      content: '\f105'
+      font-family: FontAwesome
+      padding-right: 5px
+
+.vacancy-contacts
+  &__tel,
+  &__email,
+  &__note
+    color: #000000
+
+// ----------  
+// Adaptivity
+// ----------
+// ----------------------------------------  
+// Screen resolution from 1920px and higher
+// ----------------------------------------
+@media (min-width: 1920px)
+  .vacancies-list
+    margin-top: 40px
+
+  .vacancies
+    &-container
+      padding: 60px 0
+    &-title
+      font-size: 60px
+      padding: 40px 0
+    &__text
+      font-size: 30px
+
+  .vacancy
+    &__name,
+    &__salary
+      font-size: 40px
+      padding: 10px 0
+  
+  .vacancy-description
+    &__work-time
+      font-size: 28px
+      padding: 10px 0
+
+  .vacancy-description-requirements,
+  .vacancies-description-responsibilities,
+  .vacancy-description-conditions,
+  .vacancy-contacts
+    font-size: 28px
+    padding: 8px 0
+    &__item
+      font-size: 24px
+      padding: 6px 0 6px 10px
+      font-weight: 500
+      color:#000000 
+      &::before
+        font-size: 24px
+
+  .vacancy-contacts
+    &__tel,
+    &__email,
+    &__note
+      font-size: 24px
+      font-weight: 500
+      padding: 6px 0 6px 10px
+
+// ---------------------------------------
+// Screen resolution from 1600px to 1920px
+// ---------------------------------------
+@media (min-width: 1600px) and (max-width: 1919.98px)
+  .vacancies-list
+    margin-top: 40px
+
+  .vacancies
+    &-container
+      padding: 60px 0
+    &-title
+      font-size: 60px
+      padding: 40px 0
+    &__text
+      font-size: 30px
+
+  .vacancy
+    &__name,
+    &__salary
+      font-size: 30px
+      padding: 10px 0
+  
+  .vacancy-description
+    &__work-time
+      font-size: 24px
+      padding: 10px 0
+
+  .vacancy-description-requirements,
+  .vacancies-description-responsibilities,
+  .vacancy-description-conditions,
+  .vacancy-contacts
+    font-size: 24px
+    padding: 8px 0
+    &__item
+      font-size: 20px
+      padding: 6px 0 6px 10px
+      font-weight: 500
+      color:#000000 
+      &::before
+        font-size: 20px
+
+  .vacancy-contacts
+    &__tel,
+    &__email,
+    &__note
+      font-size: 20px
+      font-weight: 500
+      padding: 6px 0 6px 10px
+
+// ---------------------------------------
+// Screen resolution from 1200px to 1600px
+// ---------------------------------------
+@media (min-width: 1200px) and (max-width: 1599.98px)
+  .vacancies-list
+    margin-top: 40px
+
+  .vacancies
+    &-container
+      padding: 60px 0
+    &-title
+      font-size: 40px
+      padding: 40px 0
+    &__text
+      font-size: 24px
+
+  .vacancy
+    &__name,
+    &__salary
+      font-size: 30px
+      padding: 10px 0
+  
+  .vacancy-description
+    &__work-time
+      font-size: 24px
+      padding: 10px 0
+
+  .vacancy-description-requirements,
+  .vacancies-description-responsibilities,
+  .vacancy-description-conditions,
+  .vacancy-contacts
+    font-size: 24px
+    padding: 8px 0
+    &__item
+      font-size: 20px
+      padding: 6px 0 6px 10px
+      font-weight: 500
+      color:#000000 
+      &::before
+        font-size: 20px
+
+  .vacancy-contacts
+    &__tel,
+    &__email,
+    &__note
+      font-size: 20px
+      font-weight: 500
+      padding: 6px 0 6px 10px
+
+// ---------------------------------------
+// Screen resolution from 900px to 1200px
+// ---------------------------------------
+@media (min-width: 900px) and (max-width: 1199.98px)
+  .vacancies-list
+    margin-top: 40px
+
+  .vacancies
+    &-container
+      padding: 60px 0
+    &-title
+      font-size: 40px
+      padding: 40px 0
+    &__text
+      font-size: 22px
+
+  .vacancy
+    &__name,
+    &__salary
+      font-size: 24px
+      padding: 10px 0
+  
+  .vacancy-description
+    &__work-time
+      font-size: 24px
+      padding: 10px 0
+
+  .vacancy-description-requirements,
+  .vacancies-description-responsibilities,
+  .vacancy-description-conditions,
+  .vacancy-contacts
+    font-size: 24px
+    padding: 8px 0
+    &__item
+      font-size: 20px
+      padding: 6px 0 6px 10px
+      font-weight: 500
+      color:#000000 
+      &::before
+        font-size: 20px
+
+  .vacancy-contacts
+    &__tel,
+    &__email,
+    &__note
+      font-size: 20px
+      font-weight: 500
+      padding: 6px 0 6px 10px
+
+// ---------------------------------------
+// Screen resolution from 600px to 900px
+// ---------------------------------------
+@media (min-width: 600px) and (max-width: 899.98px)
+  .vacancies-list
+    margin-top: 40px
+
+  .vacancies
+    &-container
+      padding: 60px 0
+    &-title
+      font-size: 30px
+      padding: 40px 0
+    &__text
+      font-size: 18px
+
+  .vacancy
+    &__name,
+    &__salary
+      font-size: 20px
+      padding: 10px 0
+  
+  .vacancy-description
+    &__work-time
+      font-size: 20px
+      padding: 10px 0
+
+  .vacancy-description-requirements,
+  .vacancies-description-responsibilities,
+  .vacancy-description-conditions,
+  .vacancy-contacts
+    font-size: 20px
+    padding: 8px 0
+    &__item
+      font-size: 18px
+      padding: 6px 0 6px 10px
+      font-weight: 500
+      color:#000000 
+      &::before
+        font-size: 18px
+
+  .vacancy-contacts
+    &__tel,
+    &__email,
+    &__note
+      font-size: 18px
+      font-weight: 500
+      padding: 6px 0 6px 10px
+
+// ---------------------------------------
+// Screen resolution from 320px to 600px
+// ---------------------------------------
+@media (min-width: 320px) and (max-width: 599.98px)
+  .vacancies-list
+    margin-top: 10px
+
+  .vacancies
+    &-container
+      padding: 60px 0
+    &-title
+      font-size: 30px
+      padding: 40px 0
+    &__text
+      font-size: 18px
+
+  .vacancy
+    &__name,
+    &__salary
+      font-size: 20px
+      padding: 10px 0
+  
+  .vacancy-description
+    &__work-time
+      font-size: 20px
+      padding: 10px 0
+
+  .vacancy-description-requirements,
+  .vacancies-description-responsibilities,
+  .vacancy-description-conditions,
+  .vacancy-contacts
+    font-size: 20px
+    padding: 8px 0
+    &__item
+      font-size: 18px
+      padding: 6px 0 6px 10px
+      font-weight: 500
+      color:#000000 
+      &::before
+        font-size: 18px
+
+  .vacancy-contacts
+    &__tel,
+    &__email,
+    &__note
+      font-size: 18px
+      font-weight: 500
+      padding: 6px 0 6px 10px
+
+
+
+      

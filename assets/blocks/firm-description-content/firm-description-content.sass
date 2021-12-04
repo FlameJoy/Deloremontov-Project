@@ -1,0 +1,61 @@
+.firm-description-container
+  padding: 60px 0
+  
+.firm-description
+  &__title,
+  &__text
+    font-family: 'Montserrat', sans-serif
+    color: #2b2b2b
+  &__title
+    font-weight: 600
+  &__text
+    line-height: 1.4em
+    padding: 10px
+  
+
+// ----------
+// Adaptivity
+// ----------
+// ----------------------------------------
+// Screen resolution from 1920px and higher
+// ----------------------------------------
+@media (min-width: 1920px)
+  .firm-description
+    &__title
+      font-size: 60px
+      padding: 30px 0
+    &__text
+      font-size: 30px
+
+// ---------------------------------------
+// Screen resolution from 1600px to 1920px
+// ---------------------------------------
+@media (min-width: 1600px) and (max-width: 1919.98px)
+  .firm-description
+    &__title
+      font-size: 60px
+      padding: 30px 0
+    &__text
+      font-size: 30px
+
+// ---------------------------------------
+// Screen resolution from 1200px to 1600px
+// ---------------------------------------
+@media (min-width: 900px) and (max-width: 1599.98px)
+  .firm-description
+    &__title
+      font-size: 40px
+      padding: 30px 0
+    &__text
+      font-size: 24px
+
+// ---------------------------------------
+// Screen resolution from 600px to 900px
+// ---------------------------------------
+@media (min-width: 600px) and (max-width: 899.98px)
+  .firm-description
+    &__title
+      font-size: 40px
+      padding: 30px 0
+    &__text
+      font-size: 24px

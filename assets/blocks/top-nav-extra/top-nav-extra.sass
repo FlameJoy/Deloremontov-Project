@@ -1,0 +1,473 @@
+.top-nav 
+  position: absolute
+  top: 20px
+  width: 100%
+  z-index: 5
+
+.top-nav-wrap 
+  display: flex
+  flex-direction: row
+  align-items: center
+  margin: 0 auto
+
+// ----
+// LOGO
+// ----
+.top-nav-logo
+  cursor: pointer
+  text-decoration: none
+  
+.logo-container
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.logo__name
+  font-family: "Roboto", sans-serif
+  font-weight: 500
+  font-style: italic
+  color: #fac106
+  text-transform: uppercase
+  letter-spacing: 1px
+  line-height: 1.2em
+  text-align: center
+  max-width: 400px
+
+.top-nav-menu
+  &__list
+    display: flex
+    flex-direction: row
+  &__item
+    margin: 0 10px
+    padding: 5px
+    border: 2px solid transparent
+    transition-delay: .1s
+    transition-duration: .4s
+    &:hover
+      border: 2px solid #fac106
+      .top-nav-menu__link
+        color: #fac106
+        text-shadow: 1px 1px 5px #000       
+  &__link
+    font-family: "Roboto", sans-serif
+    font-size: 24px
+    font-weight: 500
+    text-decoration: none
+    text-transform: uppercase
+    color: #fff
+    transition-delay: .1s
+    transition-duration: .4s
+
+.services-submenu 
+  display: none
+  position: absolute
+  font-family: "Roboto", sans-serif
+  font-size: 20px
+  font-weight: 500
+  text-decoration: none
+  text-transform: uppercase
+  color: #fff
+  padding-top: 15px
+  &__link
+    text-decoration: none
+    color: #fff
+  &__item
+    padding: 10px 20px 10px 5px
+    border: 2px solid transparent
+    cursor: pointer
+    &:hover
+      border-color: #fac106
+      .services-submenu__link
+        color: #fac106
+        text-shadow: 1px 1px 5px #000    
+  
+#services-submenu:hover .services-submenu,
+.services-submenu:hover
+  display: block
+
+// -------------
+// Dropdowm menu
+// -------------
+.top-nav-dropdown-menu
+  display: none
+  position: relative
+  &__btn
+    font-family: "Roboto", sans-serif
+    font-size: 30px
+    font-weight: 500
+    color: #fac106
+    text-transform: uppercase
+    background-color: transparent
+    border: none
+    cursor: pointer
+    padding: 8px
+    border-radius: 10px
+    transition-delay: .1s
+    transition-duration: .4s
+    &::after
+      content: '\f0c9'
+      font-family: FontAwesome
+      font-size: 30px
+      padding-left: 5px
+    &:hover
+      box-shadow: 3px 3px 15px rgba(0, 0, 0, .8)
+
+.sidenav
+  height: 100%
+  width: 0
+  position: fixed
+  z-index: 1
+  top: 0
+  left: 0
+  background-color: #2b2b2b 
+  overflow-x: hidden
+  padding-top: 60px
+  transition: 0.5s
+
+/* The navigation menu links */
+.sidenav a
+  padding: 8px 8px 8px 32px
+  text-decoration: none
+  font-family: "Roboto", sans-serif
+  font-size: 25px
+  color: #fff
+  display: block
+  transition: 0.3s
+  &:hover
+    color: #fac106
+
+.sidenav
+  &__closebtn
+    position: absolute
+    top: 20px
+    right: 25px
+    font-weight: 600
+    margin-left: 50px
+
+// --------------- 
+// Scroll menu
+// --------------- 
+.top-nav-scroll-menu
+  position: fixed
+  background-color: #fff
+  top: -100px
+  width: 100%
+  transition: all 0.3s
+  &__logo
+    width: 320px
+    padding: 0 40px 0 5% 
+  &__list
+    display: flex
+    flex-direction: row
+    align-items: center
+  &__item
+    margin: 10px
+    padding: 5px
+    border: 2px solid transparent
+    transition-delay: .1s
+    transition-duration: .4s
+    &:hover
+      border: 2px solid #fac106
+      .top-nav-scroll-menu__link
+        color: #fac106
+        text-shadow: 1px 1px 2px #000       
+  &__link
+    font-family: "Roboto", sans-serif
+    font-size: 28px
+    font-weight: 500
+    text-decoration: none
+    text-transform: uppercase
+    color: #fac106
+    transition-delay: .1s
+    transition-duration: .4s
+
+// -----------
+// Recall form
+// -----------
+.top-nav-recall 
+  display: flex
+  flex-direction: row 
+  align-items: center
+  gap: 0 15px
+  cursor: pointer
+  margin-right: 20px
+  padding: 8px
+  border-radius: 10px
+  transition-delay: .1s
+  transition-duration: .4s
+  &::after
+    font-family: FontAwesome
+    content: "\f40c"
+    font-size: 60px
+    color: #06fa1a
+  &__btn,
+  &__tel
+    font-family: "Montserrat", sans-serif
+    font-weight: 600
+    color: #fff
+    line-height: 1.2em
+    transition-delay: .1s
+    transition-duration: .4s
+
+.top-nav-recall:hover
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, .8)
+  .top-nav-recall__btn,
+  .top-nav-recall__tel
+    color: #fac106
+
+.recall-form__btn
+  margin: 0 auto
+  cursor: pointer
+  border: none
+  user-select: none
+
+#sendform
+  display: block
+  position: fixed
+  width: 70%
+  top: 45%
+  background-color: #fff
+  padding: 15px 10px
+  border-radius: 8px
+
+.sendform
+  &-msg
+    font-family: "Montserrat", sans-serif
+    font-size: 30px
+    font-weight: 600
+    color: #2b2b2b
+    line-height: 1.2em
+    padding: 5px 15px
+    text-align: center
+    &::before
+      font-family: FontAwesome
+      font-size: 42px
+      color: #ec4b00
+      content: '\f0ad'
+      margin-right: 15px
+  &__btn
+    display: block
+    border-radius: 8px
+    border: none
+    background-color: #fac106
+    font-family: "Montserrat", sans-serif
+    font-size: 32px
+    font-weight: 800
+    padding: 10px 20px
+    color: #2b2b2b
+    margin: 10px auto 0
+    cursor: pointer
+
+// ----------
+// Adaptivity
+// ----------
+// ----------------------------------------
+// Screen resolution from 1920px and higher
+//-----------------------------------------
+@media (min-width: 1920px)
+  .top-nav-wrap 
+    max-width: 1920px
+    width: 100%
+    justify-content: space-evenly
+
+  .logo-img
+    width: 400px
+
+  .top-nav-menu      
+    &__link
+      font-size: 30px
+
+  .top-nav-recall
+    &::before,
+    &::after
+      font-size: 60px
+    &__btn,
+    &__tel
+      font-size: 24px
+
+  .logo__name
+    max-width: 300px
+
+// ---------------------------------------
+// Screen resolution from 1600px to 1920px
+//----------------------------------------
+@media (min-width: 1600px) and (max-width: 1919.98px)
+  .top-nav-wrap 
+    max-width: 1600px
+    width: 100%
+    justify-content: space-evenly
+
+  .logo-img
+    width: 400px
+
+  .top-nav-menu      
+    &__link
+      font-size: 24px
+
+  .top-nav-recall
+    &::before,
+    &::after
+      font-size: 60px
+    &__btn,
+    &__tel
+      font-size: 20px
+
+  .logo__name
+    max-width: 300px
+
+// ---------------------------------------
+// Screen resolution from 1200px to 1600px
+//----------------------------------------
+@media (min-width: 1200px) and (max-width: 1599.98px)
+  .top-nav-wrap 
+    max-width: 1600px
+    width: 100%
+    justify-content: space-evenly
+
+  .logo-img
+    width: 300px
+
+  .top-nav-menu  
+    &__item
+      margin: 0 5px    
+    &__link
+      font-size: 18px
+
+  .top-nav-recall
+    &::before,
+    &::after
+      font-size: 30px
+    &__btn,
+    &__tel
+      font-size: 14px
+
+  .logo__name
+    max-width: 250px
+
+  .services-submenu 
+    font-size: 16px
+    padding-top: 15px
+    &__item
+      padding: 10px 20px 10px 5px
+
+
+// --------------------------------------
+// Screen resolution from 900px to 1200px
+//---------------------------------------
+@media (min-width: 900px) and (max-width: 1199.98px)
+  .top-nav-wrap 
+    max-width: 1600px
+    width: 100%
+    justify-content: space-evenly
+
+  .logo-img
+    width: 300px
+
+  .top-nav-menu 
+    display: none
+
+  .top-nav-dropdown-menu
+    display: flex
+
+  .top-nav-recall
+    &::before,
+    &::after
+      font-size: 40px
+    &__btn,
+    &__tel
+      font-size: 18px
+
+  .logo__name
+    max-width: 250px
+
+// --------------------------------------
+// Screen resolution from 600px to 900px
+//---------------------------------------
+@media (min-width: 600px) and (max-width: 899.98px)
+  .top-nav-wrap 
+    max-width: 1600px
+    width: 100%
+    justify-content: space-between
+
+  .logo-img
+    width: 250px
+
+  .top-nav-menu 
+    display: none
+
+  .top-nav-dropdown-menu
+    display: flex
+    &__btn
+      font-size: 24px
+
+  .top-nav-recall
+    &::before,
+    &::after
+      font-size: 40px
+    &__btn,
+    &__tel
+      display: none
+
+  #sendform
+    top: 20%
+    width: 500px
+    left: calc( 50% - 260px )
+
+  .logo__name
+    max-width: 250px
+    font-size: 8px
+
+// --------------------------------------
+// Screen resolution from 320px to 600px
+//---------------------------------------
+@media (min-width: 320px) and (max-width: 599.98px)
+  .top-nav-wrap 
+    max-width: 1600px
+    width: 100%
+    justify-content: space-between
+
+  .logo-img
+    width: 150px
+
+  .top-nav-menu 
+    display: none
+
+  .top-nav-dropdown-menu
+    display: flex
+    &__btn
+      font-size: 18px
+      &::after
+        font-size: 18px  
+    &__content
+      margin-top: 50px
+      right: -50px
+
+  .top-nav-recall
+    flex-direction: column
+    gap: 0 5px
+    &::before,
+    &::after
+      font-size: 40px
+    &__btn,
+    &__tel
+      display: none
+
+  .btn.recall-form__btn
+    font-size: 18px
+    &::after
+      font-size: 18px
+
+  #sendform
+    top: 20%
+    width: 250px
+    left: calc( 50% - 130px )
+
+  .sendform
+    &-msg
+      font-size: 24px
+      &::before
+        font-size: 30px
+
+  .logo__name
+    max-width: 120px
+    font-size: 10px

@@ -32,25 +32,25 @@
           <!-- --------------->
           <!-- Side nav menu-->
           <!-- --------------->
-          <div class="sidenav" id="mySidenav"><a class="sidenav__closebtn" href="javascript:void(0)" onclick="closeSideNav()">&times;</a><a href="#">Главная</a><a href="#">Услуги</a><a href="#">Портфолио</a><a href="#">Контакты</a><a href="#">Вакансии</a><a href="#">О нас</a></div>
+          <div class="sidenav" id="mySidenav"><a class="sidenav__closebtn" href="javascript:void(0)" onclick="closeSideNav()">&times;</a><a href="index.html">Главная</a><a href="index.html#services">Услуги</a><a href="index.html#portfolio">Портфолио</a><a href="index.html#contact">Контакты</a><a href="vacancies.html">Вакансии</a><a href="firm-description.html">О нас</a></div>
         </div>
         <!-- --------------- -->
         <!-- Navigation menu -->
         <!-- --------------- -->
         <div class="top-nav-menu">
           <ul class="top-nav-menu__list cl-effect-8">
-            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#header">Главная</a></li>
-            <li class="top-nav-menu__item" id="services-submenu"><a class="top-nav-menu__link scrollto" href="#services">Услуги</a>
+            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="index.html">Главная</a></li>
+            <li class="top-nav-menu__item" id="services-submenu"><a class="top-nav-menu__link scrollto" href="index.html#services">Услуги</a>
               <ul class="services-submenu"> 
                 <li class="services-submenu__item"> <a class="services-submenu__link" href="soundproofing.html">Звукоизоляция</a></li>
                 <li class="services-submenu__item"> <a class="services-submenu__link" href="#">Услуга</a></li>
                 <li class="services-submenu__item"> <a class="services-submenu__link" href="#">Услуга</a></li>
               </ul>
             </li>
-            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#portfolio">Портфолио</a></li>
-            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#contact">Контакты</a></li>
+            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="index.html#portfolio">Портфолио</a></li>
+            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="index.html#contact">Контакты</a></li>
             <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="vacancies.html">Вакансии</a></li>
-            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="№">O нас</a></li>
+            <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="firm-description.html">O нас</a></li>
           </ul>
         </div>
         <!-- --------------- -->
@@ -58,10 +58,12 @@
         <!-- --------------- -->
         <div class="top-nav-scroll-menu" id="top-nav-scroll-menu">
           <ul class="top-nav-scroll-menu__list cl-effect-8"><img class="top-nav-scroll-menu__logo" src="assets/images/dest/nav-scroll-logo.png" alt="scroll-menu-logo"/>
-            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="#header">Главная</a></li>
-            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="#services">Услуги</a></li>
-            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="#portfolio">Портфолио</a></li>
-            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="#contact">Контакты</a></li>
+            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="index.html">Главная</a></li>
+            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="index.html#services">Услуги</a></li>
+            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="index.html#portfolio">Портфолио</a></li>
+            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="index.html#contact">Контакты</a></li>
+            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="vacancies.html">Вакансии</a></li>
+            <li class="top-nav-scroll-menu__item"><a class="top-nav-scroll-menu__link scrollto" href="firm-description.html">О нас</a></li>
           </ul>
         </div>
         <!-- ------------------------------ -->
@@ -99,9 +101,59 @@
       <div class="container">
         <div class="vacancies-container"> 
           <div class="vacancies-info"> 
-            <h2 class="vacancies-title"> <span class="title_marked">Доступные </span><span>Вакансии</span></h2>
-            <p class="vacancies__text">Здесь размещены доступные, на данный момент, вакансии. </p>
+            <h1 class="vacancies-title"> <span class="title_marked">Доступные </span><span>Вакансии</span></h1>
+            <p class="vacancies__text">Здесь размещены доступные, на данный момент, вакансии.</p>
           </div>
+          <ul class="vacancies-list">
+            <li class="vacancies__item">
+              <div class="vacancy">
+                <!-- --------------------------------->
+                <!-- Vacancy name, salary, work-time-->
+                <!-- --------------------------------->
+                <div class="vacancy__name">Строитель-отделочник</div>
+                <div class="vacancy__salary">от 35 000 до 47 000 руб. до вычета налогов</div>
+                <div class="vacancy-description">
+                  <div class="vacancy-description__work-time">Полная занятость, Вахтовый метод</div>
+                  <!-- ---------------------->
+                  <!-- Vacancy requirements-->
+                  <!-- ---------------------->
+                  <ul class="vacancy-description-requirements">Требования
+                    <li class="vacancy-description-requirements__item">Умение пользоваться всеми необходимыми инструментами</li>
+                    <li class="vacancy-description-requirements__item">Опыт работы приветствуется</li>
+                    <li class="vacancy-description-requirements__item">Ответственность</li>
+                  </ul>
+                  <!-- -------------------------->
+                  <!-- Vacancy responsibilities-->
+                  <!-- -------------------------->
+                  <ul class="vacancies-description-responsibilities">Обязанности
+                    <li class="vacancies-description-responsibilities__item">Выполнение любых видов погрузочно-разгрузочных работ</li>
+                    <li class="vacancies-description-responsibilities__item">Выполнение работ по монтажу/демонтажу оборудования</li>
+                    <li class="vacancies-description-responsibilities__item">Выполнение отделочных и сантехнических работ</li>
+                    <li class="vacancies-description-responsibilities__item">Выполнение работ средней сложности при кладке и ремонте каменных конструкций зданий, промышленных и гидротехнических сооружения</li>
+                  </ul>
+                  <!-- -------------------->
+                  <!-- Vacancy conditions-->
+                  <!-- -------------------->
+                  <ul class="vacancy-description-conditions">Условия
+                    <li class="vacancy-description-conditions__item">Вахтовый метод 20/10</li>
+                    <li class="vacancy-description-conditions__item">Разъездной характер работ</li>
+                    <li class="vacancy-description-conditions__item">Работа в Санкт-Петербурге и ЛО</li>
+                    <li class="vacancy-description-conditions__item">Проезд за счет работодателя (до/с вахты)</li>
+                    <li class="vacancy-description-conditions__item">Оклад 35000 р. + 700 р.(вахтовая надбавка)</li>
+                    <li class="vacancy-description-conditions__item">Стабильные ежеквартальные премии</li>
+                  </ul>
+                </div>
+                <!-- ------------------>
+                <!-- Vacancy contacts-->
+                <!-- ------------------>
+                <div class="vacancy-contacts">Контакты
+                  <div class="vacancy-contacts__tel">Телефон: 8 (991) 021-22-60</div>
+                  <div class="vacancy-contacts__email">E-mail: zakaz@deloremontov.ru</div>
+                  <div class="vacancy-contacts__note">В теме письме обязательно укажите название вакансии</div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

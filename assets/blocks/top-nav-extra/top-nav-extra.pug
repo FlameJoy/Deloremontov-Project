@@ -1,0 +1,91 @@
+.top-nav
+    nav.top-nav-wrap 
+      // -----------------------
+      // Site logo & mobile menu
+      // -----------------------
+      a.top-nav-logo(href="index.html")
+        .logo-container 
+          img.logo-img(src="assets/images/dest/logo-2.png" alt="logo-img")
+          h1.logo__name Ремонт и отделка помещений в Москве и Санкт-Петербурге
+      // ----------------------
+      // Mobile navigation menu
+      // ----------------------
+      .top-nav-dropdown-menu
+          button.top-nav-dropdown-menu__btn(onclick="openSideNav()") меню
+          // -------------
+          // Side nav menu
+          // -------------
+          #mySidenav.sidenav
+            a.sidenav__closebtn(href="javascript:void(0)" onclick="closeSideNav()") &times;
+            a(href="index.html") Главная
+            a(href="index.html#services") Услуги
+            a(href="index.html#portfolio") Портфолио
+            a(href="index.html#contact") Контакты
+            a(href="vacancies.html") Вакансии
+            a(href="firm-description.html") О нас
+      // --------------- 
+      // Navigation menu 
+      // --------------- 
+      .top-nav-menu
+        ul.top-nav-menu__list.cl-effect-8
+          li.top-nav-menu__item
+            a.top-nav-menu__link.scrollto(href="index.html") Главная
+          li#services-submenu.top-nav-menu__item
+            a.top-nav-menu__link.scrollto(href="index.html#services") Услуги
+            ul.services-submenu 
+              li.services-submenu__item 
+                a.services-submenu__link(href="soundproofing.html") Звукоизоляция
+              li.services-submenu__item 
+                a.services-submenu__link(href="#") Услуга
+              li.services-submenu__item 
+                a.services-submenu__link(href="#") Услуга
+          li.top-nav-menu__item
+            a.top-nav-menu__link.scrollto(href="index.html#portfolio") Портфолио
+          li.top-nav-menu__item
+            a.top-nav-menu__link.scrollto(href="index.html#contact") Контакты
+          li.top-nav-menu__item
+            a.top-nav-menu__link.scrollto(href="vacancies.html") Вакансии
+          li.top-nav-menu__item
+            a.top-nav-menu__link.scrollto(href="firm-description.html") O нас
+      // --------------- 
+      // Scroll menu
+      // --------------- 
+      #top-nav-scroll-menu.top-nav-scroll-menu
+        ul.top-nav-scroll-menu__list.cl-effect-8
+          img.top-nav-scroll-menu__logo(src="assets/images/dest/nav-scroll-logo.png" alt="scroll-menu-logo")
+          li.top-nav-scroll-menu__item
+            a.top-nav-scroll-menu__link.scrollto(href="index.html") Главная
+          li.top-nav-scroll-menu__item
+            a.top-nav-scroll-menu__link.scrollto(href="index.html#services") Услуги
+          li.top-nav-scroll-menu__item
+            a.top-nav-scroll-menu__link.scrollto(href="index.html#portfolio") Портфолио
+          li.top-nav-scroll-menu__item
+            a.top-nav-scroll-menu__link.scrollto(href="index.html#contact") Контакты
+          li.top-nav-scroll-menu__item
+            a.top-nav-scroll-menu__link.scrollto(href="vacancies.html") Вакансии
+          li.top-nav-scroll-menu__item
+            a.top-nav-scroll-menu__link.scrollto(href="firm-description.html") О нас
+      // ------------------------------ 
+      // Recall button & telefon number 
+      // ------------------------------ 
+      .top-nav-recall(onclick="document.getElementById('id01').style.display='block'")
+        .top-nav-recall-wrap
+          .top-nav-recall__btn Заказать звонок
+          .top-nav-recall__tel 8 (991) 021-22-60
+      // ---------- 
+      // Modal form 
+      // ---------- 
+      #id01.recall.modal
+        form.recall-form(action="assets/php/action.php" method="post" name="recall-form")
+          span.recall-form__close-btn(onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal") &times;
+          .recall-form-container
+            label.recall-form__input-name(for="name") Ваше имя
+            input.recall-form__input(type="text" id="name" name="name" minlength="2" maxlength="20" pattern="^[а-яА-ЯёЁa-zA-Z]{1,20}$" placeholder="Ваше имя" onkeypress="noDigits(event)" required)
+            label.recall-form__input-name(for="phone") Введите номер телефона
+            input.recall-form__input(type="tel" id="phone" name="phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" minlength="20" maxlength="20" placeholder="+7 (999) 999-99-99" required)
+            label.recall-form__input-name(for="message") Сообщение
+            textarea.recall-form__textarea(type="textarea" name="message")
+            button.btn.recall-form__btn(type="submit" onclick="document.getElementById('sendform').style.display = 'block'") Заказать звонок
+      #sendform
+        p.sendform-msg Уважаемы посетители, сайт находится в разработке, просим уточнять реальную стоимость услуг по телефону обратной связи.
+        button.sendform__btn(onclick="document.getElementById('sendform').style.display = 'none'") ОК
