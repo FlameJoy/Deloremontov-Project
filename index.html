@@ -760,12 +760,12 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
         </div>
       </div>
       <div class="service-info-redecorating modal" id="id02">
-        <form class="service-info-form" action="redecorating-action.php" method="post">
+        <div class="service-info-form">
           <div class="service-info-form-left"> 
             <p class="service-info-form-left__title">Косметический ремонт</p>
             <p class="service-info-form-left__price">от 1900 руб/м<span class="sup">2</span></p>
             <p class="service-info-form-left__info">В косметический ремонт входят следующие работы:</p>
-            <button class="service-info-form-left__btn button-5"><span class="link-content">отправить заявку</span></button>
+            <button class="service-info-form-left__btn button-5" onclick="document.getElementById('id01').style.display='block'"><span class="link-content">отправить заявку</span></button>
           </div>
           <div class="service-info-form-right">
             <div class="service-info-form-right-services-container"> 
@@ -795,15 +795,15 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
               </ul><span class="service-info-form__close-btn close" onclick="document.getElementById('id02').style.display='none'" title="Close Modal">&times;</span>
             </div>
           </div>
-        </form>
+        </div>
       </div>
       <div class="service-info-overhaul modal" id="id03">
-        <form class="service-info-form" action="overhaul-action.php" method="post">
+        <div class="service-info-form">
           <div class="service-info-form-left"> 
             <p class="service-info-form-left__title">Капитальный ремонт</p>
             <p class="service-info-form-left__price">от 4500 руб/м<span class="sup">2</span></p>
             <p class="service-info-form-left__info">В капитальный ремонт входят следующие работы:</p>
-            <button class="service-info-form-left__btn button-5"><span class="link-content">отправить заявку</span></button>
+            <button class="service-info-form-left__btn button-5" onclick="document.getElementById('id01').style.display='block'"><span class="link-content">отправить заявку</span></button>
           </div>
           <div class="service-info-form-right">
             <div class="service-info-form-right-services-container"> 
@@ -833,15 +833,15 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
               </ul><span class="service-info-form__close-btn close" onclick="document.getElementById('id03').style.display='none'" title="Close Modal">&times;</span>
             </div>
           </div>
-        </form>
+        </div>
       </div>
       <div class="service-info-designer modal" id="id04">
-        <form class="service-info-form" action="designer-action.php" method="post">
+        <div class="service-info-form">
           <div class="service-info-form-left"> 
             <p class="service-info-form-left__title">Дизайнерский ремонт</p>
             <p class="service-info-form-left__price">от 5600 руб/м<span class="sup">2</span></p>
             <p class="service-info-form-left__info">В дизайнерский ремонт входят следующие работы:</p>
-            <button class="service-info-form-left__btn button-5"><span class="link-content">отправить заявку</span></button>
+            <button class="service-info-form-left__btn button-5" onclick="document.getElementById('id01').style.display='block'"><span class="link-content">отправить заявку</span></button>
           </div>
           <div class="service-info-form-right">
             <div class="service-info-form-right-services-container"> 
@@ -871,7 +871,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
               </ul><span class="service-info-form__close-btn close" onclick="document.getElementById('id04').style.display='none'" title="Close Modal">&times;</span>
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </section>
     <section class="work-steps"> 
@@ -980,8 +980,13 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <h4 class="contact-info__title">Контакты</h4>
                 <p class="contact-info__line"> <span class="title_marked">Адрес: </span><span>г. Санкт-Петербург, Братский Бульвар, д. 8</span></p>
                 <p class="contact-info__line"> <span class="title_marked">Адрес: </span><span>г. Москва, проезд Серебрякова, д.6, ДЦ «Серебрякова»</span></p>
+                <p class="contact-info__line"> <span class="title_marked">Адрес офиса: </span><span>г. Санкт-Петербург, площадь Конституции, д. 7, БЦ «Лидер»</span></p>
+                <p class="contact-info__line"> <span class="title_marked">Адрес склада: </span><span>г. Москва, Рябиновая 46, строение 15</span></p>
                 <p class="contact-info__line"> <span class="title_marked">E-mail: </span><span>zakaz@deloremontov.ru</span></p>
+                <p class="contact-info__line"> <span class="title_marked">E-mail: </span><span>stopzvuk-msk@mail.ru</span></p>
                 <p class="contact-info__line"> <span class="title_marked">Телефон: </span><span>+7 (991) 021 - 22 - 60</span></p>
+                <p class="contact-info__line"> <span class="title_marked">Телефон: </span><span>+7 (903) 798 - 50 - 01 </span></p>
+                <p class="contact-info__line"> <span class="title_marked">Телефон: </span><span>+7 (495) 798 - 50 - 01</span></p>
               </div>
             </div>
           </div>

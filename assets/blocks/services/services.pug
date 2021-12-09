@@ -31,13 +31,13 @@ section#services.services
           span.sup 2
 
     #id02.service-info-redecorating.modal
-      form.service-info-form(action="redecorating-action.php" method="post")
+      .service-info-form
         .service-info-form-left 
           p.service-info-form-left__title Косметический ремонт
           p.service-info-form-left__price от 1900 руб/м
             span.sup 2
           p.service-info-form-left__info В косметический ремонт входят следующие работы:
-          button.service-info-form-left__btn.button-5
+          button.service-info-form-left__btn.button-5(onclick="document.getElementById('id01').style.display='block'")
             span.link-content отправить заявку
         .service-info-form-right
           .service-info-form-right-services-container 
@@ -65,13 +65,13 @@ section#services.services
             span.service-info-form__close-btn(onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal") &times;
 
     #id03.service-info-overhaul.modal
-      form.service-info-form(action="overhaul-action.php" method="post")
+      .service-info-form
         .service-info-form-left 
           p.service-info-form-left__title Капитальный ремонт
           p.service-info-form-left__price от 4500 руб/м
             span.sup 2
           p.service-info-form-left__info В капитальный ремонт входят следующие работы:
-          button.service-info-form-left__btn.button-5
+          button.service-info-form-left__btn.button-5(onclick="document.getElementById('id01').style.display='block'")
             span.link-content отправить заявку
         .service-info-form-right
           .service-info-form-right-services-container 
@@ -99,13 +99,13 @@ section#services.services
             span.service-info-form__close-btn(onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal") &times;
 
     #id04.service-info-designer.modal
-      form.service-info-form(action="designer-action.php" method="post")
+      .service-info-form
         .service-info-form-left 
           p.service-info-form-left__title Дизайнерский ремонт
           p.service-info-form-left__price от 5600 руб/м
             span.sup 2
           p.service-info-form-left__info В дизайнерский ремонт входят следующие работы:
-          button.service-info-form-left__btn.button-5
+          button.service-info-form-left__btn.button-5(onclick="document.getElementById('id01').style.display='block'")
             span.link-content отправить заявку
         .service-info-form-right
           .service-info-form-right-services-container 
