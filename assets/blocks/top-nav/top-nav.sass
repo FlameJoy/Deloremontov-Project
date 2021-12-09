@@ -180,6 +180,15 @@
     color: #fac106
     transition-delay: .1s
     transition-duration: .4s
+    &_hidden
+      display: none
+      font-size: 24px
+      cursor: pointer
+      &::after
+        content: '\f0c9'
+        font-family: FontAwesome
+        font-size: 24px
+        padding-left: 5px    
 
 // -----------
 // Recall form
@@ -350,6 +359,14 @@
     &__item
       padding: 10px 20px 10px 5px
 
+  // --------------- 
+  // Scroll menu
+  // --------------- 
+  .top-nav-scroll-menu
+    &__logo
+      width: 250px  
+    &__link
+      font-size: 20px
 
 // --------------------------------------
 // Screen resolution from 900px to 1200px
@@ -368,6 +385,10 @@
 
   .top-nav-dropdown-menu
     display: flex
+    &__btn
+      font-size: 24px
+      &::after
+        font-size: 24px
 
   .top-nav-recall
     &::before,
@@ -379,6 +400,19 @@
 
   .logo__name
     max-width: 250px
+
+  // --------------- 
+  // Scroll menu
+  // --------------- 
+  .top-nav-scroll-menu
+    &__logo
+      width: 200px 
+      padding: 0 10px 0 5%  
+    &__item
+      margin: 10px 2px
+      padding: 5px
+    &__link
+      font-size: 18px
 
 // --------------------------------------
 // Screen resolution from 600px to 900px
@@ -399,6 +433,8 @@
     display: flex
     &__btn
       font-size: 24px
+      &::after
+        font-size: 24px
 
   .top-nav-recall
     &::before,
@@ -416,6 +452,21 @@
   .logo__name
     max-width: 250px
     font-size: 8px
+
+  // --------------- 
+  // Scroll menu
+  // --------------- 
+  .top-nav-scroll-menu
+    &__logo
+      width: 200px 
+      padding: 0 10px 0 5%  
+    &__item
+      margin: 10px 2px
+      padding: 5px
+    &__link
+      display: none
+      &_hidden
+        display: block
 
 // --------------------------------------
 // Screen resolution from 320px to 600px
