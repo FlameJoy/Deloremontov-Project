@@ -508,6 +508,9 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
             </div>
             <div class="discount__text">Гарантия на ремонт 2 года</div>
           </div>
+          <!-- ---------->
+          <!-- DISCOUNT -->
+          <!-- ---------->
           <div class="discount-inner">
             <div class="discount-block">
               <h3 class="discount-block__num">0<span class="discount-block__currency"> рублей!</span></h3>
@@ -516,6 +519,9 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
           <div class="ribbon-wrap">
             <div class="ribbon6">БОНУС</div>
           </div>
+          <!-- -------->
+          <!-- BUTTON-->
+          <!-- -------->
           <div class="discount-btn-wrap">
             <button class="discount-btn" onclick="document.getElementById('id01').style.display='block'"><span class="discount-btn__text">Заказать</span></button>
           </div>
@@ -912,11 +918,17 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
     </section>
     <section class="about-us">
       <div class="container"> 
+        <!-- ----------------->
+        <!-- About us header-->
+        <!-- ----------------->
         <div class="about-us-container"> 
           <div class="about-us-info"> 
             <h2 class="about-us-info__title">Почему <span class="title_marked">нас </span><span>выбирают</span></h2>
             <p class="about-us-info__text">Мы понимаем, что Вам нужно! Избавим от головной боли и лишних хлопот. Возьмем на себя ответственность и не заставим вдаваться в подробности. Мы с удовольствием поможем Вам создать приятную и уютную атмосферу!</p>
           </div>
+          <!-- --------------------------->
+          <!-- Advantage table container-->
+          <!-- --------------------------->
           <div class="about-us-advantages-container">
             <ul class="about-us-advantages-table">
               <li class="about-us-box"> 
@@ -962,33 +974,38 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
     </section>
     <section class="contact" id="contact">
       <div class="container"> 
-        <div class="contact-container">
-          <div class="contact-header">
-            <h2 class="contact-header__title">Оставить заявку</h2>
-            <p class="contact-header__text">Отправьте заявку, и мы свяжемся с Вами в ближайшее время. Будем рады проконсультировать Вас +7 (991) 021-22-60</p>
-          </div>
-          <div class="contact-footer"> 
-            <form class="contact-form" action="assets/php/action.php" method="post" name="footer-recall-form">
-              <div class="contact-form__input-container">
-                <input class="contact-form__input" type="text" id="name" name="name" minlength="2" maxlength="20" pattern="^[а-яА-ЯёЁa-zA-Z]{1,20}$" placeholder="Ваше имя" onkeypress="noDigits(event)" required>
-                <input class="contact-form__input" type="tel" id="phone2" name="phone" pattern="^((8|+7)[- ]?)?((?d{3})?[- ]?)?[d- ]{7,10}$" minlength="20" maxlength="20" placeholder="+7 (999) 999-99-99" required>
-              </div>
-              <textarea class="contact-form__textarea" type="textarea" name="message" placeholder="Сообщение"></textarea>
-              <button class="btn contact-form__btn" type="submit">Отправить</button>
-            </form>
-            <div class="contact-info">
-              <div class="contact-info-wrap">
-                <h4 class="contact-info__title">Контакты</h4>
-                <p class="contact-info__line"> <span class="title_marked">Адрес: </span><span>г. Санкт-Петербург, Братский Бульвар, д. 8</span></p>
-                <p class="contact-info__line"> <span class="title_marked">Адрес: </span><span>г. Москва, проезд Серебрякова, д.6, ДЦ «Серебрякова»</span></p>
-                <p class="contact-info__line"> <span class="title_marked">Адрес офиса: </span><span>г. Санкт-Петербург, площадь Конституции, д. 7, БЦ «Лидер»</span></p>
-                <p class="contact-info__line"> <span class="title_marked">Адрес склада: </span><span>г. Москва, Рябиновая 46, строение 15</span></p>
-                <p class="contact-info__line"> <span class="title_marked">E-mail: </span><span>zakaz@deloremontov.ru</span></p>
-                <p class="contact-info__line"> <span class="title_marked">E-mail: </span><span>stopzvuk-msk@mail.ru</span></p>
-                <p class="contact-info__line"> <span class="title_marked">Телефон: </span><span>+7 (991) 021 - 22 - 60</span></p>
-                <p class="contact-info__line"> <span class="title_marked">Телефон: </span><span>+7 (903) 798 - 50 - 01 </span></p>
-                <p class="contact-info__line"> <span class="title_marked">Телефон: </span><span>+7 (495) 798 - 50 - 01</span></p>
-              </div>
+        <!-- ----------------->
+        <!-- Contacts header-->
+        <!-- ----------------->
+        <div class="contact-container"></div>
+        <div class="contact-header">
+          <h2 class="contact-header__title">Оставить заявку</h2>
+          <p class="contact-header__text">Отправьте заявку, и мы свяжемся с Вами в ближайшее время. Будем рады проконсультировать Вас +7 (991) 021-22-60</p>
+        </div>
+        <div class="contact-footer"> 
+          <form class="contact-form" action="assets/php/action.php" method="post" name="footer-recall-form">
+            <div class="contact-form__input-container">
+              <input class="contact-form__input" type="text" id="name" name="name" minlength="2" maxlength="20" pattern="^[а-яА-ЯёЁa-zA-Z]{1,20}$" placeholder="Ваше имя" onkeypress="noDigits(event)" required>
+              <input class="contact-form__input" type="tel" id="phone2" name="phone" pattern="^((8|+7)[- ]?)?((?d{3})?[- ]?)?[d- ]{7,10}$" minlength="20" maxlength="20" placeholder="+7 (999) 999-99-99" required>
+            </div>
+            <textarea class="contact-form__textarea" type="textarea" name="message" placeholder="Сообщение"></textarea>
+            <button class="btn contact-form__btn" type="submit">Отправить</button>
+          </form>
+          <!-- ------------------------------->
+          <!-- Adress, telefone, e-mail info-->
+          <!-- ------------------------------->
+          <div class="contact-info">
+            <div class="contact-info-wrap">
+              <h4 class="contact-info__title">Контакты</h4>
+              <p class="contact-info__line"> <span class="title_marked">Адрес: </span><span>г. Санкт-Петербург, Братский Бульвар, д. 8</span></p>
+              <p class="contact-info__line"> <span class="title_marked">Адрес: </span><span>г. Москва, проезд Серебрякова, д.6, ДЦ «Серебрякова»</span></p>
+              <p class="contact-info__line"> <span class="title_marked">Адрес офиса: </span><span>г. Санкт-Петербург, площадь Конституции, д. 7, БЦ «Лидер»</span></p>
+              <p class="contact-info__line"> <span class="title_marked">Адрес склада: </span><span>г. Москва, Рябиновая 46, строение 15</span></p>
+              <p class="contact-info__line"> <span class="title_marked">E-mail: </span><span>zakaz@deloremontov.ru</span></p>
+              <p class="contact-info__line"> <span class="title_marked">E-mail: </span><span>stopzvuk-msk@mail.ru</span></p>
+              <p class="contact-info__line"> <span class="title_marked">Телефон: </span><span>+7 (991) 021 - 22 - 60</span></p>
+              <p class="contact-info__line"> <span class="title_marked">Телефон: </span><span>+7 (903) 798 - 50 - 01 </span></p>
+              <p class="contact-info__line"> <span class="title_marked">Телефон: </span><span>+7 (495) 798 - 50 - 01</span></p>
             </div>
           </div>
         </div>
