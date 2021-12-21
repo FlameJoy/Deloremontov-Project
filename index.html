@@ -48,7 +48,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
             <li class="top-nav-menu__item" id="services-submenu"><a class="top-nav-menu__link scrollto" href="#services">Услуги</a>
               <ul class="services-submenu"> 
                 <li class="services-submenu__item"> <a class="services-submenu__link" href="soundproofing.html">Звукоизоляция</a></li>
-                <li class="services-submenu__item"> <a class="services-submenu__link" href="#">Услуга</a></li>
+                <li class="services-submenu__item"> <a class="services-submenu__link" href="cleaning.html">Клининг</a></li>
                 <li class="services-submenu__item"> <a class="services-submenu__link" href="#">Услуга</a></li>
               </ul>
             </li>
@@ -75,12 +75,6 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
         <!-- ------------------------------ -->
         <!-- Recall button & telefon number -->
         <!-- ------------------------------ -->
-        <div class="top-nav-recall" onclick="document.getElementById('id01').style.display='block'">
-          <div class="top-nav-recall-wrap">
-            <div class="top-nav-recall__btn">Заказать звонок</div>
-            <div class="top-nav-recall__tel">8 (991) 021-22-60</div>
-          </div>
-        </div>
         <!-- ---------- -->
         <!-- Modal form -->
         <!-- ---------- -->
@@ -145,55 +139,100 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
           <!-- Calculator header-->
           <!-- ------------------->
           <div class="calc-header"> 
-            <div class="calc-header__title"> <span>Узнайте, сколько будет стоить </span><span class="title_marked">ваш ремонт</span></div>
+            <div class="calc-header__title"> <span>Узнайте сколько будет стоить </span><span class="title_marked">ваш ремонт</span></div>
           </div>
-          <div class="calc-mobile-wrap">
+          <!-- ----------------->
+          <!-- Calculator form-->
+          <!-- ----------------->
+          <form class="calc-form">
+            <!-- Tabs-->
+            <div class="calc-form-tabs"> 
+              <h3 class="calc-form-tabs__title">Выберите вид ремонта</h3>
+              <div class="calc-form-tab-wrap">
+                <input class="calc-form-tab__radio-btn" type="radio" name="renovation-type"><span class="calc-form-tab__name">Косметический</span>
+              </div>
+              <div class="calc-form-tab-wrap">
+                <input class="calc-form-tab__radio-btn" type="radio" name="renovation-type"><span class="calc-form-tab__name">Дизайнерский</span>
+              </div>
+              <div class="calc-form-tab-wrap">
+                <input class="calc-form-tab__radio-btn" type="radio" name="renovation-type"><span class="calc-form-tab__name">"Под ключ"</span>
+              </div>
+            </div>
+            <!-- Square-->
+            <div class="calc-form-square"> 
+              <h3 class="calc-form-square__title">Укажите общую площадь м2</h3>
+              <input class="calc__input" type="number" name="" placeholder="0" min="1">
+            </div>
+            <!-- Renovation type-->
+            <div class="calc-building-type">
+              <h3 class="calc-building-type__title">Выберите тип недвижимости</h3>
+              <div class="calc-building-type-wrap"> 
+                <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Первичная недвижимость</span>
+              </div>
+              <div class="calc-building-type-wrap">
+                <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Вторичная недвижимость</span>
+              </div>
+            </div>
             <!-- ----------------->
             <!-- Calculator tabs-->
             <!-- ----------------->
-            <div class="calc-tabs"> 
-              <button class="calc-tablink active firstTab" id="defaultOpen" onclick="openCalc(event, 'apartment')">Квартира</button>
-              <button class="calc-tablink" onclick="openCalc(event, 'room')">Комната</button>
-              <button class="calc-tablink" onclick="openCalc(event, 'kitchen')">Кухня</button>
-              <button class="calc-tablink" onclick="openCalc(event, 'bathroom')">Ванная</button>
-              <button class="calc-tablink" onclick="openCalc(event, 'building')">Дом</button>
-              <button class="calc-tablink lastTab" onclick="openCalc(event, 'office')">Офис</button>
-            </div>
+            <div class="calc-tabs"> <a class="calc-tablink active firstTab" id="defaultOpen" onclick="openCalc(event, 'apartment')">Квартира</a><a class="calc-tablink" onclick="openCalc(event, 'room')">Комната</a><a class="calc-tablink" onclick="openCalc(event, 'kitchen')">Кухня</a><a class="calc-tablink" onclick="openCalc(event, 'bathroom')">Ванная</a><a class="calc-tablink" onclick="openCalc(event, 'building')">Дом</a><a class="calc-tablink lastTab" onclick="openCalc(event, 'office')">Офис</a></div>
             <!-- ------------------------->
             <!-- Apartment-->
             <!-- ------------------------->
             <div class="calc-tabcontent" id="apartment">
-              <form class="calc-form" action="calculate.php" method="post">
+              <div class="calc-form">
                 <div class="calc-wrap animate__fadeIn animate__animated">
-                  <div class="calc-form__left">
-                    <h4 class="calc__service-name">Выберите вид ремонта</h4>
-                    <select class="calc__selector" id="apartment-select" name=""> 
-                      <option class="apartment__opt" value="1">Косметический</option>
-                      <option class="apartment__opt" value="2">Дизайнерский</option>
-                      <option class="apartment__opt" value="3">"Под ключ"</option>
-                      <option class="apartment__opt" value="4">Капитальный</option>
-                    </select>
-                    <h4 class="calc__work-area">Укажите общую площадь</h4>
-                    <input class="calc__input" type="number" name="" placeholder="0" min="10">
-                    <h4 class="calc-building-type">Выберите тип недвижимости</h4>
-                    <div class="calc-building-type-wrap"> 
-                      <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Первичная недвижимость</span>
-                    </div>
-                    <div class="calc-building-type-wrap">
-                      <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Вторичная недвижимость</span>
-                    </div>
+                  <!-- --------------->
+                  <!-- Walls options-->
+                  <!-- --------------->
+                  <div class="calc-box walls">
+                    <h4 class="calc-services__title">Стены</h4>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен (штукатурка)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен (гипсокартон)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Поклейка обоев</span>
+                    </p>
                   </div>
-                  <div class="calc-form__center">
-                    <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
+                  <!-- --------------->
+                  <!-- Floor options-->
+                  <!-- --------------->
+                  <div class="calc-box floors">
+                    <h4 class="calc-services__title">Полы</h4>
                     <p class="calc-add-service">
                       <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание пола</span>
                     </p>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Финишное покрытие пола (ламинат)</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Финишное покрытие пола (плитка)</span>
+                    </p>
+                  </div>
+                  <!-- ----------------->
+                  <!-- Ceiling options-->
+                  <!-- ---------------   -->
+                  <div class="calc-box ceilings">
+                    <h4 class="calc-services__title">Потолок</h4>
                     <p class="calc-add-service"> 
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание потолка (штукатурка)</span>
                     </p>
                     <p class="calc-add-service"> 
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание потолка</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Потолки (гипсокартон)</span>
                     </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Натяжные потолки</span>
+                    </p>
+                  </div>
+                  <!-- -------------------->
+                  <!-- Additional options-->
+                  <!-- -------------------->
+                  <div class="calc-box additional">
+                    <h4 class="calc-services__title">Дополнительно</h4>
                     <p class="calc-add-service">
                       <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена электрики</span>
                     </p>
@@ -203,43 +242,32 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                     <p class="calc-add-service"> 
                       <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы отопления</span>
                     </p>
+                    <p class="calc-add-service">
+                      <input class="calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Установка двери</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Звукоизоляция стен, пола, потолка</span>
+                    </p>
                     <p class="calc-add-service"> 
                       <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Материал нашей компании</span>
                     </p>
-                    <h4 class="calc-estimate">Введите адрес электронной почты</h4>
-                    <input class="calc__input calc-estimate__adress" type="email" placeholder="example@gmail.com">
-                  </div>
-                  <div class="calc-form__right"> 
-                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/apartment.jpg" alt="apartment" rel="prefetch prerender"></div>
                   </div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
-              </form>
+              </div>
             </div>
             <!-- -------------------->
             <!-- Room-->
             <!-- -------------------->
             <div class="calc-tabcontent" id="room"> 
-              <form class="calc-form" action="calculate.php" method="post">
+              <div class="calc-form">
                 <div class="calc-wrap animate__fadeIn animate__animated">
-                  <div class="calc-form__left">
-                    <h4 class="calc__service-name">Выберите вид ремонта</h4>
-                    <select class="calc__selector" id="apartment-select" name=""> 
-                      <option class="apartment__opt" value="1">Косметический</option>
-                      <option class="apartment__opt" value="2">Дизайнерский</option>
-                      <option class="apartment__opt" value="3">"Под ключ"</option>
-                      <option class="apartment__opt" value="4">Капитальный</option>
-                    </select>
-                    <h4 class="calc__work-area">Укажите общую площадь</h4>
-                    <input class="calc__input" type="number" name="" placeholder="0" min="10">
-                    <h4 class="calc-building-type">Выберите тип недвижимости</h4>
-                    <div class="calc-building-type-wrap"> 
-                      <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Первичная недвижимость</span>
-                    </div>
-                    <div class="calc-building-type-wrap">
-                      <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Вторичная недвижимость</span>
-                    </div>
-                  </div>
                   <div class="calc-form__center">
                     <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
                     <p class="calc-add-service">
@@ -265,32 +293,14 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                   </div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
-              </form>
+              </div>
             </div>
             <!-- ----------------------->
             <!-- Kitchen-->
             <!-- ----------------------->
             <div class="calc-tabcontent" id="kitchen"> 
-              <form class="calc-form" action="calculate.php" method="post">
+              <div class="calc-form">
                 <div class="calc-wrap animate__fadeIn animate__animated">
-                  <div class="calc-form__left">
-                    <h4 class="calc__service-name">Выберите вид ремонта</h4>
-                    <select class="calc__selector" id="apartment-select" name=""> 
-                      <option class="apartment__opt" value="1">Косметический</option>
-                      <option class="apartment__opt" value="2">Дизайнерский</option>
-                      <option class="apartment__opt" value="3">"Под ключ"</option>
-                      <option class="apartment__opt" value="4">Капитальный</option>
-                    </select>
-                    <h4 class="calc__work-area">Укажите общую площадь</h4>
-                    <input class="calc__input" type="number" name="" placeholder="0" min="6">
-                    <h4 class="calc-building-type">Выберите тип недвижимости</h4>
-                    <div class="calc-building-type-wrap"> 
-                      <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Первичная недвижимость</span>
-                    </div>
-                    <div class="calc-building-type-wrap">
-                      <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Вторичная недвижимость</span>
-                    </div>
-                  </div>
                   <div class="calc-form__center">
                     <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
                     <p class="calc-add-service">
@@ -316,32 +326,14 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                   </div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
-              </form>
+              </div>
             </div>
             <!-- ------------------------>
             <!-- Bathroom-->
             <!-- ------------------------>
             <div class="calc-tabcontent" id="bathroom"> 
-              <form class="calc-form" action="calculate.php" method="post">
+              <div class="calc-form">
                 <div class="calc-wrap animate__fadeIn animate__animated">
-                  <div class="calc-form__left">
-                    <h4 class="calc__service-name">Выберите вид ремонта</h4>
-                    <select class="calc__selector" id="apartment-select" name=""> 
-                      <option class="apartment__opt" value="1">Косметический</option>
-                      <option class="apartment__opt" value="2">Дизайнерский</option>
-                      <option class="apartment__opt" value="3">"Под ключ"</option>
-                      <option class="apartment__opt" value="4">Капитальный</option>
-                    </select>
-                    <h4 class="calc__work-area">Укажите общую площадь</h4>
-                    <input class="calc__input" type="number" name="" placeholder="0" min="1">
-                    <h4 class="calc-building-type">Выберите тип недвижимости</h4>
-                    <div class="calc-building-type-wrap"> 
-                      <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Первичная недвижимость</span>
-                    </div>
-                    <div class="calc-building-type-wrap">
-                      <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Вторичная недвижимость</span>
-                    </div>
-                  </div>
                   <div class="calc-form__center">
                     <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
                     <p class="calc-add-service">
@@ -370,32 +362,14 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                   </div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
-              </form>
+              </div>
             </div>
             <!-- ------------------------>
             <!-- Building-->
             <!-- ------------------------>
             <div class="calc-tabcontent" id="building"> 
-              <form class="calc-form" action="calculate.php" method="post">
+              <div class="calc-form">
                 <div class="calc-wrap animate__fadeIn animate__animated">
-                  <div class="calc-form__left">
-                    <h4 class="calc__service-name">Выберите вид ремонта</h4>
-                    <select class="calc__selector" id="apartment-select" name=""> 
-                      <option class="apartment__opt" value="1">Косметический</option>
-                      <option class="apartment__opt" value="2">Дизайнерский</option>
-                      <option class="apartment__opt" value="3">"Под ключ"</option>
-                      <option class="apartment__opt" value="4">Капитальный</option>
-                    </select>
-                    <h4 class="calc__work-area">Укажите общую площадь</h4>
-                    <input class="calc__input" type="number" name="" placeholder="100" min="100">
-                    <h4 class="calc-building-type">Выберите тип недвижимости</h4>
-                    <div class="calc-building-type-wrap"> 
-                      <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Первичная недвижимость</span>
-                    </div>
-                    <div class="calc-building-type-wrap">
-                      <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Вторичная недвижимость</span>
-                    </div>
-                  </div>
                   <div class="calc-form__center">
                     <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
                     <p class="calc-add-service">
@@ -427,32 +401,14 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                   </div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
-              </form>
+              </div>
             </div>
             <!-- ---------------------->
             <!-- Office-->
             <!-- ---------------------->
             <div class="calc-tabcontent" id="office">
-              <form class="calc-form" action="calculate.php" method="post">
+              <div class="calc-form">
                 <div class="calc-wrap animate__fadeIn animate__animated">
-                  <div class="calc-form__left">
-                    <h4 class="calc__service-name">Выберите вид ремонта</h4>
-                    <select class="calc__selector" id="apartment-select" name=""> 
-                      <option class="apartment__opt" value="1">Косметический</option>
-                      <option class="apartment__opt" value="2">Дизайнерский</option>
-                      <option class="apartment__opt" value="3">"Под ключ"</option>
-                      <option class="apartment__opt" value="4">Капитальный</option>
-                    </select>
-                    <h4 class="calc__work-area">Укажите площадь</h4>
-                    <input class="calc__input" type="number" name="" placeholder="100" min="10">
-                    <h4 class="calc-building-type">Выберите тип недвижимости</h4>
-                    <div class="calc-building-type-wrap"> 
-                      <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Первичная недвижимость</span>
-                    </div>
-                    <div class="calc-building-type-wrap">
-                      <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Вторичная недвижимость</span>
-                    </div>
-                  </div>
                   <div class="calc-form__center">
                     <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
                     <p class="calc-add-service">
@@ -487,9 +443,9 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                   </div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
-              </form>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </section>
@@ -997,15 +953,12 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
           <div class="contact-info">
             <div class="contact-info-wrap">
               <h4 class="contact-info__title">Контакты</h4>
-              <p class="contact-info__line"> <span class="title_marked">Адрес: </span><span>г. Санкт-Петербург, Братский Бульвар, д. 8</span></p>
               <p class="contact-info__line"> <span class="title_marked">Адрес: </span><span>г. Москва, проезд Серебрякова, д.6, ДЦ «Серебрякова»</span></p>
-              <p class="contact-info__line"> <span class="title_marked">Адрес офиса: </span><span>г. Санкт-Петербург, площадь Конституции, д. 7, БЦ «Лидер»</span></p>
+              <p class="contact-info__line"> <span class="title_marked">Адрес: </span><span>г. Санкт-Петербург, ул. Зайцева, д.41, лит.А, офис 537Б</span></p>
               <p class="contact-info__line"> <span class="title_marked">Адрес склада: </span><span>г. Москва, Рябиновая 46, строение 15</span></p>
               <p class="contact-info__line"> <span class="title_marked">E-mail: </span><span>zakaz@deloremontov.ru</span></p>
-              <p class="contact-info__line"> <span class="title_marked">E-mail: </span><span>stopzvuk-msk@mail.ru</span></p>
-              <p class="contact-info__line"> <span class="title_marked">Телефон: </span><span>+7 (991) 021 - 22 - 60</span></p>
-              <p class="contact-info__line"> <span class="title_marked">Телефон: </span><span>+7 (903) 798 - 50 - 01 </span></p>
-              <p class="contact-info__line"> <span class="title_marked">Телефон: </span><span>+7 (495) 798 - 50 - 01</span></p>
+              <p class="contact-info__line"> <span class="title_marked">Телефон Санкт-Петербург: </span><span>+7 (991) 021 - 22 - 60</span></p>
+              <p class="contact-info__line"> <span class="title_marked">Телефон Москва: </span><span>+7 (903) 798 - 50 - 01 </span></p>
             </div>
           </div>
         </div>

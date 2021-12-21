@@ -4,7 +4,7 @@
 .calc
   background: url(../images/dest/7.png) no-repeat center
   background-size: 130%
-  background-position: -20% 80%
+  background-position: 5% 10%
 
 .calc-header__title 
   display: flex
@@ -17,43 +17,10 @@
   text-transform: uppercase
   color: #2b2b2b 
 
-// NEW
-.calc-form-tabs,
-.calc-form-square,
-.calc-building-type,
-.calc-area-type-tabs,
-.calc-tabcontent
-  width: 80%
-  margin: 30px auto 0
-
-.calc-form-tabs__title,
-.calc-form-square__title,
-.calc-building-type__title
-  font-family: "Montserrat", sans-serif
-  font-weight: 600
-  font-size: 28px
-  color: #2b2b2b
-  margin-bottom: 10px
-
-.calc-form-tab-wrap,
-.calc-building-type-wrap
-    padding: 10px 0
-
-.calc-form-tab__name,
-.calc-building-type__name
-  font-family: "Montserrat", sans-serif
-  font-weight: 600
-  font-size: 20px
-  text-transform: uppercase
-  color: #2b2b2b 
-  margin-left: 8px
-
-// NEW
-
 // -----------------  
 // Tab buttons style
 // -----------------
-.calc-tablink
+.calc-tablink 
   background: transparent
   position: relative
   font-family: "Montserrat", sans-serif
@@ -75,41 +42,38 @@
     position: absolute
     left: calc(50% - 20px)
     left: -webkit-calc(50% - 15px)
-    top: 50px
+    top: 55px
+
+.calc-tablink.active
+  &::after
+    border-color: #2b2b2b transparent transparent transparent
 
 // ----------------------------
 // Active/current tablink style
 // ----------------------------
 .calc-tablink.active 
   background-color: #2b2b2b
-  &::after
-    border-color: #2b2b2b transparent transparent transparent
 
 // ---------------------  
 // Style the tab content
 // ---------------------
 .calc-tabcontent
-  display: block
+  display: none
 
 .calc-wrap
-  display: grid
-  grid-template-columns: repeat(2, 250px)
-  grid-template-rows:  repeat(3, 1fr)
+  display: flex
+  flex-direction: row
+  gap: 0 50px
+  justify-content: space-between
 
-.walls,
-.floors,
-.ceilings
-  grid-column: 1 / 2
-  grid-row: span 1
-
-.additional
-  grid-column: 2 / 3
-  grid-row: 1 / 4
+.calc-form
+  &__center
+    max-width: 350px
 
 .calc__service-name,
 .calc__work-area,
 .calc-building-type,
-.calc-services__title,
+.calc-add-services,
 .calc-estimate
     font-family: "Roboto", sans-serif
     font-weight: 600
@@ -137,10 +101,9 @@
 .calc__selector
   width: 272px
 
-.calc-building-type__radio-btn,
-.calc-form-tab__radio-btn
-  width: 20px
-  height: 20px
+.calc-building-type__radio-btn
+  width: 25px
+  height: 25px
   filter: grayscale(1)
 
 .calc-building-type__name
@@ -155,8 +118,8 @@
   padding: 10px 0
 
 .calc-add-service__checkbox
-  height: 20px
-  width: 20px
+  height: 30px
+  width: 30px
   filter: grayscale(1)
 
 .calc-add-service__name
@@ -219,7 +182,7 @@
 @media (min-width: 1920px)
   .calc-header__title 
     font-size: 60px
-    padding: 80px 0 20px 0
+    padding: 80px 0
 
   .calc-tablink 
     font-size: 30px
@@ -273,7 +236,7 @@
 @media (min-width: 1600px) and (max-width: 1919.98px)
   .calc-header__title 
     font-size: 42px
-    padding: 80px 0 20px 0
+    padding: 80px 0
 
   .calc-tablink 
     font-size: 22px
@@ -281,33 +244,34 @@
     margin-right: 10px
 
   .calc-tabs
-    margin-left: 10%
+    margin-left: 10px
 
   .calc-tabcontent
-    padding: 50px 0 0
+    padding: 100px 0 0
+    width: 1266.4px
+    height: 850px
+    margin: 0 auto
 
   .calc__service-name,
   .calc__work-area,
   .calc-building-type,
+  .calc-add-services,
   .calc-estimate
-    font-size: 20px
+    font-size: 24px
     padding: 15px 0
-
-  .calc-services__title
-    font-size: 28px
-    margin-top: 20px
 
   .calc__input,
   .calc__selector,
   .apartment__opt
-    font-size: 20px
+    font-size: 18px
     padding: 8px 10px
-    width: 200px
+    width: 250px
 
   .calc__input-num
     width: 30px
-    padding: 4px 10px
-    font-size: 18px
+
+  .calc-building-type__name
+    font-size: 16px
 
   .calc-add-service__name
     font-size: 18px
