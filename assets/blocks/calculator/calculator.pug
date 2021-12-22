@@ -7,7 +7,7 @@ section#calc.calc
       .calc-header 
         .calc-header__title 
           span Узнайте сколько будет стоить 
-          span.title_marked ваш ремонт
+            span.title_marked ваш ремонт
       // ---------------
       // Calculator form
       // ---------------
@@ -124,6 +124,8 @@ section#calc.calc
                 p.calc-add-service 
                   input.calc-add-service__checkbox(type="checkbox", name="add-services") 
                   span.calc-add-service__name Материал нашей компании
+              .calc-box.calc-img-wrap
+                img.calc-img(src="assets/images/dest/apartment.jpg" alt="apartment"  rel="prefetch prerender") 
             .calc-btn-container
               a.btn.calc__btn(type="submit") Рассчитать
         // ------------------
@@ -132,13 +134,67 @@ section#calc.calc
         #room.calc-tabcontent 
           .calc-form
             .calc-wrap.animate__fadeIn.animate__animated
-              .calc-form__center
-                h4.calc-add-services Выберите дополнительные услуги
+              // -------------
+              // Walls options
+              // -------------
+              .calc-box.walls
+                h4.calc-services__title Стены
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание стен (штукатурка)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание стен (гипсокартон)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Поклейка обоев
+              // -------------
+              // Floor options
+              // -------------
+              .calc-box.floors
+                h4.calc-services__title Полы
                 p.calc-add-service
-                  input.calc__input.calc__input-num(type="number", name="" placeholder="0" min="0")
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание пола
+                p.calc-add-service
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Финишное покрытие пола (ламинат)
+                p.calc-add-service
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Финишное покрытие пола (плитка)
+              // ---------------
+              // Ceiling options
+              // ---------------   
+              .calc-box.ceilings
+                h4.calc-services__title Потолок
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание потолка (штукатурка)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Потолки (гипсокартон)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Натяжные потолки
+              // ------------------
+              // Additional options
+              // ------------------
+              .calc-box.additional
+                h4.calc-services__title Дополнительно
+                p.calc-add-service
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Замена электрики
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Замена системы водоснабжения
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Замена системы отопления
+                p.calc-add-service
+                  input.calc__input-num(type="number", name="" placeholder="0" min="0")
                   span.calc-add-service__name Замена или монтаж радиаторов отопления, шт
                 p.calc-add-service
-                  input.calc__input.calc__input-num(type="number", name="" placeholder="0" min="0")
+                  input.calc__input-num(type="number", name="" placeholder="0" min="0")
                   span.calc-add-service__name Замена окон, шт
                 p.calc-add-service
                   input.calc-add-service__checkbox(type="checkbox", name="add-services") 
@@ -149,11 +205,8 @@ section#calc.calc
                 p.calc-add-service 
                   input.calc-add-service__checkbox(type="checkbox", name="add-services") 
                   span.calc-add-service__name Материал нашей компании
-                h4.calc-estimate Введите адрес электронной почты
-                input.calc__input.calc-estimate__adress(type="email" placeholder="example@gmail.com")
-              .calc-form__right 
-                .calc-img-wrap
-                  img.calc-img(src="assets/images/dest/room.jpg" alt="room"  rel="prefetch prerender") 
+              .calc-box.calc-img-wrap
+                img.calc-img(src="assets/images/dest/room.jpg" alt="room"  rel="prefetch prerender")
             .calc-btn-container
               a.btn.calc__btn(type="submit") Рассчитать
         // ---------------------
@@ -162,13 +215,67 @@ section#calc.calc
         #kitchen.calc-tabcontent 
           .calc-form
             .calc-wrap.animate__fadeIn.animate__animated
-              .calc-form__center
-                h4.calc-add-services Выберите дополнительные услуги
+              // -------------
+              // Walls options
+              // -------------
+              .calc-box.walls
+                h4.calc-services__title Стены
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание стен (штукатурка)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание стен (гипсокартон)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Поклейка обоев
+              // -------------
+              // Floor options
+              // -------------
+              .calc-box.floors
+                h4.calc-services__title Полы
                 p.calc-add-service
-                  input.calc__input.calc__input-num(type="number", name="" placeholder="0" min="0")
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание пола
+                p.calc-add-service
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Финишное покрытие пола (ламинат)
+                p.calc-add-service
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Финишное покрытие пола (плитка)
+              // ---------------
+              // Ceiling options
+              // ---------------   
+              .calc-box.ceilings
+                h4.calc-services__title Потолок
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание потолка (штукатурка)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Потолки (гипсокартон)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Натяжные потолки
+              // ------------------
+              // Additional options
+              // ------------------
+              .calc-box.additional
+                h4.calc-services__title Дополнительно
+                p.calc-add-service
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Замена электрики
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Замена системы водоснабжения
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Замена системы отопления
+                p.calc-add-service
+                  input.calc__input-num(type="number", name="" placeholder="0" min="0")
                   span.calc-add-service__name Замена или монтаж радиаторов отопления, шт
                 p.calc-add-service
-                  input.calc__input.calc__input-num(type="number", name="" placeholder="0" min="0")
+                  input.calc__input-num(type="number", name="" placeholder="0" min="0")
                   span.calc-add-service__name Замена окон, шт
                 p.calc-add-service
                   input.calc-add-service__checkbox(type="checkbox", name="add-services") 
@@ -179,11 +286,8 @@ section#calc.calc
                 p.calc-add-service 
                   input.calc-add-service__checkbox(type="checkbox", name="add-services") 
                   span.calc-add-service__name Материал нашей компании
-                h4.calc-estimate Введите адрес электронной почты
-                input.calc__input.calc-estimate__adress(type="email" placeholder="example@gmail.com")
-              .calc-form__right 
-                .calc-img-wrap
-                  img.calc-img(src="assets/images/dest/kitchen.jpg" alt="room"  rel="prefetch prerender") 
+              .calc-box.calc-img-wrap
+                img.calc-img(src="assets/images/dest/kitchen.jpg" alt="room"  rel="prefetch prerender") 
             .calc-btn-container
               a.btn.calc__btn(type="submit") Рассчитать
         // ----------------------
@@ -192,31 +296,79 @@ section#calc.calc
         #bathroom.calc-tabcontent 
           .calc-form
             .calc-wrap.animate__fadeIn.animate__animated
-              .calc-form__center
-                h4.calc-add-services Выберите дополнительные услуги
+              // -------------
+              // Walls options
+              // -------------
+              .calc-box.walls
+                h4.calc-services__title Стены
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание стен (штукатурка)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание стен (гипсокартон)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Поклейка обоев
+              // -------------
+              // Floor options
+              // -------------
+              .calc-box.floors
+                h4.calc-services__title Полы
                 p.calc-add-service
                   input.calc-add-service__checkbox(type="checkbox", name="add-services") 
-                  span.calc-add-service__name Демонтажные работы
+                  span.calc-add-service__name Выравнивание пола
+                p.calc-add-service
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Финишное покрытие пола (ламинат)
+                p.calc-add-service
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Финишное покрытие пола (плитка)
+              // ---------------
+              // Ceiling options
+              // ---------------   
+              .calc-box.ceilings
+                h4.calc-services__title Потолок
                 p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание потолка (штукатурка)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Потолки (гипсокартон)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Натяжные потолки
+              // ------------------
+              // Additional options
+              // ------------------
+              .calc-box.additional
+                h4.calc-services__title Дополнительно
+                p.calc-add-service
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Замена электрики
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Замена системы водоснабжения
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Замена системы отопления
+                p.calc-add-service
+                  input.calc__input-num(type="number", name="" placeholder="0" min="0")
+                  span.calc-add-service__name Замена или монтаж радиаторов отопления, шт
+                p.calc-add-service
+                  input.calc__input-num(type="number", name="" placeholder="0" min="0")
+                  span.calc-add-service__name Замена окон, шт
+                p.calc-add-service
                   input.calc-add-service__checkbox(type="checkbox", name="add-services") 
                   span.calc-add-service__name Установка двери
                 p.calc-add-service 
                   input.calc-add-service__checkbox(type="checkbox", name="add-services") 
-                  span.calc-add-service__name Монтаж теплого пола
-                p.calc-add-service
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
-                  span.calc-add-service__name Монтаж системы защиты от протечек
-                p.calc-add-service 
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
-                  span.calc-add-service__name Переваривание полотенцесушителя
+                  span.calc-add-service__name Звукоизоляция стен, пола, потолка
                 p.calc-add-service 
                   input.calc-add-service__checkbox(type="checkbox", name="add-services") 
                   span.calc-add-service__name Материал нашей компании
-                h4.calc-estimate Введите адрес электронной почты
-                input.calc__input.calc-estimate__adress(type="email" placeholder="example@gmail.com")
-              .calc-form__right 
-                .calc-img-wrap
-                  img.calc-img(src="assets/images/dest/bathroom.jpg" alt="bathroom"  rel="prefetch prerender") 
+              .calc-box.calc-img-wrap
+                img.calc-img(src="assets/images/dest/bathroom.jpg" alt="bathroom"  rel="prefetch prerender") 
             .calc-btn-container
               a.btn.calc__btn(type="submit") Рассчитать
         // ----------------------
@@ -225,36 +377,79 @@ section#calc.calc
         #building.calc-tabcontent 
           .calc-form
             .calc-wrap.animate__fadeIn.animate__animated
-              .calc-form__center
-                h4.calc-add-services Выберите дополнительные услуги
-                p.calc-add-service
-                  input.calc__input.calc__input-num(type="number", name="" placeholder="0" min="0")
-                  span.calc-add-service__name Установка дверей, шт
-                p.calc-add-service
-                  input.calc__input.calc__input-num(type="number", name="" placeholder="0" min="0")
-                  span.calc-add-service__name Замена или монтаж радиаторов отопления, шт
-                p.calc-add-service
-                  input.calc__input.calc__input-num(type="number", name="" placeholder="0" min="0")
-                  span.calc-add-service__name Монтаж теплого пола, м
-                    span.sup 2
-                p.calc-add-service
-                  input.calc__input.calc__input-num(type="number", name="" placeholder="0" min="0")
-                  span.calc-add-service__name Замена окон, шт
-                p.calc-add-service
-                  input.calc__input.calc__input-num(type="number", name="" placeholder="0" min="0")
-                  span.calc-add-service__name Звукоизоляция стен, пола, потолка, м
-                    span.sup 2
+              // -------------
+              // Walls options
+              // -------------
+              .calc-box.walls
+                h4.calc-services__title Стены
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание стен (штукатурка)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание стен (гипсокартон)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Поклейка обоев
+              // -------------
+              // Floor options
+              // -------------
+              .calc-box.floors
+                h4.calc-services__title Полы
                 p.calc-add-service
                   input.calc-add-service__checkbox(type="checkbox", name="add-services") 
-                  span.calc-add-service__name Демонтажные работы
+                  span.calc-add-service__name Выравнивание пола
+                p.calc-add-service
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Финишное покрытие пола (ламинат)
+                p.calc-add-service
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Финишное покрытие пола (плитка)
+              // ---------------
+              // Ceiling options
+              // ---------------   
+              .calc-box.ceilings
+                h4.calc-services__title Потолок
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание потолка (штукатурка)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Потолки (гипсокартон)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Натяжные потолки
+              // ------------------
+              // Additional options
+              // ------------------
+              .calc-box.additional
+                h4.calc-services__title Дополнительно
+                p.calc-add-service
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Замена электрики
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Замена системы водоснабжения
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Замена системы отопления
+                p.calc-add-service
+                  input.calc__input-num(type="number", name="" placeholder="0" min="0")
+                  span.calc-add-service__name Замена или монтаж радиаторов отопления, шт
+                p.calc-add-service
+                  input.calc__input-num(type="number", name="" placeholder="0" min="0")
+                  span.calc-add-service__name Замена окон, шт
+                p.calc-add-service
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Установка двери
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Звукоизоляция стен, пола, потолка
                 p.calc-add-service 
                   input.calc-add-service__checkbox(type="checkbox", name="add-services") 
                   span.calc-add-service__name Материал нашей компании
-                h4.calc-estimate Введите адрес электронной почты
-                input.calc__input.calc-estimate__adress(type="email" placeholder="example@gmail.com")
-              .calc-form__right 
-                .calc-img-wrap
-                  img.calc-img(src="assets/images/dest/building.jpg" alt="building"  rel="prefetch prerender") 
+              .calc-box.calc-img-wrap
+                img.calc-img(src="assets/images/dest/building.jpg" alt="building"  rel="prefetch prerender") 
             .calc-btn-container
               a.btn.calc__btn(type="submit") Рассчитать
         // --------------------
@@ -263,37 +458,78 @@ section#calc.calc
         #office.calc-tabcontent
           .calc-form
             .calc-wrap.animate__fadeIn.animate__animated
-              .calc-form__center
-                h4.calc-add-services Выберите дополнительные услуги
+              // -------------
+              // Walls options
+              // -------------
+              .calc-box.walls
+                h4.calc-services__title Стены
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание стен (штукатурка)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание стен (гипсокартон)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Поклейка обоев
+              // -------------
+              // Floor options
+              // -------------
+              .calc-box.floors
+                h4.calc-services__title Полы
                 p.calc-add-service
-                  input.calc__input.calc__input-num(type="number", name="" placeholder="0" min="0")
-                  span.calc-add-service__name Установка дверей, шт
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание пола
                 p.calc-add-service
-                  input.calc__input.calc__input-num(type="number", name="" placeholder="0" min="0")
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Финишное покрытие пола (ламинат)
+                p.calc-add-service
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Финишное покрытие пола (плитка)
+              // ---------------
+              // Ceiling options
+              // ---------------   
+              .calc-box.ceilings
+                h4.calc-services__title Потолок
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Выравнивание потолка (штукатурка)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Потолки (гипсокартон)
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Натяжные потолки
+              // ------------------
+              // Additional options
+              // ------------------
+              .calc-box.additional
+                h4.calc-services__title Дополнительно
+                p.calc-add-service
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Замена электрики
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Замена системы водоснабжения
+                p.calc-add-service 
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Замена системы отопления
+                p.calc-add-service
+                  input.calc__input-num(type="number", name="" placeholder="0" min="0")
                   span.calc-add-service__name Замена или монтаж радиаторов отопления, шт
                 p.calc-add-service
-                  input.calc__input.calc__input-num(type="number", name="" placeholder="0" min="0")
+                  input.calc__input-num(type="number", name="" placeholder="0" min="0")
                   span.calc-add-service__name Замена окон, шт
                 p.calc-add-service
-                  input.calc__input.calc__input-num(type="number", name="" placeholder="0" min="0")
-                  span.calc-add-service__name Звукоизоляция стен, пола, потолка, м
-                    span.sup 2
+                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  span.calc-add-service__name Установка двери
                 p.calc-add-service 
                   input.calc-add-service__checkbox(type="checkbox", name="add-services") 
-                  span.calc-add-service__name Демонтажные работы
-                p.calc-add-service
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
-                  span.calc-add-service__name Установка пожарной сигнализации и оповещения
-                p.calc-add-service 
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
-                  span.calc-add-service__name Вентиляция и система кондиционирования
+                  span.calc-add-service__name Звукоизоляция стен, пола, потолка
                 p.calc-add-service 
                   input.calc-add-service__checkbox(type="checkbox", name="add-services") 
                   span.calc-add-service__name Материал нашей компании
-                h4.calc-estimate Введите адрес электронной почты
-                input.calc__input.calc-estimate__adress(type="email" placeholder="example@gmail.com")
-              .calc-form__right 
-                .calc-img-wrap
-                  img.calc-img(src="assets/images/dest/office.jpg" alt="office"  rel="prefetch prerender") 
+              .calc-box.calc-img-wrap
+                img.calc-img(src="assets/images/dest/office.jpg" alt="office"  rel="prefetch prerender") 
             .calc-btn-container
               a.btn.calc__btn(type="submit") Рассчитать

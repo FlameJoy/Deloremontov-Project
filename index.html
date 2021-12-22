@@ -139,7 +139,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
           <!-- Calculator header-->
           <!-- ------------------->
           <div class="calc-header"> 
-            <div class="calc-header__title"> <span>Узнайте сколько будет стоить </span><span class="title_marked">ваш ремонт</span></div>
+            <div class="calc-header__title"> <span>Узнайте сколько будет стоить <span class="title_marked">ваш ремонт</span></span></div>
           </div>
           <!-- ----------------->
           <!-- Calculator form-->
@@ -258,6 +258,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                       <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Материал нашей компании</span>
                     </p>
                   </div>
+                  <div class="calc-box calc-img-wrap"><img class="calc-img" src="assets/images/dest/apartment.jpg" alt="apartment" rel="prefetch prerender"></div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
               </div>
@@ -268,13 +269,70 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
             <div class="calc-tabcontent" id="room"> 
               <div class="calc-form">
                 <div class="calc-wrap animate__fadeIn animate__animated">
-                  <div class="calc-form__center">
-                    <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
+                  <!-- --------------->
+                  <!-- Walls options-->
+                  <!-- --------------->
+                  <div class="calc-box walls">
+                    <h4 class="calc-services__title">Стены</h4>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен (штукатурка)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен (гипсокартон)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Поклейка обоев</span>
+                    </p>
+                  </div>
+                  <!-- --------------->
+                  <!-- Floor options-->
+                  <!-- --------------->
+                  <div class="calc-box floors">
+                    <h4 class="calc-services__title">Полы</h4>
                     <p class="calc-add-service">
-                      <input class="calc__input calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание пола</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Финишное покрытие пола (ламинат)</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Финишное покрытие пола (плитка)</span>
+                    </p>
+                  </div>
+                  <!-- ----------------->
+                  <!-- Ceiling options-->
+                  <!-- ---------------   -->
+                  <div class="calc-box ceilings">
+                    <h4 class="calc-services__title">Потолок</h4>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание потолка (штукатурка)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Потолки (гипсокартон)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Натяжные потолки</span>
+                    </p>
+                  </div>
+                  <!-- -------------------->
+                  <!-- Additional options-->
+                  <!-- -------------------->
+                  <div class="calc-box additional">
+                    <h4 class="calc-services__title">Дополнительно</h4>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена электрики</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы водоснабжения</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы отопления</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
                     </p>
                     <p class="calc-add-service">
                       <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Установка двери</span>
@@ -285,12 +343,8 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                     <p class="calc-add-service"> 
                       <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Материал нашей компании</span>
                     </p>
-                    <h4 class="calc-estimate">Введите адрес электронной почты</h4>
-                    <input class="calc__input calc-estimate__adress" type="email" placeholder="example@gmail.com">
                   </div>
-                  <div class="calc-form__right"> 
-                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/room.jpg" alt="room" rel="prefetch prerender"></div>
-                  </div>
+                  <div class="calc-box calc-img-wrap"><img class="calc-img" src="assets/images/dest/room.jpg" alt="room" rel="prefetch prerender"></div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
               </div>
@@ -301,13 +355,70 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
             <div class="calc-tabcontent" id="kitchen"> 
               <div class="calc-form">
                 <div class="calc-wrap animate__fadeIn animate__animated">
-                  <div class="calc-form__center">
-                    <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
+                  <!-- --------------->
+                  <!-- Walls options-->
+                  <!-- --------------->
+                  <div class="calc-box walls">
+                    <h4 class="calc-services__title">Стены</h4>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен (штукатурка)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен (гипсокартон)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Поклейка обоев</span>
+                    </p>
+                  </div>
+                  <!-- --------------->
+                  <!-- Floor options-->
+                  <!-- --------------->
+                  <div class="calc-box floors">
+                    <h4 class="calc-services__title">Полы</h4>
                     <p class="calc-add-service">
-                      <input class="calc__input calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание пола</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Финишное покрытие пола (ламинат)</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Финишное покрытие пола (плитка)</span>
+                    </p>
+                  </div>
+                  <!-- ----------------->
+                  <!-- Ceiling options-->
+                  <!-- ---------------   -->
+                  <div class="calc-box ceilings">
+                    <h4 class="calc-services__title">Потолок</h4>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание потолка (штукатурка)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Потолки (гипсокартон)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Натяжные потолки</span>
+                    </p>
+                  </div>
+                  <!-- -------------------->
+                  <!-- Additional options-->
+                  <!-- -------------------->
+                  <div class="calc-box additional">
+                    <h4 class="calc-services__title">Дополнительно</h4>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена электрики</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы водоснабжения</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы отопления</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
                     </p>
                     <p class="calc-add-service">
                       <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Установка двери</span>
@@ -318,12 +429,8 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                     <p class="calc-add-service"> 
                       <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Материал нашей компании</span>
                     </p>
-                    <h4 class="calc-estimate">Введите адрес электронной почты</h4>
-                    <input class="calc__input calc-estimate__adress" type="email" placeholder="example@gmail.com">
                   </div>
-                  <div class="calc-form__right"> 
-                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/kitchen.jpg" alt="room" rel="prefetch prerender"></div>
-                  </div>
+                  <div class="calc-box calc-img-wrap"><img class="calc-img" src="assets/images/dest/kitchen.jpg" alt="room" rel="prefetch prerender"></div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
               </div>
@@ -334,32 +441,82 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
             <div class="calc-tabcontent" id="bathroom"> 
               <div class="calc-form">
                 <div class="calc-wrap animate__fadeIn animate__animated">
-                  <div class="calc-form__center">
-                    <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
-                    <p class="calc-add-service">
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Демонтажные работы</span>
+                  <!-- --------------->
+                  <!-- Walls options-->
+                  <!-- --------------->
+                  <div class="calc-box walls">
+                    <h4 class="calc-services__title">Стены</h4>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен (штукатурка)</span>
                     </p>
                     <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен (гипсокартон)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Поклейка обоев</span>
+                    </p>
+                  </div>
+                  <!-- --------------->
+                  <!-- Floor options-->
+                  <!-- --------------->
+                  <div class="calc-box floors">
+                    <h4 class="calc-services__title">Полы</h4>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание пола</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Финишное покрытие пола (ламинат)</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Финишное покрытие пола (плитка)</span>
+                    </p>
+                  </div>
+                  <!-- ----------------->
+                  <!-- Ceiling options-->
+                  <!-- ---------------   -->
+                  <div class="calc-box ceilings">
+                    <h4 class="calc-services__title">Потолок</h4>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание потолка (штукатурка)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Потолки (гипсокартон)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Натяжные потолки</span>
+                    </p>
+                  </div>
+                  <!-- -------------------->
+                  <!-- Additional options-->
+                  <!-- -------------------->
+                  <div class="calc-box additional">
+                    <h4 class="calc-services__title">Дополнительно</h4>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена электрики</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы водоснабжения</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы отопления</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
+                    </p>
+                    <p class="calc-add-service">
                       <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Установка двери</span>
                     </p>
                     <p class="calc-add-service"> 
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Монтаж теплого пола</span>
-                    </p>
-                    <p class="calc-add-service">
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Монтаж системы защиты от протечек</span>
-                    </p>
-                    <p class="calc-add-service"> 
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Переваривание полотенцесушителя</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Звукоизоляция стен, пола, потолка</span>
                     </p>
                     <p class="calc-add-service"> 
                       <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Материал нашей компании</span>
                     </p>
-                    <h4 class="calc-estimate">Введите адрес электронной почты</h4>
-                    <input class="calc__input calc-estimate__adress" type="email" placeholder="example@gmail.com">
                   </div>
-                  <div class="calc-form__right"> 
-                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/bathroom.jpg" alt="bathroom" rel="prefetch prerender"></div>
-                  </div>
+                  <div class="calc-box calc-img-wrap"><img class="calc-img" src="assets/images/dest/bathroom.jpg" alt="bathroom" rel="prefetch prerender"></div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
               </div>
@@ -370,35 +527,82 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
             <div class="calc-tabcontent" id="building"> 
               <div class="calc-form">
                 <div class="calc-wrap animate__fadeIn animate__animated">
-                  <div class="calc-form__center">
-                    <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
+                  <!-- --------------->
+                  <!-- Walls options-->
+                  <!-- --------------->
+                  <div class="calc-box walls">
+                    <h4 class="calc-services__title">Стены</h4>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен (штукатурка)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен (гипсокартон)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Поклейка обоев</span>
+                    </p>
+                  </div>
+                  <!-- --------------->
+                  <!-- Floor options-->
+                  <!-- --------------->
+                  <div class="calc-box floors">
+                    <h4 class="calc-services__title">Полы</h4>
                     <p class="calc-add-service">
-                      <input class="calc__input calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Установка дверей, шт</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание пола</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Финишное покрытие пола (ламинат)</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Монтаж теплого пола, м<span class="sup">2</span></span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Финишное покрытие пола (плитка)</span>
+                    </p>
+                  </div>
+                  <!-- ----------------->
+                  <!-- Ceiling options-->
+                  <!-- ---------------   -->
+                  <div class="calc-box ceilings">
+                    <h4 class="calc-services__title">Потолок</h4>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание потолка (штукатурка)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Потолки (гипсокартон)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Натяжные потолки</span>
+                    </p>
+                  </div>
+                  <!-- -------------------->
+                  <!-- Additional options-->
+                  <!-- -------------------->
+                  <div class="calc-box additional">
+                    <h4 class="calc-services__title">Дополнительно</h4>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена электрики</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы водоснабжения</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы отопления</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
+                      <input class="calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Звукоизоляция стен, пола, потолка, м<span class="sup">2</span></span>
+                      <input class="calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Демонтажные работы</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Установка двери</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Звукоизоляция стен, пола, потолка</span>
                     </p>
                     <p class="calc-add-service"> 
                       <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Материал нашей компании</span>
                     </p>
-                    <h4 class="calc-estimate">Введите адрес электронной почты</h4>
-                    <input class="calc__input calc-estimate__adress" type="email" placeholder="example@gmail.com">
                   </div>
-                  <div class="calc-form__right"> 
-                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/building.jpg" alt="building" rel="prefetch prerender"></div>
-                  </div>
+                  <div class="calc-box calc-img-wrap"><img class="calc-img" src="assets/images/dest/building.jpg" alt="building" rel="prefetch prerender"></div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
               </div>
@@ -409,38 +613,82 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
             <div class="calc-tabcontent" id="office">
               <div class="calc-form">
                 <div class="calc-wrap animate__fadeIn animate__animated">
-                  <div class="calc-form__center">
-                    <h4 class="calc-add-services">Выберите дополнительные услуги</h4>
-                    <p class="calc-add-service">
-                      <input class="calc__input calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Установка дверей, шт</span>
-                    </p>
-                    <p class="calc-add-service">
-                      <input class="calc__input calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
-                    </p>
-                    <p class="calc-add-service">
-                      <input class="calc__input calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
-                    </p>
-                    <p class="calc-add-service">
-                      <input class="calc__input calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Звукоизоляция стен, пола, потолка, м<span class="sup">2</span></span>
+                  <!-- --------------->
+                  <!-- Walls options-->
+                  <!-- --------------->
+                  <div class="calc-box walls">
+                    <h4 class="calc-services__title">Стены</h4>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен (штукатурка)</span>
                     </p>
                     <p class="calc-add-service"> 
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Демонтажные работы</span>
-                    </p>
-                    <p class="calc-add-service">
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Установка пожарной сигнализации и оповещения</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен (гипсокартон)</span>
                     </p>
                     <p class="calc-add-service"> 
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Вентиляция и система кондиционирования</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Поклейка обоев</span>
+                    </p>
+                  </div>
+                  <!-- --------------->
+                  <!-- Floor options-->
+                  <!-- --------------->
+                  <div class="calc-box floors">
+                    <h4 class="calc-services__title">Полы</h4>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание пола</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Финишное покрытие пола (ламинат)</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Финишное покрытие пола (плитка)</span>
+                    </p>
+                  </div>
+                  <!-- ----------------->
+                  <!-- Ceiling options-->
+                  <!-- ---------------   -->
+                  <div class="calc-box ceilings">
+                    <h4 class="calc-services__title">Потолок</h4>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание потолка (штукатурка)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Потолки (гипсокартон)</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Натяжные потолки</span>
+                    </p>
+                  </div>
+                  <!-- -------------------->
+                  <!-- Additional options-->
+                  <!-- -------------------->
+                  <div class="calc-box additional">
+                    <h4 class="calc-services__title">Дополнительно</h4>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена электрики</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы водоснабжения</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Замена системы отопления</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc__input-num" type="number" name="" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
+                    </p>
+                    <p class="calc-add-service">
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Установка двери</span>
+                    </p>
+                    <p class="calc-add-service"> 
+                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Звукоизоляция стен, пола, потолка</span>
                     </p>
                     <p class="calc-add-service"> 
                       <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Материал нашей компании</span>
                     </p>
-                    <h4 class="calc-estimate">Введите адрес электронной почты</h4>
-                    <input class="calc__input calc-estimate__adress" type="email" placeholder="example@gmail.com">
                   </div>
-                  <div class="calc-form__right"> 
-                    <div class="calc-img-wrap"><img class="calc-img" src="assets/images/dest/office.jpg" alt="office" rel="prefetch prerender"></div>
-                  </div>
+                  <div class="calc-box calc-img-wrap"><img class="calc-img" src="assets/images/dest/office.jpg" alt="office" rel="prefetch prerender"></div>
                 </div>
                 <div class="calc-btn-container"><a class="btn calc__btn" type="submit">Рассчитать</a></div>
               </div>
