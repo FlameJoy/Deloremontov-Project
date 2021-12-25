@@ -6,6 +6,7 @@
 
 .header-slide-container
   margin: 0 auto
+  max-width: 1920px
 
 .header-slide-container:nth-child(1)::before
   background: url(../images/dest/slider-header-4.jpeg) no-repeat center
@@ -23,6 +24,7 @@
   background-position-x: 65%
 
 .header-slide-container::before
+  max-width: 1920px
   content: ""
   position: absolute
   filter: brightness(70%)
@@ -61,8 +63,6 @@
 // -------------
 .header-slider-btn 
   position: absolute
-  left: calc( 50% - 180px )
-  bottom: 150px
 
 .slider-btn
   border: none
@@ -98,6 +98,7 @@
   overflow: auto
   background-color: rgb(0,0,0)
   background-color: rgba(0,0,0,0.4)
+  padding-top: 5%
 
 .instagram-modal-content
   width: 600px
@@ -123,7 +124,7 @@
   left: calc( 50% - 500px )
   display: flex
   justify-content: center
-  bottom: 30px
+  bottom: 50px
 
 .header-slide__line
   display: inline-block
@@ -162,21 +163,19 @@
 @media (min-width: 1920px)
   .header-slide-container
     max-width: 1920px
-    width: 100%
     height: 1000px
 
   .header-slide-container::before
-    max-width: 1920px
     width: 100%
     height: 1000px
 
   .header-slide-info
-    padding-top: 360px
+    padding-top: 400px
 
   .header-slider-btn 
     position: absolute
     left: calc( 50% - 180px )
-    bottom: 80px
+    bottom: 100px
 
   // ----------------------
   // Instagram QR code link
@@ -185,7 +184,7 @@
     &::after 
       font-size: 100px
       right: 10%
-      bottom: 80px
+      bottom: 135px
 
   // ----------------------
   // Instagram modal window
@@ -367,8 +366,8 @@
     bottom: 80px
 
   .header-slide-lines
-    width: 600px
-    left: calc( 50% - 300px )
+    width: 400px
+    left: calc( 50% - 200px )
 
   // ----------------------
   // Instagram QR code link
@@ -377,7 +376,7 @@
     &::after 
       font-size: 80px
       right: 10%
-      bottom: 80px
+      bottom: 110px
 
   // ----------------------
   // Instagram modal window
@@ -443,8 +442,8 @@
     width: 50px
 
   .header-slide-lines
-    width: 600px
-    left: calc( 50% - 300px )
+    width: 400px
+    left: calc( 50% - 200px )
 
   // ----------------------
   // Instagram QR code link
@@ -521,7 +520,7 @@
 
   .header-slider-btn 
     position: absolute
-    left: calc( 50% - 180px )
+    left: calc( 50% - 155px )
     bottom: 50px
 
   .header-slide-lines

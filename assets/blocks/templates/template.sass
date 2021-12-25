@@ -3,7 +3,6 @@
   display: inline-block
   width: 300px
   height: 70px
-  line-height: 70px
   border-radius: 45px
   margin: 40px 30px
   font-family: 'Montserrat', sans-serif
@@ -16,6 +15,7 @@
   background: transparent
   box-shadow: 0 8px 15px rgba(0, 0, 0, .1)
   transition: .3s
+  border: none
 
 .btn:hover
   background: #ec4b00
@@ -27,3 +27,13 @@
   font-family: FontAwesome
   font-size: 30px
   margin-left: 10px
+
+// Adaptivity
+// Screen resolution from 320px to 600px
+@media (min-width: 320px) and (max-width: 599.98px)
+  .btn
+    font-size: 20px
+    width: 250px
+    height: 70px
+    &::after
+      font-size: 22px

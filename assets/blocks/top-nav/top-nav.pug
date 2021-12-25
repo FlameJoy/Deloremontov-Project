@@ -17,12 +17,13 @@
           // -------------
           #mySidenav.sidenav
             a.sidenav__closebtn(href="javascript:void(0)" onclick="closeSideNav()") &times;
-            a(href="index.html") Главная
-            a(href="#services") Услуги
-            a(href="#portfolio") Портфолио
-            a(href="#contact") Контакты
-            a(href="vacancies.html") Вакансии
-            a(href="firm-description.html") О нас
+            a.sidenav__link(href="index.html") Главная
+            a.sidenav__link(href="soundproofing.html") Звукоизоляция
+            a.sidenav__link(href="cleaning.html") Клининг
+            a.sidenav__link(href="#portfolio") Портфолио
+            a.sidenav__link(href="#contact") Контакты
+            a.sidenav__link(href="vacancies.html") Вакансии
+            a.sidenav__link(href="firm-description.html") О нас
       // --------------- 
       // Navigation menu 
       // --------------- 
@@ -77,7 +78,7 @@
       // ---------- 
       // Modal form 
       // ---------- 
-      #id01.recall.modal
+      #id01.recall
         form.recall-form(action="assets/php/action.php" method="post" name="recall-form")
           span.recall-form__close-btn(onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal") &times;
           .recall-form-container
