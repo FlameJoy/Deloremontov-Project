@@ -362,6 +362,11 @@
 // Screen resolution from 900px to 1200px
 // ---------------------------------------
 @media (min-width: 900px) and (max-width: 1199.98px)
+  .calc
+    background: url(../images/dest/7.png) no-repeat center
+    background-size: 200%
+    background-position: 20% 90%
+
   .calc-header__title 
     font-size: 28px
     padding: 80px 0 20px 0
@@ -439,7 +444,112 @@
 // ---------------------------------------
 // Screen resolution from 320px to 900px
 // ---------------------------------------
-@media (min-width: 320px) and (max-width: 899.98px)
+@media (min-width: 600px) and (max-width: 899.98px)
+  .calc
+    background: url(../images/dest/7.png) no-repeat center
+    background-size: 400%
+    background-position: 20% 70%
+
+  .calc-header__title 
+    font-size: 24px
+    padding: 80px 0 20px 0
+    width: 100%
+
+  .calc-tablink 
+    font-size: 22px
+    padding: 14px 16px
+    margin-right: 0
+    &::after
+      display: none
+
+  .calc-tabs 
+    display: flex
+    flex-direction: column
+    margin-left: 0
+
+  .calc-wrap
+    margin-left: 0
+    gap: 0
+    grid-template-columns: 300px
+    grid-template-rows:  repeat(1fr)
+    justify-content: center
+
+  .calc-tabcontent
+    padding: 50px 0 0
+
+  .walls,
+  .floors,
+  .ceilings
+    grid-column: 1 span
+    grid-row: span 1
+
+  .additional
+    grid-column: 1 span
+    grid-row: 1 span
+
+  .calc-img-wrap
+    grid-column: 1 span
+    grid-row: 1 / 2
+
+  .calc-form-tabs,
+  .calc-form-square,
+  .calc-building-type,
+  .calc-area-type-tabs,
+  .calc-tabcontent
+    width: 100%
+    margin: 30px auto 0
+
+  .calc-form-tabs__title,
+  .calc-form-square__title,
+  .calc-building-type__title
+    font-size: 24px
+
+  .calc-form-tab__name,
+  .calc-building-type__name
+    font-size: 18px
+
+  .calc__service-name,
+  .calc__work-area,
+  .calc-building-type,
+  .calc-estimate
+    font-size: 20px
+    padding: 15px 0
+
+  .calc-services__title
+    font-size: 24px
+    margin-top: 20px
+    
+  .calc__input,
+  .calc__selector,
+  .apartment__opt
+    font-size: 20px
+    padding: 8px 10px
+    width: 200px
+
+  .calc__input-num
+    width: 30px
+    padding: 4px 10px
+    font-size: 18px
+
+  .calc-add-service__name
+    font-size: 18px
+    padding-left: 10px
+
+  .calc-img
+    width: 100%
+    height: auto
+  .calc__btn
+    padding: 0 20px
+
+// ---------------------------------------
+// Screen resolution from 320px to 600px
+// ---------------------------------------
+@media (min-width: 320px) and (max-width: 599.98px)
+  .calc
+    background: url(../images/dest/7.png) no-repeat center
+    background-size: 400%
+    background-position: 20% 70%
+
   .calc-header__title 
     font-size: 24px
     padding: 80px 0 20px 0

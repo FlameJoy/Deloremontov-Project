@@ -187,15 +187,15 @@
     color: #fac106
     transition-delay: .1s
     transition-duration: .4s
-    &_hidden
-      display: none
-      font-size: 24px
-      cursor: pointer
-      &::after
-        content: '\f0c9'
-        font-family: FontAwesome
-        font-size: 24px
-        padding-left: 5px    
+  &__hidden-item
+    display: none
+    font-size: 24px
+    cursor: pointer
+    &::after
+      content: '\f0c9'
+      font-family: FontAwesome
+      padding-left: 5px
+      color: #fac106
 
 // -----------
 // Recall form
@@ -343,23 +343,35 @@
   .top-nav-dropdown-menu
     display: flex
     &__btn
-      font-size: 42px
+      font-size: 38px
       margin-right: 25px
       &::after
-        font-size: 42px
-
+        font-size: 38px
+    
   // --------------- 
   // Scroll menu
   // --------------- 
   .top-nav-scroll-menu
+    &__list
+      justify-content: space-between
     &__logo
       width: 200px 
       padding: 0 10px 0 5%  
     &__item
-      margin: 10px 2px
-      padding: 5px
+      display: none
     &__link
-      font-size: 18px
+      font-size: 28px
+    &__hidden-item
+      display: block
+      margin-right: 5%
+      font-size: 24px
+      &::after
+        font-size: 30px
+
+  .sidenav
+    padding-top: 120px
+    &__closebtn
+      top: 80px
 
 // --------------------------------------
 // Screen resolution from 600px to 900px
@@ -384,34 +396,31 @@
       margin-right: 25px
       &::after
         font-size: 38px
-
+    
   // --------------- 
   // Scroll menu
   // --------------- 
   .top-nav-scroll-menu
+    &__list
+      justify-content: space-between
     &__logo
       width: 200px 
       padding: 0 10px 0 5%  
     &__item
-      margin: 10px 2px
-      padding: 5px
-    &__link
-      font-size: 18px
-
-  // --------------- 
-  // Scroll menu
-  // --------------- 
-  .top-nav-scroll-menu
-    &__logo
-      width: 200px 
-      padding: 0 10px 0 5%  
-    &__item
-      margin: 10px 2px
-      padding: 5px
-    &__link
       display: none
-      &_hidden
-        display: block
+    &__link
+      font-size: 28px
+    &__hidden-item
+      display: block
+      margin-right: 5%
+      font-size: 24px
+      &::after
+        font-size: 30px
+
+  .sidenav
+    padding-top: 120px
+    &__closebtn
+      top: 80px
 
 // --------------------------------------
 // Screen resolution from 320px to 600px
@@ -421,10 +430,10 @@
     justify-content: space-between
 
   .logo-img
-    width: 160px
+    width: 200px
 
   .logo__name
-    display: none
+    max-width: 250px
 
   .top-nav-menu 
     display: none
@@ -432,20 +441,32 @@
   .top-nav-dropdown-menu
     display: flex
     &__btn
-      font-size: 24px
+      font-size: 38px
       margin-right: 25px
       &::after
-        font-size: 24px
-
+        font-size: 38px
+    
   // --------------- 
   // Scroll menu
   // --------------- 
   .top-nav-scroll-menu
+    &__list
+      justify-content: space-between
     &__logo
-      width: 200px 
+      width: 150px 
       padding: 0 10px 0 5%  
     &__item
-      margin: 10px 2px
-      padding: 5px
+      display: none
     &__link
       font-size: 18px
+    &__hidden-item
+      display: block
+      margin-right: 5%
+      font-size: 24px
+      &::after
+        font-size: 20px
+
+  .sidenav
+    padding-top: 120px
+    &__closebtn
+      top: 80px
