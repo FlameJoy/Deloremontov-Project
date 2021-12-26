@@ -17,12 +17,13 @@
           // -------------
           #mySidenav.sidenav
             a.sidenav__closebtn(href="javascript:void(0)" onclick="closeSideNav()") &times;
-            a(href="index.html") Главная
-            a(href="index.html#services") Услуги
-            a(href="index.html#portfolio") Портфолио
-            a(href="index.html#contact") Контакты
-            a(href="vacancies.html") Вакансии
-            a(href="firm-description.html") О нас
+            a.sidenav__link(href="index.html") Главная
+            a.sidenav__link(href="soundproofing.html") Звукоизоляция
+            a.sidenav__link(href="cleaning.html") Клининг
+            a.sidenav__link(href="#portfolio") Портфолио
+            a.sidenav__link(href="#contact") Контакты
+            a.sidenav__link(href="vacancies.html") Вакансии
+            a.sidenav__link(href="firm-description.html") О нас
       // --------------- 
       // Navigation menu 
       // --------------- 
@@ -65,13 +66,6 @@
             a.top-nav-scroll-menu__link.scrollto(href="vacancies.html") Вакансии
           li.top-nav-scroll-menu__item
             a.top-nav-scroll-menu__link.scrollto(href="firm-description.html") О нас
-      // ------------------------------ 
-      // Recall button & telefon number 
-      // ------------------------------ 
-      .top-nav-recall(onclick="document.getElementById('id01').style.display='block'")
-        .top-nav-recall-wrap
-          .top-nav-recall__btn Заказать звонок
-          .top-nav-recall__tel 8 (991) 021-22-60
       // ---------- 
       // Modal form 
       // ---------- 
