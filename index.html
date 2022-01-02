@@ -144,33 +144,33 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
           <!-- ----------------->
           <!-- Calculator form-->
           <!-- ----------------->
-          <form class="calc-form">
+          <div class="calc-form" action="assets/php/calculator.php" method="post" name="calc-form">
             <!-- Tabs-->
             <div class="calc-form-tabs"> 
               <h3 class="calc-form-tabs__title">Выберите вид ремонта</h3>
               <div class="calc-form-tab-wrap">
-                <input class="calc-form-tab__radio-btn" type="radio" name="renovation-type"><span class="calc-form-tab__name">Косметический</span>
+                <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="cosmetic"><span class="calc-form-tab__name">Косметический</span>
               </div>
               <div class="calc-form-tab-wrap">
-                <input class="calc-form-tab__radio-btn" type="radio" name="renovation-type"><span class="calc-form-tab__name">Дизайнерский</span>
+                <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="design"><span class="calc-form-tab__name">Дизайнерский</span>
               </div>
               <div class="calc-form-tab-wrap">
-                <input class="calc-form-tab__radio-btn" type="radio" name="renovation-type"><span class="calc-form-tab__name">"Под ключ"</span>
+                <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="onkey"><span class="calc-form-tab__name">"Под ключ"</span>
               </div>
             </div>
             <!-- Square-->
             <div class="calc-form-square"> 
               <h3 class="calc-form-square__title">Укажите общую площадь м2</h3>
-              <input class="calc__input" type="number" name="" placeholder="0" min="1">
+              <input class="calc__input" id="square" type="number" name="square" placeholder="0" min="1" value="" required>
             </div>
             <!-- Renovation type-->
             <div class="calc-building-type">
               <h3 class="calc-building-type__title">Выберите тип недвижимости</h3>
               <div class="calc-building-type-wrap"> 
-                <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Первичная недвижимость</span>
+                <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="new"><span class="calc-building-type__name">Первичная недвижимость</span>
               </div>
               <div class="calc-building-type-wrap">
-                <input class="calc-building-type__radio-btn" type="radio" name="building-type"><span class="calc-building-type__name">Вторичная недвижимость</span>
+                <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="old"><span class="calc-building-type__name">Вторичная недвижимость</span>
               </div>
             </div>
             <!-- ----------------->
@@ -189,13 +189,13 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                   <div class="calc-box walls">
                     <h4 class="calc-services__title">Стены</h4>
                     <p class="calc-add-service"> 
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен (штукатурка)</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="plaster" id="plaster" value="Выравнивание стен (штукатурка)"><span class="calc-add-service__name">Выравнивание стен (штукатурка)</span>
                     </p>
                     <p class="calc-add-service"> 
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание стен (гипсокартон)</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="drywall" id="drywall" value="Выравнивание стен (гипсокартон)"><span class="calc-add-service__name">Выравнивание стен (гипсокартон)</span>
                     </p>
                     <p class="calc-add-service"> 
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Поклейка обоев</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="wallpaper" id="wallpaper" value="Поклейка обоев"><span class="calc-add-service__name">Поклейка обоев</span>
                     </p>
                   </div>
                   <!-- --------------->
@@ -204,13 +204,13 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                   <div class="calc-box floors">
                     <h4 class="calc-services__title">Полы</h4>
                     <p class="calc-add-service">
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Выравнивание пола</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="floorLeveling" id="floorLeveling" value="floorLeveling"><span class="calc-add-service__name">Выравнивание пола</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Финишное покрытие пола (ламинат)</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="laminate" id="laminate" value="laminate"><span class="calc-add-service__name">Финишное покрытие пола (ламинат)</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc-add-service__checkbox" type="checkbox" name="add-services"><span class="calc-add-service__name">Финишное покрытие пола (плитка)</span>
+                      <input class="calc-add-service__checkbox" type="checkbox" name="tile" id="tile" value="tile"><span class="calc-add-service__name">Финишное покрытие пола (плитка)</span>
                     </p>
                   </div>
                   <!-- ----------------->
@@ -259,9 +259,13 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                     </p>
                   </div>
                   <div class="calc-box calc-img-wrap"><img class="calc-img" src="assets/images/dest/apartment.jpg" alt="apartment" rel="prefetch prerender"></div>
+                  <!-- Email input-->
+                  <h4 class="calc-estimate">Введите адрес электронной почты
+                    <input class="calc__input calc-estimate__adress" type="email" name="email" placeholder="example@gmail.com">
+                  </h4>
                 </div>
                 <div class="calc-btn-container">
-                  <button class="btn calc__btn" type="submit">Рассчитать</button>
+                  <button class="btn calc__btn" onclick="calc()">Рассчитать</button>
                 </div>
               </div>
             </div>
@@ -708,7 +712,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 </div>
               </div>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </section>
@@ -1236,5 +1240,6 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
     <script src="assets/js/main.min.js"></script>
     <script src="https://kit.fontawesome.com/36446de779.js" crossorigin="anonymous"> </script>
     <script src="assets/js/jquery.maskedinput.min.js"></script>
+    <script src="assets/js/calc.js"></script>
   </body>
 </html>

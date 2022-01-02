@@ -11,31 +11,31 @@ section#calc.calc
       // ---------------
       // Calculator form
       // ---------------
-      form.calc-form
+      .calc-form(action="assets/php/calculator.php" method="post" name="calc-form")
         // Tabs
         .calc-form-tabs 
           h3.calc-form-tabs__title Выберите вид ремонта
           .calc-form-tab-wrap
-            input.calc-form-tab__radio-btn(type="radio" name="renovation-type") 
+            input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="cosmetic") 
             span.calc-form-tab__name Косметический
           .calc-form-tab-wrap
-            input.calc-form-tab__radio-btn(type="radio" name="renovation-type") 
+            input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="design") 
             span.calc-form-tab__name Дизайнерский
           .calc-form-tab-wrap
-            input.calc-form-tab__radio-btn(type="radio" name="renovation-type") 
+            input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="onkey") 
             span.calc-form-tab__name "Под ключ"
         // Square
         .calc-form-square 
           h3.calc-form-square__title Укажите общую площадь м2
-          input.calc__input(type="number", name="" placeholder="0" min="1")
+          input#square.calc__input(type="number" name="square" placeholder="0" min="1" value="" required)
         // Renovation type
         .calc-building-type
           h3.calc-building-type__title Выберите тип недвижимости
           .calc-building-type-wrap 
-            input.calc-building-type__radio-btn(type="radio", name="building-type")
+            input.calc-building-type__radio-btn(type="radio" name="buildingType" value="new")
             span.calc-building-type__name Первичная недвижимость
           .calc-building-type-wrap
-            input.calc-building-type__radio-btn(type="radio", name="building-type")
+            input.calc-building-type__radio-btn(type="radio" name="buildingType" value="old")
             span.calc-building-type__name Вторичная недвижимость
         // ---------------
         // Calculator tabs
@@ -59,13 +59,13 @@ section#calc.calc
               .calc-box.walls
                 h4.calc-services__title Стены
                 p.calc-add-service 
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  input.calc-add-service__checkbox(type="checkbox" name="plaster" id="plaster" value="Выравнивание стен (штукатурка)") 
                   span.calc-add-service__name Выравнивание стен (штукатурка)
                 p.calc-add-service 
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  input.calc-add-service__checkbox(type="checkbox" name="drywall" id="drywall" value="Выравнивание стен (гипсокартон)") 
                   span.calc-add-service__name Выравнивание стен (гипсокартон)
                 p.calc-add-service 
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  input.calc-add-service__checkbox(type="checkbox" name="wallpaper" id="wallpaper" value="Поклейка обоев") 
                   span.calc-add-service__name Поклейка обоев
               // -------------
               // Floor options
@@ -73,13 +73,13 @@ section#calc.calc
               .calc-box.floors
                 h4.calc-services__title Полы
                 p.calc-add-service
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  input.calc-add-service__checkbox(type="checkbox" name="floorLeveling" id="floorLeveling" value="floorLeveling") 
                   span.calc-add-service__name Выравнивание пола
                 p.calc-add-service
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  input.calc-add-service__checkbox(type="checkbox" name="laminate" id="laminate" value="laminate") 
                   span.calc-add-service__name Финишное покрытие пола (ламинат)
                 p.calc-add-service
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  input.calc-add-service__checkbox(type="checkbox" name="tile" id="tile" value="tile") 
                   span.calc-add-service__name Финишное покрытие пола (плитка)
               // ---------------
               // Ceiling options
@@ -126,8 +126,11 @@ section#calc.calc
                   span.calc-add-service__name Материал нашей компании
               .calc-box.calc-img-wrap
                 img.calc-img(src="assets/images/dest/apartment.jpg" alt="apartment"  rel="prefetch prerender") 
+              // Email input
+              h4.calc-estimate Введите адрес электронной почты
+                input.calc__input.calc-estimate__adress(type="email" name="email" placeholder="example@gmail.com")
             .calc-btn-container
-                button.btn.calc__btn(type="submit") Рассчитать
+                button.btn.calc__btn(onclick="calc()") Рассчитать
         // ------------------
         // Room
         // ------------------
