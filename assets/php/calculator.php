@@ -19,10 +19,13 @@
   $stretchCeiling = trim(strip_tags($_POST['stretchCeiling']));
 
   // Additional options
-  $ceilingPlaster = trim(strip_tags($_POST['ceilingPlaster']));
-  $ceilingDrywall = trim(strip_tags($_POST['ceilingDrywall']));
-  $stretchCeiling = trim(strip_tags($_POST['stretchCeiling']));
+  $electrics = trim(strip_tags($_POST['electrics']));
+  $waterSupplySystem = trim(strip_tags($_POST['waterSupplySystem']));
+  $heatingSystem = trim(strip_tags($_POST['heatingSystem']));
   
+  $replHeatingRadiators = trim(strip_tags($_POST['replHeatingRadiators']));
+  $replWindows = trim(strip_tags($_POST['replWindows']));
+
   // Email
   $email = trim(strip_tags($_POST["email"]));
 ?>

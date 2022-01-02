@@ -59,13 +59,13 @@ section#calc.calc
               .calc-box.walls
                 h4.calc-services__title Стены
                 p.calc-add-service 
-                  input.calc-add-service__checkbox(type="checkbox" name="plaster" id="plaster" value="Выравнивание стен (штукатурка)") 
+                  input.calc-add-service__checkbox(type="checkbox" name="plaster" id="wallPlaster" value="Выравнивание стен (штукатурка)") 
                   span.calc-add-service__name Выравнивание стен (штукатурка)
                 p.calc-add-service 
-                  input.calc-add-service__checkbox(type="checkbox" name="drywall" id="drywall" value="Выравнивание стен (гипсокартон)") 
+                  input.calc-add-service__checkbox(type="checkbox" name="drywall" id="wallDrywall" value="Выравнивание стен (гипсокартон)") 
                   span.calc-add-service__name Выравнивание стен (гипсокартон)
                 p.calc-add-service 
-                  input.calc-add-service__checkbox(type="checkbox" name="wallpaper" id="wallpaper" value="Поклейка обоев") 
+                  input.calc-add-service__checkbox(type="checkbox" name="wallpaper" id="wallWallpaper" value="Поклейка обоев") 
                   span.calc-add-service__name Поклейка обоев
               // -------------
               // Floor options
@@ -76,10 +76,10 @@ section#calc.calc
                   input.calc-add-service__checkbox(type="checkbox" name="floorLeveling" id="floorLeveling" value="floorLeveling") 
                   span.calc-add-service__name Выравнивание пола
                 p.calc-add-service
-                  input.calc-add-service__checkbox(type="checkbox" name="laminate" id="laminate" value="laminate") 
+                  input.calc-add-service__checkbox(type="checkbox" name="floorLeveling" id="floorLaminate" value="floorLaminate") 
                   span.calc-add-service__name Финишное покрытие пола (ламинат)
                 p.calc-add-service
-                  input.calc-add-service__checkbox(type="checkbox" name="tile" id="tile" value="tile") 
+                  input.calc-add-service__checkbox(type="checkbox" name="floorTile" id="floorTile" value="floorTile") 
                   span.calc-add-service__name Финишное покрытие пола (плитка)
               // ---------------
               // Ceiling options
@@ -87,13 +87,13 @@ section#calc.calc
               .calc-box.ceilings
                 h4.calc-services__title Потолок
                 p.calc-add-service 
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  input.calc-add-service__checkbox(type="checkbox" name="ceilingPlaster" id="ceilingPlaster" value="ceilingPlaster") 
                   span.calc-add-service__name Выравнивание потолка (штукатурка)
                 p.calc-add-service 
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  input.calc-add-service__checkbox(type="checkbox" name="ceilingDrywall" id="ceilingDrywall" value="ceilingDrywall") 
                   span.calc-add-service__name Потолки (гипсокартон)
                 p.calc-add-service 
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  input.calc-add-service__checkbox(type="checkbox" name="stretchCeiling" id="stretchCeiling" value="stretchCeiling") 
                   span.calc-add-service__name Натяжные потолки
               // ------------------
               // Additional options
@@ -101,19 +101,19 @@ section#calc.calc
               .calc-box.additional
                 h4.calc-services__title Дополнительно
                 p.calc-add-service
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  input.calc-add-service__checkbox(type="checkbox" name="electrics" id="electrics" value="electrics") 
                   span.calc-add-service__name Замена электрики
                 p.calc-add-service 
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  input.calc-add-service__checkbox(type="checkbox" name="waterSupplySystem" id="waterSupplySystem" value="waterSupplySystem") 
                   span.calc-add-service__name Замена системы водоснабжения
                 p.calc-add-service 
-                  input.calc-add-service__checkbox(type="checkbox", name="add-services") 
+                  input.calc-add-service__checkbox(type="checkbox" name="heatingSystem" id="heatingSystem" value="heatingSystem") 
                   span.calc-add-service__name Замена системы отопления
                 p.calc-add-service
-                  input.calc__input-num(type="number", name="" placeholder="0" min="0")
+                  input.calc__input-num(type="number" name="replHeatingRadiators" placeholder="0" min="0" value="0")
                   span.calc-add-service__name Замена или монтаж радиаторов отопления, шт
                 p.calc-add-service
-                  input.calc__input-num(type="number", name="" placeholder="0" min="0")
+                  input.calc__input-num(type="number" name="replWindows" placeholder="0" min="0" value="0")
                   span.calc-add-service__name Замена окон, шт
                 p.calc-add-service
                   input.calc-add-service__checkbox(type="checkbox", name="add-services") 
