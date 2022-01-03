@@ -11,7 +11,7 @@ section#calc.calc
       // ---------------
       // Calculator form
       // ---------------
-      .calc-form(action="assets/php/calculator.php" method="post" name="calc-form")
+      form.calc-form(action="assets/php/calculator.php" method="post" name="calc-form")
         // Tabs
         .calc-form-tabs 
           h3.calc-form-tabs__title Выберите вид ремонта
@@ -130,7 +130,7 @@ section#calc.calc
               h4.calc-estimate Введите адрес электронной почты
                 input.calc__input.calc-estimate__adress(type="email" name="email" placeholder="example@gmail.com")
             .calc-btn-container
-                button.btn.calc__btn(onclick="calc()") Рассчитать
+                button.btn.calc__btn(type="submit") Рассчитать
         // ------------------
         // Room
         // ------------------

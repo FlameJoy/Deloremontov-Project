@@ -1,7 +1,7 @@
 <?php
   $subject = "Расчет сметы ремонта помещения";
   $renovationType = trim(strip_tags($_POST['renovationType']));
-  $renovationType = trim(strip_tags($_POST['buildingType']));
+  $buildingType = trim(strip_tags($_POST['buildingType']));
 
   // Walls
   $wallPlaster = trim(strip_tags($_POST['wallPlaster']));
@@ -26,6 +26,17 @@
   $replHeatingRadiators = trim(strip_tags($_POST['replHeatingRadiators']));
   $replWindows = trim(strip_tags($_POST['replWindows']));
 
+  // Message
+  $msg = "Рассчёт сметы проекта:\n" ."Тип ремонта: $renovationType\n" ."Вид недвижимости: $buildingType\n" ."Ваш email: $email\n";
+
   // Email
   $email = trim(strip_tags($_POST["email"]));
+
+  // Headers
+  $headers = "Content-type: text/plain; charset=UTF-8" . "\r\n";
+  $headers .= "From: Ваше_имя <ваш_email>" . "\r\n";
+  $headers .= "Bcc: ваш_email". "\r\n";
+
+  mail($email, $subject, $msg, $headers); //отправляет получателю на емайл значения переменных
+  header("Location:https://deloremontov.ru/");
 ?>
