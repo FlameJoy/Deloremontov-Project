@@ -4,9 +4,6 @@
 // let renovationTypes = document.getElementsByName('renovationType');
 // let buildingTypes = document.getElementsByName('buildingType');
 // let square = document.getElementById('square');
-// let plaster = document.getElementById('plaster');
-// let drywall = document.getElementById('drywall');
-// let wallpaper = document.getElementById('wallpaper');
 
 // let renovationTypeValue = -1;
 // let buildingTypeValue = -1;
@@ -27,11 +24,6 @@
 //       break;
 //     }
 //   }
-
-//   // walls
-//   let plasterValue = plaster.value;
-//   let drywallValue = drywall.value;
-//   let wallpaperValue = wallpaper.value;
   
 //   if ((renovationTypeValue || buildingTypeValue || squareValue) < 0) {
 //     alert("Empty value");
