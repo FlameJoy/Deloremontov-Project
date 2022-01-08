@@ -163,5 +163,5 @@
     $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n"; // указывает на тип посылаемого контента
 
   mail($email, $subject, $msg, $headers); //отправляет получателю на емайл значения переменных
-  header("Location:https://deloremontov.ru/");
+  header("Location:https://deloremontov.ru/#calc/");
 ?>

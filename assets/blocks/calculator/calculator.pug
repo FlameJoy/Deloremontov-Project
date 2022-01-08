@@ -1,4 +1,4 @@
-section#calc.calc 
+section#calc.calc(name="calc") 
   .container
     .calc-container 
       // -----------------
@@ -21,13 +21,13 @@ section#calc.calc
             .calc-form-tabs 
               h3.calc-form-tabs__title Выберите вид ремонта
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Косметический") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Косметический" required) 
                 span.calc-form-tab__name Косметический
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Дизайнерский") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Дизайнерский" required) 
                 span.calc-form-tab__name Дизайнерский
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="\'Под Ключ\'") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="\'Под Ключ\'" required) 
                 span.calc-form-tab__name "Под ключ"
             // Square
             .calc-form-square 
@@ -37,10 +37,10 @@ section#calc.calc
             .calc-building-type
               h3.calc-building-type__title Выберите тип недвижимости
               .calc-building-type-wrap 
-                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Первичная недвижимость")
+                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Первичная недвижимость" required)
                 span.calc-building-type__name Первичная недвижимость
               .calc-building-type-wrap
-                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Вторичная недвижимость")
+                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Вторичная недвижимость" required)
                 span.calc-building-type__name Вторичная недвижимость
             // Hidden input type of premises 
             input(type="hidden" name="premisesApartment" value="Квартира")
@@ -113,10 +113,10 @@ section#calc.calc
                   input.calc-add-service__checkbox(type="checkbox" name="heatingSystem" id="heatingSystem" value="Замена системы отопления") 
                   span.calc-add-service__name Замена системы отопления
                 p.calc-add-service
-                  input.calc__input-num(type="number" name="replHeatingRadiators" placeholder="0" min="0")
+                  input.calc__input-num(type="number" name="replHeatingRadiators" placeholder="0" min="0" value="0")
                   span.calc-add-service__name Замена или монтаж радиаторов отопления, шт
                 p.calc-add-service
-                  input.calc__input-num(type="number" name="replWindows" placeholder="0" min="0")
+                  input.calc__input-num(type="number" name="replWindows" placeholder="0" min="0" value="0")
                   span.calc-add-service__name Замена окон, шт
                 p.calc-add-service
                   input.calc-add-service__checkbox(type="checkbox" name="doorInst" id="doorInst" value="Установка двери") 
@@ -132,7 +132,7 @@ section#calc.calc
             // Email input
             .calc-email
               h4.calc-estimate Введите адрес электронной почты
-              input.calc__input.calc-estimate__adress(type="email" name="email" placeholder="example@gmail.com")
+              input.calc__input.calc-estimate__adress(type="email" name="email" placeholder="example@gmail.com" required)
             // Form submit button
             .calc-btn-container
                 button.btn.calc__btn(type="submit") Рассчитать
@@ -142,13 +142,13 @@ section#calc.calc
             .calc-form-tabs 
               h3.calc-form-tabs__title Выберите вид ремонта
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Косметический") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Косметический" required) 
                 span.calc-form-tab__name Косметический
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Дизайнерский") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Дизайнерский" required) 
                 span.calc-form-tab__name Дизайнерский
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="\'Под Ключ\'") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="\'Под Ключ\'" required) 
                 span.calc-form-tab__name "Под ключ"
             // Square
             .calc-form-square 
@@ -158,10 +158,10 @@ section#calc.calc
             .calc-building-type
               h3.calc-building-type__title Выберите тип недвижимости
               .calc-building-type-wrap 
-                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Первичная недвижимость")
+                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Первичная недвижимость" required)
                 span.calc-building-type__name Первичная недвижимость
               .calc-building-type-wrap
-                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Вторичная недвижимость")
+                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Вторичная недвижимость" required)
                 span.calc-building-type__name Вторичная недвижимость
             // Hidden input type of premises 
             input(type="hidden" name="premisesApartment" value="Комната")
@@ -253,7 +253,7 @@ section#calc.calc
             // Email input
             .calc-email
               h4.calc-estimate Введите адрес электронной почты
-              input.calc__input.calc-estimate__adress(type="email" name="email" placeholder="example@gmail.com")
+              input.calc__input.calc-estimate__adress(type="email" name="email" placeholder="example@gmail.com" required)
             // Form submit button
             .calc-btn-container
                 button.btn.calc__btn(type="submit") Рассчитать
@@ -263,13 +263,13 @@ section#calc.calc
             .calc-form-tabs 
               h3.calc-form-tabs__title Выберите вид ремонта
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Косметический") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Косметический" required) 
                 span.calc-form-tab__name Косметический
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Дизайнерский") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Дизайнерский" required) 
                 span.calc-form-tab__name Дизайнерский
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="\'Под Ключ\'") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="\'Под Ключ\'" required) 
                 span.calc-form-tab__name "Под ключ"
             // Square
             .calc-form-square 
@@ -279,10 +279,10 @@ section#calc.calc
             .calc-building-type
               h3.calc-building-type__title Выберите тип недвижимости
               .calc-building-type-wrap 
-                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Первичная недвижимость")
+                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Первичная недвижимость" required)
                 span.calc-building-type__name Первичная недвижимость
               .calc-building-type-wrap
-                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Вторичная недвижимость")
+                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Вторичная недвижимость" required)
                 span.calc-building-type__name Вторичная недвижимость
             // Hidden input type of premises 
             input(type="hidden" name="premisesApartment" value="Кухня")
@@ -374,7 +374,7 @@ section#calc.calc
             // Email input
             .calc-email
               h4.calc-estimate Введите адрес электронной почты
-              input.calc__input.calc-estimate__adress(type="email" name="email" placeholder="example@gmail.com")
+              input.calc__input.calc-estimate__adress(type="email" name="email" placeholder="example@gmail.com" required)
             // Form submit button
             .calc-btn-container
                 button.btn.calc__btn(type="submit") Рассчитать
@@ -384,13 +384,13 @@ section#calc.calc
             .calc-form-tabs 
               h3.calc-form-tabs__title Выберите вид ремонта
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Косметический") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Косметический" required) 
                 span.calc-form-tab__name Косметический
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Дизайнерский") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Дизайнерский" required) 
                 span.calc-form-tab__name Дизайнерский
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="\'Под Ключ\'") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="\'Под Ключ\'" required) 
                 span.calc-form-tab__name "Под ключ"
             // Square
             .calc-form-square 
@@ -400,10 +400,10 @@ section#calc.calc
             .calc-building-type
               h3.calc-building-type__title Выберите тип недвижимости
               .calc-building-type-wrap 
-                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Первичная недвижимость")
+                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Первичная недвижимость" required)
                 span.calc-building-type__name Первичная недвижимость
               .calc-building-type-wrap
-                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Вторичная недвижимость")
+                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Вторичная недвижимость" required)
                 span.calc-building-type__name Вторичная недвижимость
             // Hidden input type of premises 
             input(type="hidden" name="premisesApartment" value="Ванная")
@@ -495,7 +495,7 @@ section#calc.calc
             // Email input
             .calc-email
               h4.calc-estimate Введите адрес электронной почты
-              input.calc__input.calc-estimate__adress(type="email" name="email" placeholder="example@gmail.com")
+              input.calc__input.calc-estimate__adress(type="email" name="email" placeholder="example@gmail.com" required)
             // Form submit button
             .calc-btn-container
                 button.btn.calc__btn(type="submit") Рассчитать
@@ -505,13 +505,13 @@ section#calc.calc
             .calc-form-tabs 
               h3.calc-form-tabs__title Выберите вид ремонта
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Косметический") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Косметический" required) 
                 span.calc-form-tab__name Косметический
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Дизайнерский") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Дизайнерский" required) 
                 span.calc-form-tab__name Дизайнерский
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="\'Под Ключ\'") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="\'Под Ключ\'" required) 
                 span.calc-form-tab__name "Под ключ"
             // Square
             .calc-form-square 
@@ -521,10 +521,10 @@ section#calc.calc
             .calc-building-type
               h3.calc-building-type__title Выберите тип недвижимости
               .calc-building-type-wrap 
-                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Первичная недвижимость")
+                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Первичная недвижимость" required)
                 span.calc-building-type__name Первичная недвижимость
               .calc-building-type-wrap
-                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Вторичная недвижимость")
+                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Вторичная недвижимость" required)
                 span.calc-building-type__name Вторичная недвижимость
             // Hidden input type of premises 
             input(type="hidden" name="premisesApartment" value="Дом")
@@ -616,7 +616,7 @@ section#calc.calc
             // Email input
             .calc-email
               h4.calc-estimate Введите адрес электронной почты
-              input.calc__input.calc-estimate__adress(type="email" name="email" placeholder="example@gmail.com")
+              input.calc__input.calc-estimate__adress(type="email" name="email" placeholder="example@gmail.com" required)
             // Form submit button
             .calc-btn-container
                 button.btn.calc__btn(type="submit") Рассчитать
@@ -626,13 +626,13 @@ section#calc.calc
             .calc-form-tabs 
               h3.calc-form-tabs__title Выберите вид ремонта
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Косметический") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Косметический" required) 
                 span.calc-form-tab__name Косметический
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Дизайнерский") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="Дизайнерский" required) 
                 span.calc-form-tab__name Дизайнерский
               .calc-form-tab-wrap
-                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="\'Под Ключ\'") 
+                input.calc-form-tab__radio-btn(type="radio" name="renovationType" value="\'Под Ключ\'" required) 
                 span.calc-form-tab__name "Под ключ"
             // Square
             .calc-form-square 
@@ -642,10 +642,10 @@ section#calc.calc
             .calc-building-type
               h3.calc-building-type__title Выберите тип недвижимости
               .calc-building-type-wrap 
-                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Первичная недвижимость")
+                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Первичная недвижимость" required)
                 span.calc-building-type__name Первичная недвижимость
               .calc-building-type-wrap
-                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Вторичная недвижимость")
+                input.calc-building-type__radio-btn(type="radio" name="buildingType" value="Вторичная недвижимость" required)
                 span.calc-building-type__name Вторичная недвижимость
             // Hidden input type of premises 
             input(type="hidden" name="premisesApartment" value="Офис")
@@ -737,7 +737,7 @@ section#calc.calc
             // Email input
             .calc-email
               h4.calc-estimate Введите адрес электронной почты
-              input.calc__input.calc-estimate__adress(type="email" name="email" placeholder="example@gmail.com")
+              input.calc__input.calc-estimate__adress(type="email" name="email" placeholder="example@gmail.com" required)
             // Form submit button
             .calc-btn-container
                 button.btn.calc__btn(type="submit") Рассчитать
