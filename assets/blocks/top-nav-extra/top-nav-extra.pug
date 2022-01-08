@@ -20,8 +20,8 @@
             a.sidenav__link(href="index.html") Главная
             a.sidenav__link(href="soundproofing.html") Звукоизоляция
             a.sidenav__link(href="cleaning.html") Клининг
-            a.sidenav__link(href="#portfolio") Портфолио
-            a.sidenav__link(href="#contact") Контакты
+            a.sidenav__link(href="index.html#portfolio") Портфолио
+            a.sidenav__link(href="index.html#contact") Контакты
             a.sidenav__link(href="vacancies.html") Вакансии
             a.sidenav__link(href="firm-description.html") О нас
       // --------------- 
@@ -38,8 +38,6 @@
                 a.services-submenu__link(href="soundproofing.html") Звукоизоляция
               li.services-submenu__item 
                 a.services-submenu__link(href="cleaning.html") Клининг
-              li.services-submenu__item 
-                a.services-submenu__link(href="#") Услуга
           li.top-nav-menu__item
             a.top-nav-menu__link.scrollto(href="index.html#portfolio") Портфолио
           li.top-nav-menu__item
@@ -80,6 +78,6 @@
             label.recall-form__input-name(for="message") Сообщение
             textarea.recall-form__textarea(type="textarea" name="message")
             button.btn.recall-form__btn(type="submit" onclick="document.getElementById('sendform').style.display = 'block'") Заказать звонок
-      #sendform
+      //- #sendform
         p.sendform-msg Уважаемы посетители, сайт находится в разработке, просим уточнять реальную стоимость услуг по телефону обратной связи.
         button.sendform__btn(onclick="document.getElementById('sendform').style.display = 'none'") ОК

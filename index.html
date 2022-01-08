@@ -49,7 +49,6 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
               <ul class="services-submenu"> 
                 <li class="services-submenu__item"> <a class="services-submenu__link" href="soundproofing.html">Звукоизоляция</a></li>
                 <li class="services-submenu__item"> <a class="services-submenu__link" href="cleaning.html">Клининг</a></li>
-                <li class="services-submenu__item"> <a class="services-submenu__link" href="#">Услуга</a></li>
               </ul>
             </li>
             <li class="top-nav-menu__item"><a class="top-nav-menu__link scrollto" href="#portfolio">Портфолио</a></li>
@@ -150,13 +149,13 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <div class="calc-form-tabs"> 
                   <h3 class="calc-form-tabs__title">Выберите вид ремонта</h3>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Косметический"><span class="calc-form-tab__name">Косметический</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Косметический" required><span class="calc-form-tab__name">Косметический</span>
                   </div>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Дизайнерский"><span class="calc-form-tab__name">Дизайнерский</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Дизайнерский" required><span class="calc-form-tab__name">Дизайнерский</span>
                   </div>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="'Под Ключ'"><span class="calc-form-tab__name">"Под ключ"</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="'Под Ключ'" required><span class="calc-form-tab__name">"Под ключ"</span>
                   </div>
                 </div>
                 <!-- Square-->
@@ -168,10 +167,10 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <div class="calc-building-type">
                   <h3 class="calc-building-type__title">Выберите тип недвижимости</h3>
                   <div class="calc-building-type-wrap"> 
-                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Первичная недвижимость"><span class="calc-building-type__name">Первичная недвижимость</span>
+                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Первичная недвижимость" required><span class="calc-building-type__name">Первичная недвижимость</span>
                   </div>
                   <div class="calc-building-type-wrap">
-                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Вторичная недвижимость"><span class="calc-building-type__name">Вторичная недвижимость</span>
+                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Вторичная недвижимость" required><span class="calc-building-type__name">Вторичная недвижимость</span>
                   </div>
                 </div>
                 <!-- Hidden input type of premises -->
@@ -242,10 +241,10 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                       <input class="calc-add-service__checkbox" type="checkbox" name="heatingSystem" id="heatingSystem" value="Замена системы отопления"><span class="calc-add-service__name">Замена системы отопления</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input-num" type="number" name="replHeatingRadiators" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
+                      <input class="calc__input-num" type="number" name="replHeatingRadiators" placeholder="0" min="0" value="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input-num" type="number" name="replWindows" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
+                      <input class="calc__input-num" type="number" name="replWindows" placeholder="0" min="0" value="0"><span class="calc-add-service__name">Замена окон, шт</span>
                     </p>
                     <p class="calc-add-service">
                       <input class="calc-add-service__checkbox" type="checkbox" name="doorInst" id="doorInst" value="Установка двери"><span class="calc-add-service__name">Установка двери</span>
@@ -262,7 +261,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <!-- Email input-->
                 <div class="calc-email">
                   <h4 class="calc-estimate">Введите адрес электронной почты</h4>
-                  <input class="calc__input calc-estimate__adress" type="email" name="email" placeholder="example@gmail.com">
+                  <input class="calc__input calc-estimate__adress" type="email" name="email" placeholder="example@gmail.com" required>
                 </div>
                 <!-- Form submit button-->
                 <div class="calc-btn-container">
@@ -276,13 +275,13 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <div class="calc-form-tabs"> 
                   <h3 class="calc-form-tabs__title">Выберите вид ремонта</h3>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Косметический"><span class="calc-form-tab__name">Косметический</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Косметический" required><span class="calc-form-tab__name">Косметический</span>
                   </div>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Дизайнерский"><span class="calc-form-tab__name">Дизайнерский</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Дизайнерский" required><span class="calc-form-tab__name">Дизайнерский</span>
                   </div>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="'Под Ключ'"><span class="calc-form-tab__name">"Под ключ"</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="'Под Ключ'" required><span class="calc-form-tab__name">"Под ключ"</span>
                   </div>
                 </div>
                 <!-- Square-->
@@ -294,10 +293,10 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <div class="calc-building-type">
                   <h3 class="calc-building-type__title">Выберите тип недвижимости</h3>
                   <div class="calc-building-type-wrap"> 
-                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Первичная недвижимость"><span class="calc-building-type__name">Первичная недвижимость</span>
+                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Первичная недвижимость" required><span class="calc-building-type__name">Первичная недвижимость</span>
                   </div>
                   <div class="calc-building-type-wrap">
-                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Вторичная недвижимость"><span class="calc-building-type__name">Вторичная недвижимость</span>
+                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Вторичная недвижимость" required><span class="calc-building-type__name">Вторичная недвижимость</span>
                   </div>
                 </div>
                 <!-- Hidden input type of premises -->
@@ -368,10 +367,10 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                       <input class="calc-add-service__checkbox" type="checkbox" name="heatingSystem" id="heatingSystem" value="Замена системы отопления"><span class="calc-add-service__name">Замена системы отопления</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input-num" type="number" name="replHeatingRadiators" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
+                      <input class="calc__input-num" type="number" name="replHeatingRadiators" placeholder="0" min="0" value="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input-num" type="number" name="replWindows" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
+                      <input class="calc__input-num" type="number" name="replWindows" placeholder="0" min="0" value="0"><span class="calc-add-service__name">Замена окон, шт</span>
                     </p>
                     <p class="calc-add-service">
                       <input class="calc-add-service__checkbox" type="checkbox" name="doorInst" id="doorInst" value="Установка двери"><span class="calc-add-service__name">Установка двери</span>
@@ -388,7 +387,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <!-- Email input-->
                 <div class="calc-email">
                   <h4 class="calc-estimate">Введите адрес электронной почты</h4>
-                  <input class="calc__input calc-estimate__adress" type="email" name="email" placeholder="example@gmail.com">
+                  <input class="calc__input calc-estimate__adress" type="email" name="email" placeholder="example@gmail.com" required>
                 </div>
                 <!-- Form submit button-->
                 <div class="calc-btn-container">
@@ -402,13 +401,13 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <div class="calc-form-tabs"> 
                   <h3 class="calc-form-tabs__title">Выберите вид ремонта</h3>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Косметический"><span class="calc-form-tab__name">Косметический</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Косметический" required><span class="calc-form-tab__name">Косметический</span>
                   </div>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Дизайнерский"><span class="calc-form-tab__name">Дизайнерский</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Дизайнерский" required><span class="calc-form-tab__name">Дизайнерский</span>
                   </div>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="'Под Ключ'"><span class="calc-form-tab__name">"Под ключ"</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="'Под Ключ'" required><span class="calc-form-tab__name">"Под ключ"</span>
                   </div>
                 </div>
                 <!-- Square-->
@@ -420,10 +419,10 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <div class="calc-building-type">
                   <h3 class="calc-building-type__title">Выберите тип недвижимости</h3>
                   <div class="calc-building-type-wrap"> 
-                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Первичная недвижимость"><span class="calc-building-type__name">Первичная недвижимость</span>
+                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Первичная недвижимость" required><span class="calc-building-type__name">Первичная недвижимость</span>
                   </div>
                   <div class="calc-building-type-wrap">
-                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Вторичная недвижимость"><span class="calc-building-type__name">Вторичная недвижимость</span>
+                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Вторичная недвижимость" required><span class="calc-building-type__name">Вторичная недвижимость</span>
                   </div>
                 </div>
                 <!-- Hidden input type of premises -->
@@ -494,10 +493,10 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                       <input class="calc-add-service__checkbox" type="checkbox" name="heatingSystem" id="heatingSystem" value="Замена системы отопления"><span class="calc-add-service__name">Замена системы отопления</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input-num" type="number" name="replHeatingRadiators" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
+                      <input class="calc__input-num" type="number" name="replHeatingRadiators" placeholder="0" min="0" value="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input-num" type="number" name="replWindows" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
+                      <input class="calc__input-num" type="number" name="replWindows" placeholder="0" min="0" value="0"><span class="calc-add-service__name">Замена окон, шт</span>
                     </p>
                     <p class="calc-add-service">
                       <input class="calc-add-service__checkbox" type="checkbox" name="doorInst" id="doorInst" value="Установка двери"><span class="calc-add-service__name">Установка двери</span>
@@ -514,7 +513,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <!-- Email input-->
                 <div class="calc-email">
                   <h4 class="calc-estimate">Введите адрес электронной почты</h4>
-                  <input class="calc__input calc-estimate__adress" type="email" name="email" placeholder="example@gmail.com">
+                  <input class="calc__input calc-estimate__adress" type="email" name="email" placeholder="example@gmail.com" required>
                 </div>
                 <!-- Form submit button-->
                 <div class="calc-btn-container">
@@ -528,13 +527,13 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <div class="calc-form-tabs"> 
                   <h3 class="calc-form-tabs__title">Выберите вид ремонта</h3>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Косметический"><span class="calc-form-tab__name">Косметический</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Косметический" required><span class="calc-form-tab__name">Косметический</span>
                   </div>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Дизайнерский"><span class="calc-form-tab__name">Дизайнерский</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Дизайнерский" required><span class="calc-form-tab__name">Дизайнерский</span>
                   </div>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="'Под Ключ'"><span class="calc-form-tab__name">"Под ключ"</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="'Под Ключ'" required><span class="calc-form-tab__name">"Под ключ"</span>
                   </div>
                 </div>
                 <!-- Square-->
@@ -546,10 +545,10 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <div class="calc-building-type">
                   <h3 class="calc-building-type__title">Выберите тип недвижимости</h3>
                   <div class="calc-building-type-wrap"> 
-                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Первичная недвижимость"><span class="calc-building-type__name">Первичная недвижимость</span>
+                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Первичная недвижимость" required><span class="calc-building-type__name">Первичная недвижимость</span>
                   </div>
                   <div class="calc-building-type-wrap">
-                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Вторичная недвижимость"><span class="calc-building-type__name">Вторичная недвижимость</span>
+                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Вторичная недвижимость" required><span class="calc-building-type__name">Вторичная недвижимость</span>
                   </div>
                 </div>
                 <!-- Hidden input type of premises -->
@@ -620,10 +619,10 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                       <input class="calc-add-service__checkbox" type="checkbox" name="heatingSystem" id="heatingSystem" value="Замена системы отопления"><span class="calc-add-service__name">Замена системы отопления</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input-num" type="number" name="replHeatingRadiators" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
+                      <input class="calc__input-num" type="number" name="replHeatingRadiators" placeholder="0" min="0" value="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input-num" type="number" name="replWindows" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
+                      <input class="calc__input-num" type="number" name="replWindows" placeholder="0" min="0" value="0"><span class="calc-add-service__name">Замена окон, шт</span>
                     </p>
                     <p class="calc-add-service">
                       <input class="calc-add-service__checkbox" type="checkbox" name="doorInst" id="doorInst" value="Установка двери"><span class="calc-add-service__name">Установка двери</span>
@@ -640,7 +639,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <!-- Email input-->
                 <div class="calc-email">
                   <h4 class="calc-estimate">Введите адрес электронной почты</h4>
-                  <input class="calc__input calc-estimate__adress" type="email" name="email" placeholder="example@gmail.com">
+                  <input class="calc__input calc-estimate__adress" type="email" name="email" placeholder="example@gmail.com" required>
                 </div>
                 <!-- Form submit button-->
                 <div class="calc-btn-container">
@@ -654,13 +653,13 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <div class="calc-form-tabs"> 
                   <h3 class="calc-form-tabs__title">Выберите вид ремонта</h3>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Косметический"><span class="calc-form-tab__name">Косметический</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Косметический" required><span class="calc-form-tab__name">Косметический</span>
                   </div>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Дизайнерский"><span class="calc-form-tab__name">Дизайнерский</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Дизайнерский" required><span class="calc-form-tab__name">Дизайнерский</span>
                   </div>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="'Под Ключ'"><span class="calc-form-tab__name">"Под ключ"</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="'Под Ключ'" required><span class="calc-form-tab__name">"Под ключ"</span>
                   </div>
                 </div>
                 <!-- Square-->
@@ -672,10 +671,10 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <div class="calc-building-type">
                   <h3 class="calc-building-type__title">Выберите тип недвижимости</h3>
                   <div class="calc-building-type-wrap"> 
-                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Первичная недвижимость"><span class="calc-building-type__name">Первичная недвижимость</span>
+                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Первичная недвижимость" required><span class="calc-building-type__name">Первичная недвижимость</span>
                   </div>
                   <div class="calc-building-type-wrap">
-                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Вторичная недвижимость"><span class="calc-building-type__name">Вторичная недвижимость</span>
+                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Вторичная недвижимость" required><span class="calc-building-type__name">Вторичная недвижимость</span>
                   </div>
                 </div>
                 <!-- Hidden input type of premises -->
@@ -746,10 +745,10 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                       <input class="calc-add-service__checkbox" type="checkbox" name="heatingSystem" id="heatingSystem" value="Замена системы отопления"><span class="calc-add-service__name">Замена системы отопления</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input-num" type="number" name="replHeatingRadiators" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
+                      <input class="calc__input-num" type="number" name="replHeatingRadiators" placeholder="0" min="0" value="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input-num" type="number" name="replWindows" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
+                      <input class="calc__input-num" type="number" name="replWindows" placeholder="0" min="0" value="0"><span class="calc-add-service__name">Замена окон, шт</span>
                     </p>
                     <p class="calc-add-service">
                       <input class="calc-add-service__checkbox" type="checkbox" name="doorInst" id="doorInst" value="Установка двери"><span class="calc-add-service__name">Установка двери</span>
@@ -766,7 +765,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <!-- Email input-->
                 <div class="calc-email">
                   <h4 class="calc-estimate">Введите адрес электронной почты</h4>
-                  <input class="calc__input calc-estimate__adress" type="email" name="email" placeholder="example@gmail.com">
+                  <input class="calc__input calc-estimate__adress" type="email" name="email" placeholder="example@gmail.com" required>
                 </div>
                 <!-- Form submit button-->
                 <div class="calc-btn-container">
@@ -780,13 +779,13 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <div class="calc-form-tabs"> 
                   <h3 class="calc-form-tabs__title">Выберите вид ремонта</h3>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Косметический"><span class="calc-form-tab__name">Косметический</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Косметический" required><span class="calc-form-tab__name">Косметический</span>
                   </div>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Дизайнерский"><span class="calc-form-tab__name">Дизайнерский</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="Дизайнерский" required><span class="calc-form-tab__name">Дизайнерский</span>
                   </div>
                   <div class="calc-form-tab-wrap">
-                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="'Под Ключ'"><span class="calc-form-tab__name">"Под ключ"</span>
+                    <input class="calc-form-tab__radio-btn" type="radio" name="renovationType" value="'Под Ключ'" required><span class="calc-form-tab__name">"Под ключ"</span>
                   </div>
                 </div>
                 <!-- Square-->
@@ -798,10 +797,10 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <div class="calc-building-type">
                   <h3 class="calc-building-type__title">Выберите тип недвижимости</h3>
                   <div class="calc-building-type-wrap"> 
-                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Первичная недвижимость"><span class="calc-building-type__name">Первичная недвижимость</span>
+                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Первичная недвижимость" required><span class="calc-building-type__name">Первичная недвижимость</span>
                   </div>
                   <div class="calc-building-type-wrap">
-                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Вторичная недвижимость"><span class="calc-building-type__name">Вторичная недвижимость</span>
+                    <input class="calc-building-type__radio-btn" type="radio" name="buildingType" value="Вторичная недвижимость" required><span class="calc-building-type__name">Вторичная недвижимость</span>
                   </div>
                 </div>
                 <!-- Hidden input type of premises -->
@@ -872,10 +871,10 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                       <input class="calc-add-service__checkbox" type="checkbox" name="heatingSystem" id="heatingSystem" value="Замена системы отопления"><span class="calc-add-service__name">Замена системы отопления</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input-num" type="number" name="replHeatingRadiators" placeholder="0" min="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
+                      <input class="calc__input-num" type="number" name="replHeatingRadiators" placeholder="0" min="0" value="0"><span class="calc-add-service__name">Замена или монтаж радиаторов отопления, шт</span>
                     </p>
                     <p class="calc-add-service">
-                      <input class="calc__input-num" type="number" name="replWindows" placeholder="0" min="0"><span class="calc-add-service__name">Замена окон, шт</span>
+                      <input class="calc__input-num" type="number" name="replWindows" placeholder="0" min="0" value="0"><span class="calc-add-service__name">Замена окон, шт</span>
                     </p>
                     <p class="calc-add-service">
                       <input class="calc-add-service__checkbox" type="checkbox" name="doorInst" id="doorInst" value="Установка двери"><span class="calc-add-service__name">Установка двери</span>
@@ -892,7 +891,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 209317593, {tooltipButtonT
                 <!-- Email input-->
                 <div class="calc-email">
                   <h4 class="calc-estimate">Введите адрес электронной почты</h4>
-                  <input class="calc__input calc-estimate__adress" type="email" name="email" placeholder="example@gmail.com">
+                  <input class="calc__input calc-estimate__adress" type="email" name="email" placeholder="example@gmail.com" required>
                 </div>
                 <!-- Form submit button-->
                 <div class="calc-btn-container">
