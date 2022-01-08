@@ -29,13 +29,13 @@
   display: flex
   flex-direction: column
   justify-content: center
-  margin: 0 auto
+  margin: 40px auto 0
   background: url(../images/dest/7.png) no-repeat center, #fff
   background-position: 35% 50%
   border-radius: 8px
 
 .recall-form__close-btn
-  font-size: 58px
+  font-size: 52px
   font-weight: 600
   text-align: right
   cursor: pointer
@@ -81,7 +81,6 @@
   &::after
     content: '\f2a0'
     font-family: FontAwesome
-    font-size: 30px
     margin-left: 10px
 
 // ---------  
@@ -94,7 +93,7 @@
 
 @media (min-width: 320px)
   .recall-form
-    width: 300px
+    width: 295px
     padding: 10px 5px 10px 5px
 
   .recall-form-container
@@ -109,7 +108,6 @@
 
   .recall-form__input-name
     font-size: 18px
-    width: 300px
 
   .recall-form__btn
     width: 300px
@@ -134,20 +132,21 @@
     &__input,
     &__textarea
       font-size: 22px
-      padding: 10px 20px
+      padding: 5px 20px
       width: 545px
       &-time,
       &-date
         width: 240px
 
   .recall-form__input-name
-    font-size: 32px
+    font-size: 24px
     width: 100%
 
   .recall-form__btn
     width: 400px
     height: 70px
-    line-height: 70px
+    line-height: 50px
     margin: 20px auto
     font-size: 26px
-
+    &::after
+      font-size: 26px
